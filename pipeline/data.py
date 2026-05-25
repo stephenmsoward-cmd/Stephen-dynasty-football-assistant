@@ -66,6 +66,16 @@ def get_traded_picks(league_id: str) -> list[dict]:
     )
 
 
+def get_trending(kind: str = "add", lookback_hours: int = 24, limit: int = 50) -> list[dict]:
+    """Sleeper's community-trending list. kind = 'add' or 'drop'.
+    Returns [{player_id, count}], sorted desc by count."""
+    return _cached_get(
+        f"{SLEEPER_BASE}/players/nfl/trending/{kind}?lookback_hours={lookback_hours}&limit={limit}",
+        f"sleeper_trending_{kind}_{lookback_hours}h_{limit}",
+        ttl_seconds=3600,  # trending data is genuinely time-sensitive
+    )
+
+
 def get_all_players() -> dict[str, dict]:
     # Sleeper recommends fetching this no more than once per day.
     return _cached_get(

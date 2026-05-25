@@ -69,10 +69,24 @@ Results are surfaced in tiers:
 - **Package deals** — multi-player trades (2-for-1, 1-for-2, 2-for-2).
 - **By opposing team** — collapsible accordion with top candidates per partner.
 
+### Waiver wire
+
+Compares your roster to every player not rostered in your league and
+surfaces:
+
+- **🔥 Trending Adds** — Sleeper's community 24-hour add count, filtered
+  to players still available in your league. Strongest early signal for
+  what's actually moving on waiver wire.
+- **Best Available Overall** — top dynasty-value free agents (excluding
+  draft picks).
+- **Targeted at gap positions** — best free agents at positions where
+  your starting lineup ranks in the bottom third of the league.
+- **Drop candidates** — your lowest-value skill players.
+
+Each pickup gets a suggested drop matched by position eligibility.
+
 ## Roadmap
 
-- **Drop/add** — compare rostered players to the waiver wire by value and
-  Sleeper trending interest; surface swaps that improve your team.
 - **Projection swap-in** — replace FantasyCalc redraft values with
   ESPN/FantasyPros 2026 statistical projections when those land in late July.
 - **News + usage signals** — surface injury status and ascending-usage
@@ -80,6 +94,9 @@ Results are surfaced in tiers:
 - **Win-Now trade analysis** — currently the trade finder uses dynasty
   values as canonical trade-market currency. A Win-Now trade mode would
   optimize for this-season lineup gains.
+- **Smarter drop suggestions** — currently the suggested drop is always
+  the lowest-value compatible player. Could improve by matching position
+  more carefully and rotating through multiple options.
 
 ## Add your league
 
@@ -116,6 +133,8 @@ league/rosters: 1h, FantasyCalc values: 24h) so re-runs are fast.
 pipeline/         Python — data fetch, lineup math, HTML rendering
   data.py           Sleeper + FantasyCalc clients with file cache
   lineup.py         Optimal-lineup calculator (greedy under slot constraints)
+  trades.py         Trade finder (1v1/2v1/1v2/2v2 + picks + asset/lineup scoring)
+  waivers.py        Waiver wire recommender (trending + value + gap-targeting)
   generate.py       Entry point: builds site/ and history/
   templates/        Jinja2 templates + CSS + toggle JS
 site/             Published to GitHub Pages

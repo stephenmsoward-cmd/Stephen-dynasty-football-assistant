@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ report.name }} — Waiver Wire</title>
+  <link rel="stylesheet" href="../../../style.css">
+</head>
+<body class="mode-dynasty">
+<div class="container">
+  <header class="site">
+    <h1>Waiver Wire — {{ report.trades.my_team.team_name }}</h1>
+    <div class="tagline">
+      {{ report.name }} &middot; {{ report.season }} &middot;
+      {{ report.waivers.available_count }} valued free agents
+      {% if report.waivers.gap_positions %}
+        &middot; gap positions: {{ report.waivers.gap_positions | join(', ') }}
+      {% endif %}
+    </div>
+    <nav>
+      <a href="../">&larr; Back to league</a>
+      {% if report.trades %}&middot; <a href="../trades/">Trade ideas</a>{% endif %}
+      <span class="muted small">&middot; Generated {{ report.generated_at }}</span>
+    </nav>
+  </header>
+
+  {% macro pickup_row(s) %}
+  <article class="waiver-row">
+    <div class="waiver-pickup">
+      <div>
+        <span class="trade-player-name">{{ s.pickup.name }}</span>
+        <span class="pos-tag">{{ s.pickup.position }}{% if s.pickup.team %} · {{ s.pickup.team }}{% endif %}</span>
+        {% if s.pickup.injury_status %}<span class="injury Q">{{ s.pickup.injury_status }}</span>{% endif %}
+        {% if s.trending_count %}
+          <span class="trending-badge" title="Adds in last 24h across Sleeper">🔥 {{ s.trending_count | money }}</span>
+        {% endif %}
+      </div>
+      <div class="muted small">
+        {% if s.pickup.age %}age {{ s.pickup.age | round | int }} &middot; {% endif %}
+        dyn value <strong>{{ s.pickup.dynasty_value | money }}</strong>
+        {% if s.pickup.redraft_value %}&middot; redraft {{ s.pickup.redraft_value | money }}{% endif %}
+      </div>
+    </div>
+    <div class="waiver-arrow">←</div>
+    <div class="waiver-drop">
+      {% if s.suggested_drop %}
+      <div class="muted small waiver-drop-label">Suggested drop</div>
+      <div>
+        <span>{{ s.suggested_drop.name }}</span>
+        <span class="pos-tag">{{ s.suggested_drop.position }}{% if s.suggested_drop.team %} · {{ s.suggested_drop.team }}{% endif %}</span>
+      </div>
+      <div class="muted small">
+        value {{ s.suggested_drop.dynasty_value | money }}
+        &middot; net <span class="good">+{{ s.value_delta | money }}</span>
+      </div>
+      {% else %}
+      <div class="muted small">No clear drop candidate.</div>
+      {% endif %}
+    </div>
+  </article>
+  {% endmacro %}
+
+  {% if report.waivers.trending %}
+  <h2>🔥 Trending Adds <span class="muted small">({{ report.waivers.trending | length }})</span></h2>
+  <p class="muted small">
+    Players the Sleeper community is grabbing right now, filtered to ones still
+    available in your league.
+  </p>
+  {% for s in report.waivers.trending %}{{ pickup_row(s) }}{% endfor %}
+  {% endif %}
+
+  <h2>Best Available Overall <span class="muted small">({{ report.waivers.best_overall | length }})</span></h2>
+  <p class="muted small">
+    Top dynasty values among free agents. Some may be stashed for upside,
+    others may be aging vets nobody wants — read the age and team carefully.
+  </p>
+  {% for s in report.waivers.best_overall %}{{ pickup_row(s) }}{% endfor %}
+
+  {% if report.waivers.by_gap_position %}
+  <h2>Targeted at Your Gap Positions</h2>
+  <p class="muted small">
+    The best free agents at positions where your starting lineup ranks in the
+    bottom third of the league.
+  </p>
+  {% for pos, suggestions in report.waivers.by_gap_position.items() %}
+  <h3>{{ pos }}</h3>
+  {% for s in suggestions %}{{ pickup_row(s) }}{% endfor %}
+  {% endfor %}
+  {% endif %}
+
+  <h2>Drop Candidates <span class="muted small">(your roster)</span></h2>
+  <p class="muted small">
+    Your lowest-value skill players. If you find a pickup worth more than any
+    of these, the swap is strictly positive.
+  </p>
+  <div class="drop-grid">
+    {% for p in report.waivers.drop_candidates %}
+    <div class="drop-card">
+      <div>
+        <span class="trade-player-name">{{ p.name }}</span>
+        <span class="pos-tag">{{ p.position }}{% if p.team %} · {{ p.team }}{% endif %}</span>
+      </div>
+      <div class="muted small">
+        {% if p.age %}age {{ p.age | round | int }} &middot; {% endif %}
+        value <strong>{{ p.dynasty_value | money }}</strong>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="methodology">
+    <h3>Methodology</h3>
+    <p>
+      <strong>Available pool</strong>: every FantasyCalc-valued player whose
+      Sleeper ID isn't on a roster, taxi squad, or IR slot in your league.
+    </p>
+    <p>
+      <strong>Trending</strong> comes from Sleeper's 24-hour community
+      add count. Big numbers mean lots of managers are grabbing the player
+      right now — useful early-warning signal for waiver wire targets.
+    </p>
+    <p>
+      <strong>Suggested drop</strong> is the lowest-value skill player on
+      your roster the pickup could plausibly replace. For K/DEF pickups,
+      it's matched to the same position.
+    </p>
+    <p>
+      <strong>Limitations:</strong> No FAAB budget awareness. No bye-week
+      conflict checking. Doesn't model snap share or target trend, so
+      ascending-but-low-value players aren't surfaced beyond what
+      FantasyCalc has already priced in.
+    </p>
+  </div>
+
+  <footer class="site">
+    Data: <a href="https://docs.sleeper.com">Sleeper</a> &middot;
+    <a href="https://fantasycalc.com">FantasyCalc</a>.
+  </footer>
+</div>
+</body>
+</html>

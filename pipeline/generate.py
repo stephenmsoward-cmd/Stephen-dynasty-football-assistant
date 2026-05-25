@@ -23,6 +23,7 @@ import data
 from data import Player
 from lineup import optimal_lineup
 from trades import TradeCandidate, find_trades
+from waivers import build_waiver_report
 
 ROOT = Path(__file__).parent.parent
 SITE = ROOT / "site"
@@ -401,6 +402,40 @@ def build_league_report(league_id: str, slug: str, my_user_id: str | None = None
                 pos_ranks=pos_ranks,
             )
 
+    waiver_report = None
+    if my_user_id:
+        my_roster_id = next(
+            (rid for rid, m in team_meta.items()
+             if next((r for r in rosters if r["roster_id"] == rid and r["owner_id"] == my_user_id), None)),
+            None,
+        )
+        if my_roster_id is not None:
+            rostered_ids: set[str] = set()
+            for r in rosters:
+                rostered_ids.update(r.get("players") or [])
+                rostered_ids.update(r.get("taxi") or [])
+                rostered_ids.update(r.get("reserve") or [])
+            available_players = [
+                p for sid, p in index.items()
+                if sid not in rostered_ids and p.position != "PICK"
+            ]
+            trending_adds = {
+                str(t["player_id"]): t["count"]
+                for t in data.get_trending(kind="add", lookback_hours=24, limit=50)
+            }
+            gap_positions: list[str] = []
+            if trade_report:
+                gap_positions = [
+                    pos for pos, info in trade_report["my_team"]["position_strength"].items()
+                    if info["label"] == "gap"
+                ]
+            waiver_report = build_waiver_report(
+                my_roster=rostered_by_team[my_roster_id],
+                available_players=available_players,
+                trending_adds=trending_adds,
+                gap_positions=gap_positions,
+            )
+
     return {
         "slug": slug,
         "name": league["name"],
@@ -414,6 +449,7 @@ def build_league_report(league_id: str, slug: str, my_user_id: str | None = None
         "previous_snapshot_date": prev_date,
         "teams": teams,
         "trades": trade_report,
+        "waivers": waiver_report,
     }
 
 
@@ -445,6 +481,7 @@ def render_site(reports: list[dict]) -> None:
 
     league_tmpl = env.get_template("league.html.j2")
     trades_tmpl = env.get_template("trades.html.j2")
+    waivers_tmpl = env.get_template("waivers.html.j2")
     for r in reports:
         out_dir = SITE / "leagues" / r["slug"]
         out_dir.mkdir(parents=True, exist_ok=True)
@@ -455,6 +492,11 @@ def render_site(reports: list[dict]) -> None:
             trades_dir = out_dir / "trades"
             trades_dir.mkdir(exist_ok=True)
             (trades_dir / "index.html").write_text(trades_tmpl.render(report=r))
+
+        if r.get("waivers"):
+            waivers_dir = out_dir / "waivers"
+            waivers_dir.mkdir(exist_ok=True)
+            (waivers_dir / "index.html").write_text(waivers_tmpl.render(report=r))
 
     landing_tmpl = env.get_template("landing.html.j2")
     (SITE / "index.html").write_text(landing_tmpl.render(
