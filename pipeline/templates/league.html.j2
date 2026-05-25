@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ report.name }} — Best Ball Projection</title>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+<body class="mode-dynasty">
+<div class="container">
+  <header class="site">
+    <h1>{{ report.name }}</h1>
+    <div class="tagline">
+      Best-ball projection &middot; {{ report.season }} season &middot;
+      {{ report.total_rosters }} teams &middot; {{ report.ppr }} PPR &middot;
+      {{ report.pass_td }}-pt pass TDs
+    </div>
+    <nav>
+      <a href="../../">&larr; All leagues</a>
+      {% if report.trades %}
+      &middot;
+      <a href="trades/">Trade ideas for {{ report.trades.my_team.team_name }}</a>
+      {% endif %}
+      <span class="muted small">&middot; Generated {{ report.generated_at }}</span>
+    </nav>
+  </header>
+
+  <div class="mode-toggle" role="tablist" aria-label="Value mode">
+    <button data-mode="dynasty" class="active" role="tab" aria-selected="true">
+      Dynasty
+      <span class="mode-desc">multi-year, age-weighted</span>
+    </button>
+    <button data-mode="winnow" role="tab" aria-selected="false">
+      Win Now
+      <span class="mode-desc">this season only</span>
+    </button>
+  </div>
+
+  {% macro standings_table(report, mode, other_mode, other_label) %}
+  <table class="standings">
+    <thead>
+      <tr>
+        <th class="num">#</th>
+        <th>Team</th>
+        <th class="hide-mobile">Owner</th>
+        <th class="num" title="Rank under {{ other_label }} mode">{{ other_label }} #</th>
+        <th class="num hide-mobile">QB</th>
+        <th class="num hide-mobile">RB</th>
+        <th class="num hide-mobile">WR</th>
+        <th class="num hide-mobile">TE</th>
+        <th class="num">Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for t in teams_sorted_by(report.teams, mode) %}
+      {% set m = t.modes[mode] %}
+      {% set other_rank = t.modes[other_mode].rank %}
+      {% set delta = m.rank - other_rank %}
+      <tr>
+        <td class="num rank">{{ m.rank }}</td>
+        <td>{{ t.team_name }}</td>
+        <td class="muted hide-mobile">{{ t.owner_display_name }}</td>
+        <td class="num">
+          {{ other_rank }}
+          {% if delta > 0 %}
+          <span class="delta down" title="Falls {{ delta }} rank{{ 's' if delta != 1 else '' }} in {{ other_label }} mode">▼{{ delta }}</span>
+          {% elif delta < 0 %}
+          <span class="delta up" title="Rises {{ delta|abs }} rank{{ 's' if delta != -1 else '' }} in {{ other_label }} mode">▲{{ delta|abs }}</span>
+          {% endif %}
+        </td>
+        <td class="num hide-mobile">{{ m.position_totals.QB | money }}</td>
+        <td class="num hide-mobile">{{ m.position_totals.RB | money }}</td>
+        <td class="num hide-mobile">{{ m.position_totals.WR | money }}</td>
+        <td class="num hide-mobile">{{ m.position_totals.TE | money }}</td>
+        <td class="num">
+          <strong>{{ m.total_value | money }}</strong>
+          {% if m.delta_vs_prev %}
+          <span class="prev-delta {{ 'up' if m.delta_vs_prev > 0 else 'down' }}">
+            {{ m.delta_vs_prev | signed }}
+          </span>
+          {% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% endmacro %}
+
+  <h2>Standings by Optimal Lineup Value</h2>
+  <div class="dynasty-only">
+    {{ standings_table(report, 'dynasty', 'winnow', 'Win Now') }}
+  </div>
+  <div class="winnow-only">
+    {{ standings_table(report, 'winnow', 'dynasty', 'Dynasty') }}
+  </div>
+  {% if report.previous_snapshot_date %}
+  <div class="muted small" style="margin-top:0.5rem">
+    Total deltas vs. {{ report.previous_snapshot_date }}.
+  </div>
+  {% endif %}
+
+  {% macro team_card(t, mode) %}
+  {% set m = t.modes[mode] %}
+  <section class="team-card">
+    <div class="team-card-header">
+      <h3>
+        <span class="rank-badge">#{{ m.rank }}</span>
+        {{ t.team_name }}
+        <span class="muted small">&middot; {{ t.owner_display_name }}</span>
+      </h3>
+      <div class="muted small">value <strong>{{ m.total_value | money }}</strong>
+        {% if m.delta_vs_prev %}
+        <span class="prev-delta {{ 'up' if m.delta_vs_prev > 0 else 'down' }}">
+          {{ m.delta_vs_prev | signed }}
+        </span>
+        {% endif %}
+      </div>
+    </div>
+    <table class="lineup">
+      <tbody>
+        {% for p in m.lineup %}
+        <tr>
+          <td class="slot">{{ p.slot }}</td>
+          <td>
+            {{ p.name }}
+            <span class="pos-tag">{{ p.position }}{% if p.team %} · {{ p.team }}{% endif %}</span>
+            {% if p.pos_rank_in_league %}
+              <span class="pos-rank">{{ p.position }}#{{ p.pos_rank_in_league }}</span>
+            {% endif %}
+            {% if p.injury_status %}
+              {% set inj_class = 'Q' if p.injury_status.startswith('Q') else p.injury_status %}
+              <span class="injury {{ inj_class }}">{{ p.injury_status }}</span>
+            {% endif %}
+          </td>
+          <td class="muted small hide-mobile">{% if p.age %}age {{ p.age | round | int }}{% endif %}</td>
+          <td class="val {% if p.value_in_mode == 0 %}zero{% endif %}">{{ p.value_in_mode | money }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% if m.bench %}
+    <div class="bench">
+      <span class="bench-label">Top bench:</span>
+      {% for p in m.bench %}
+      <span class="bench-player">
+        {{ p.name }}
+        <span class="pos-rank">{{ p.position }}#{{ p.pos_rank_in_league or '—' }}</span>
+        <span class="muted small">{{ p.value_in_mode | money }}</span>
+      </span>
+      {% if not loop.last %}<span class="bench-sep">·</span>{% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+  </section>
+  {% endmacro %}
+
+  <h2>Optimal Lineups</h2>
+  <div class="dynasty-only">
+    {% for t in teams_sorted_by(report.teams, 'dynasty') %}
+      {{ team_card(t, 'dynasty') }}
+    {% endfor %}
+  </div>
+  <div class="winnow-only">
+    {% for t in teams_sorted_by(report.teams, 'winnow') %}
+      {{ team_card(t, 'winnow') }}
+    {% endfor %}
+  </div>
+
+  <div class="methodology">
+    <h3>Methodology</h3>
+    <p>
+      For each roster, we exclude taxi-squad and IR players, then solve for the
+      lineup that maximizes total value under the league's slot configuration
+      ({{ report.roster_positions | join(' / ') }}). FLEX slots take the
+      highest-value RB / WR / TE remaining after position-locked slots are filled.
+    </p>
+    <p>
+      <strong>Two modes:</strong>
+    </p>
+    <ul>
+      <li><strong>Dynasty</strong> — FantasyCalc dynasty trade values: multi-year
+        expected production with age weighted in. Best for long-term roster strength.</li>
+      <li><strong>Win Now</strong> — FantasyCalc redraft values: this season only.
+        Aging veterans rank higher here than in dynasty mode.</li>
+    </ul>
+    <p>
+      The <strong>rank-delta column</strong> shows where a team's rank in the
+      <em>other</em> mode lands. ▲ means they rank higher in the other mode
+      (e.g. a rebuild team ranks higher in Dynasty than Win Now); ▼ means lower.
+      Big deltas signal a clear strategic timeline.
+    </p>
+    <p>
+      <strong>Position rank tags</strong> (e.g. <span class="pos-rank">RB#5</span>)
+      indicate where the player ranks against every other rostered player at
+      that position in the league, under the active mode.
+    </p>
+    <p>
+      Kickers and team defenses currently show value 0 — FantasyCalc doesn't track
+      them, and they have negligible impact on dynasty valuation.
+    </p>
+  </div>
+
+  <footer class="site">
+    Data: <a href="https://docs.sleeper.com">Sleeper</a> &middot;
+    <a href="https://fantasycalc.com">FantasyCalc</a>.
+    <a href="data.json">Raw JSON</a>.
+  </footer>
+</div>
+<script src="../../app.js"></script>
+</body>
+</html>

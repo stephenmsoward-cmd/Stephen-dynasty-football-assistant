@@ -1,0 +1,575 @@
+:root {
+  color-scheme: dark light;
+  --bg: #0f1115;
+  --surface: #181b22;
+  --surface-2: #21252e;
+  --border: #2a2f3a;
+  --text: #e6e8ed;
+  --muted: #8b919f;
+  --accent: #7aa2f7;
+  --good: #9ece6a;
+  --warn: #e0af68;
+  --bad: #f7768e;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f7f8fa;
+    --surface: #ffffff;
+    --surface-2: #f1f3f7;
+    --border: #e2e5ec;
+    --text: #1a1d24;
+    --muted: #5b6373;
+    --accent: #2563eb;
+    --good: #16a34a;
+    --warn: #d97706;
+    --bad: #dc2626;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+
+header.site {
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2rem;
+  padding-bottom: 1.25rem;
+}
+
+header.site h1 {
+  font-size: 1.5rem;
+  margin: 0 0 0.25rem;
+  letter-spacing: -0.01em;
+}
+
+header.site .tagline {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+header.site nav {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+}
+
+header.site nav a { margin-right: 1rem; }
+
+h2 {
+  font-size: 1.15rem;
+  margin: 2rem 0 0.75rem;
+  letter-spacing: -0.005em;
+}
+
+h3 {
+  font-size: 1rem;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.muted { color: var(--muted); }
+.small { font-size: 0.85rem; }
+
+.league-list {
+  display: grid;
+  gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+}
+
+.league-list li {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+}
+
+.league-list a { font-weight: 600; font-size: 1.05rem; }
+
+.meta {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+table.standings {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+table.standings th,
+table.standings td {
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+table.standings th {
+  font-weight: 500;
+  color: var(--muted);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+table.standings td.num,
+table.standings th.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+table.standings tr.you td { background: var(--surface-2); }
+table.standings tr:hover td { background: var(--surface-2); }
+
+.rank {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  width: 2.5em;
+}
+
+.team-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin: 0.75rem 0;
+}
+
+.team-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.team-card-header h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.team-card-header .rank-badge {
+  display: inline-block;
+  background: var(--surface-2);
+  border-radius: 4px;
+  padding: 0.1rem 0.5rem;
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-right: 0.5rem;
+}
+
+.lineup {
+  width: 100%;
+  font-size: 0.85rem;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+
+.lineup td {
+  padding: 0.25rem 0.5rem;
+  border-bottom: 1px solid transparent;
+}
+
+.lineup tr:not(:last-child) td {
+  border-bottom: 1px solid var(--border);
+}
+
+.slot {
+  color: var(--muted);
+  width: 4em;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.pos-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  padding: 0.05rem 0.4rem;
+  border-radius: 3px;
+  background: var(--surface-2);
+  color: var(--muted);
+  margin-left: 0.4rem;
+}
+
+.injury {
+  font-size: 0.7rem;
+  padding: 0.05rem 0.4rem;
+  border-radius: 3px;
+  margin-left: 0.4rem;
+}
+.injury.Q { background: rgba(224, 175, 104, 0.15); color: var(--warn); }
+.injury.IR, .injury.Out { background: rgba(247, 118, 142, 0.15); color: var(--bad); }
+
+.val { text-align: right; color: var(--text); }
+.val.zero { color: var(--muted); }
+
+footer.site {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.methodology {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-top: 2rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.methodology h3 { color: var(--text); margin-top: 0; }
+
+/* ---- Mode toggle ---- */
+.mode-toggle {
+  display: inline-flex;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 4px;
+  gap: 2px;
+  margin: 0.5rem 0 1.25rem;
+}
+
+.mode-toggle button {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  color: var(--muted);
+  padding: 0.45rem 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.88rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.2;
+  transition: background 0.15s, color 0.15s;
+}
+
+.mode-toggle button .mode-desc {
+  font-size: 0.7rem;
+  font-weight: 400;
+  opacity: 0.7;
+  margin-top: 2px;
+}
+
+.mode-toggle button:hover { color: var(--text); }
+.mode-toggle button.active {
+  background: var(--bg);
+  color: var(--text);
+  font-weight: 600;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06), inset 0 0 0 1px var(--border);
+}
+
+@media (prefers-color-scheme: dark) {
+  .mode-toggle button.active {
+    background: var(--surface-2);
+    box-shadow: inset 0 0 0 1px var(--accent);
+  }
+}
+
+/* Show/hide content per active mode */
+body.mode-dynasty .winnow-only { display: none; }
+body.mode-winnow .dynasty-only { display: none; }
+
+/* ---- Position rank tag ---- */
+.pos-rank {
+  display: inline-block;
+  font-size: 0.7rem;
+  padding: 0.05rem 0.4rem;
+  border-radius: 3px;
+  background: rgba(122, 162, 247, 0.12);
+  color: var(--accent);
+  margin-left: 0.3rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+}
+
+/* ---- Rank-delta indicator (in standings) ---- */
+.delta {
+  display: inline-block;
+  font-size: 0.72rem;
+  margin-left: 0.3rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+}
+.delta.up { color: var(--good); }
+.delta.down { color: var(--bad); }
+
+/* ---- Diff vs. previous snapshot ---- */
+.prev-delta {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 400;
+  margin-left: 0.25rem;
+  font-variant-numeric: tabular-nums;
+}
+.prev-delta.up { color: var(--good); }
+.prev-delta.down { color: var(--bad); }
+
+/* ---- Bench depth ---- */
+.bench {
+  margin-top: 0.6rem;
+  padding-top: 0.6rem;
+  border-top: 1px dashed var(--border);
+  font-size: 0.82rem;
+  color: var(--muted);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem;
+}
+
+.bench-label {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.7rem;
+  font-weight: 500;
+  margin-right: 0.2rem;
+}
+
+.bench-player {
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+
+.bench-sep {
+  color: var(--border);
+  margin: 0 0.1rem;
+}
+
+/* ---- Trade page: positional strength grid ---- */
+.strength-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.strength-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+}
+
+.strength-card .strength-pos {
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+}
+
+.strength-card .strength-value {
+  font-variant-numeric: tabular-nums;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0.15rem 0;
+}
+
+.strength-card .strength-rank {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.strength-card .strength-label {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.05rem 0.4rem;
+  border-radius: 3px;
+  margin-left: 0.3rem;
+}
+
+.strength-surplus .strength-label { background: rgba(158, 206, 106, 0.18); color: var(--good); }
+.strength-gap .strength-label { background: rgba(247, 118, 142, 0.18); color: var(--bad); }
+.strength-average .strength-label { background: var(--surface-2); color: var(--muted); }
+
+.strength-surplus { border-left: 3px solid var(--good); }
+.strength-gap { border-left: 3px solid var(--bad); }
+
+.strength-surplus-text { color: var(--good); }
+.strength-gap-text { color: var(--bad); }
+
+/* ---- Trade cards ---- */
+.trade-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin: 0.75rem 0;
+  border-left: 3px solid var(--border);
+}
+
+.trade-card.trade-tier-mutual { border-left-color: var(--good); }
+.trade-card.trade-tier-buy { border-left-color: var(--accent); }
+.trade-card.trade-tier-sell { border-left-color: var(--warn); }
+.trade-card.trade-tier-package { border-left-color: var(--muted); }
+.trade-card.trade-tier-asymmetric { border-left-color: var(--border); }
+
+.trade-card-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.6rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.85rem;
+}
+
+.tier-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  background: var(--surface-2);
+  color: var(--muted);
+}
+.tier-badge.tier-mutual { background: rgba(158, 206, 106, 0.15); color: var(--good); }
+.tier-badge.tier-buy { background: rgba(122, 162, 247, 0.15); color: var(--accent); }
+.tier-badge.tier-sell { background: rgba(224, 175, 104, 0.18); color: var(--warn); }
+.tier-badge.tier-package { background: var(--surface-2); color: var(--muted); }
+
+.trade-partner { color: var(--text); }
+
+.pick-tag {
+  background: rgba(224, 175, 104, 0.18) !important;
+  color: var(--warn) !important;
+  font-weight: 600;
+}
+
+.trade-player.is-pick .trade-player-name { color: var(--warn); }
+
+.trade-sides {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.trade-side {
+  background: var(--surface-2);
+  border-radius: 6px;
+  padding: 0.75rem 0.9rem;
+}
+
+.trade-side-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+}
+
+.trade-side.give { border-left: 3px solid var(--warn); }
+.trade-side.get { border-left: 3px solid var(--accent); }
+
+.trade-player + .trade-player {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.trade-player-name { font-weight: 600; }
+
+.trade-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  color: var(--muted);
+}
+
+.trade-meta {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+  font-size: 0.85rem;
+}
+
+.trade-meta-item .good { color: var(--good); font-weight: 600; font-variant-numeric: tabular-nums; }
+.trade-meta-item .bad { color: var(--bad); font-weight: 600; font-variant-numeric: tabular-nums; }
+
+.team-trades {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin: 0.6rem 0;
+  padding: 0.5rem 1rem;
+}
+
+.team-trades > summary {
+  cursor: pointer;
+  padding: 0.5rem 0;
+  list-style: revert;
+}
+
+.team-trades > summary::-webkit-details-marker { color: var(--muted); }
+
+.team-trades[open] > summary {
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 0.5rem;
+}
+
+/* ---- Mobile polish ---- */
+@media (max-width: 640px) {
+  body { font-size: 14px; }
+  .container { padding: 1.25rem 0.75rem 3rem; }
+  header.site h1 { font-size: 1.25rem; }
+  h2 { font-size: 1.05rem; margin: 1.5rem 0 0.5rem; }
+  .hide-mobile { display: none !important; }
+
+  table.standings { font-size: 0.82rem; }
+  table.standings th,
+  table.standings td { padding: 0.45rem 0.5rem; }
+
+  .team-card { padding: 0.85rem 1rem; }
+  .team-card-header h3 { font-size: 0.95rem; }
+  .lineup { font-size: 0.8rem; }
+  .lineup td { padding: 0.3rem 0.35rem; }
+  .slot { width: 3em; }
+  .pos-tag, .pos-rank, .injury { font-size: 0.65rem; }
+
+  .mode-toggle { width: 100%; }
+  .mode-toggle button { flex: 1; align-items: center; }
+
+  .trade-sides {
+    grid-template-columns: 1fr;
+  }
+  .trade-arrow {
+    transform: rotate(90deg);
+    padding: 0.25rem 0;
+  }
+  .trade-meta { font-size: 0.78rem; }
+}

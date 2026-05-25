@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Dynasty Tools</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <header class="site">
+    <h1>Dynasty Tools</h1>
+    <div class="tagline">Best-ball projections and analytics for Sleeper dynasty leagues.</div>
+    <nav>
+      <a href="https://github.com/stephenmsoward-cmd/Stephen-dynasty-football-assistant">GitHub</a>
+    </nav>
+  </header>
+
+  <h2>Leagues</h2>
+  <ul class="league-list">
+    <li>
+      <a href="leagues/bricksquad-sportz/">BrickSquad Sportz</a>
+      <div class="meta">
+        2026 season &middot; 10 teams &middot; 0.5 PPR
+      </div>
+    </li>
+  </ul>
+
+  <div class="methodology">
+    <h3>What this is</h3>
+    <p>
+      For each team in a Sleeper dynasty league, this site computes the
+      <strong>optimal starting lineup</strong> from all rostered players (excluding taxi and IR)
+      using the league's actual slot configuration. Values come from FantasyCalc's dynasty
+      trade values and reflect multi-year expected production with age baked in.
+    </p>
+    <p>
+      It's a way to see how teams stack up if everyone fielded their best possible lineup
+      each week — the "best ball" version of the standings.
+    </p>
+    <h3>Add your league</h3>
+    <p>
+      Open a pull request adding your league ID and a slug to
+      <code>leagues.yml</code>. The nightly Action will build a report at
+      <code>/leagues/&lt;slug&gt;/</code>.
+    </p>
+  </div>
+
+  <footer class="site">
+    Generated 2026-05-25T18:41:10+00:00.
+  </footer>
+</div>
+</body>
+</html>

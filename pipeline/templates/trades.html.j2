@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ report.name }} — Trade Ideas for {{ report.trades.my_team.team_name }}</title>
+  <link rel="stylesheet" href="../../../style.css">
+</head>
+<body class="mode-dynasty">
+<div class="container">
+  <header class="site">
+    <h1>Trade Ideas — {{ report.trades.my_team.team_name }}</h1>
+    <div class="tagline">
+      {{ report.name }} &middot; {{ report.season }} &middot;
+      Dynasty rank #{{ report.trades.my_team.dynasty_rank }} &middot;
+      Win-Now rank #{{ report.trades.my_team.winnow_rank }} &middot;
+      {{ report.trades.my_team.pick_count }} pick{{ 's' if report.trades.my_team.pick_count != 1 else '' }}
+      (value {{ report.trades.my_team.pick_value | money }})
+    </div>
+    <nav>
+      <a href="../">&larr; Back to league</a>
+      <span class="muted small">&middot; Generated {{ report.generated_at }}</span>
+    </nav>
+  </header>
+
+  <h2>Your Roster Profile</h2>
+  <div class="strength-grid">
+    {% for pos, s in report.trades.my_team.position_strength.items() %}
+    <div class="strength-card strength-{{ s.label }}">
+      <div class="strength-pos">{{ pos }}</div>
+      <div class="strength-value">{{ s.value | money }}</div>
+      <div class="strength-rank">
+        league #{{ s.league_rank }} of {{ report.total_rosters }}
+        <span class="strength-label">{{ s.label }}</span>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <p class="muted small">
+    Trade targets typically move value from your
+    <strong class="strength-surplus-text">surplus</strong> positions to your
+    <strong class="strength-gap-text">gap</strong> positions, or swap
+    win-now production for future picks (and vice versa).
+  </p>
+
+  {% macro player_chip(p) %}
+  <div class="trade-player {% if p.is_pick %}is-pick{% endif %}">
+    <span class="trade-player-name">{{ p.name }}</span>
+    {% if p.is_pick %}
+      <span class="pos-tag pick-tag">PICK</span>
+    {% else %}
+      <span class="pos-tag">{{ p.position }}{% if p.team %} · {{ p.team }}{% endif %}</span>
+      {% if p.pos_rank_in_league %}<span class="pos-rank">{{ p.position }}#{{ p.pos_rank_in_league }}</span>{% endif %}
+      {% if p.injury_status %}<span class="injury Q">{{ p.injury_status }}</span>{% endif %}
+    {% endif %}
+    <div class="muted small">
+      {% if p.age %}age {{ p.age | round | int }} &middot; {% endif %}value {{ p.dynasty_value | money }}
+    </div>
+  </div>
+  {% endmacro %}
+
+  {% macro trade_card(c, show_partner=true) %}
+  <article class="trade-card trade-tier-{{ c.tier }}">
+    <div class="trade-card-header">
+      <span class="tier-badge tier-{{ c.tier }}">{{ c.tier }}</span>
+      <span class="muted small">{{ c.structure }}</span>
+      {% if show_partner %}
+      <span class="trade-partner">
+        with <strong>{{ c.partner_team_name }}</strong>
+        <span class="muted">({{ c.partner_owner }})</span>
+        <span class="muted small">&middot; Dyn #{{ c.partner_dynasty_rank }} / WN #{{ c.partner_winnow_rank }}</span>
+      </span>
+      {% endif %}
+    </div>
+    <div class="trade-sides">
+      <div class="trade-side give">
+        <div class="trade-side-label">You send</div>
+        {% for p in c.send %}{{ player_chip(p) }}{% endfor %}
+      </div>
+      <div class="trade-arrow">⇄</div>
+      <div class="trade-side get">
+        <div class="trade-side-label">You get</div>
+        {% for p in c.receive %}{{ player_chip(p) }}{% endfor %}
+      </div>
+    </div>
+    <div class="trade-meta">
+      <span class="trade-meta-item">
+        Your lineup:
+        <span class="{{ 'good' if c.my_lineup_change > 0 else ('bad' if c.my_lineup_change < 0 else 'muted') }}">
+          {{ c.my_lineup_change | signed }}
+        </span>
+        <span class="muted small">({{ c.my_lineup_old | money }} → {{ c.my_lineup_new | money }})</span>
+      </span>
+      <span class="trade-meta-item">
+        Their lineup:
+        <span class="{{ 'good' if c.their_lineup_change > 0 else ('bad' if c.their_lineup_change < 0 else 'muted') }}">
+          {{ c.their_lineup_change | signed }}
+        </span>
+        <span class="muted small">({{ c.their_lineup_old | money }} → {{ c.their_lineup_new | money }})</span>
+      </span>
+      <span class="trade-meta-item">
+        Your asset value:
+        <span class="{{ 'good' if c.my_asset_change >= 0 else 'bad' }}">{{ c.my_asset_change | signed }}</span>
+      </span>
+    </div>
+  </article>
+  {% endmacro %}
+
+  {% macro tier_section(tier_key, tier_label, tier_desc) %}
+  {% set candidates = report.trades.tiers[tier_key] %}
+  {% if candidates %}
+  <h2>{{ tier_label }} <span class="muted small">({{ candidates | length }})</span></h2>
+  <p class="muted small">{{ tier_desc }}</p>
+  {% for c in candidates %}{{ trade_card(c) }}{% endfor %}
+  {% endif %}
+  {% endmacro %}
+
+  {{ tier_section(
+    'mutual',
+    'Highest Mutual Benefit',
+    'Both teams\' starting lineups strictly improve. The easiest pitches because every manager has a reason to say yes.'
+  ) }}
+
+  {{ tier_section(
+    'buy',
+    'Convert Futures to Win-Now',
+    'You send picks (future value); you receive players who slot into your lineup now. Good if your timeline is now.'
+  ) }}
+
+  {{ tier_section(
+    'sell',
+    'Sell for Picks',
+    'You receive picks; you send players who slot into the partner\'s lineup. Good if you\'re building for the future or shedding aging vets.'
+  ) }}
+
+  {{ tier_section(
+    'package',
+    'Package Deals',
+    'Multi-player trades (2-for-1, 1-for-2, 2-for-2). Useful for consolidating depth or trading down for breadth.'
+  ) }}
+
+  {{ tier_section(
+    'asymmetric',
+    'Other Candidates',
+    'Trades that pass the asset-value-OR-lineup-improvement filter but don\'t fit the cleaner categories.'
+  ) }}
+
+  {% if report.trades.total_candidates == 0 %}
+  <h2>No Trade Ideas Found</h2>
+  <p class="muted">
+    No trades pass the filters (each side must improve on lineup or asset value;
+    FantasyCalc values within 20%). Your roster may already be optimized
+    relative to partners.
+  </p>
+  {% endif %}
+
+  <h2>By Opposing Team</h2>
+  {% for partner in report.trades.by_team %}
+  <details class="team-trades" {% if partner.candidates %}open{% endif %}>
+    <summary>
+      <strong>{{ partner.team.team_name }}</strong>
+      <span class="muted small">{{ partner.team.owner_display_name }}</span>
+      <span class="muted small">
+        &middot; Dynasty #{{ partner.their_rank_dynasty }} &middot; Win-Now #{{ partner.their_rank_winnow }}
+      </span>
+      <span class="muted small">
+        &middot; {{ partner.candidate_count }} candidate{{ '' if partner.candidate_count == 1 else 's' }}
+      </span>
+    </summary>
+    {% if partner.candidates %}
+      {% for c in partner.candidates %}{{ trade_card(c, show_partner=false) }}{% endfor %}
+    {% else %}
+      <p class="muted small">No trades found that pass the filter against this team.</p>
+    {% endif %}
+  </details>
+  {% endfor %}
+
+  <div class="methodology">
+    <h3>Methodology</h3>
+    <p>
+      <strong>What's a "good" trade?</strong> For every candidate (1-for-1, 2-for-1,
+      1-for-2, 2-for-2 — including draft picks), we recompute the optimal
+      best-ball lineup for both teams and compute the change in each team's
+      total dynasty asset value. A candidate is shown when each team improves
+      on at least one of those two dimensions, with FantasyCalc value parity
+      within 20%.
+    </p>
+    <p>
+      This dual-dimension filter is what makes pick-for-player trades work:
+      the team receiving the pick may not improve their starting lineup
+      (picks don't slot), but they gain dynasty asset value. The team
+      receiving the player gains lineup value. Both have reason to say yes.
+    </p>
+    <p>
+      <strong>Pick values</strong> come from FantasyCalc's pick rankings,
+      averaged across slots within each round. Pick ownership comes from
+      Sleeper's <code>traded_picks</code> endpoint applied to the league's
+      default pick allocation. FantasyCalc only tracks the next upcoming
+      draft; future-season picks are discounted at 15% per year.
+    </p>
+    <p>
+      <strong>Current limitations:</strong> Multi-player packages are limited
+      to the top {{ 15 }} most-valuable assets per side for tractability.
+      Excludes taxi-squad and IR players. Uses dynasty values as the
+      trade-market currency; a Win-Now trade mode is on the roadmap.
+    </p>
+  </div>
+
+  <footer class="site">
+    Data: <a href="https://docs.sleeper.com">Sleeper</a> &middot;
+    <a href="https://fantasycalc.com">FantasyCalc</a>.
+  </footer>
+</div>
+</body>
+</html>
