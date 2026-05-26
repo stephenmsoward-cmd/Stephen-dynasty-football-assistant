@@ -163,7 +163,7 @@ Your Sleeper league ID is the long number in the league URL:
 ```bash
 pip install -r pipeline/requirements.txt
 python pipeline/generate.py
-python -m http.server 8765 --directory site
+python -m http.server 8765 --directory docs
 # open http://localhost:8765
 ```
 
@@ -183,9 +183,9 @@ pipeline/         Python — data fetch, lineup math, HTML rendering
   rankings.py       League power rankings (composite of dynasty + win-now + assets)
   compare.py        Side-by-side full roster comparisons
   history.py        Reads dated snapshots → sparkline SVGs
-  generate.py       Entry point: builds site/ and history/
+  generate.py       Entry point: builds docs/ and history/
   templates/        Jinja2 templates + CSS + toggle JS
-site/             Published to GitHub Pages
+docs/             Published to GitHub Pages (main branch /docs)
 history/          Daily JSON snapshots, git-tracked
 leagues.yml       Which leagues to build
 .github/workflows/refresh.yml   Nightly Action
