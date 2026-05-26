@@ -32,7 +32,7 @@ from history import build_team_series, sparkline_svg
 from og import make_og_image
 
 ROOT = Path(__file__).parent.parent
-SITE = ROOT / "site"
+SITE = ROOT / "docs"
 HISTORY = ROOT / "history"
 LEAGUES_CFG = ROOT / "leagues.yml"
 TEMPLATES = Path(__file__).parent / "templates"

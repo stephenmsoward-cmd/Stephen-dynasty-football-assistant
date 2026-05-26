@@ -15,8 +15,6 @@ on:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 concurrency:
   group: refresh
@@ -48,31 +46,19 @@ jobs:
           restore-keys: |
             api-cache-${{ runner.os }}-
 
-      - name: Build site
+      - name: Build docs
         run: python pipeline/generate.py
 
-      - name: Commit history + site updates
+      - name: Commit history + docs updates
+        # Pages is configured to deploy from main branch /docs, so this commit
+        # IS the deploy. No separate upload-artifact / deploy-pages steps needed.
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add site history
+          git add docs history
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
             git commit -m "chore: refresh reports ($(date -u +%Y-%m-%d))"
             git push
           fi
-
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: site
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4

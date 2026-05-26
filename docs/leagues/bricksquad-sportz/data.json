@@ -35,7 +35,7 @@
     "BN",
     "BN"
   ],
-  "generated_at": "2026-05-26T11:25:15+00:00",
+  "generated_at": "2026-05-26T11:39:32+00:00",
   "previous_snapshot_date": "2026-05-26",
   "teams": [
     {
@@ -529,10 +529,10 @@
       },
       "rank_delta": -3,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "dynasty_points": 2,
-        "winnow_points": 2
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
+        "dynasty_points": 1,
+        "winnow_points": 1
       }
     },
     {
@@ -1026,10 +1026,10 @@
       },
       "rank_delta": -1,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "dynasty_points": 2,
-        "winnow_points": 2
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
+        "dynasty_points": 1,
+        "winnow_points": 1
       }
     },
     {
@@ -1491,10 +1491,10 @@
       },
       "rank_delta": 1,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "dynasty_points": 2,
-        "winnow_points": 2
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
+        "dynasty_points": 1,
+        "winnow_points": 1
       }
     },
     {
@@ -1988,10 +1988,10 @@
       },
       "rank_delta": -3,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "dynasty_points": 2,
-        "winnow_points": 2
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
+        "dynasty_points": 1,
+        "winnow_points": 1
       }
     },
     {
@@ -2485,10 +2485,10 @@
       },
       "rank_delta": 4,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "dynasty_points": 2,
-        "winnow_points": 2
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
+        "dynasty_points": 1,
+        "winnow_points": 1
       }
     },
     {
@@ -2982,10 +2982,10 @@
       },
       "rank_delta": -2,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "dynasty_points": 2,
-        "winnow_points": 2
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
+        "dynasty_points": 1,
+        "winnow_points": 1
       }
     },
     {
@@ -3479,10 +3479,10 @@
       },
       "rank_delta": 1,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "dynasty_points": 2,
-        "winnow_points": 2
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
+        "dynasty_points": 1,
+        "winnow_points": 1
       }
     },
     {
@@ -3976,10 +3976,10 @@
       },
       "rank_delta": 3,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "dynasty_points": 2,
-        "winnow_points": 2
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
+        "dynasty_points": 1,
+        "winnow_points": 1
       }
     },
     {
@@ -4473,10 +4473,10 @@
       },
       "rank_delta": 0,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "dynasty_points": 2,
-        "winnow_points": 2
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
+        "dynasty_points": 1,
+        "winnow_points": 1
       }
     },
     {
@@ -4970,10 +4970,10 @@
       },
       "rank_delta": 0,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "dynasty_points": 2,
-        "winnow_points": 2
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
+        "dynasty_points": 1,
+        "winnow_points": 1
       }
     }
   ],
@@ -17093,7 +17093,7 @@
       "description": "With premium defensive options on the board, Tennessee made unanimous decision to get an impact player on offense.",
       "url": "https://www.espn.com/nfl/story/_/id/48826160/tennessee-titans-wr-carnell-tate-perfect-pairing-cam-ward",
       "published": "2026-05-25T10:35:26Z",
-      "age_hours": 24.8,
+      "age_hours": 25.1,
       "players": [
         {
           "sleeper_id": "12522",
@@ -17109,7 +17109,7 @@
       "description": "The New England quarterback is entering a vital second season with his offensive coordinator.",
       "url": "https://www.espn.com/nfl/story/_/id/48845555/new-england-patriots-qb-drake-maye-josh-mcdaniels-system-2026-season",
       "published": "2026-05-24T10:00:05Z",
-      "age_hours": 49.4,
+      "age_hours": 49.7,
       "players": [
         {
           "sleeper_id": "11564",
@@ -17132,7 +17132,7 @@
       "description": "Jordan Love and Ronika Stone have spent a full month with their newborn daughter.",
       "url": "https://www.espn.com/nfl/story/_/id/48855003/green-bay-packers-jordan-love-ronika-stone-baby-announcement-daughter",
       "published": "2026-05-23T22:38:18Z",
-      "age_hours": 60.8,
+      "age_hours": 61.0,
       "players": [
         {
           "sleeper_id": "6804",
@@ -17148,7 +17148,7 @@
       "description": "A reworked deal between the Arizona Cardinals and quarterback Jacoby Brissett is still not close, a source told ESPN on Friday.",
       "url": "https://www.espn.com/nfl/story/_/id/48846780/jacoby-brissett-not-close-reworked-deal-cardinals",
       "published": "2026-05-22T21:42:04Z",
-      "age_hours": 85.7,
+      "age_hours": 86.0,
       "players": [
         {
           "sleeper_id": "3257",
@@ -17164,7 +17164,7 @@
       "description": "Adam Schefter tells Pat McAfee that he doesn't like what he's hearing surrounding Malik Nabers as he works back from a knee injury.",
       "url": "https://www.espn.com/video/clip/_/id/48845314/why-adam-schefter-concerned-malik-nabers-week-1-availability",
       "published": "2026-05-22T17:44:15Z",
-      "age_hours": 89.7,
+      "age_hours": 89.9,
       "players": [
         {
           "sleeper_id": "11632",
@@ -17180,7 +17180,7 @@
       "description": "McDaniel's new offense could mean a big year for Njoku.",
       "url": "https://www.espn.com/nfl/story/_/id/48827621/los-angeles-chargers-te-david-njoku-fit-mike-mcdaniel-offense",
       "published": "2026-05-22T16:38:58Z",
-      "age_hours": 90.8,
+      "age_hours": 91.0,
       "players": [
         {
           "sleeper_id": "4033",
@@ -17196,7 +17196,7 @@
       "description": "Reigning NFL MVP Matthew Stafford and the Rams reached agreement on a one-year, $55 million extension, sources told ESPN's Adam Schefter. The QB is now tied to L.A. through the 2027 season, with $105 million remaining on his deal.",
       "url": "https://www.espn.com/nfl/story/_/id/48839342/sources-matthew-stafford-rams-reach-1-year-55m-extension",
       "published": "2026-05-22T16:23:50Z",
-      "age_hours": 91.0,
+      "age_hours": 91.3,
       "players": [
         {
           "sleeper_id": "421",
@@ -17212,7 +17212,7 @@
       "description": "The Bears, Packers, Lions and Vikings finished with winning records in 2025. Here's how their offseasons have impacted the NFC North.",
       "url": "https://www.espn.com/nfl/story/_/id/48834642/nfl-nfc-lions-packers-bears-vikings-kyler-murray-caleb-williams-jordan-love",
       "published": "2026-05-22T14:54:06Z",
-      "age_hours": 92.5,
+      "age_hours": 92.8,
       "players": [
         {
           "sleeper_id": "11560",
@@ -17256,7 +17256,7 @@
       "description": "Chris Canty believes the Rams gave Matthew Stafford his one-year, $55 million extension to keep him happy after selecting Ty Simpson in the first round.",
       "url": "https://www.espn.com/video/clip/_/id/48843248/rams-wanted-make-sure-stafford-was-happy-simpson-pick",
       "published": "2026-05-22T12:37:38Z",
-      "age_hours": 94.8,
+      "age_hours": 95.0,
       "players": [
         {
           "sleeper_id": "421",
@@ -17272,7 +17272,7 @@
       "description": "Kyle Shanahan wants to use his star RB less, but the options behind him are unproven. Who's likely to step up?",
       "url": "https://www.espn.com/nfl/story/_/id/48829524/san-francisco-2026-nfl-49ers-depth-chart-running-back-christian-mccaffrey-kaelon-black",
       "published": "2026-05-22T10:00:01Z",
-      "age_hours": 97.4,
+      "age_hours": 97.7,
       "players": [
         {
           "sleeper_id": "4034",
