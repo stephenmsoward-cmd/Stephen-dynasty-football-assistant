@@ -4,6 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>{{ report.name }} — Draft Recommendations</title>
+  {% set og_title = 'Draft Recommendations — ' + report.name %}
+  {% set og_description = 'Projected rookie board at your pick slots, with team-need adjustment based on league-wide positional demand.' %}
+  {% set og_path = '/leagues/' + report.slug + '/draft/' %}
+  {% include '_meta.html.j2' %}
   <link rel="stylesheet" href="../../../style.css">
 </head>
 <body class="mode-dynasty">
@@ -172,5 +176,6 @@
     <a href="https://fantasycalc.com">FantasyCalc</a>.
   </footer>
 </div>
+<script src="../../../app.js"></script>
 </body>
 </html>

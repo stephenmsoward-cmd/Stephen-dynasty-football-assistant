@@ -4,6 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>{{ report.name }} — Waiver Wire</title>
+  {% set og_title = 'Waiver Wire — ' + report.trades.my_team.team_name %}
+  {% set og_description = 'Trending veteran adds + best-available + gap-targeted pickups, with suggested drops.' %}
+  {% set og_path = '/leagues/' + report.slug + '/waivers/' %}
+  {% include '_meta.html.j2' %}
   <link rel="stylesheet" href="../../../style.css">
 </head>
 <body class="mode-dynasty">
@@ -139,5 +143,6 @@
     <a href="https://fantasycalc.com">FantasyCalc</a>.
   </footer>
 </div>
+<script src="../../../app.js"></script>
 </body>
 </html>

@@ -863,6 +863,74 @@ body.mode-winnow .dynasty-only { display: none; }
 .sparkline-cell { color: var(--accent); }
 .sparkline { vertical-align: middle; }
 
+/* ---- Floating table of contents ----
+   Pinned to the right viewport edge on screens wide enough that it won't
+   overlap the centered 1100px-max-width container. At ~1500px the math:
+   container right edge ≈ 50% + 570px ≈ 1320; TOC left ≈ vw - 220 ≈ 1280
+   still overlaps. We need ≥ 1560px for a clean 20px gap.
+*/
+.toc {
+  display: none;
+}
+
+@media (min-width: 1560px) {
+  .toc {
+    display: block;
+    position: fixed;
+    top: 90px;
+    right: 20px;
+    width: 200px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.85rem 1rem;
+    font-size: 0.82rem;
+    z-index: 10;
+  }
+}
+
+.toc-heading {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+.toc ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.toc li { margin: 0; }
+
+.toc a {
+  display: block;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 0.25rem 0.55rem;
+  border-left: 2px solid transparent;
+  border-radius: 0 3px 3px 0;
+  margin-left: -0.55rem;
+  line-height: 1.35;
+  transition: color 0.12s, border-color 0.12s, background 0.12s;
+}
+
+.toc a:hover {
+  color: var(--text);
+  background: var(--surface-2);
+}
+
+.toc a.active {
+  color: var(--accent);
+  border-left-color: var(--accent);
+  font-weight: 600;
+}
+
 /* ---- Updated waiver row: compact, drop list inline ---- */
 .waiver-card {
   background: var(--surface);

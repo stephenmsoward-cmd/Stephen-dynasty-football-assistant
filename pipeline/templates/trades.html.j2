@@ -4,6 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>{{ report.name }} — Trade Ideas for {{ report.trades.my_team.team_name }}</title>
+  {% set og_title = 'Trade Ideas — ' + report.trades.my_team.team_name %}
+  {% set og_description = '1-for-1, 2-for-1, 1-for-2, and 2-for-2 trades across all opposing teams. Picks included. Dynasty + Win-Now modes.' %}
+  {% set og_path = '/leagues/' + report.slug + '/trades/' %}
+  {% include '_meta.html.j2' %}
   <link rel="stylesheet" href="../../../style.css">
 </head>
 <body class="mode-dynasty">

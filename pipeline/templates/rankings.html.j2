@@ -4,6 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>{{ report.name }} — League Power Rankings</title>
+  {% set og_title = 'Power Rankings — ' + report.name %}
+  {% set og_description = 'Composite rank combining Dynasty starter value, Win-Now starter value, and total dynasty asset value (players + picks). Trajectory tags per team.' %}
+  {% set og_path = '/leagues/' + report.slug + '/rankings/' %}
+  {% include '_meta.html.j2' %}
   <link rel="stylesheet" href="../../../style.css">
 </head>
 <body class="mode-dynasty">
@@ -111,5 +115,6 @@
     <a href="https://fantasycalc.com">FantasyCalc</a>.
   </footer>
 </div>
+<script src="../../../app.js"></script>
 </body>
 </html>

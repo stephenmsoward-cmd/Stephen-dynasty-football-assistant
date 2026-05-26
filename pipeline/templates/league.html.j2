@@ -4,6 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>{{ report.name }} — Best Ball Projection</title>
+  {% set og_title = report.name + ' — Best-Ball Standings' %}
+  {% set og_description = report.season ~ ' season · ' ~ report.total_rosters ~ ' teams · Dynasty + Win-Now optimal lineups, rank deltas, and trends.' %}
+  {% set og_path = '/leagues/' + report.slug + '/' %}
+  {% include '_meta.html.j2' %}
   <link rel="stylesheet" href="../../style.css">
 </head>
 <body class="mode-dynasty">

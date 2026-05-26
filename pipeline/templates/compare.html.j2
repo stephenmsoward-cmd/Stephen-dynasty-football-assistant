@@ -4,6 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>{{ report.name }} — Team Comparisons</title>
+  {% set og_title = 'Team Comparisons — ' + report.compare.my_team.team_name %}
+  {% set og_description = 'Side-by-side full-roster comparisons against every team in the league, including draft picks. Position-by-position diffs.' %}
+  {% set og_path = '/leagues/' + report.slug + '/compare/' %}
+  {% include '_meta.html.j2' %}
   <link rel="stylesheet" href="../../../style.css">
 </head>
 <body class="mode-dynasty">
@@ -163,5 +167,6 @@
     <a href="https://fantasycalc.com">FantasyCalc</a>.
   </footer>
 </div>
+<script src="../../../app.js"></script>
 </body>
 </html>

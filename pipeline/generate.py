@@ -29,6 +29,7 @@ from news import build_news_feed
 from rankings import build_power_rankings
 from compare import build_compare_report
 from history import build_team_series, sparkline_svg
+from og import make_og_image
 
 ROOT = Path(__file__).parent.parent
 SITE = ROOT / "site"
@@ -44,6 +45,7 @@ TOP_TRADES_PER_TEAM = 5
 TOP_TRADES_PER_TIER = 8
 TRADE_MODE = "dynasty"  # Trade analysis uses dynasty value as canonical currency.
 PICK_SEASONS_AHEAD = 2  # Include picks for the next N upcoming drafts.
+BASE_URL = "https://stephenmsoward-cmd.github.io/Stephen-dynasty-football-assistant"
 
 
 def team_name(user: dict) -> str:
@@ -610,6 +612,7 @@ def render_site(reports: list[dict]) -> None:
     )
     env.filters["money"] = lambda v: f"{v:,}" if v is not None else "—"
     env.filters["signed"] = lambda v: ("+" if v > 0 else "") + f"{v:,}" if v is not None else ""
+    env.globals["base_url"] = BASE_URL
 
     def teams_sorted_by(teams, mode):
         return sorted(teams, key=lambda t: t["modes"][mode]["rank"])
@@ -668,6 +671,9 @@ def render_site(reports: list[dict]) -> None:
     js_src = TEMPLATES / "app.js"
     if js_src.exists():
         (SITE / "app.js").write_text(js_src.read_text())
+
+    # OG card image (shared across all pages; per-page titles in meta tags).
+    make_og_image(SITE / "og.png")
 
 
 def main() -> None:

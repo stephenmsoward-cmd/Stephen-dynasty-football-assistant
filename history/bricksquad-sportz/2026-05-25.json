@@ -35,8 +35,8 @@
     "BN",
     "BN"
   ],
-  "generated_at": "2026-05-26T01:31:57+00:00",
-  "previous_snapshot_date": null,
+  "generated_at": "2026-05-26T01:44:26+00:00",
+  "previous_snapshot_date": "2026-05-26",
   "teams": [
     {
       "roster_id": 4,
@@ -282,7 +282,7 @@
               "pos_rank_in_league": 43
             }
           ],
-          "delta_vs_prev": null,
+          "delta_vs_prev": 67,
           "rank": 1
         },
         "winnow": {
@@ -523,16 +523,16 @@
               "pos_rank_in_league": 44
             }
           ],
-          "delta_vs_prev": null,
+          "delta_vs_prev": 225,
           "rank": 4
         }
       },
       "rank_delta": -3,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
-        "dynasty_points": 1,
-        "winnow_points": 1
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty_points": 2,
+        "winnow_points": 2
       }
     },
     {
@@ -779,7 +779,7 @@
               "pos_rank_in_league": 42
             }
           ],
-          "delta_vs_prev": null,
+          "delta_vs_prev": 0,
           "rank": 2
         },
         "winnow": {
@@ -1020,16 +1020,16 @@
               "pos_rank_in_league": 42
             }
           ],
-          "delta_vs_prev": null,
+          "delta_vs_prev": 160,
           "rank": 3
         }
       },
       "rank_delta": -1,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
-        "dynasty_points": 1,
-        "winnow_points": 1
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty_points": 2,
+        "winnow_points": 2
       }
     },
     {
@@ -1260,7 +1260,7 @@
               "pos_rank_in_league": 33
             }
           ],
-          "delta_vs_prev": null,
+          "delta_vs_prev": -45,
           "rank": 3
         },
         "winnow": {
@@ -1485,16 +1485,16 @@
               "pos_rank_in_league": 31
             }
           ],
-          "delta_vs_prev": null,
+          "delta_vs_prev": 159,
           "rank": 2
         }
       },
       "rank_delta": 1,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
-        "dynasty_points": 1,
-        "winnow_points": 1
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,1.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty_points": 2,
+        "winnow_points": 2
       }
     },
     {
@@ -1741,7 +1741,7 @@
               "pos_rank_in_league": 40
             }
           ],
-          "delta_vs_prev": null,
+          "delta_vs_prev": -55,
           "rank": 4
         },
         "winnow": {
@@ -1982,16 +1982,16 @@
               "pos_rank_in_league": 43
             }
           ],
-          "delta_vs_prev": null,
+          "delta_vs_prev": -12,
           "rank": 7
         }
       },
       "rank_delta": -3,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
-        "dynasty_points": 1,
-        "winnow_points": 1
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,1.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,1.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty_points": 2,
+        "winnow_points": 2
       }
     },
     {
@@ -2238,7 +2238,7 @@
               "pos_rank_in_league": 36
             }
           ],
-          "delta_vs_prev": null,
+          "delta_vs_prev": -61,
           "rank": 5
         },
         "winnow": {
@@ -2479,16 +2479,16 @@
               "pos_rank_in_league": 14
             }
           ],
-          "delta_vs_prev": null,
+          "delta_vs_prev": -46,
           "rank": 1
         }
       },
       "rank_delta": 4,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
-        "dynasty_points": 1,
-        "winnow_points": 1
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,1.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,1.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty_points": 2,
+        "winnow_points": 2
       }
     },
     {
@@ -2735,7 +2735,7 @@
               "pos_rank_in_league": 20
             }
           ],
-          "delta_vs_prev": null,
+          "delta_vs_prev": 78,
           "rank": 6
         },
         "winnow": {
@@ -2976,16 +2976,16 @@
               "pos_rank_in_league": 19
             }
           ],
-          "delta_vs_prev": null,
+          "delta_vs_prev": 175,
           "rank": 8
         }
       },
       "rank_delta": -2,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
-        "dynasty_points": 1,
-        "winnow_points": 1
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty_points": 2,
+        "winnow_points": 2
       }
     },
     {
@@ -3232,7 +3232,7 @@
               "pos_rank_in_league": 37
             }
           ],
-          "delta_vs_prev": null,
+          "delta_vs_prev": -190,
           "rank": 7
         },
         "winnow": {
@@ -3473,16 +3473,16 @@
               "pos_rank_in_league": 44
             }
           ],
-          "delta_vs_prev": null,
+          "delta_vs_prev": -146,
           "rank": 6
         }
       },
       "rank_delta": 1,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
-        "dynasty_points": 1,
-        "winnow_points": 1
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,1.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,1.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty_points": 2,
+        "winnow_points": 2
       }
     },
     {
@@ -3729,7 +3729,7 @@
               "pos_rank_in_league": 38
             }
           ],
-          "delta_vs_prev": null,
+          "delta_vs_prev": 47,
           "rank": 8
         },
         "winnow": {
@@ -3970,16 +3970,16 @@
               "pos_rank_in_league": 21
             }
           ],
-          "delta_vs_prev": null,
+          "delta_vs_prev": 154,
           "rank": 5
         }
       },
       "rank_delta": 3,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
-        "dynasty_points": 1,
-        "winnow_points": 1
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty_points": 2,
+        "winnow_points": 2
       }
     },
     {
@@ -4226,7 +4226,7 @@
               "pos_rank_in_league": 36
             }
           ],
-          "delta_vs_prev": null,
+          "delta_vs_prev": -60,
           "rank": 9
         },
         "winnow": {
@@ -4467,16 +4467,16 @@
               "pos_rank_in_league": 48
             }
           ],
-          "delta_vs_prev": null,
+          "delta_vs_prev": 33,
           "rank": 9
         }
       },
       "rank_delta": 0,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
-        "dynasty_points": 1,
-        "winnow_points": 1
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,1.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty_points": 2,
+        "winnow_points": 2
       }
     },
     {
@@ -4723,7 +4723,7 @@
               "pos_rank_in_league": 43
             }
           ],
-          "delta_vs_prev": null,
+          "delta_vs_prev": -96,
           "rank": 10
         },
         "winnow": {
@@ -4964,16 +4964,16 @@
               "pos_rank_in_league": 41
             }
           ],
-          "delta_vs_prev": null,
+          "delta_vs_prev": -15,
           "rank": 10
         }
       },
       "rank_delta": 0,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
-        "dynasty_points": 1,
-        "winnow_points": 1
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,1.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,1.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty_points": 2,
+        "winnow_points": 2
       }
     }
   ],
@@ -17093,7 +17093,7 @@
       "description": "With premium defensive options on the board, Tennessee made unanimous decision to get an impact player on offense.",
       "url": "https://www.espn.com/nfl/story/_/id/48826160/tennessee-titans-wr-carnell-tate-perfect-pairing-cam-ward",
       "published": "2026-05-25T10:35:26Z",
-      "age_hours": 14.9,
+      "age_hours": 15.2,
       "players": [
         {
           "sleeper_id": "12522",
@@ -17109,7 +17109,7 @@
       "description": "The New England quarterback is entering a vital second season with his offensive coordinator.",
       "url": "https://www.espn.com/nfl/story/_/id/48845555/new-england-patriots-qb-drake-maye-josh-mcdaniels-system-2026-season",
       "published": "2026-05-24T10:00:05Z",
-      "age_hours": 39.5,
+      "age_hours": 39.7,
       "players": [
         {
           "sleeper_id": "11564",
@@ -17132,7 +17132,7 @@
       "description": "Jordan Love and Ronika Stone have spent a full month with their newborn daughter.",
       "url": "https://www.espn.com/nfl/story/_/id/48855003/green-bay-packers-jordan-love-ronika-stone-baby-announcement-daughter",
       "published": "2026-05-23T22:38:18Z",
-      "age_hours": 50.9,
+      "age_hours": 51.1,
       "players": [
         {
           "sleeper_id": "6804",
@@ -17148,7 +17148,7 @@
       "description": "A reworked deal between the Arizona Cardinals and quarterback Jacoby Brissett is still not close, a source told ESPN on Friday.",
       "url": "https://www.espn.com/nfl/story/_/id/48846780/jacoby-brissett-not-close-reworked-deal-cardinals",
       "published": "2026-05-22T21:42:04Z",
-      "age_hours": 75.8,
+      "age_hours": 76.0,
       "players": [
         {
           "sleeper_id": "3257",
@@ -17164,7 +17164,7 @@
       "description": "Adam Schefter tells Pat McAfee that he doesn't like what he's hearing surrounding Malik Nabers as he works back from a knee injury.",
       "url": "https://www.espn.com/video/clip/_/id/48845314/why-adam-schefter-concerned-malik-nabers-week-1-availability",
       "published": "2026-05-22T17:44:15Z",
-      "age_hours": 79.8,
+      "age_hours": 80.0,
       "players": [
         {
           "sleeper_id": "11632",
@@ -17180,7 +17180,7 @@
       "description": "McDaniel's new offense could mean a big year for Njoku.",
       "url": "https://www.espn.com/nfl/story/_/id/48827621/los-angeles-chargers-te-david-njoku-fit-mike-mcdaniel-offense",
       "published": "2026-05-22T16:38:58Z",
-      "age_hours": 80.9,
+      "age_hours": 81.1,
       "players": [
         {
           "sleeper_id": "4033",
@@ -17196,7 +17196,7 @@
       "description": "Reigning NFL MVP Matthew Stafford and the Rams reached agreement on a one-year, $55 million extension, sources told ESPN's Adam Schefter. The QB is now tied to L.A. through the 2027 season, with $105 million remaining on his deal.",
       "url": "https://www.espn.com/nfl/story/_/id/48839342/sources-matthew-stafford-rams-reach-1-year-55m-extension",
       "published": "2026-05-22T16:23:50Z",
-      "age_hours": 81.1,
+      "age_hours": 81.3,
       "players": [
         {
           "sleeper_id": "421",
@@ -17212,7 +17212,7 @@
       "description": "The Bears, Packers, Lions and Vikings finished with winning records in 2025. Here's how their offseasons have impacted the NFC North.",
       "url": "https://www.espn.com/nfl/story/_/id/48834642/nfl-nfc-lions-packers-bears-vikings-kyler-murray-caleb-williams-jordan-love",
       "published": "2026-05-22T14:54:06Z",
-      "age_hours": 82.6,
+      "age_hours": 82.8,
       "players": [
         {
           "sleeper_id": "11560",
@@ -17256,7 +17256,7 @@
       "description": "Chris Canty believes the Rams gave Matthew Stafford his one-year, $55 million extension to keep him happy after selecting Ty Simpson in the first round.",
       "url": "https://www.espn.com/video/clip/_/id/48843248/rams-wanted-make-sure-stafford-was-happy-simpson-pick",
       "published": "2026-05-22T12:37:38Z",
-      "age_hours": 84.9,
+      "age_hours": 85.1,
       "players": [
         {
           "sleeper_id": "421",
@@ -17272,7 +17272,7 @@
       "description": "Kyle Shanahan wants to use his star RB less, but the options behind him are unproven. Who's likely to step up?",
       "url": "https://www.espn.com/nfl/story/_/id/48829524/san-francisco-2026-nfl-49ers-depth-chart-running-back-christian-mccaffrey-kaelon-black",
       "published": "2026-05-22T10:00:01Z",
-      "age_hours": 87.5,
+      "age_hours": 87.7,
       "players": [
         {
           "sleeper_id": "4034",
