@@ -31,7 +31,13 @@ from lineup import optimal_lineup
 ValueFn = Callable[[Player], int]
 
 # Per-side FC value parity tolerance: |send_total - receive_total| / max.
+# Used during candidate generation so we keep the pool reasonable.
 DEFAULT_VALUE_TOLERANCE = 0.20
+
+# Tighter tolerance for the "mutual" tier specifically. If both lineups
+# improve but FantasyCalc values are lopsided, no real manager accepts
+# the trade — those candidates fall through to "asymmetric" instead.
+MUTUAL_VALUE_TOLERANCE = 0.08
 
 # Minimum positive change to count as "improvement" on a dimension.
 LINEUP_MIN_IMPROVEMENT = 50
@@ -108,8 +114,18 @@ def _classify(c: TradeCandidate) -> str:
     my_l_up = c.my_lineup_change >= LINEUP_MIN_IMPROVEMENT
     their_l_up = c.their_lineup_change >= LINEUP_MIN_IMPROVEMENT
 
+    # "Mutual" must satisfy BOTH conditions:
+    # 1. Both lineups improve (algorithmic fit)
+    # 2. FantasyCalc value parity is tight (market plausibility)
+    # Without (2), one side is essentially being asked to take a worse deal
+    # in market terms, even though their lineup math improves.
     if my_l_up and their_l_up:
-        return "mutual"
+        send_total = _asset_total(c.send)
+        receive_total = _asset_total(c.receive)
+        larger = max(send_total, receive_total)
+        if larger > 0 and abs(send_total - receive_total) / larger <= MUTUAL_VALUE_TOLERANCE:
+            return "mutual"
+        # Falls through to other tiers below.
 
     sending_pick = any(_is_pick(p) for p in c.send)
     receiving_pick = any(_is_pick(p) for p in c.receive)

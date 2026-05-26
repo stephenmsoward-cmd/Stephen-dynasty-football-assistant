@@ -863,6 +863,48 @@ body.mode-winnow .dynasty-only { display: none; }
 .sparkline-cell { color: var(--accent); }
 .sparkline { vertical-align: middle; }
 
+/* ---- Reveal-more collapsibles (news, lineups) ---- */
+details.reveal-more {
+  margin: 0.75rem 0 1rem;
+}
+
+details.reveal-more > summary {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.45rem 0.9rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: var(--accent);
+  font-weight: 500;
+  user-select: none;
+  list-style: none;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+details.reveal-more > summary:hover {
+  background: var(--surface-2);
+  border-color: var(--accent);
+}
+
+details.reveal-more > summary::marker { display: none; }
+details.reveal-more > summary::-webkit-details-marker { display: none; }
+
+details.reveal-more > summary::before {
+  content: '▾ ';
+  color: var(--muted);
+  margin-right: 0.25rem;
+}
+
+details.reveal-more[open] > summary::before {
+  content: '▴ ';
+}
+
+details.reveal-more[open] > summary {
+  margin-bottom: 0.75rem;
+}
+
 /* ---- Floating table of contents ----
    Pinned to the right viewport edge on screens wide enough that it won't
    overlap the centered 1100px-max-width container. At ~1500px the math:

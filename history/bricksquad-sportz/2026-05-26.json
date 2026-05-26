@@ -35,7 +35,7 @@
     "BN",
     "BN"
   ],
-  "generated_at": "2026-05-26T11:39:32+00:00",
+  "generated_at": "2026-05-26T11:51:34+00:00",
   "previous_snapshot_date": "2026-05-26",
   "teams": [
     {
@@ -529,10 +529,10 @@
       },
       "rank_delta": -3,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
-        "dynasty_points": 1,
-        "winnow_points": 1
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty_points": 2,
+        "winnow_points": 2
       }
     },
     {
@@ -1026,10 +1026,10 @@
       },
       "rank_delta": -1,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
-        "dynasty_points": 1,
-        "winnow_points": 1
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty_points": 2,
+        "winnow_points": 2
       }
     },
     {
@@ -1491,10 +1491,10 @@
       },
       "rank_delta": 1,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
-        "dynasty_points": 1,
-        "winnow_points": 1
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty_points": 2,
+        "winnow_points": 2
       }
     },
     {
@@ -1988,10 +1988,10 @@
       },
       "rank_delta": -3,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
-        "dynasty_points": 1,
-        "winnow_points": 1
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty_points": 2,
+        "winnow_points": 2
       }
     },
     {
@@ -2485,10 +2485,10 @@
       },
       "rank_delta": 4,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
-        "dynasty_points": 1,
-        "winnow_points": 1
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty_points": 2,
+        "winnow_points": 2
       }
     },
     {
@@ -2982,10 +2982,10 @@
       },
       "rank_delta": -2,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
-        "dynasty_points": 1,
-        "winnow_points": 1
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty_points": 2,
+        "winnow_points": 2
       }
     },
     {
@@ -3479,10 +3479,10 @@
       },
       "rank_delta": 1,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
-        "dynasty_points": 1,
-        "winnow_points": 1
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty_points": 2,
+        "winnow_points": 2
       }
     },
     {
@@ -3976,10 +3976,10 @@
       },
       "rank_delta": 3,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
-        "dynasty_points": 1,
-        "winnow_points": 1
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty_points": 2,
+        "winnow_points": 2
       }
     },
     {
@@ -4473,10 +4473,10 @@
       },
       "rank_delta": 0,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
-        "dynasty_points": 1,
-        "winnow_points": 1
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty_points": 2,
+        "winnow_points": 2
       }
     },
     {
@@ -4970,10 +4970,10 @@
       },
       "rank_delta": 0,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><circle cx=\"30.0\" cy=\"9.0\" r=\"1.5\" fill=\"currentColor\"/></svg>",
-        "dynasty_points": 1,
-        "winnow_points": 1
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty_points": 2,
+        "winnow_points": 2
       }
     }
   ],
@@ -7711,69 +7711,69 @@
               ],
               "receive": [
                 {
-                  "sleeper_id": "12527",
-                  "name": "Ashton Jeanty",
-                  "position": "RB",
-                  "team": "LV",
-                  "age": 22,
-                  "dynasty_value": 7805,
-                  "redraft_value": 8031,
+                  "sleeper_id": "9493",
+                  "name": "Puka Nacua",
+                  "position": "WR",
+                  "team": "LAR",
+                  "age": 24,
+                  "dynasty_value": 8553,
+                  "redraft_value": 8896,
                   "injury_status": null,
                   "pos_rank_in_league": 3,
                   "is_pick": false
                 },
                 {
-                  "sleeper_id": "12506",
-                  "name": "Harold Fannin",
-                  "position": "TE",
-                  "team": "CLE",
-                  "age": 21,
-                  "dynasty_value": 2939,
-                  "redraft_value": 784,
+                  "sleeper_id": "11560",
+                  "name": "Caleb Williams",
+                  "position": "QB",
+                  "team": "CHI",
+                  "age": 24,
+                  "dynasty_value": 3788,
+                  "redraft_value": 2512,
                   "injury_status": null,
-                  "pos_rank_in_league": 6,
+                  "pos_rank_in_league": 3,
                   "is_pick": false
                 }
               ],
               "structure": "2v2",
               "tier": "mutual",
               "pick_flow": "to_them",
-              "my_lineup_change": 58,
-              "their_lineup_change": 688,
-              "my_asset_change": -2173,
-              "their_asset_change": 2173,
-              "my_value_delta": -2173,
+              "my_lineup_change": 120,
+              "their_lineup_change": 724,
+              "my_asset_change": -576,
+              "their_asset_change": 576,
+              "my_value_delta": -576,
               "my_lineup_old": 39037,
-              "my_lineup_new": 39095,
-              "their_lineup_old": 36657,
-              "their_lineup_new": 37345,
-              "score": 2919,
-              "partner_team_name": "Mongo Money Makers",
-              "partner_owner": "dantonio34",
-              "partner_dynasty_rank": 4,
-              "partner_winnow_rank": 7
+              "my_lineup_new": 39157,
+              "their_lineup_old": 35815,
+              "their_lineup_new": 36539,
+              "score": 1420,
+              "partner_team_name": "Saquantum Leap",
+              "partner_owner": "AhjaySidhu",
+              "partner_dynasty_rank": 5,
+              "partner_winnow_rank": 1
             },
             {
               "send": [
                 {
-                  "sleeper_id": "9488",
-                  "name": "Jaxon Smith-Njigba",
+                  "sleeper_id": "5859",
+                  "name": "A.J. Brown",
                   "position": "WR",
-                  "team": "SEA",
-                  "age": 24,
-                  "dynasty_value": 9351,
-                  "redraft_value": 9100,
+                  "team": "PHI",
+                  "age": 28,
+                  "dynasty_value": 3548,
+                  "redraft_value": 4593,
                   "injury_status": null,
-                  "pos_rank_in_league": 2,
+                  "pos_rank_in_league": 18,
                   "is_pick": false
                 },
                 {
-                  "sleeper_id": "PICK_2026_R1_O3",
-                  "name": "2026 R1 (Comedy of Errors)",
+                  "sleeper_id": "PICK_2027_R1_O3",
+                  "name": "2027 R1 (Comedy of Errors)",
                   "position": "PICK",
                   "team": null,
                   "age": null,
-                  "dynasty_value": 3566,
+                  "dynasty_value": 3031,
                   "redraft_value": 0,
                   "injury_status": null,
                   "pos_rank_in_league": null,
@@ -7782,177 +7782,47 @@
               ],
               "receive": [
                 {
-                  "sleeper_id": "12527",
-                  "name": "Ashton Jeanty",
-                  "position": "RB",
-                  "team": "LV",
-                  "age": 22,
-                  "dynasty_value": 7805,
-                  "redraft_value": 8031,
+                  "sleeper_id": "11560",
+                  "name": "Caleb Williams",
+                  "position": "QB",
+                  "team": "CHI",
+                  "age": 24,
+                  "dynasty_value": 3788,
+                  "redraft_value": 2512,
                   "injury_status": null,
                   "pos_rank_in_league": 3,
                   "is_pick": false
                 },
                 {
-                  "sleeper_id": "9484",
-                  "name": "Tucker Kraft",
-                  "position": "TE",
-                  "team": "GB",
-                  "age": 25,
-                  "dynasty_value": 3099,
-                  "redraft_value": 2124,
+                  "sleeper_id": "10229",
+                  "name": "Rashee Rice",
+                  "position": "WR",
+                  "team": "KC",
+                  "age": 26,
+                  "dynasty_value": 3341,
+                  "redraft_value": 3111,
                   "injury_status": "Questionable",
-                  "pos_rank_in_league": 5,
+                  "pos_rank_in_league": 21,
                   "is_pick": false
                 }
               ],
               "structure": "2v2",
               "tier": "mutual",
               "pick_flow": "to_them",
-              "my_lineup_change": 218,
-              "their_lineup_change": 528,
-              "my_asset_change": -2013,
-              "their_asset_change": 2013,
-              "my_value_delta": -2013,
+              "my_lineup_change": 711,
+              "their_lineup_change": 133,
+              "my_asset_change": 550,
+              "their_asset_change": -550,
+              "my_value_delta": 550,
               "my_lineup_old": 39037,
-              "my_lineup_new": 39255,
-              "their_lineup_old": 36657,
-              "their_lineup_new": 37185,
-              "score": 2759,
-              "partner_team_name": "Mongo Money Makers",
-              "partner_owner": "dantonio34",
-              "partner_dynasty_rank": 4,
-              "partner_winnow_rank": 7
-            },
-            {
-              "send": [
-                {
-                  "sleeper_id": "7564",
-                  "name": "Ja'Marr Chase",
-                  "position": "WR",
-                  "team": "CIN",
-                  "age": 26,
-                  "dynasty_value": 9677,
-                  "redraft_value": 9941,
-                  "injury_status": null,
-                  "pos_rank_in_league": 1,
-                  "is_pick": false
-                },
-                {
-                  "sleeper_id": "PICK_2026_R1_O3",
-                  "name": "2026 R1 (Comedy of Errors)",
-                  "position": "PICK",
-                  "team": null,
-                  "age": null,
-                  "dynasty_value": 3566,
-                  "redraft_value": 0,
-                  "injury_status": null,
-                  "pos_rank_in_league": null,
-                  "is_pick": true
-                }
-              ],
-              "receive": [
-                {
-                  "sleeper_id": "9226",
-                  "name": "De'Von Achane",
-                  "position": "RB",
-                  "team": "MIA",
-                  "age": 24,
-                  "dynasty_value": 6654,
-                  "redraft_value": 8159,
-                  "injury_status": null,
-                  "pos_rank_in_league": 4,
-                  "is_pick": false
-                },
-                {
-                  "sleeper_id": "12517",
-                  "name": "Colston Loveland",
-                  "position": "TE",
-                  "team": "CHI",
-                  "age": 22,
-                  "dynasty_value": 4726,
-                  "redraft_value": 2985,
-                  "injury_status": null,
-                  "pos_rank_in_league": 3,
-                  "is_pick": false
-                }
-              ],
-              "structure": "2v2",
-              "tier": "mutual",
-              "pick_flow": "to_them",
-              "my_lineup_change": 368,
-              "their_lineup_change": 366,
-              "my_asset_change": -1863,
-              "their_asset_change": 1863,
-              "my_value_delta": -1863,
-              "my_lineup_old": 39037,
-              "my_lineup_new": 39405,
-              "their_lineup_old": 40556,
-              "their_lineup_new": 40922,
-              "score": 2597,
-              "partner_team_name": "Ligma",
-              "partner_owner": "nfaber",
-              "partner_dynasty_rank": 2,
-              "partner_winnow_rank": 3
-            },
-            {
-              "send": [
-                {
-                  "sleeper_id": "7564",
-                  "name": "Ja'Marr Chase",
-                  "position": "WR",
-                  "team": "CIN",
-                  "age": 26,
-                  "dynasty_value": 9677,
-                  "redraft_value": 9941,
-                  "injury_status": null,
-                  "pos_rank_in_league": 1,
-                  "is_pick": false
-                }
-              ],
-              "receive": [
-                {
-                  "sleeper_id": "9226",
-                  "name": "De'Von Achane",
-                  "position": "RB",
-                  "team": "MIA",
-                  "age": 24,
-                  "dynasty_value": 6654,
-                  "redraft_value": 8159,
-                  "injury_status": null,
-                  "pos_rank_in_league": 4,
-                  "is_pick": false
-                },
-                {
-                  "sleeper_id": "12517",
-                  "name": "Colston Loveland",
-                  "position": "TE",
-                  "team": "CHI",
-                  "age": 22,
-                  "dynasty_value": 4726,
-                  "redraft_value": 2985,
-                  "injury_status": null,
-                  "pos_rank_in_league": 3,
-                  "is_pick": false
-                }
-              ],
-              "structure": "1v2",
-              "tier": "mutual",
-              "pick_flow": "none",
-              "my_lineup_change": 368,
-              "their_lineup_change": 366,
-              "my_asset_change": 1703,
-              "their_asset_change": -1703,
-              "my_value_delta": 1703,
-              "my_lineup_old": 39037,
-              "my_lineup_new": 39405,
-              "their_lineup_old": 40556,
-              "their_lineup_new": 40922,
-              "score": 2437,
-              "partner_team_name": "Ligma",
-              "partner_owner": "nfaber",
-              "partner_dynasty_rank": 2,
-              "partner_winnow_rank": 3
+              "my_lineup_new": 39748,
+              "their_lineup_old": 35815,
+              "their_lineup_new": 35948,
+              "score": 1394,
+              "partner_team_name": "Saquantum Leap",
+              "partner_owner": "AhjaySidhu",
+              "partner_dynasty_rank": 5,
+              "partner_winnow_rank": 1
             },
             {
               "send": [
@@ -7969,15 +7839,15 @@
                   "is_pick": false
                 },
                 {
-                  "sleeper_id": "5967",
-                  "name": "Tony Pollard",
-                  "position": "RB",
-                  "team": "TEN",
-                  "age": 29,
-                  "dynasty_value": 1793,
-                  "redraft_value": 1764,
+                  "sleeper_id": "6904",
+                  "name": "Jalen Hurts",
+                  "position": "QB",
+                  "team": "PHI",
+                  "age": 27,
+                  "dynasty_value": 2870,
+                  "redraft_value": 1835,
                   "injury_status": null,
-                  "pos_rank_in_league": 31,
+                  "pos_rank_in_league": 9,
                   "is_pick": false
                 }
               ],
@@ -8012,14 +7882,14 @@
               "pick_flow": "none",
               "my_lineup_change": 513,
               "their_lineup_change": 331,
-              "my_asset_change": 1590,
-              "their_asset_change": -1590,
-              "my_value_delta": 1590,
+              "my_asset_change": 513,
+              "their_asset_change": -513,
+              "my_value_delta": 513,
               "my_lineup_old": 39037,
               "my_lineup_new": 39550,
               "their_lineup_old": 35815,
               "their_lineup_new": 36146,
-              "score": 2434,
+              "score": 1357,
               "partner_team_name": "Saquantum Leap",
               "partner_owner": "AhjaySidhu",
               "partner_dynasty_rank": 5,
@@ -8040,12 +7910,12 @@
                   "is_pick": false
                 },
                 {
-                  "sleeper_id": "PICK_2026_R2_O3",
-                  "name": "2026 R2 (Comedy of Errors)",
+                  "sleeper_id": "PICK_2026_R1_O3",
+                  "name": "2026 R1 (Comedy of Errors)",
                   "position": "PICK",
                   "team": null,
                   "age": null,
-                  "dynasty_value": 1765,
+                  "dynasty_value": 3566,
                   "redraft_value": 0,
                   "injury_status": null,
                   "pos_rank_in_league": null,
@@ -8054,15 +7924,15 @@
               ],
               "receive": [
                 {
-                  "sleeper_id": "12512",
-                  "name": "Quinshon Judkins",
+                  "sleeper_id": "4866",
+                  "name": "Saquon Barkley",
                   "position": "RB",
-                  "team": "CLE",
-                  "age": 22,
-                  "dynasty_value": 4233,
-                  "redraft_value": 3952,
-                  "injury_status": "Questionable",
-                  "pos_rank_in_league": 11,
+                  "team": "PHI",
+                  "age": 29,
+                  "dynasty_value": 3982,
+                  "redraft_value": 6829,
+                  "injury_status": null,
+                  "pos_rank_in_league": 14,
                   "is_pick": false
                 },
                 {
@@ -8081,16 +7951,16 @@
               "structure": "2v2",
               "tier": "mutual",
               "pick_flow": "to_them",
-              "my_lineup_change": 439,
-              "their_lineup_change": 405,
-              "my_asset_change": 1544,
-              "their_asset_change": -1544,
-              "my_value_delta": 1544,
+              "my_lineup_change": 188,
+              "their_lineup_change": 656,
+              "my_asset_change": -508,
+              "their_asset_change": 508,
+              "my_value_delta": -508,
               "my_lineup_old": 39037,
-              "my_lineup_new": 39476,
+              "my_lineup_new": 39225,
               "their_lineup_old": 35815,
-              "their_lineup_new": 36220,
-              "score": 2388,
+              "their_lineup_new": 36471,
+              "score": 1352,
               "partner_team_name": "Saquantum Leap",
               "partner_owner": "AhjaySidhu",
               "partner_dynasty_rank": 5,
@@ -8111,16 +7981,16 @@
                   "is_pick": false
                 },
                 {
-                  "sleeper_id": "PICK_2027_R1_O3",
-                  "name": "2027 R1 (Comedy of Errors)",
-                  "position": "PICK",
-                  "team": null,
-                  "age": null,
-                  "dynasty_value": 3031,
-                  "redraft_value": 0,
+                  "sleeper_id": "12522",
+                  "name": "Cam Ward",
+                  "position": "QB",
+                  "team": "TEN",
+                  "age": 24,
+                  "dynasty_value": 1983,
+                  "redraft_value": 282,
                   "injury_status": null,
-                  "pos_rank_in_league": null,
-                  "is_pick": true
+                  "pos_rank_in_league": 15,
+                  "is_pick": false
                 }
               ],
               "receive": [
@@ -8151,21 +8021,92 @@
               ],
               "structure": "2v2",
               "tier": "mutual",
-              "pick_flow": "to_them",
+              "pick_flow": "none",
               "my_lineup_change": 58,
               "their_lineup_change": 688,
-              "my_asset_change": -1638,
-              "their_asset_change": 1638,
-              "my_value_delta": -1638,
+              "my_asset_change": -590,
+              "their_asset_change": 590,
+              "my_value_delta": -590,
               "my_lineup_old": 39037,
               "my_lineup_new": 39095,
               "their_lineup_old": 36657,
               "their_lineup_new": 37345,
-              "score": 2384,
+              "score": 1336,
               "partner_team_name": "Mongo Money Makers",
               "partner_owner": "dantonio34",
               "partner_dynasty_rank": 4,
               "partner_winnow_rank": 7
+            },
+            {
+              "send": [
+                {
+                  "sleeper_id": "5859",
+                  "name": "A.J. Brown",
+                  "position": "WR",
+                  "team": "PHI",
+                  "age": 28,
+                  "dynasty_value": 3548,
+                  "redraft_value": 4593,
+                  "injury_status": null,
+                  "pos_rank_in_league": 18,
+                  "is_pick": false
+                },
+                {
+                  "sleeper_id": "PICK_2027_R1_O3",
+                  "name": "2027 R1 (Comedy of Errors)",
+                  "position": "PICK",
+                  "team": null,
+                  "age": null,
+                  "dynasty_value": 3031,
+                  "redraft_value": 0,
+                  "injury_status": null,
+                  "pos_rank_in_league": null,
+                  "is_pick": true
+                }
+              ],
+              "receive": [
+                {
+                  "sleeper_id": "4881",
+                  "name": "Lamar Jackson",
+                  "position": "QB",
+                  "team": "BAL",
+                  "age": 29,
+                  "dynasty_value": 3714,
+                  "redraft_value": 3543,
+                  "injury_status": null,
+                  "pos_rank_in_league": 5,
+                  "is_pick": false
+                },
+                {
+                  "sleeper_id": "10229",
+                  "name": "Rashee Rice",
+                  "position": "WR",
+                  "team": "KC",
+                  "age": 26,
+                  "dynasty_value": 3341,
+                  "redraft_value": 3111,
+                  "injury_status": "Questionable",
+                  "pos_rank_in_league": 21,
+                  "is_pick": false
+                }
+              ],
+              "structure": "2v2",
+              "tier": "mutual",
+              "pick_flow": "to_them",
+              "my_lineup_change": 637,
+              "their_lineup_change": 207,
+              "my_asset_change": 476,
+              "their_asset_change": -476,
+              "my_value_delta": 476,
+              "my_lineup_old": 39037,
+              "my_lineup_new": 39674,
+              "their_lineup_old": 35815,
+              "their_lineup_new": 36022,
+              "score": 1320,
+              "partner_team_name": "Saquantum Leap",
+              "partner_owner": "AhjaySidhu",
+              "partner_dynasty_rank": 5,
+              "partner_winnow_rank": 1
             },
             {
               "send": [
@@ -8182,15 +8123,15 @@
                   "is_pick": false
                 },
                 {
-                  "sleeper_id": "5967",
-                  "name": "Tony Pollard",
-                  "position": "RB",
-                  "team": "TEN",
-                  "age": 29,
-                  "dynasty_value": 1793,
-                  "redraft_value": 1764,
+                  "sleeper_id": "6904",
+                  "name": "Jalen Hurts",
+                  "position": "QB",
+                  "team": "PHI",
+                  "age": 27,
+                  "dynasty_value": 2870,
+                  "redraft_value": 1835,
                   "injury_status": null,
-                  "pos_rank_in_league": 31,
+                  "pos_rank_in_league": 9,
                   "is_pick": false
                 }
               ],
@@ -8225,14 +8166,85 @@
               "pick_flow": "none",
               "my_lineup_change": 439,
               "their_lineup_change": 405,
-              "my_asset_change": 1516,
-              "their_asset_change": -1516,
-              "my_value_delta": 1516,
+              "my_asset_change": 439,
+              "their_asset_change": -439,
+              "my_value_delta": 439,
               "my_lineup_old": 39037,
               "my_lineup_new": 39476,
               "their_lineup_old": 35815,
               "their_lineup_new": 36220,
-              "score": 2360,
+              "score": 1283,
+              "partner_team_name": "Saquantum Leap",
+              "partner_owner": "AhjaySidhu",
+              "partner_dynasty_rank": 5,
+              "partner_winnow_rank": 1
+            },
+            {
+              "send": [
+                {
+                  "sleeper_id": "4034",
+                  "name": "Christian McCaffrey",
+                  "position": "RB",
+                  "team": "SF",
+                  "age": 29,
+                  "dynasty_value": 4638,
+                  "redraft_value": 8023,
+                  "injury_status": null,
+                  "pos_rank_in_league": 9,
+                  "is_pick": false
+                },
+                {
+                  "sleeper_id": "PICK_2026_R1_O3",
+                  "name": "2026 R1 (Comedy of Errors)",
+                  "position": "PICK",
+                  "team": null,
+                  "age": null,
+                  "dynasty_value": 3566,
+                  "redraft_value": 0,
+                  "injury_status": null,
+                  "pos_rank_in_league": null,
+                  "is_pick": true
+                }
+              ],
+              "receive": [
+                {
+                  "sleeper_id": "4866",
+                  "name": "Saquon Barkley",
+                  "position": "RB",
+                  "team": "PHI",
+                  "age": 29,
+                  "dynasty_value": 3982,
+                  "redraft_value": 6829,
+                  "injury_status": null,
+                  "pos_rank_in_league": 14,
+                  "is_pick": false
+                },
+                {
+                  "sleeper_id": "11560",
+                  "name": "Caleb Williams",
+                  "position": "QB",
+                  "team": "CHI",
+                  "age": 24,
+                  "dynasty_value": 3788,
+                  "redraft_value": 2512,
+                  "injury_status": null,
+                  "pos_rank_in_league": 3,
+                  "is_pick": false
+                }
+              ],
+              "structure": "2v2",
+              "tier": "mutual",
+              "pick_flow": "to_them",
+              "my_lineup_change": 262,
+              "their_lineup_change": 582,
+              "my_asset_change": -434,
+              "their_asset_change": 434,
+              "my_value_delta": -434,
+              "my_lineup_old": 39037,
+              "my_lineup_new": 39299,
+              "their_lineup_old": 35815,
+              "their_lineup_new": 36397,
+              "score": 1278,
               "partner_team_name": "Saquantum Leap",
               "partner_owner": "AhjaySidhu",
               "partner_dynasty_rank": 5,
@@ -9866,6 +9878,53 @@
             {
               "send": [
                 {
+                  "sleeper_id": "12519",
+                  "name": "Luther Burden",
+                  "position": "WR",
+                  "team": "CHI",
+                  "age": 22,
+                  "dynasty_value": 3404,
+                  "redraft_value": 1723,
+                  "injury_status": null,
+                  "pos_rank_in_league": 19,
+                  "is_pick": false
+                }
+              ],
+              "receive": [
+                {
+                  "sleeper_id": "9484",
+                  "name": "Tucker Kraft",
+                  "position": "TE",
+                  "team": "GB",
+                  "age": 25,
+                  "dynasty_value": 3099,
+                  "redraft_value": 2124,
+                  "injury_status": "Questionable",
+                  "pos_rank_in_league": 5,
+                  "is_pick": false
+                }
+              ],
+              "structure": "1v1",
+              "tier": "asymmetric",
+              "pick_flow": "none",
+              "my_lineup_change": 153,
+              "their_lineup_change": 305,
+              "my_asset_change": -305,
+              "their_asset_change": 305,
+              "my_value_delta": -305,
+              "my_lineup_old": 39037,
+              "my_lineup_new": 39190,
+              "their_lineup_old": 36657,
+              "their_lineup_new": 36962,
+              "score": 763,
+              "partner_team_name": "Mongo Money Makers",
+              "partner_owner": "dantonio34",
+              "partner_dynasty_rank": 4,
+              "partner_winnow_rank": 7
+            },
+            {
+              "send": [
+                {
                   "sleeper_id": "12489",
                   "name": "RJ Harvey",
                   "position": "RB",
@@ -10050,53 +10109,6 @@
               "partner_owner": "dantonio34",
               "partner_dynasty_rank": 4,
               "partner_winnow_rank": 7
-            },
-            {
-              "send": [
-                {
-                  "sleeper_id": "6904",
-                  "name": "Jalen Hurts",
-                  "position": "QB",
-                  "team": "PHI",
-                  "age": 27,
-                  "dynasty_value": 2870,
-                  "redraft_value": 1835,
-                  "injury_status": null,
-                  "pos_rank_in_league": 9,
-                  "is_pick": false
-                }
-              ],
-              "receive": [
-                {
-                  "sleeper_id": "7553",
-                  "name": "Kyle Pitts",
-                  "position": "TE",
-                  "team": "ATL",
-                  "age": 25,
-                  "dynasty_value": 2611,
-                  "redraft_value": 1427,
-                  "injury_status": null,
-                  "pos_rank_in_league": 8,
-                  "is_pick": false
-                }
-              ],
-              "structure": "1v1",
-              "tier": "asymmetric",
-              "pick_flow": "none",
-              "my_lineup_change": 389,
-              "their_lineup_change": -2611,
-              "my_asset_change": -259,
-              "their_asset_change": 259,
-              "my_value_delta": -259,
-              "my_lineup_old": 39037,
-              "my_lineup_new": 39426,
-              "their_lineup_old": 35223,
-              "their_lineup_new": 32612,
-              "score": 648,
-              "partner_team_name": "Obijan Kenobi",
-              "partner_owner": "GregariousG",
-              "partner_dynasty_rank": 6,
-              "partner_winnow_rank": 8
             }
           ]
         },
@@ -12783,219 +12795,6 @@
               ],
               "receive": [
                 {
-                  "sleeper_id": "9226",
-                  "name": "De'Von Achane",
-                  "position": "RB",
-                  "team": "MIA",
-                  "age": 24,
-                  "dynasty_value": 6654,
-                  "redraft_value": 8159,
-                  "injury_status": null,
-                  "pos_rank_in_league": 4,
-                  "is_pick": false
-                },
-                {
-                  "sleeper_id": "10859",
-                  "name": "Sam LaPorta",
-                  "position": "TE",
-                  "team": "DET",
-                  "age": 25,
-                  "dynasty_value": 2697,
-                  "redraft_value": 1481,
-                  "injury_status": "Questionable",
-                  "pos_rank_in_league": 7,
-                  "is_pick": false
-                }
-              ],
-              "structure": "2v2",
-              "tier": "mutual",
-              "pick_flow": "none",
-              "my_lineup_change": 118,
-              "their_lineup_change": 941,
-              "my_asset_change": -2191,
-              "their_asset_change": 2191,
-              "my_value_delta": -2191,
-              "my_lineup_old": 39827,
-              "my_lineup_new": 39945,
-              "their_lineup_old": 39503,
-              "their_lineup_new": 40444,
-              "score": 3250,
-              "partner_team_name": "Ligma",
-              "partner_owner": "nfaber",
-              "partner_dynasty_rank": 2,
-              "partner_winnow_rank": 3
-            },
-            {
-              "send": [
-                {
-                  "sleeper_id": "7564",
-                  "name": "Ja'Marr Chase",
-                  "position": "WR",
-                  "team": "CIN",
-                  "age": 26,
-                  "dynasty_value": 9677,
-                  "redraft_value": 9941,
-                  "injury_status": null,
-                  "pos_rank_in_league": 1,
-                  "is_pick": false
-                },
-                {
-                  "sleeper_id": "12519",
-                  "name": "Luther Burden",
-                  "position": "WR",
-                  "team": "CHI",
-                  "age": 22,
-                  "dynasty_value": 3404,
-                  "redraft_value": 1723,
-                  "injury_status": null,
-                  "pos_rank_in_league": 30,
-                  "is_pick": false
-                }
-              ],
-              "receive": [
-                {
-                  "sleeper_id": "11604",
-                  "name": "Brock Bowers",
-                  "position": "TE",
-                  "team": "LV",
-                  "age": 23,
-                  "dynasty_value": 6885,
-                  "redraft_value": 6153,
-                  "injury_status": "Questionable",
-                  "pos_rank_in_league": 2,
-                  "is_pick": false
-                },
-                {
-                  "sleeper_id": "8150",
-                  "name": "Kyren Williams",
-                  "position": "RB",
-                  "team": "LAR",
-                  "age": 25,
-                  "dynasty_value": 3679,
-                  "redraft_value": 4660,
-                  "injury_status": null,
-                  "pos_rank_in_league": 16,
-                  "is_pick": false
-                }
-              ],
-              "structure": "2v2",
-              "tier": "mutual",
-              "pick_flow": "none",
-              "my_lineup_change": 305,
-              "their_lineup_change": 284,
-              "my_asset_change": -2517,
-              "their_asset_change": 2517,
-              "my_value_delta": -2517,
-              "my_lineup_old": 39827,
-              "my_lineup_new": 40132,
-              "their_lineup_old": 22233,
-              "their_lineup_new": 22517,
-              "score": 3106,
-              "partner_team_name": "cropcreamer",
-              "partner_owner": "cropcreamer",
-              "partner_dynasty_rank": 10,
-              "partner_winnow_rank": 10
-            },
-            {
-              "send": [
-                {
-                  "sleeper_id": "9488",
-                  "name": "Jaxon Smith-Njigba",
-                  "position": "WR",
-                  "team": "SEA",
-                  "age": 24,
-                  "dynasty_value": 9351,
-                  "redraft_value": 9100,
-                  "injury_status": null,
-                  "pos_rank_in_league": 2,
-                  "is_pick": false
-                },
-                {
-                  "sleeper_id": "12522",
-                  "name": "Cam Ward",
-                  "position": "QB",
-                  "team": "TEN",
-                  "age": 24,
-                  "dynasty_value": 1983,
-                  "redraft_value": 282,
-                  "injury_status": null,
-                  "pos_rank_in_league": 18,
-                  "is_pick": false
-                }
-              ],
-              "receive": [
-                {
-                  "sleeper_id": "9226",
-                  "name": "De'Von Achane",
-                  "position": "RB",
-                  "team": "MIA",
-                  "age": 24,
-                  "dynasty_value": 6654,
-                  "redraft_value": 8159,
-                  "injury_status": null,
-                  "pos_rank_in_league": 4,
-                  "is_pick": false
-                },
-                {
-                  "sleeper_id": "10859",
-                  "name": "Sam LaPorta",
-                  "position": "TE",
-                  "team": "DET",
-                  "age": 25,
-                  "dynasty_value": 2697,
-                  "redraft_value": 1481,
-                  "injury_status": "Questionable",
-                  "pos_rank_in_league": 7,
-                  "is_pick": false
-                }
-              ],
-              "structure": "2v2",
-              "tier": "mutual",
-              "pick_flow": "none",
-              "my_lineup_change": 118,
-              "their_lineup_change": 941,
-              "my_asset_change": -1983,
-              "their_asset_change": 1983,
-              "my_value_delta": -1983,
-              "my_lineup_old": 39827,
-              "my_lineup_new": 39945,
-              "their_lineup_old": 39503,
-              "their_lineup_new": 40444,
-              "score": 3042,
-              "partner_team_name": "Ligma",
-              "partner_owner": "nfaber",
-              "partner_dynasty_rank": 2,
-              "partner_winnow_rank": 3
-            },
-            {
-              "send": [
-                {
-                  "sleeper_id": "9488",
-                  "name": "Jaxon Smith-Njigba",
-                  "position": "WR",
-                  "team": "SEA",
-                  "age": 24,
-                  "dynasty_value": 9351,
-                  "redraft_value": 9100,
-                  "injury_status": null,
-                  "pos_rank_in_league": 2,
-                  "is_pick": false
-                },
-                {
-                  "sleeper_id": "12519",
-                  "name": "Luther Burden",
-                  "position": "WR",
-                  "team": "CHI",
-                  "age": 22,
-                  "dynasty_value": 3404,
-                  "redraft_value": 1723,
-                  "injury_status": null,
-                  "pos_rank_in_league": 30,
-                  "is_pick": false
-                }
-              ],
-              "receive": [
-                {
                   "sleeper_id": "12527",
                   "name": "Ashton Jeanty",
                   "position": "RB",
@@ -13023,16 +12822,371 @@
               "structure": "2v2",
               "tier": "mutual",
               "pick_flow": "none",
-              "my_lineup_change": 488,
-              "their_lineup_change": 668,
-              "my_asset_change": -1851,
-              "their_asset_change": 1851,
-              "my_value_delta": -1851,
+              "my_lineup_change": 633,
+              "their_lineup_change": 523,
+              "my_asset_change": -638,
+              "their_asset_change": 638,
+              "my_value_delta": -638,
               "my_lineup_old": 39827,
-              "my_lineup_new": 40315,
+              "my_lineup_new": 40460,
               "their_lineup_old": 34349,
-              "their_lineup_new": 35017,
-              "score": 3007,
+              "their_lineup_new": 34872,
+              "score": 1794,
+              "partner_team_name": "Mongo Money Makers",
+              "partner_owner": "dantonio34",
+              "partner_dynasty_rank": 4,
+              "partner_winnow_rank": 7
+            },
+            {
+              "send": [
+                {
+                  "sleeper_id": "9488",
+                  "name": "Jaxon Smith-Njigba",
+                  "position": "WR",
+                  "team": "SEA",
+                  "age": 24,
+                  "dynasty_value": 9351,
+                  "redraft_value": 9100,
+                  "injury_status": null,
+                  "pos_rank_in_league": 2,
+                  "is_pick": false
+                },
+                {
+                  "sleeper_id": "5967",
+                  "name": "Tony Pollard",
+                  "position": "RB",
+                  "team": "TEN",
+                  "age": 29,
+                  "dynasty_value": 1793,
+                  "redraft_value": 1764,
+                  "injury_status": null,
+                  "pos_rank_in_league": 26,
+                  "is_pick": false
+                }
+              ],
+              "receive": [
+                {
+                  "sleeper_id": "12507",
+                  "name": "Omarion Hampton",
+                  "position": "RB",
+                  "team": "LAC",
+                  "age": 23,
+                  "dynasty_value": 6328,
+                  "redraft_value": 7095,
+                  "injury_status": null,
+                  "pos_rank_in_league": 8,
+                  "is_pick": false
+                },
+                {
+                  "sleeper_id": "12518",
+                  "name": "Tyler Warren",
+                  "position": "TE",
+                  "team": "IND",
+                  "age": 24,
+                  "dynasty_value": 4066,
+                  "redraft_value": 3015,
+                  "injury_status": null,
+                  "pos_rank_in_league": 3,
+                  "is_pick": false
+                }
+              ],
+              "structure": "2v2",
+              "tier": "mutual",
+              "pick_flow": "none",
+              "my_lineup_change": 402,
+              "their_lineup_change": 600,
+              "my_asset_change": -750,
+              "their_asset_change": 750,
+              "my_value_delta": -750,
+              "my_lineup_old": 39827,
+              "my_lineup_new": 40229,
+              "their_lineup_old": 39161,
+              "their_lineup_new": 39761,
+              "score": 1752,
+              "partner_team_name": "Da Bell of Da Ball",
+              "partner_owner": "jmirandette",
+              "partner_dynasty_rank": 1,
+              "partner_winnow_rank": 4
+            },
+            {
+              "send": [
+                {
+                  "sleeper_id": "PICK_2026_R1_O3",
+                  "name": "2026 R1 (Comedy of Errors)",
+                  "position": "PICK",
+                  "team": null,
+                  "age": null,
+                  "dynasty_value": 3566,
+                  "redraft_value": 0,
+                  "injury_status": null,
+                  "pos_rank_in_league": null,
+                  "is_pick": true
+                },
+                {
+                  "sleeper_id": "12519",
+                  "name": "Luther Burden",
+                  "position": "WR",
+                  "team": "CHI",
+                  "age": 22,
+                  "dynasty_value": 3404,
+                  "redraft_value": 1723,
+                  "injury_status": null,
+                  "pos_rank_in_league": 30,
+                  "is_pick": false
+                }
+              ],
+              "receive": [
+                {
+                  "sleeper_id": "PICK_2026_R1_O6",
+                  "name": "2026 R1 (Mongo Money Makers)",
+                  "position": "PICK",
+                  "team": null,
+                  "age": null,
+                  "dynasty_value": 3566,
+                  "redraft_value": 0,
+                  "injury_status": null,
+                  "pos_rank_in_league": null,
+                  "is_pick": true
+                },
+                {
+                  "sleeper_id": "12506",
+                  "name": "Harold Fannin",
+                  "position": "TE",
+                  "team": "CLE",
+                  "age": 21,
+                  "dynasty_value": 2939,
+                  "redraft_value": 784,
+                  "injury_status": null,
+                  "pos_rank_in_league": 10,
+                  "is_pick": false
+                }
+              ],
+              "structure": "2v2",
+              "tier": "mutual",
+              "pick_flow": "both",
+              "my_lineup_change": 217,
+              "their_lineup_change": 939,
+              "my_asset_change": -465,
+              "their_asset_change": 465,
+              "my_value_delta": -465,
+              "my_lineup_old": 39827,
+              "my_lineup_new": 40044,
+              "their_lineup_old": 34349,
+              "their_lineup_new": 35288,
+              "score": 1621,
+              "partner_team_name": "Mongo Money Makers",
+              "partner_owner": "dantonio34",
+              "partner_dynasty_rank": 4,
+              "partner_winnow_rank": 7
+            },
+            {
+              "send": [
+                {
+                  "sleeper_id": "12519",
+                  "name": "Luther Burden",
+                  "position": "WR",
+                  "team": "CHI",
+                  "age": 22,
+                  "dynasty_value": 3404,
+                  "redraft_value": 1723,
+                  "injury_status": null,
+                  "pos_rank_in_league": 30,
+                  "is_pick": false
+                },
+                {
+                  "sleeper_id": "PICK_2027_R1_O3",
+                  "name": "2027 R1 (Comedy of Errors)",
+                  "position": "PICK",
+                  "team": null,
+                  "age": null,
+                  "dynasty_value": 3031,
+                  "redraft_value": 0,
+                  "injury_status": null,
+                  "pos_rank_in_league": null,
+                  "is_pick": true
+                }
+              ],
+              "receive": [
+                {
+                  "sleeper_id": "PICK_2027_R1_O6",
+                  "name": "2027 R1 (Mongo Money Makers)",
+                  "position": "PICK",
+                  "team": null,
+                  "age": null,
+                  "dynasty_value": 3031,
+                  "redraft_value": 0,
+                  "injury_status": null,
+                  "pos_rank_in_league": null,
+                  "is_pick": true
+                },
+                {
+                  "sleeper_id": "12506",
+                  "name": "Harold Fannin",
+                  "position": "TE",
+                  "team": "CLE",
+                  "age": 21,
+                  "dynasty_value": 2939,
+                  "redraft_value": 784,
+                  "injury_status": null,
+                  "pos_rank_in_league": 10,
+                  "is_pick": false
+                }
+              ],
+              "structure": "2v2",
+              "tier": "mutual",
+              "pick_flow": "both",
+              "my_lineup_change": 217,
+              "their_lineup_change": 939,
+              "my_asset_change": -465,
+              "their_asset_change": 465,
+              "my_value_delta": -465,
+              "my_lineup_old": 39827,
+              "my_lineup_new": 40044,
+              "their_lineup_old": 34349,
+              "their_lineup_new": 35288,
+              "score": 1621,
+              "partner_team_name": "Mongo Money Makers",
+              "partner_owner": "dantonio34",
+              "partner_dynasty_rank": 4,
+              "partner_winnow_rank": 7
+            },
+            {
+              "send": [
+                {
+                  "sleeper_id": "PICK_2026_R1_O3",
+                  "name": "2026 R1 (Comedy of Errors)",
+                  "position": "PICK",
+                  "team": null,
+                  "age": null,
+                  "dynasty_value": 3566,
+                  "redraft_value": 0,
+                  "injury_status": null,
+                  "pos_rank_in_league": null,
+                  "is_pick": true
+                },
+                {
+                  "sleeper_id": "2216",
+                  "name": "Mike Evans",
+                  "position": "WR",
+                  "team": "SF",
+                  "age": 32,
+                  "dynasty_value": 2023,
+                  "redraft_value": 2426,
+                  "injury_status": null,
+                  "pos_rank_in_league": 25,
+                  "is_pick": false
+                }
+              ],
+              "receive": [
+                {
+                  "sleeper_id": "9484",
+                  "name": "Tucker Kraft",
+                  "position": "TE",
+                  "team": "GB",
+                  "age": 25,
+                  "dynasty_value": 3099,
+                  "redraft_value": 2124,
+                  "injury_status": "Questionable",
+                  "pos_rank_in_league": 5,
+                  "is_pick": false
+                },
+                {
+                  "sleeper_id": "12501",
+                  "name": "Matthew Golden",
+                  "position": "WR",
+                  "team": "GB",
+                  "age": 22,
+                  "dynasty_value": 2081,
+                  "redraft_value": 349,
+                  "injury_status": null,
+                  "pos_rank_in_league": 47,
+                  "is_pick": false
+                }
+              ],
+              "structure": "2v2",
+              "tier": "mutual",
+              "pick_flow": "to_them",
+              "my_lineup_change": 854,
+              "their_lineup_change": 302,
+              "my_asset_change": -409,
+              "their_asset_change": 409,
+              "my_value_delta": -409,
+              "my_lineup_old": 39827,
+              "my_lineup_new": 40681,
+              "their_lineup_old": 34349,
+              "their_lineup_new": 34651,
+              "score": 1565,
+              "partner_team_name": "Mongo Money Makers",
+              "partner_owner": "dantonio34",
+              "partner_dynasty_rank": 4,
+              "partner_winnow_rank": 7
+            },
+            {
+              "send": [
+                {
+                  "sleeper_id": "PICK_2027_R1_O3",
+                  "name": "2027 R1 (Comedy of Errors)",
+                  "position": "PICK",
+                  "team": null,
+                  "age": null,
+                  "dynasty_value": 3031,
+                  "redraft_value": 0,
+                  "injury_status": null,
+                  "pos_rank_in_league": null,
+                  "is_pick": true
+                },
+                {
+                  "sleeper_id": "12489",
+                  "name": "RJ Harvey",
+                  "position": "RB",
+                  "team": "DEN",
+                  "age": 25,
+                  "dynasty_value": 2191,
+                  "redraft_value": 1578,
+                  "injury_status": null,
+                  "pos_rank_in_league": 28,
+                  "is_pick": false
+                }
+              ],
+              "receive": [
+                {
+                  "sleeper_id": "12506",
+                  "name": "Harold Fannin",
+                  "position": "TE",
+                  "team": "CLE",
+                  "age": 21,
+                  "dynasty_value": 2939,
+                  "redraft_value": 784,
+                  "injury_status": null,
+                  "pos_rank_in_league": 10,
+                  "is_pick": false
+                },
+                {
+                  "sleeper_id": "9500",
+                  "name": "Josh Downs",
+                  "position": "WR",
+                  "team": "IND",
+                  "age": 24,
+                  "dynasty_value": 1878,
+                  "redraft_value": 444,
+                  "injury_status": null,
+                  "pos_rank_in_league": 43,
+                  "is_pick": false
+                }
+              ],
+              "structure": "2v2",
+              "tier": "mutual",
+              "pick_flow": "to_them",
+              "my_lineup_change": 362,
+              "their_lineup_change": 794,
+              "my_asset_change": -405,
+              "their_asset_change": 405,
+              "my_value_delta": -405,
+              "my_lineup_old": 39827,
+              "my_lineup_new": 40189,
+              "their_lineup_old": 34349,
+              "their_lineup_new": 35143,
+              "score": 1561,
               "partner_team_name": "Mongo Money Makers",
               "partner_owner": "dantonio34",
               "partner_dynasty_rank": 4,
@@ -13053,16 +13207,16 @@
                   "is_pick": false
                 },
                 {
-                  "sleeper_id": "PICK_2026_R1_O3",
-                  "name": "2026 R1 (Comedy of Errors)",
-                  "position": "PICK",
-                  "team": null,
-                  "age": null,
-                  "dynasty_value": 3566,
-                  "redraft_value": 0,
+                  "sleeper_id": "12489",
+                  "name": "RJ Harvey",
+                  "position": "RB",
+                  "team": "DEN",
+                  "age": 25,
+                  "dynasty_value": 2191,
+                  "redraft_value": 1578,
                   "injury_status": null,
-                  "pos_rank_in_league": null,
-                  "is_pick": true
+                  "pos_rank_in_league": 28,
+                  "is_pick": false
                 }
               ],
               "receive": [
@@ -13093,17 +13247,17 @@
               ],
               "structure": "2v2",
               "tier": "mutual",
-              "pick_flow": "to_them",
+              "pick_flow": "none",
               "my_lineup_change": 781,
               "their_lineup_change": 278,
-              "my_asset_change": -1863,
-              "their_asset_change": 1863,
-              "my_value_delta": -1863,
+              "my_asset_change": -488,
+              "their_asset_change": 488,
+              "my_value_delta": -488,
               "my_lineup_old": 39827,
               "my_lineup_new": 40608,
               "their_lineup_old": 39503,
               "their_lineup_new": 39781,
-              "score": 2922,
+              "score": 1547,
               "partner_team_name": "Ligma",
               "partner_owner": "nfaber",
               "partner_dynasty_rank": 2,
@@ -13112,86 +13266,15 @@
             {
               "send": [
                 {
-                  "sleeper_id": "9488",
-                  "name": "Jaxon Smith-Njigba",
+                  "sleeper_id": "12519",
+                  "name": "Luther Burden",
                   "position": "WR",
-                  "team": "SEA",
-                  "age": 24,
-                  "dynasty_value": 9351,
-                  "redraft_value": 9100,
+                  "team": "CHI",
+                  "age": 22,
+                  "dynasty_value": 3404,
+                  "redraft_value": 1723,
                   "injury_status": null,
-                  "pos_rank_in_league": 2,
-                  "is_pick": false
-                },
-                {
-                  "sleeper_id": "PICK_2026_R2_O3",
-                  "name": "2026 R2 (Comedy of Errors)",
-                  "position": "PICK",
-                  "team": null,
-                  "age": null,
-                  "dynasty_value": 1765,
-                  "redraft_value": 0,
-                  "injury_status": null,
-                  "pos_rank_in_league": null,
-                  "is_pick": true
-                }
-              ],
-              "receive": [
-                {
-                  "sleeper_id": "9226",
-                  "name": "De'Von Achane",
-                  "position": "RB",
-                  "team": "MIA",
-                  "age": 24,
-                  "dynasty_value": 6654,
-                  "redraft_value": 8159,
-                  "injury_status": null,
-                  "pos_rank_in_league": 4,
-                  "is_pick": false
-                },
-                {
-                  "sleeper_id": "10859",
-                  "name": "Sam LaPorta",
-                  "position": "TE",
-                  "team": "DET",
-                  "age": 25,
-                  "dynasty_value": 2697,
-                  "redraft_value": 1481,
-                  "injury_status": "Questionable",
-                  "pos_rank_in_league": 7,
-                  "is_pick": false
-                }
-              ],
-              "structure": "2v2",
-              "tier": "mutual",
-              "pick_flow": "to_them",
-              "my_lineup_change": 118,
-              "their_lineup_change": 941,
-              "my_asset_change": -1765,
-              "their_asset_change": 1765,
-              "my_value_delta": -1765,
-              "my_lineup_old": 39827,
-              "my_lineup_new": 39945,
-              "their_lineup_old": 39503,
-              "their_lineup_new": 40444,
-              "score": 2824,
-              "partner_team_name": "Ligma",
-              "partner_owner": "nfaber",
-              "partner_dynasty_rank": 2,
-              "partner_winnow_rank": 3
-            },
-            {
-              "send": [
-                {
-                  "sleeper_id": "9488",
-                  "name": "Jaxon Smith-Njigba",
-                  "position": "WR",
-                  "team": "SEA",
-                  "age": 24,
-                  "dynasty_value": 9351,
-                  "redraft_value": 9100,
-                  "injury_status": null,
-                  "pos_rank_in_league": 2,
+                  "pos_rank_in_league": 30,
                   "is_pick": false
                 },
                 {
@@ -13209,106 +13292,47 @@
               ],
               "receive": [
                 {
-                  "sleeper_id": "9226",
-                  "name": "De'Von Achane",
-                  "position": "RB",
-                  "team": "MIA",
-                  "age": 24,
-                  "dynasty_value": 6654,
-                  "redraft_value": 8159,
+                  "sleeper_id": "12506",
+                  "name": "Harold Fannin",
+                  "position": "TE",
+                  "team": "CLE",
+                  "age": 21,
+                  "dynasty_value": 2939,
+                  "redraft_value": 784,
                   "injury_status": null,
-                  "pos_rank_in_league": 4,
+                  "pos_rank_in_league": 10,
                   "is_pick": false
                 },
                 {
-                  "sleeper_id": "10859",
-                  "name": "Sam LaPorta",
+                  "sleeper_id": "8110",
+                  "name": "Jake Ferguson",
                   "position": "TE",
-                  "team": "DET",
-                  "age": 25,
-                  "dynasty_value": 2697,
-                  "redraft_value": 1481,
-                  "injury_status": "Questionable",
-                  "pos_rank_in_league": 7,
+                  "team": "DAL",
+                  "age": 27,
+                  "dynasty_value": 1805,
+                  "redraft_value": 585,
+                  "injury_status": null,
+                  "pos_rank_in_league": 11,
                   "is_pick": false
                 }
               ],
               "structure": "2v2",
               "tier": "mutual",
               "pick_flow": "none",
-              "my_lineup_change": 118,
-              "their_lineup_change": 941,
-              "my_asset_change": -1708,
-              "their_asset_change": 1708,
-              "my_value_delta": -1708,
+              "my_lineup_change": 217,
+              "their_lineup_change": 939,
+              "my_asset_change": -368,
+              "their_asset_change": 368,
+              "my_value_delta": -368,
               "my_lineup_old": 39827,
-              "my_lineup_new": 39945,
-              "their_lineup_old": 39503,
-              "their_lineup_new": 40444,
-              "score": 2767,
-              "partner_team_name": "Ligma",
-              "partner_owner": "nfaber",
-              "partner_dynasty_rank": 2,
-              "partner_winnow_rank": 3
-            },
-            {
-              "send": [
-                {
-                  "sleeper_id": "7564",
-                  "name": "Ja'Marr Chase",
-                  "position": "WR",
-                  "team": "CIN",
-                  "age": 26,
-                  "dynasty_value": 9677,
-                  "redraft_value": 9941,
-                  "injury_status": null,
-                  "pos_rank_in_league": 1,
-                  "is_pick": false
-                }
-              ],
-              "receive": [
-                {
-                  "sleeper_id": "9226",
-                  "name": "De'Von Achane",
-                  "position": "RB",
-                  "team": "MIA",
-                  "age": 24,
-                  "dynasty_value": 6654,
-                  "redraft_value": 8159,
-                  "injury_status": null,
-                  "pos_rank_in_league": 4,
-                  "is_pick": false
-                },
-                {
-                  "sleeper_id": "12517",
-                  "name": "Colston Loveland",
-                  "position": "TE",
-                  "team": "CHI",
-                  "age": 22,
-                  "dynasty_value": 4726,
-                  "redraft_value": 2985,
-                  "injury_status": null,
-                  "pos_rank_in_league": 4,
-                  "is_pick": false
-                }
-              ],
-              "structure": "1v2",
-              "tier": "mutual",
-              "pick_flow": "none",
-              "my_lineup_change": 781,
-              "their_lineup_change": 278,
-              "my_asset_change": 1703,
-              "their_asset_change": -1703,
-              "my_value_delta": 1703,
-              "my_lineup_old": 39827,
-              "my_lineup_new": 40608,
-              "their_lineup_old": 39503,
-              "their_lineup_new": 39781,
-              "score": 2762,
-              "partner_team_name": "Ligma",
-              "partner_owner": "nfaber",
-              "partner_dynasty_rank": 2,
-              "partner_winnow_rank": 3
+              "my_lineup_new": 40044,
+              "their_lineup_old": 34349,
+              "their_lineup_new": 35288,
+              "score": 1524,
+              "partner_team_name": "Mongo Money Makers",
+              "partner_owner": "dantonio34",
+              "partner_dynasty_rank": 4,
+              "partner_winnow_rank": 7
             }
           ],
           "buy": [
@@ -17093,7 +17117,7 @@
       "description": "With premium defensive options on the board, Tennessee made unanimous decision to get an impact player on offense.",
       "url": "https://www.espn.com/nfl/story/_/id/48826160/tennessee-titans-wr-carnell-tate-perfect-pairing-cam-ward",
       "published": "2026-05-25T10:35:26Z",
-      "age_hours": 25.1,
+      "age_hours": 25.3,
       "players": [
         {
           "sleeper_id": "12522",
@@ -17109,7 +17133,7 @@
       "description": "The New England quarterback is entering a vital second season with his offensive coordinator.",
       "url": "https://www.espn.com/nfl/story/_/id/48845555/new-england-patriots-qb-drake-maye-josh-mcdaniels-system-2026-season",
       "published": "2026-05-24T10:00:05Z",
-      "age_hours": 49.7,
+      "age_hours": 49.9,
       "players": [
         {
           "sleeper_id": "11564",
@@ -17132,7 +17156,7 @@
       "description": "Jordan Love and Ronika Stone have spent a full month with their newborn daughter.",
       "url": "https://www.espn.com/nfl/story/_/id/48855003/green-bay-packers-jordan-love-ronika-stone-baby-announcement-daughter",
       "published": "2026-05-23T22:38:18Z",
-      "age_hours": 61.0,
+      "age_hours": 61.2,
       "players": [
         {
           "sleeper_id": "6804",
@@ -17148,7 +17172,7 @@
       "description": "A reworked deal between the Arizona Cardinals and quarterback Jacoby Brissett is still not close, a source told ESPN on Friday.",
       "url": "https://www.espn.com/nfl/story/_/id/48846780/jacoby-brissett-not-close-reworked-deal-cardinals",
       "published": "2026-05-22T21:42:04Z",
-      "age_hours": 86.0,
+      "age_hours": 86.2,
       "players": [
         {
           "sleeper_id": "3257",
@@ -17164,7 +17188,7 @@
       "description": "Adam Schefter tells Pat McAfee that he doesn't like what he's hearing surrounding Malik Nabers as he works back from a knee injury.",
       "url": "https://www.espn.com/video/clip/_/id/48845314/why-adam-schefter-concerned-malik-nabers-week-1-availability",
       "published": "2026-05-22T17:44:15Z",
-      "age_hours": 89.9,
+      "age_hours": 90.1,
       "players": [
         {
           "sleeper_id": "11632",
@@ -17180,7 +17204,7 @@
       "description": "McDaniel's new offense could mean a big year for Njoku.",
       "url": "https://www.espn.com/nfl/story/_/id/48827621/los-angeles-chargers-te-david-njoku-fit-mike-mcdaniel-offense",
       "published": "2026-05-22T16:38:58Z",
-      "age_hours": 91.0,
+      "age_hours": 91.2,
       "players": [
         {
           "sleeper_id": "4033",
@@ -17196,7 +17220,7 @@
       "description": "Reigning NFL MVP Matthew Stafford and the Rams reached agreement on a one-year, $55 million extension, sources told ESPN's Adam Schefter. The QB is now tied to L.A. through the 2027 season, with $105 million remaining on his deal.",
       "url": "https://www.espn.com/nfl/story/_/id/48839342/sources-matthew-stafford-rams-reach-1-year-55m-extension",
       "published": "2026-05-22T16:23:50Z",
-      "age_hours": 91.3,
+      "age_hours": 91.5,
       "players": [
         {
           "sleeper_id": "421",
@@ -17212,7 +17236,7 @@
       "description": "The Bears, Packers, Lions and Vikings finished with winning records in 2025. Here's how their offseasons have impacted the NFC North.",
       "url": "https://www.espn.com/nfl/story/_/id/48834642/nfl-nfc-lions-packers-bears-vikings-kyler-murray-caleb-williams-jordan-love",
       "published": "2026-05-22T14:54:06Z",
-      "age_hours": 92.8,
+      "age_hours": 93.0,
       "players": [
         {
           "sleeper_id": "11560",
@@ -17256,7 +17280,7 @@
       "description": "Chris Canty believes the Rams gave Matthew Stafford his one-year, $55 million extension to keep him happy after selecting Ty Simpson in the first round.",
       "url": "https://www.espn.com/video/clip/_/id/48843248/rams-wanted-make-sure-stafford-was-happy-simpson-pick",
       "published": "2026-05-22T12:37:38Z",
-      "age_hours": 95.0,
+      "age_hours": 95.2,
       "players": [
         {
           "sleeper_id": "421",
@@ -17272,7 +17296,7 @@
       "description": "Kyle Shanahan wants to use his star RB less, but the options behind him are unproven. Who's likely to step up?",
       "url": "https://www.espn.com/nfl/story/_/id/48829524/san-francisco-2026-nfl-49ers-depth-chart-running-back-christian-mccaffrey-kaelon-black",
       "published": "2026-05-22T10:00:01Z",
-      "age_hours": 97.7,
+      "age_hours": 97.9,
       "players": [
         {
           "sleeper_id": "4034",

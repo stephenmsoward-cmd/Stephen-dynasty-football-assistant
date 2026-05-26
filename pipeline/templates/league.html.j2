@@ -115,29 +115,40 @@
   <p class="muted small">
     Latest ESPN articles mentioning players rostered in this league.
   </p>
+
+  {% macro news_item(n) %}
+  <li class="news-item">
+    <div class="news-headline">
+      {% if n.url %}<a href="{{ n.url }}" target="_blank" rel="noopener">{{ n.headline }}</a>
+      {% else %}{{ n.headline }}{% endif %}
+      <span class="muted small news-age">
+        {% if n.age_hours < 24 %}{{ n.age_hours | round | int }}h ago
+        {% else %}{{ (n.age_hours / 24) | round | int }}d ago{% endif %}
+      </span>
+    </div>
+    {% if n.description %}<div class="muted small news-desc">{{ n.description }}</div>{% endif %}
+    <div class="news-players">
+      {% for p in n.players %}
+      <span class="news-player-tag">
+        {{ p.name }}
+        <span class="muted">({{ p.position }}{% if p.team %} · {{ p.team }}{% endif %})</span>
+      </span>
+      {% endfor %}
+    </div>
+  </li>
+  {% endmacro %}
+
   <ul class="news-list">
-    {% for n in report.news %}
-    <li class="news-item">
-      <div class="news-headline">
-        {% if n.url %}<a href="{{ n.url }}" target="_blank" rel="noopener">{{ n.headline }}</a>
-        {% else %}{{ n.headline }}{% endif %}
-        <span class="muted small news-age">
-          {% if n.age_hours < 24 %}{{ n.age_hours | round | int }}h ago
-          {% else %}{{ (n.age_hours / 24) | round | int }}d ago{% endif %}
-        </span>
-      </div>
-      {% if n.description %}<div class="muted small news-desc">{{ n.description }}</div>{% endif %}
-      <div class="news-players">
-        {% for p in n.players %}
-        <span class="news-player-tag">
-          {{ p.name }}
-          <span class="muted">({{ p.position }}{% if p.team %} · {{ p.team }}{% endif %})</span>
-        </span>
-        {% endfor %}
-      </div>
-    </li>
-    {% endfor %}
+    {% for n in report.news[:3] %}{{ news_item(n) }}{% endfor %}
   </ul>
+  {% if report.news | length > 3 %}
+  <details class="reveal-more">
+    <summary>Show {{ report.news | length - 3 }} more news items</summary>
+    <ul class="news-list">
+      {% for n in report.news[3:] %}{{ news_item(n) }}{% endfor %}
+    </ul>
+  </details>
+  {% endif %}
   {% endif %}
 
   <h2>Standings by Optimal Lineup Value</h2>
@@ -208,17 +219,20 @@
   </section>
   {% endmacro %}
 
+  {% macro lineup_section(mode) %}
+  {% set teams = teams_sorted_by(report.teams, mode) %}
+  {% for t in teams[:3] %}{{ team_card(t, mode) }}{% endfor %}
+  {% if teams | length > 3 %}
+  <details class="reveal-more">
+    <summary>Show {{ teams | length - 3 }} more team{{ '' if (teams | length - 3) == 1 else 's' }}</summary>
+    {% for t in teams[3:] %}{{ team_card(t, mode) }}{% endfor %}
+  </details>
+  {% endif %}
+  {% endmacro %}
+
   <h2>Optimal Lineups</h2>
-  <div class="dynasty-only">
-    {% for t in teams_sorted_by(report.teams, 'dynasty') %}
-      {{ team_card(t, 'dynasty') }}
-    {% endfor %}
-  </div>
-  <div class="winnow-only">
-    {% for t in teams_sorted_by(report.teams, 'winnow') %}
-      {{ team_card(t, 'winnow') }}
-    {% endfor %}
-  </div>
+  <div class="dynasty-only">{{ lineup_section('dynasty') }}</div>
+  <div class="winnow-only">{{ lineup_section('winnow') }}</div>
 
   <div class="methodology">
     <h3>Methodology</h3>
