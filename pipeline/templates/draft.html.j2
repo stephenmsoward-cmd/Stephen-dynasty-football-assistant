@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ report.name }} — Draft Recommendations</title>
+  <link rel="stylesheet" href="../../../style.css">
+</head>
+<body class="mode-dynasty">
+<div class="container">
+  <header class="site">
+    <h1>Draft Recommendations</h1>
+    <div class="tagline">
+      {{ report.name }} &middot; {{ report.season }} rookie draft &middot;
+      {{ report.draft.num_teams }} teams &middot;
+      {{ report.draft.rookie_pool_size }} available prospects
+    </div>
+    <nav>
+      <a href="../">&larr; Back to league</a>
+      {% if report.trades %}&middot; <a href="../trades/">Trade ideas</a>{% endif %}
+      {% if report.waivers %}&middot; <a href="../waivers/">Waiver wire</a>{% endif %}
+      <span class="muted small">&middot; Generated {{ report.generated_at }}</span>
+    </nav>
+  </header>
+
+  <p class="muted small" style="margin-top: 0.5rem;">
+    For each of your pick slots, we project which prospects will fall to you
+    using a strict "best player available by FantasyCalc dynasty value"
+    model. Real drafts have positional runs and reaches, so this is a starting
+    point — not a guarantee.
+  </p>
+
+  {% macro prospect_row(p) %}
+  <article class="prospect-row">
+    <div class="prospect-rank">#{{ p.projected_rank }}</div>
+    <div class="prospect-main">
+      <span class="trade-player-name">{{ p.name }}</span>
+      <span class="pos-tag">{{ p.position }}{% if p.team %} · {{ p.team }}{% endif %}</span>
+      {% if p.injury_status %}<span class="injury Q">{{ p.injury_status }}</span>{% endif %}
+      <div class="muted small">
+        {% if p.age %}age {{ p.age | round | int }} &middot; {% endif %}
+        dyn <strong>{{ p.dynasty_value | money }}</strong>
+        {% if p.redraft_value %}&middot; redraft {{ p.redraft_value | money }}{% endif %}
+      </div>
+    </div>
+  </article>
+  {% endmacro %}
+
+  {% for slot in report.draft.my_slots %}
+  <section class="draft-slot">
+    <header class="draft-slot-header">
+      <div>
+        <h2>Pick {{ slot.label }}
+          <span class="muted small">— overall #{{ slot.overall }}</span>
+        </h2>
+        <div class="muted small">
+          Round {{ slot.round }}, slot {{ slot.slot_in_round }} of {{ report.draft.num_teams }}
+          {% if slot.fc_value %}
+          &middot; FantasyCalc slot value <strong>{{ slot.fc_value | money }}</strong>
+          {% endif %}
+        </div>
+      </div>
+    </header>
+    <p class="muted small">
+      Projected board when you're on the clock — top {{ slot.projected_available | length }}
+      prospects estimated to be available at overall pick {{ slot.overall }}.
+    </p>
+    {% for p in slot.projected_available %}{{ prospect_row(p) }}{% endfor %}
+  </section>
+  {% endfor %}
+
+  {% if report.draft.later_board %}
+  <section class="draft-slot draft-later">
+    <h2>Falling beyond your last pick <span class="muted small">({{ report.draft.later_board | length }})</span></h2>
+    <p class="muted small">
+      Prospects projected to go later than your latest pick. Useful for trade-back
+      decisions or eyeing late-round value.
+    </p>
+    {% for p in report.draft.later_board %}{{ prospect_row(p) }}{% endfor %}
+  </section>
+  {% endif %}
+
+  <div class="methodology">
+    <h3>Methodology</h3>
+    <p>
+      <strong>Rookie pool</strong>: every FantasyCalc-valued player with
+      <code>years_exp = 0</code> (entering their first NFL season) who isn't
+      currently on a roster in your league.
+    </p>
+    <p>
+      <strong>Projected availability</strong> assumes other managers will
+      pick strictly by FantasyCalc dynasty value descending. At overall
+      pick N, the algorithm shows rookies ranked #N through #N+7. Reality
+      will diverge — TEs and QBs tend to fall further than their ranking,
+      RBs often go earlier in superflex / 1-QB formats, etc.
+    </p>
+    <p>
+      <strong>Slot value</strong> comes from FantasyCalc's per-slot pick
+      values. Earlier picks (1.01, 1.02) are worth more because the player
+      pool is steeper at the top.
+    </p>
+    <p>
+      <strong>Limitations:</strong> No positional-need modeling per
+      opposing team. No model of draft-day surprises (combine risers,
+      trades, news). Assumes 10-team draft ordering — multi-team formats
+      would need slot remapping.
+    </p>
+  </div>
+
+  <footer class="site">
+    Data: <a href="https://docs.sleeper.com">Sleeper</a> &middot;
+    <a href="https://fantasycalc.com">FantasyCalc</a>.
+  </footer>
+</div>
+</body>
+</html>

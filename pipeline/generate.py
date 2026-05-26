@@ -24,6 +24,7 @@ from data import Player
 from lineup import optimal_lineup
 from trades import TradeCandidate, find_trades
 from waivers import build_waiver_report
+from draft import build_draft_report
 
 ROOT = Path(__file__).parent.parent
 SITE = ROOT / "site"
@@ -263,7 +264,12 @@ def build_trade_report(
     }
 
 
-def build_league_report(league_id: str, slug: str, my_user_id: str | None = None) -> dict:
+def build_league_report(
+    league_id: str,
+    slug: str,
+    my_user_id: str | None = None,
+    my_draft_slots: list[str] | None = None,
+) -> dict:
     league = data.get_league(league_id)
     users = {u["user_id"]: u for u in data.get_users(league_id)}
     rosters = data.get_rosters(league_id)
@@ -436,6 +442,29 @@ def build_league_report(league_id: str, slug: str, my_user_id: str | None = None
                 gap_positions=gap_positions,
             )
 
+    draft_report = None
+    if my_draft_slots:
+        # Available rookies = years_exp 0, not rostered, has FC value, not a pick.
+        rostered_ids_all: set[str] = set()
+        for r in rosters:
+            rostered_ids_all.update(r.get("players") or [])
+            rostered_ids_all.update(r.get("taxi") or [])
+            rostered_ids_all.update(r.get("reserve") or [])
+        available_rookies = [
+            p for sid, p in index.items()
+            if p.years_exp == 0
+            and p.position != "PICK"
+            and sid not in rostered_ids_all
+        ]
+        slot_values = data.pick_slot_values(fc_values)
+        draft_report = build_draft_report(
+            available_rookies=available_rookies,
+            my_slots=my_draft_slots,
+            season=league["season"],
+            num_teams=league["total_rosters"],
+            pick_slot_values=slot_values,
+        )
+
     return {
         "slug": slug,
         "name": league["name"],
@@ -450,6 +479,7 @@ def build_league_report(league_id: str, slug: str, my_user_id: str | None = None
         "teams": teams,
         "trades": trade_report,
         "waivers": waiver_report,
+        "draft": draft_report,
     }
 
 
@@ -482,6 +512,7 @@ def render_site(reports: list[dict]) -> None:
     league_tmpl = env.get_template("league.html.j2")
     trades_tmpl = env.get_template("trades.html.j2")
     waivers_tmpl = env.get_template("waivers.html.j2")
+    draft_tmpl = env.get_template("draft.html.j2")
     for r in reports:
         out_dir = SITE / "leagues" / r["slug"]
         out_dir.mkdir(parents=True, exist_ok=True)
@@ -497,6 +528,11 @@ def render_site(reports: list[dict]) -> None:
             waivers_dir = out_dir / "waivers"
             waivers_dir.mkdir(exist_ok=True)
             (waivers_dir / "index.html").write_text(waivers_tmpl.render(report=r))
+
+        if r.get("draft"):
+            draft_dir = out_dir / "draft"
+            draft_dir.mkdir(exist_ok=True)
+            (draft_dir / "index.html").write_text(draft_tmpl.render(report=r))
 
     landing_tmpl = env.get_template("landing.html.j2")
     (SITE / "index.html").write_text(landing_tmpl.render(
@@ -524,6 +560,7 @@ def main() -> None:
             entry["league_id"],
             entry["slug"],
             my_user_id=entry.get("my_user_id"),
+            my_draft_slots=entry.get("my_draft_slots"),
         )
         write_history(entry["slug"], r)
         reports.append(r)

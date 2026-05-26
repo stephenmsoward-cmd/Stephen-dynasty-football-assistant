@@ -523,6 +523,99 @@ body.mode-winnow .dynasty-only { display: none; }
   padding: 0.6rem 0.85rem;
 }
 
+/* ---- Draft page ---- */
+.draft-slot {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+}
+
+.draft-slot-header h2 {
+  margin: 0;
+}
+
+.draft-slot.draft-later {
+  border-left: 3px solid var(--muted);
+}
+
+.prospect-row {
+  display: grid;
+  grid-template-columns: 3em 1fr;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.prospect-row:last-child {
+  border-bottom: none;
+}
+
+.prospect-rank {
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-align: right;
+}
+
+.prospect-main .trade-player-name { font-weight: 600; }
+
+/* ---- Updated waiver row: compact, drop list inline ---- */
+.waiver-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  margin: 0.5rem 0;
+}
+
+.waiver-card-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.4rem;
+  margin-bottom: 0.25rem;
+}
+
+.waiver-card-top .trade-player-name {
+  font-size: 1rem;
+}
+
+.waiver-card-meta {
+  color: var(--muted);
+  font-size: 0.82rem;
+  margin-bottom: 0.4rem;
+}
+
+.waiver-drops {
+  font-size: 0.78rem;
+  color: var(--muted);
+  border-top: 1px dashed var(--border);
+  padding-top: 0.4rem;
+}
+
+.waiver-drops-label {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.65rem;
+  font-weight: 600;
+  margin-right: 0.4rem;
+}
+
+.waiver-drops .drop-chip {
+  display: inline-block;
+  background: var(--surface-2);
+  border-radius: 3px;
+  padding: 0.05rem 0.45rem;
+  margin-right: 0.3rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+}
+
 .trade-sides {
   display: grid;
   grid-template-columns: 1fr auto 1fr;

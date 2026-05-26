@@ -71,19 +71,36 @@ Results are surfaced in tiers:
 
 ### Waiver wire
 
-Compares your roster to every player not rostered in your league and
-surfaces:
+Compares your roster to every **veteran** free agent in your league
+(rookies are routed to the draft page instead) and surfaces:
 
 - **🔥 Trending Adds** — Sleeper's community 24-hour add count, filtered
   to players still available in your league. Strongest early signal for
   what's actually moving on waiver wire.
-- **Best Available Overall** — top dynasty-value free agents (excluding
-  draft picks).
-- **Targeted at gap positions** — best free agents at positions where
-  your starting lineup ranks in the bottom third of the league.
+- **Best Available Overall** — top dynasty-value veteran free agents.
+- **Targeted at gap positions** — best veterans at positions where your
+  starting lineup ranks in the bottom third of the league.
 - **Drop candidates** — your lowest-value skill players.
 
-Each pickup gets a suggested drop matched by position eligibility.
+Each pickup is paired with **three suggested drop candidates** so you
+have options instead of always the same single name.
+
+### Draft recommendations
+
+For each pick slot you own in this year's rookie draft (configured per
+league via `my_draft_slots` in `leagues.yml`), the draft page projects
+which rookies will likely be available. Uses a strict "best player
+available by FantasyCalc dynasty value" model — real drafts deviate
+because of positional runs and personal preferences, so treat this as
+guidance not gospel.
+
+Per pick slot you see:
+- Your overall pick number (e.g., 1.10 = overall #10 in a 10-team league)
+- FantasyCalc's per-slot value (so you know what your pick is worth)
+- The top 8 rookies projected to be on the board when you're up
+
+A "falling beyond your last pick" section shows the next chunk of
+prospects who'd otherwise go later — useful for trade-back analysis.
 
 ## Roadmap
 
@@ -106,7 +123,10 @@ Each pickup gets a suggested drop matched by position eligibility.
    - league_id: "your-sleeper-league-id"
      slug: "kebab-case-name"
      display_name: "League Display Name"
-     my_user_id: "your-sleeper-user-id"   # optional, enables trade finder
+     my_user_id: "your-sleeper-user-id"   # optional, enables trade/waiver pages
+     my_draft_slots:                      # optional, enables draft page
+       - "1.10"
+       - "2.10"
    ```
 3. Open a pull request. After merge, the nightly Action publishes a
    report at `/leagues/<slug>/`.
@@ -134,7 +154,8 @@ pipeline/         Python — data fetch, lineup math, HTML rendering
   data.py           Sleeper + FantasyCalc clients with file cache
   lineup.py         Optimal-lineup calculator (greedy under slot constraints)
   trades.py         Trade finder (1v1/2v1/1v2/2v2 + picks + asset/lineup scoring)
-  waivers.py        Waiver wire recommender (trending + value + gap-targeting)
+  waivers.py        Waiver wire recommender (veterans only, trending + gap-targeting)
+  draft.py          Rookie draft recommender (projected board at your slots)
   generate.py       Entry point: builds site/ and history/
   templates/        Jinja2 templates + CSS + toggle JS
 site/             Published to GitHub Pages

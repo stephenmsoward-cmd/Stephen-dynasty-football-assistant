@@ -215,6 +215,22 @@ def pick_round_averages(fc_values: list[dict]) -> dict[tuple[str, int], int]:
     return {k: sum(v) // len(v) for k, v in by_round.items()}
 
 
+def pick_slot_values(fc_values: list[dict]) -> dict[tuple[str, int, int], int]:
+    """Returns {(season, round, slot_in_round): dynasty_value} per FC pick slot.
+    Slots are 1-indexed (X.01 → slot 1)."""
+    out: dict[tuple[str, int, int], int] = {}
+    for entry in fc_values:
+        p = entry["player"]
+        if p.get("position") != "PICK":
+            continue
+        m = _PICK_NAME_RE.match(p.get("name", ""))
+        if not m:
+            continue
+        season, rnd, slot = m.groups()
+        out[(season, int(rnd), int(slot))] = entry.get("value", 0)
+    return out
+
+
 def pick_value(
     season: str,
     rnd: int,

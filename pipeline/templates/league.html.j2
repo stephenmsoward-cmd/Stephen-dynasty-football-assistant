@@ -25,6 +25,10 @@
       &middot;
       <a href="waivers/">Waiver wire</a>
       {% endif %}
+      {% if report.draft %}
+      &middot;
+      <a href="draft/">Draft recommendations</a>
+      {% endif %}
       <span class="muted small">&middot; Generated {{ report.generated_at }}</span>
     </nav>
   </header>

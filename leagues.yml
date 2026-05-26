@@ -2,11 +2,16 @@
 # Add your league by appending a new entry. The `slug` becomes the URL path
 # under /leagues/<slug>/ on the published site.
 #
-# `my_user_id` is optional. If provided, a trade-finder report is generated
-# at /leagues/<slug>/trades/ analyzing trades from that team's perspective.
+# Optional per-league fields:
+#   my_user_id     — your Sleeper user_id, enables trade/waiver/draft pages
+#   my_draft_slots — list of pick slots you own this year, e.g. ["1.10", "2.10"]
+#                    Enables the draft recommendations page.
 
 leagues:
   - league_id: "1312099121280069632"
     slug: "bricksquad-sportz"
     display_name: "BrickSquad Sportz"
     my_user_id: "1134182400436850688"   # ssoward94 — Comedy of Errors
+    my_draft_slots:
+      - "1.10"
+      - "2.10"

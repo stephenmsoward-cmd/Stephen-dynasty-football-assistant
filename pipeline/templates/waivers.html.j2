@@ -12,7 +12,10 @@
     <h1>Waiver Wire — {{ report.trades.my_team.team_name }}</h1>
     <div class="tagline">
       {{ report.name }} &middot; {{ report.season }} &middot;
-      {{ report.waivers.available_count }} valued free agents
+      {{ report.waivers.available_count }} veteran free agents
+      {% if report.waivers.rookies_excluded %}
+        <span class="muted small">({{ report.waivers.rookies_excluded }} rookies moved to draft page)</span>
+      {% endif %}
       {% if report.waivers.gap_positions %}
         &middot; gap positions: {{ report.waivers.gap_positions | join(', ') }}
       {% endif %}
@@ -20,78 +23,77 @@
     <nav>
       <a href="../">&larr; Back to league</a>
       {% if report.trades %}&middot; <a href="../trades/">Trade ideas</a>{% endif %}
+      {% if report.draft %}&middot; <a href="../draft/">Draft recommendations</a>{% endif %}
       <span class="muted small">&middot; Generated {{ report.generated_at }}</span>
     </nav>
   </header>
 
-  {% macro pickup_row(s) %}
-  <article class="waiver-row">
-    <div class="waiver-pickup">
-      <div>
-        <span class="trade-player-name">{{ s.pickup.name }}</span>
-        <span class="pos-tag">{{ s.pickup.position }}{% if s.pickup.team %} · {{ s.pickup.team }}{% endif %}</span>
-        {% if s.pickup.injury_status %}<span class="injury Q">{{ s.pickup.injury_status }}</span>{% endif %}
-        {% if s.trending_count %}
-          <span class="trending-badge" title="Adds in last 24h across Sleeper">🔥 {{ s.trending_count | money }}</span>
-        {% endif %}
-      </div>
-      <div class="muted small">
-        {% if s.pickup.age %}age {{ s.pickup.age | round | int }} &middot; {% endif %}
-        dyn value <strong>{{ s.pickup.dynasty_value | money }}</strong>
-        {% if s.pickup.redraft_value %}&middot; redraft {{ s.pickup.redraft_value | money }}{% endif %}
-      </div>
-    </div>
-    <div class="waiver-arrow">←</div>
-    <div class="waiver-drop">
-      {% if s.suggested_drop %}
-      <div class="muted small waiver-drop-label">Suggested drop</div>
-      <div>
-        <span>{{ s.suggested_drop.name }}</span>
-        <span class="pos-tag">{{ s.suggested_drop.position }}{% if s.suggested_drop.team %} · {{ s.suggested_drop.team }}{% endif %}</span>
-      </div>
-      <div class="muted small">
-        value {{ s.suggested_drop.dynasty_value | money }}
-        &middot; net <span class="good">+{{ s.value_delta | money }}</span>
-      </div>
-      {% else %}
-      <div class="muted small">No clear drop candidate.</div>
+  {% macro pickup_card(s) %}
+  <article class="waiver-card">
+    <div class="waiver-card-top">
+      <span class="trade-player-name">{{ s.pickup.name }}</span>
+      <span class="pos-tag">{{ s.pickup.position }}{% if s.pickup.team %} · {{ s.pickup.team }}{% endif %}</span>
+      {% if s.pickup.injury_status %}<span class="injury Q">{{ s.pickup.injury_status }}</span>{% endif %}
+      {% if s.trending_count %}
+        <span class="trending-badge" title="Adds in last 24h across Sleeper">🔥 {{ s.trending_count | money }}</span>
       {% endif %}
     </div>
+    <div class="waiver-card-meta">
+      {% if s.pickup.age %}age {{ s.pickup.age | round | int }}{% endif %}
+      {% if s.pickup.years_exp is not none %} &middot; {{ s.pickup.years_exp }} yr{{ '' if s.pickup.years_exp == 1 else 's' }} exp{% endif %}
+      &middot; dyn value <strong>{{ s.pickup.dynasty_value | money }}</strong>
+      {% if s.pickup.redraft_value %} &middot; redraft {{ s.pickup.redraft_value | money }}{% endif %}
+    </div>
+    {% if s.suggested_drops %}
+    <div class="waiver-drops">
+      <span class="waiver-drops-label">Drop one of</span>
+      {% for d in s.suggested_drops %}
+      <span class="drop-chip">{{ d.name }} ({{ d.dynasty_value | money }})</span>
+      {% endfor %}
+    </div>
+    {% endif %}
   </article>
   {% endmacro %}
 
   {% if report.waivers.trending %}
   <h2>🔥 Trending Adds <span class="muted small">({{ report.waivers.trending | length }})</span></h2>
   <p class="muted small">
-    Players the Sleeper community is grabbing right now, filtered to ones still
-    available in your league.
+    Veterans the Sleeper community is grabbing in the last 24 hours, filtered
+    to ones still available in your league.
   </p>
-  {% for s in report.waivers.trending %}{{ pickup_row(s) }}{% endfor %}
+  {% for s in report.waivers.trending %}{{ pickup_card(s) }}{% endfor %}
+  {% else %}
+  <h2>🔥 Trending Adds</h2>
+  <p class="muted small">
+    No trending veterans available in your league right now. Most of the
+    current waves are rookies — check the
+    {% if report.draft %}<a href="../draft/">draft page</a>{% else %}draft page{% endif %}.
+  </p>
   {% endif %}
 
   <h2>Best Available Overall <span class="muted small">({{ report.waivers.best_overall | length }})</span></h2>
   <p class="muted small">
-    Top dynasty values among free agents. Some may be stashed for upside,
-    others may be aging vets nobody wants — read the age and team carefully.
+    Top dynasty-value veterans on the wire. Read the age and team carefully —
+    some are aging vets, some are deep-stash upside plays.
   </p>
-  {% for s in report.waivers.best_overall %}{{ pickup_row(s) }}{% endfor %}
+  {% for s in report.waivers.best_overall %}{{ pickup_card(s) }}{% endfor %}
 
   {% if report.waivers.by_gap_position %}
   <h2>Targeted at Your Gap Positions</h2>
   <p class="muted small">
-    The best free agents at positions where your starting lineup ranks in the
-    bottom third of the league.
+    The best veteran free agents at positions where your starting lineup
+    ranks in the bottom third of the league.
   </p>
   {% for pos, suggestions in report.waivers.by_gap_position.items() %}
-  <h3>{{ pos }}</h3>
-  {% for s in suggestions %}{{ pickup_row(s) }}{% endfor %}
+  <h3 style="margin-top: 1rem;">{{ pos }}</h3>
+  {% for s in suggestions %}{{ pickup_card(s) }}{% endfor %}
   {% endfor %}
   {% endif %}
 
   <h2>Drop Candidates <span class="muted small">(your roster)</span></h2>
   <p class="muted small">
-    Your lowest-value skill players. If you find a pickup worth more than any
-    of these, the swap is strictly positive.
+    Your lowest-value skill players. If a pickup is worth more than any of
+    these, the swap is strictly positive.
   </p>
   <div class="drop-grid">
     {% for p in report.waivers.drop_candidates %}
@@ -111,24 +113,24 @@
   <div class="methodology">
     <h3>Methodology</h3>
     <p>
-      <strong>Available pool</strong>: every FantasyCalc-valued player whose
-      Sleeper ID isn't on a roster, taxi squad, or IR slot in your league.
+      <strong>Pool</strong>: every FantasyCalc-valued player whose Sleeper
+      ID isn't on a roster, taxi squad, or IR slot in your league —
+      excluding rookies (years_exp = 0). Rookies live on the
+      <a href="../draft/">draft page</a>, where they're projected against
+      your actual pick slots.
     </p>
     <p>
-      <strong>Trending</strong> comes from Sleeper's 24-hour community
-      add count. Big numbers mean lots of managers are grabbing the player
-      right now — useful early-warning signal for waiver wire targets.
+      <strong>Trending</strong> is Sleeper's 24-hour community add count —
+      a leading indicator for wire pickups.
     </p>
     <p>
-      <strong>Suggested drop</strong> is the lowest-value skill player on
-      your roster the pickup could plausibly replace. For K/DEF pickups,
-      it's matched to the same position.
+      <strong>Suggested drops</strong> per pickup are your 3 lowest-value
+      compatible skill players. Pick the one that hurts your roster least.
     </p>
     <p>
-      <strong>Limitations:</strong> No FAAB budget awareness. No bye-week
-      conflict checking. Doesn't model snap share or target trend, so
-      ascending-but-low-value players aren't surfaced beyond what
-      FantasyCalc has already priced in.
+      <strong>Limitations:</strong> No FAAB awareness. No bye-week conflict
+      check. Doesn't model snap-share or target-trend signals, so ascending
+      players whose value hasn't caught up yet won't surface.
     </p>
   </div>
 
