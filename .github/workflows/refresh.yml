@@ -1,5 +1,6 @@
 name: Refresh dynasty reports
 
+# Schedule + on-push + manual triggers.
 on:
   schedule:
     # 09:30 UTC daily ≈ 04:30 ET / 02:30 PT — after FantasyCalc's overnight refresh.
