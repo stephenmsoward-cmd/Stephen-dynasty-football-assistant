@@ -39,6 +39,11 @@ DEFAULT_VALUE_TOLERANCE = 0.20
 # the trade — those candidates fall through to "asymmetric" instead.
 MUTUAL_VALUE_TOLERANCE = 0.08
 
+# Mutual tier also requires lineup gains to be reasonably balanced.
+# min(my_change, their_change) / max(...) must be >= this threshold.
+# 0.5 means neither side's lineup gain can be more than 2x the other's.
+MUTUAL_LINEUP_BALANCE = 0.5
+
 # Minimum positive change to count as "improvement" on a dimension.
 LINEUP_MIN_IMPROVEMENT = 50
 ASSET_MIN_IMPROVEMENT = 200
@@ -114,16 +119,22 @@ def _classify(c: TradeCandidate) -> str:
     my_l_up = c.my_lineup_change >= LINEUP_MIN_IMPROVEMENT
     their_l_up = c.their_lineup_change >= LINEUP_MIN_IMPROVEMENT
 
-    # "Mutual" must satisfy BOTH conditions:
+    # "Mutual" must satisfy THREE conditions:
     # 1. Both lineups improve (algorithmic fit)
     # 2. FantasyCalc value parity is tight (market plausibility)
-    # Without (2), one side is essentially being asked to take a worse deal
-    # in market terms, even though their lineup math improves.
+    # 3. Lineup gains are reasonably balanced (neither side dwarfs the other)
+    # Without (2) one side takes a worse market deal; without (3) one side
+    # barely benefits while the other gets the bulk of the lineup upgrade.
     if my_l_up and their_l_up:
         send_total = _asset_total(c.send)
         receive_total = _asset_total(c.receive)
         larger = max(send_total, receive_total)
-        if larger > 0 and abs(send_total - receive_total) / larger <= MUTUAL_VALUE_TOLERANCE:
+        value_ok = larger > 0 and abs(send_total - receive_total) / larger <= MUTUAL_VALUE_TOLERANCE
+
+        max_lineup = max(c.my_lineup_change, c.their_lineup_change)
+        balance_ok = max_lineup > 0 and (min(c.my_lineup_change, c.their_lineup_change) / max_lineup) >= MUTUAL_LINEUP_BALANCE
+
+        if value_ok and balance_ok:
             return "mutual"
         # Falls through to other tiers below.
 
