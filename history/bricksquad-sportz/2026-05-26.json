@@ -35,7 +35,7 @@
     "BN",
     "BN"
   ],
-  "generated_at": "2026-05-26T23:16:26+00:00",
+  "generated_at": "2026-05-26T23:17:32+00:00",
   "previous_snapshot_date": "2026-05-26",
   "teams": [
     {
@@ -529,8 +529,8 @@
       },
       "rank_delta": -3,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
         "dynasty_points": 2,
         "winnow_points": 2
       }
@@ -1026,8 +1026,8 @@
       },
       "rank_delta": -1,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,1.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
         "dynasty_points": 2,
         "winnow_points": 2
       }
@@ -1491,8 +1491,8 @@
       },
       "rank_delta": 1,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
         "dynasty_points": 2,
         "winnow_points": 2
       }
@@ -1988,8 +1988,8 @@
       },
       "rank_delta": -3,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,1.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,1.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
         "dynasty_points": 2,
         "winnow_points": 2
       }
@@ -2485,8 +2485,8 @@
       },
       "rank_delta": 4,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,1.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,1.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
         "dynasty_points": 2,
         "winnow_points": 2
       }
@@ -2982,8 +2982,8 @@
       },
       "rank_delta": -2,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,1.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
         "dynasty_points": 2,
         "winnow_points": 2
       }
@@ -3479,8 +3479,8 @@
       },
       "rank_delta": 2,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,1.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,1.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
         "dynasty_points": 2,
         "winnow_points": 2
       }
@@ -3976,8 +3976,8 @@
       },
       "rank_delta": 2,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
         "dynasty_points": 2,
         "winnow_points": 2
       }
@@ -4473,8 +4473,8 @@
       },
       "rank_delta": 0,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,1.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,1.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
         "dynasty_points": 2,
         "winnow_points": 2
       }
@@ -4970,8 +4970,8 @@
       },
       "rank_delta": 0,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
         "dynasty_points": 2,
         "winnow_points": 2
       }
@@ -15509,7 +15509,7 @@
             "injury_status": "Questionable"
           }
         ],
-        "trending_count": 79551
+        "trending_count": 67671
       },
       {
         "pickup": {
@@ -15558,7 +15558,7 @@
             "injury_status": "Questionable"
           }
         ],
-        "trending_count": 4424
+        "trending_count": 4396
       },
       {
         "pickup": {
@@ -15607,7 +15607,7 @@
             "injury_status": "Questionable"
           }
         ],
-        "trending_count": 2744
+        "trending_count": 2702
       },
       {
         "pickup": {
@@ -15656,7 +15656,7 @@
             "injury_status": "Questionable"
           }
         ],
-        "trending_count": 2720
+        "trending_count": 2696
       },
       {
         "pickup": {
@@ -15705,7 +15705,7 @@
             "injury_status": "Questionable"
           }
         ],
-        "trending_count": 1656
+        "trending_count": 1640
       }
     ],
     "best_overall": [
@@ -15805,7 +15805,7 @@
             "injury_status": "Questionable"
           }
         ],
-        "trending_count": 4424
+        "trending_count": 4396
       },
       {
         "pickup": {
@@ -16004,7 +16004,7 @@
               "injury_status": "Questionable"
             }
           ],
-          "trending_count": 4424
+          "trending_count": 4396
         },
         {
           "pickup": {
@@ -16202,7 +16202,7 @@
               "injury_status": "Questionable"
             }
           ],
-          "trending_count": 79551
+          "trending_count": 67671
         }
       ],
       "TE": [
@@ -17348,7 +17348,7 @@
       "description": "Buccaneers running back Bucky Irving, who is rehabbing from offseason shoulder surgery, should be ready later this summer, a source told ESPN's Adam Schefter.",
       "url": "https://www.espn.com/nfl/story/_/id/48884875/source-bucs-rb-bucky-irving-shoulder-likely-ready-summer",
       "published": "2026-05-26T22:31:50Z",
-      "age_hours": 0.7,
+      "age_hours": 0.8,
       "players": [
         {
           "sleeper_id": "11584",
@@ -17467,7 +17467,7 @@
       "description": "Jordan Love and Ronika Stone have spent a full month with their newborn daughter.",
       "url": "https://www.espn.com/nfl/story/_/id/48855003/green-bay-packers-jordan-love-ronika-stone-baby-announcement-daughter",
       "published": "2026-05-23T22:38:18Z",
-      "age_hours": 72.6,
+      "age_hours": 72.7,
       "players": [
         {
           "sleeper_id": "6804",
