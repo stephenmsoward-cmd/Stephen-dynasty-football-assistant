@@ -29,6 +29,14 @@
       &middot;
       <a href="draft/">Draft recommendations</a>
       {% endif %}
+      {% if report.rankings %}
+      &middot;
+      <a href="rankings/">Power rankings</a>
+      {% endif %}
+      {% if report.compare %}
+      &middot;
+      <a href="compare/">Compare teams</a>
+      {% endif %}
       <span class="muted small">&middot; Generated {{ report.generated_at }}</span>
     </nav>
   </header>
@@ -57,6 +65,7 @@
         <th class="num hide-mobile">WR</th>
         <th class="num hide-mobile">TE</th>
         <th class="num">Total</th>
+        <th class="num hide-mobile" title="Daily value history">Trend</th>
       </tr>
     </thead>
     <tbody>
@@ -88,11 +97,44 @@
           </span>
           {% endif %}
         </td>
+        <td class="num hide-mobile sparkline-cell" title="{{ t.sparkline[mode + '_points'] }} day(s) of history">
+          {{ t.sparkline[mode] | safe }}
+        </td>
       </tr>
       {% endfor %}
     </tbody>
   </table>
   {% endmacro %}
+
+  {% if report.news %}
+  <h2>📰 Recent Player News <span class="muted small">({{ report.news | length }})</span></h2>
+  <p class="muted small">
+    Latest ESPN articles mentioning players rostered in this league.
+  </p>
+  <ul class="news-list">
+    {% for n in report.news %}
+    <li class="news-item">
+      <div class="news-headline">
+        {% if n.url %}<a href="{{ n.url }}" target="_blank" rel="noopener">{{ n.headline }}</a>
+        {% else %}{{ n.headline }}{% endif %}
+        <span class="muted small news-age">
+          {% if n.age_hours < 24 %}{{ n.age_hours | round | int }}h ago
+          {% else %}{{ (n.age_hours / 24) | round | int }}d ago{% endif %}
+        </span>
+      </div>
+      {% if n.description %}<div class="muted small news-desc">{{ n.description }}</div>{% endif %}
+      <div class="news-players">
+        {% for p in n.players %}
+        <span class="news-player-tag">
+          {{ p.name }}
+          <span class="muted">({{ p.position }}{% if p.team %} · {{ p.team }}{% endif %})</span>
+        </span>
+        {% endfor %}
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
 
   <h2>Standings by Optimal Lineup Value</h2>
   <div class="dynasty-only">

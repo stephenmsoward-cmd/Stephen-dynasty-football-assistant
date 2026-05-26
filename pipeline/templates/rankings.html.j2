@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ report.name }} — League Power Rankings</title>
+  <link rel="stylesheet" href="../../../style.css">
+</head>
+<body class="mode-dynasty">
+<div class="container">
+  <header class="site">
+    <h1>League Power Rankings</h1>
+    <div class="tagline">
+      {{ report.name }} &middot; {{ report.season }} &middot;
+      {{ report.total_rosters }} teams
+    </div>
+    <nav>
+      <a href="../">&larr; Back to league</a>
+      {% if report.trades %}&middot; <a href="../trades/">Trade ideas</a>{% endif %}
+      {% if report.waivers %}&middot; <a href="../waivers/">Waiver wire</a>{% endif %}
+      {% if report.draft %}&middot; <a href="../draft/">Draft recommendations</a>{% endif %}
+      {% if report.compare %}&middot; <a href="../compare/">Compare teams</a>{% endif %}
+      <span class="muted small">&middot; Generated {{ report.generated_at }}</span>
+    </nav>
+  </header>
+
+  <p class="muted small" style="margin-top: 0.5rem;">
+    Composite rank combines Dynasty starter value, Win-Now starter value, and
+    total asset value (all rostered players + picks). Trajectory labels mark
+    teams whose Dynasty and Win-Now ranks differ by more than {{ 2 }} slots.
+  </p>
+
+  <table class="standings power-rankings">
+    <thead>
+      <tr>
+        <th class="num">#</th>
+        <th>Team</th>
+        <th class="hide-mobile">Owner</th>
+        <th>Trajectory</th>
+        <th class="num">Dynasty</th>
+        <th class="num">Win-Now</th>
+        <th class="num">Assets</th>
+        <th class="num">Composite</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for r in report.rankings.rows %}
+      <tr>
+        <td class="num rank">{{ r.composite_rank }}</td>
+        <td>
+          <div>{{ r.team_name }}</div>
+        </td>
+        <td class="muted hide-mobile">{{ r.owner_display_name }}</td>
+        <td>
+          <span class="trajectory-badge trajectory-{{ r.trajectory }}">
+            {{ r.trajectory }}
+          </span>
+        </td>
+        <td class="num">
+          <div class="rank-bar-row">
+            <span class="rank-bar"><span class="rank-bar-fill" style="width: {{ r.dynasty_bar_pct }}%; background: var(--accent);"></span></span>
+            <span class="rank-bar-label">#{{ r.dynasty_rank }} · {{ r.dynasty_total | money }}</span>
+          </div>
+        </td>
+        <td class="num">
+          <div class="rank-bar-row">
+            <span class="rank-bar"><span class="rank-bar-fill" style="width: {{ r.winnow_bar_pct }}%; background: var(--warn);"></span></span>
+            <span class="rank-bar-label">#{{ r.winnow_rank }} · {{ r.winnow_total | money }}</span>
+          </div>
+        </td>
+        <td class="num">
+          <div class="rank-bar-row">
+            <span class="rank-bar"><span class="rank-bar-fill" style="width: {{ r.asset_bar_pct }}%; background: var(--good);"></span></span>
+            <span class="rank-bar-label">#{{ r.asset_rank }} · {{ r.asset_value | money }}</span>
+          </div>
+        </td>
+        <td class="num"><strong>{{ "%.2f" | format(r.composite_score) }}</strong></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <div class="methodology">
+    <h3>Methodology</h3>
+    <p>
+      <strong>Dynasty rank</strong> and <strong>Win-Now rank</strong> come
+      directly from the league standings page — each team's optimal best-ball
+      lineup value under that mode.
+    </p>
+    <p>
+      <strong>Asset value</strong> sums dynasty values for every rostered
+      player (active, taxi, IR) PLUS every owned draft pick. It captures
+      total roster depth, not just starter quality.
+    </p>
+    <p>
+      <strong>Composite score</strong> is the simple average of those three
+      ranks (lower is better, like golf). Teams that rank well across all
+      three dimensions win.
+    </p>
+    <p>
+      <strong>Trajectory</strong> reads the gap between dynasty and win-now
+      ranks. "Win-Now" = doing better short-term than long-term (aging
+      vets producing now). "Rebuild" = doing better long-term than
+      short-term (young assets still maturing). "Balanced" = within 2 ranks
+      either way.
+    </p>
+  </div>
+
+  <footer class="site">
+    Data: <a href="https://docs.sleeper.com">Sleeper</a> &middot;
+    <a href="https://fantasycalc.com">FantasyCalc</a>.
+  </footer>
+</div>
+</body>
+</html>

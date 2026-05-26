@@ -89,31 +89,54 @@ have options instead of always the same single name.
 
 For each pick slot you own in this year's rookie draft (configured per
 league via `my_draft_slots` in `leagues.yml`), the draft page projects
-which rookies will likely be available. Uses a strict "best player
-available by FantasyCalc dynasty value" model — real drafts deviate
-because of positional runs and personal preferences, so treat this as
-guidance not gospel.
+which rookies will likely be available — under two side-by-side models:
 
-Per pick slot you see:
-- Your overall pick number (e.g., 1.10 = overall #10 in a 10-team league)
-- FantasyCalc's per-slot value (so you know what your pick is worth)
-- The top 8 rookies projected to be on the board when you're up
+- **Adjusted for team need** — each rookie's value is scaled by the
+  league-wide spread at that position (a proxy for hungry-team demand).
+  Wider spreads → bigger boost. Up to +20% at maximum demand.
+- **Strict by FantasyCalc value** — pure best-player-available, no
+  positional bias.
 
+Players who rise into the window under the adjusted model are tagged
+"▲ rising"; players who drop out are dimmed and tagged "▼ falling."
+
+A "League positional demand" header visualizes the spread per position.
 A "falling beyond your last pick" section shows the next chunk of
-prospects who'd otherwise go later — useful for trade-back analysis.
+prospects for trade-back decisions.
+
+### Power rankings
+
+Composite ranking page combining:
+- **Dynasty rank** — long-term starter value
+- **Win-Now rank** — this-season starter value
+- **Asset rank** — total dynasty value of every rostered player + every
+  owned draft pick (captures depth, not just starters)
+
+Each team gets a trajectory tag (`win-now`, `rebuild`, or `balanced`)
+based on the gap between Dynasty and Win-Now ranks.
+
+### Compare teams
+
+Side-by-side full-roster comparisons against every other team in the
+league. Groups players by position with running per-position totals;
+sign of the diff shows who's ahead at that position. Draft picks
+included as a separate row.
+
+### Recent news
+
+ESPN's NFL news endpoint filtered to articles mentioning players actually
+rostered in the league. Top items appear on the league landing page with
+clickable headlines, ages, and player tags.
 
 ## Roadmap
 
+- **Usage trends from nflverse** — pull weekly snap counts and target share
+  to detect ascending players before FantasyCalc values catch up.
 - **Projection swap-in** — replace FantasyCalc redraft values with
   ESPN/FantasyPros 2026 statistical projections when those land in late July.
-- **News + usage signals** — surface injury status and ascending-usage
-  flags (snap share trend, target share) per player.
-- **Win-Now trade analysis** — currently the trade finder uses dynasty
-  values as canonical trade-market currency. A Win-Now trade mode would
-  optimize for this-season lineup gains.
-- **Smarter drop suggestions** — currently the suggested drop is always
-  the lowest-value compatible player. Could improve by matching position
-  more carefully and rotating through multiple options.
+- **Trade negotiation sandbox** — let users paste in any proposed trade and
+  see the lineup/asset impact under both modes.
+- **Smarter drop suggestions** — match drops more carefully by position.
 
 ## Add your league
 
@@ -151,11 +174,15 @@ league/rosters: 1h, FantasyCalc values: 24h) so re-runs are fast.
 
 ```
 pipeline/         Python — data fetch, lineup math, HTML rendering
-  data.py           Sleeper + FantasyCalc clients with file cache
+  data.py           Sleeper + FantasyCalc + ESPN news clients with file cache
   lineup.py         Optimal-lineup calculator (greedy under slot constraints)
-  trades.py         Trade finder (1v1/2v1/1v2/2v2 + picks + asset/lineup scoring)
-  waivers.py        Waiver wire recommender (veterans only, trending + gap-targeting)
-  draft.py          Rookie draft recommender (projected board at your slots)
+  trades.py         Trade finder (1v1/2v1/1v2/2v2 + picks + dual-mode)
+  waivers.py        Waiver wire recommender (veterans only)
+  draft.py          Rookie draft recommender (strict + team-need adjusted boards)
+  news.py           ESPN news filtered to rostered players
+  rankings.py       League power rankings (composite of dynasty + win-now + assets)
+  compare.py        Side-by-side full roster comparisons
+  history.py        Reads dated snapshots → sparkline SVGs
   generate.py       Entry point: builds site/ and history/
   templates/        Jinja2 templates + CSS + toggle JS
 site/             Published to GitHub Pages

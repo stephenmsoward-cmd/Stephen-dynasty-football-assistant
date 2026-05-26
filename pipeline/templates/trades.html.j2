@@ -25,9 +25,27 @@
     </nav>
   </header>
 
-  <h2>Your Roster Profile</h2>
+  <div class="mode-toggle" role="tablist" aria-label="Trade value mode">
+    <button data-mode="dynasty" class="active" role="tab" aria-selected="true">
+      Dynasty trades
+      <span class="mode-desc">long-term lineup gains</span>
+    </button>
+    <button data-mode="winnow" role="tab" aria-selected="false">
+      Win-Now trades
+      <span class="mode-desc">this-season lineup gains</span>
+    </button>
+  </div>
+  <p class="muted small">
+    Trade candidates are computed under both modes. Dynasty mode optimizes for
+    long-term roster value; Win-Now mode optimizes for this-season production.
+    The same trade may appear in different tiers under each mode.
+  </p>
+
+  {% macro position_strength_block(mode) %}
+  {% set strength = report.trades.my_team.position_strength[mode] %}
+  <h2>Your Roster Profile <span class="muted small">({{ 'dynasty' if mode == 'dynasty' else 'win-now' }} mode)</span></h2>
   <div class="strength-grid">
-    {% for pos, s in report.trades.my_team.position_strength.items() %}
+    {% for pos, s in strength.items() %}
     <div class="strength-card strength-{{ s.label }}">
       <div class="strength-pos">{{ pos }}</div>
       <div class="strength-value">{{ s.value | money }}</div>
@@ -38,12 +56,7 @@
     </div>
     {% endfor %}
   </div>
-  <p class="muted small">
-    Trade targets typically move value from your
-    <strong class="strength-surplus-text">surplus</strong> positions to your
-    <strong class="strength-gap-text">gap</strong> positions, or swap
-    win-now production for future picks (and vice versa).
-  </p>
+  {% endmacro %}
 
   {% macro player_chip(p) %}
   <div class="trade-player {% if p.is_pick %}is-pick{% endif %}">
@@ -108,8 +121,8 @@
   </article>
   {% endmacro %}
 
-  {% macro tier_section(tier_key, tier_label, tier_desc) %}
-  {% set candidates = report.trades.tiers[tier_key] %}
+  {% macro tier_section(tier_key, tier_label, tier_desc, mode_data) %}
+  {% set candidates = mode_data.tiers[tier_key] %}
   {% if candidates %}
   <h2>{{ tier_label }} <span class="muted small">({{ candidates | length }})</span></h2>
   <p class="muted small">{{ tier_desc }}</p>
@@ -117,47 +130,45 @@
   {% endif %}
   {% endmacro %}
 
-  {{ tier_section(
-    'mutual',
-    'Highest Mutual Benefit',
-    'Both teams\' starting lineups strictly improve. The easiest pitches because every manager has a reason to say yes.'
-  ) }}
+  {% macro mode_content(mode, mode_data) %}
+  {{ position_strength_block(mode) }}
+  <p class="muted small">
+    Trade targets typically move value from your
+    <strong class="strength-surplus-text">surplus</strong> positions to your
+    <strong class="strength-gap-text">gap</strong> positions, or swap
+    win-now production for future picks (and vice versa).
+    {{ mode_data.total_candidates | money }} candidate{{ '' if mode_data.total_candidates == 1 else 's' }} found.
+  </p>
 
-  {{ tier_section(
-    'buy',
-    'Convert Futures to Win-Now',
-    'You send picks (future value); you receive players who slot into your lineup now. Good if your timeline is now.'
-  ) }}
+  {{ tier_section('mutual', 'Highest Mutual Benefit',
+    'Both teams\' starting lineups strictly improve. The easiest pitches because every manager has a reason to say yes.',
+    mode_data) }}
 
-  {{ tier_section(
-    'sell',
-    'Sell for Picks',
-    'You receive picks; you send players who slot into the partner\'s lineup. Good if you\'re building for the future or shedding aging vets.'
-  ) }}
+  {{ tier_section('buy', 'Convert Futures to ' + ('Win-Now' if mode == 'winnow' else 'Now'),
+    'You send picks (future value); you receive players who slot into your lineup now. Good if your timeline is now.',
+    mode_data) }}
 
-  {{ tier_section(
-    'package',
-    'Package Deals',
-    'Multi-player trades (2-for-1, 1-for-2, 2-for-2). Useful for consolidating depth or trading down for breadth.'
-  ) }}
+  {{ tier_section('sell', 'Sell for Picks',
+    'You receive picks; you send players who slot into the partner\'s lineup. Good if you\'re building for the future or shedding aging vets.',
+    mode_data) }}
 
-  {{ tier_section(
-    'asymmetric',
-    'Other Candidates',
-    'Trades that pass the asset-value-OR-lineup-improvement filter but don\'t fit the cleaner categories.'
-  ) }}
+  {{ tier_section('package', 'Package Deals',
+    'Multi-player trades (2-for-1, 1-for-2, 2-for-2). Useful for consolidating depth or trading down for breadth.',
+    mode_data) }}
 
-  {% if report.trades.total_candidates == 0 %}
+  {{ tier_section('asymmetric', 'Other Candidates',
+    'Trades that pass the asset-value-OR-lineup-improvement filter but don\'t fit the cleaner categories.',
+    mode_data) }}
+
+  {% if mode_data.total_candidates == 0 %}
   <h2>No Trade Ideas Found</h2>
   <p class="muted">
-    No trades pass the filters (each side must improve on lineup or asset value;
-    FantasyCalc values within 20%). Your roster may already be optimized
-    relative to partners.
+    No trades pass the filters under this mode.
   </p>
   {% endif %}
 
-  <h2>By Opposing Team</h2>
-  {% for partner in report.trades.by_team %}
+  <h2>By Opposing Team <span class="muted small">({{ mode_data.by_team | length }})</span></h2>
+  {% for partner in mode_data.by_team %}
   <details class="team-trades" {% if partner.candidates %}open{% endif %}>
     <summary>
       <strong>{{ partner.team.team_name }}</strong>
@@ -176,35 +187,40 @@
     {% endif %}
   </details>
   {% endfor %}
+  {% endmacro %}
+
+  <div class="dynasty-only">
+    {{ mode_content('dynasty', report.trades.modes.dynasty) }}
+  </div>
+  <div class="winnow-only">
+    {{ mode_content('winnow', report.trades.modes.winnow) }}
+  </div>
 
   <div class="methodology">
     <h3>Methodology</h3>
     <p>
-      <strong>What's a "good" trade?</strong> For every candidate (1-for-1, 2-for-1,
-      1-for-2, 2-for-2 — including draft picks), we recompute the optimal
-      best-ball lineup for both teams and compute the change in each team's
-      total dynasty asset value. A candidate is shown when each team improves
-      on at least one of those two dimensions, with FantasyCalc value parity
-      within 20%.
+      For every candidate (1-for-1, 2-for-1, 1-for-2, 2-for-2 — including draft
+      picks), we recompute the optimal best-ball lineup for both teams under
+      the active value mode, and compute the change in each team's total
+      dynasty asset value. A candidate is shown when each team improves on at
+      least one of those two dimensions, with FantasyCalc value parity within
+      20%.
     </p>
     <p>
-      This dual-dimension filter is what makes pick-for-player trades work:
-      the team receiving the pick may not improve their starting lineup
-      (picks don't slot), but they gain dynasty asset value. The team
-      receiving the player gains lineup value. Both have reason to say yes.
+      <strong>Dynasty mode</strong> uses FantasyCalc dynasty values (multi-year,
+      age-weighted). <strong>Win-Now mode</strong> uses redraft values
+      (this-season market value). The same trade often appears in different
+      tiers — a 32-year-old WR may be worth less in dynasty but more in
+      win-now, flipping a candidate from "asymmetric" to "mutual".
     </p>
     <p>
-      <strong>Pick values</strong> come from FantasyCalc's pick rankings,
-      averaged across slots within each round. Pick ownership comes from
-      Sleeper's <code>traded_picks</code> endpoint applied to the league's
-      default pick allocation. FantasyCalc only tracks the next upcoming
-      draft; future-season picks are discounted at 15% per year.
+      <strong>Value parity</strong> (20% tolerance) is always measured in
+      dynasty values because that's the consensus trade-market currency. Mode
+      only affects which lineup we optimize.
     </p>
     <p>
-      <strong>Current limitations:</strong> Multi-player packages are limited
-      to the top {{ 15 }} most-valuable assets per side for tractability.
-      Excludes taxi-squad and IR players. Uses dynasty values as the
-      trade-market currency; a Win-Now trade mode is on the roadmap.
+      <strong>Limitations:</strong> Multi-player packages are limited to the
+      top 15 most-valuable assets per side. Excludes taxi-squad and IR players.
     </p>
   </div>
 
@@ -213,5 +229,6 @@
     <a href="https://fantasycalc.com">FantasyCalc</a>.
   </footer>
 </div>
+<script src="../../../app.js"></script>
 </body>
 </html>

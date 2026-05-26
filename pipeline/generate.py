@@ -25,6 +25,10 @@ from lineup import optimal_lineup
 from trades import TradeCandidate, find_trades
 from waivers import build_waiver_report
 from draft import build_draft_report
+from news import build_news_feed
+from rankings import build_power_rankings
+from compare import build_compare_report
+from history import build_team_series, sparkline_svg
 
 ROOT = Path(__file__).parent.parent
 SITE = ROOT / "site"
@@ -169,34 +173,20 @@ def candidate_to_dict(c: TradeCandidate, pos_ranks: dict[str, int]) -> dict:
     }
 
 
-def build_trade_report(
-    my_roster_id: int,
+def _run_trade_search(
+    mode: str,
+    my_players: list[Player],
+    my_tradeable: list[Player],
     rostered_by_team: dict[int, list[Player]],
     picks_by_team: dict[int, list[Player]],
+    my_roster_id: int,
+    slots: list[str],
     teams_data: list[dict],
     team_meta: dict[int, dict],
-    slots: list[str],
-    pos_ranks: dict[str, dict[str, int]],
+    pos_ranks_for_mode: dict[str, int],
 ) -> dict:
-    """Returns the trades payload to attach to the league report."""
-    vf = value_fn_for(TRADE_MODE)
-    my_players = rostered_by_team[my_roster_id]
-    my_picks = picks_by_team.get(my_roster_id, [])
-    my_tradeable = my_players + my_picks
-
-    league_pos_totals: dict[str, list[int]] = {pos: [] for pos in SKILL_POSITIONS}
-    my_team_data = next(t for t in teams_data if t["roster_id"] == my_roster_id)
-    for t in teams_data:
-        for pos in SKILL_POSITIONS:
-            league_pos_totals[pos].append(t["modes"][TRADE_MODE]["position_totals"].get(pos, 0))
-    for pos in SKILL_POSITIONS:
-        league_pos_totals[pos].sort(reverse=True)
-
-    my_pos_strength = position_strength(
-        my_team_data["modes"][TRADE_MODE]["position_totals"],
-        league_pos_totals,
-    )
-
+    """Compute all candidates + tiers for one value mode (dynasty or winnow)."""
+    vf = value_fn_for(mode)
     by_team: list[dict] = []
     all_candidates: list[tuple[int, TradeCandidate]] = []
     for rid, players_list in rostered_by_team.items():
@@ -204,7 +194,6 @@ def build_trade_report(
             continue
         their_picks = picks_by_team.get(rid, [])
         their_tradeable = players_list + their_picks
-
         candidates = find_trades(
             my_tradeable=my_tradeable,
             my_players=my_players,
@@ -223,15 +212,14 @@ def build_trade_report(
                 t["modes"]["winnow"]["rank"] for t in teams_data if t["roster_id"] == rid
             ),
             "candidate_count": len(candidates),
-            "candidates": [candidate_to_dict(c, pos_ranks[TRADE_MODE]) for c in top_for_team],
+            "candidates": [candidate_to_dict(c, pos_ranks_for_mode) for c in top_for_team],
         })
         for c in candidates:
             all_candidates.append((rid, c))
 
-    # Group by tier across all partners.
     tiers = {"mutual": [], "buy": [], "sell": [], "package": [], "asymmetric": []}
     for rid, c in all_candidates:
-        d = candidate_to_dict(c, pos_ranks[TRADE_MODE])
+        d = candidate_to_dict(c, pos_ranks_for_mode)
         d["partner_team_name"] = team_meta[rid]["team_name"]
         d["partner_owner"] = team_meta[rid]["owner_display_name"]
         d["partner_dynasty_rank"] = next(
@@ -246,20 +234,71 @@ def build_trade_report(
         tiers[tier] = tiers[tier][:TOP_TRADES_PER_TIER]
 
     return {
+        "by_team": by_team,
+        "tiers": tiers,
+        "tier_counts": {t: len(c) for t, c in tiers.items()},
+        "total_candidates": len(all_candidates),
+    }
+
+
+def build_trade_report(
+    my_roster_id: int,
+    rostered_by_team: dict[int, list[Player]],
+    picks_by_team: dict[int, list[Player]],
+    teams_data: list[dict],
+    team_meta: dict[int, dict],
+    slots: list[str],
+    pos_ranks: dict[str, dict[str, int]],
+) -> dict:
+    """Returns the trades payload, with candidates computed under BOTH modes."""
+    my_players = rostered_by_team[my_roster_id]
+    my_picks = picks_by_team.get(my_roster_id, [])
+    my_tradeable = my_players + my_picks
+
+    my_team_data = next(t for t in teams_data if t["roster_id"] == my_roster_id)
+
+    # Per-mode positional strength (gaps shift between modes).
+    position_strengths: dict[str, dict] = {}
+    for mode in MODES:
+        league_pos_totals: dict[str, list[int]] = {pos: [] for pos in SKILL_POSITIONS}
+        for t in teams_data:
+            for pos in SKILL_POSITIONS:
+                league_pos_totals[pos].append(t["modes"][mode]["position_totals"].get(pos, 0))
+        for pos in SKILL_POSITIONS:
+            league_pos_totals[pos].sort(reverse=True)
+        position_strengths[mode] = position_strength(
+            my_team_data["modes"][mode]["position_totals"],
+            league_pos_totals,
+        )
+
+    # Run the trade search once per mode.
+    mode_results: dict[str, dict] = {}
+    for mode in MODES:
+        mode_results[mode] = _run_trade_search(
+            mode=mode,
+            my_players=my_players,
+            my_tradeable=my_tradeable,
+            rostered_by_team=rostered_by_team,
+            picks_by_team=picks_by_team,
+            my_roster_id=my_roster_id,
+            slots=slots,
+            teams_data=teams_data,
+            team_meta=team_meta,
+            pos_ranks_for_mode=pos_ranks[mode],
+        )
+
+    return {
         "my_team": {
             **team_meta[my_roster_id],
             "dynasty_rank": my_team_data["modes"]["dynasty"]["rank"],
             "winnow_rank": my_team_data["modes"]["winnow"]["rank"],
             "dynasty_total": my_team_data["modes"]["dynasty"]["total_value"],
             "winnow_total": my_team_data["modes"]["winnow"]["total_value"],
-            "position_strength": my_pos_strength,
+            "position_strength": position_strengths,
             "pick_count": len(my_picks),
             "pick_value": sum(p.dynasty_value for p in my_picks),
         },
-        "by_team": by_team,
-        "tiers": tiers,
-        "tier_counts": {t: len(c) for t, c in tiers.items()},
-        "total_candidates": len(all_candidates),
+        "modes": mode_results,
         "mode": TRADE_MODE,
     }
 
@@ -431,10 +470,10 @@ def build_league_report(
             }
             gap_positions: list[str] = []
             if trade_report:
-                gap_positions = [
-                    pos for pos, info in trade_report["my_team"]["position_strength"].items()
-                    if info["label"] == "gap"
-                ]
+                # Use dynasty-mode gaps for the waiver page (consistent with the
+                # roster's long-term shape; win-now gaps shift with redraft values).
+                strength = trade_report["my_team"]["position_strength"]["dynasty"]
+                gap_positions = [pos for pos, info in strength.items() if info["label"] == "gap"]
             waiver_report = build_waiver_report(
                 my_roster=rostered_by_team[my_roster_id],
                 available_players=available_players,
@@ -457,13 +496,80 @@ def build_league_report(
             and sid not in rostered_ids_all
         ]
         slot_values = data.pick_slot_values(fc_values)
+
+        # Compute position_strength for every team so the draft model can
+        # apply league-wide positional demand to its adjusted board.
+        league_pos_totals: dict[str, list[int]] = {pos: [] for pos in SKILL_POSITIONS}
+        for t in teams:
+            for pos in SKILL_POSITIONS:
+                league_pos_totals[pos].append(t["modes"]["dynasty"]["position_totals"].get(pos, 0))
+        for pos in SKILL_POSITIONS:
+            league_pos_totals[pos].sort(reverse=True)
+        position_strengths_by_team = {
+            t["roster_id"]: position_strength(
+                t["modes"]["dynasty"]["position_totals"],
+                league_pos_totals,
+            )
+            for t in teams
+        }
+
         draft_report = build_draft_report(
             available_rookies=available_rookies,
             my_slots=my_draft_slots,
             season=league["season"],
             num_teams=league["total_rosters"],
             pick_slot_values=slot_values,
+            position_strengths_by_team=position_strengths_by_team,
         )
+
+    # Per-team time series from historical snapshots → sparkline SVGs.
+    team_series = build_team_series(HISTORY / slug)
+    sparklines_by_team: dict[int, dict[str, str]] = {}
+    for t in teams:
+        rid = t["roster_id"]
+        series = team_series.get(rid, {"dynasty": [], "winnow": []})
+        sparklines_by_team[rid] = {
+            "dynasty": sparkline_svg([s["value"] for s in series["dynasty"]]),
+            "winnow": sparkline_svg([s["value"] for s in series["winnow"]]),
+            "dynasty_points": len(series["dynasty"]),
+            "winnow_points": len(series["winnow"]),
+        }
+        t["sparkline"] = sparklines_by_team[rid]
+
+    # Power rankings — composite of dynasty, win-now, and total asset value.
+    rankings_payload = build_power_rankings(
+        teams_data=teams,
+        rostered_by_team=rostered_by_team,
+        picks_by_team=picks_by_team,
+    )
+
+    # Compare-two-teams — only when we know which team is "yours".
+    compare_payload = None
+    if my_user_id:
+        # Reuse my_roster_id resolution.
+        my_rid = next(
+            (r["roster_id"] for r in rosters if r["owner_id"] == my_user_id),
+            None,
+        )
+        if my_rid is not None:
+            compare_payload = build_compare_report(
+                my_roster_id=my_rid,
+                rostered_by_team=rostered_by_team,
+                picks_by_team=picks_by_team,
+                teams_data=teams,
+                team_meta=team_meta,
+            )
+
+    # News feed — for the whole league, articles mentioning any rostered player.
+    rostered_by_espn_id: dict[str, Player] = {}
+    for players_list in rostered_by_team.values():
+        for p in players_list:
+            if p.espn_id:
+                rostered_by_espn_id[p.espn_id] = p
+    news_feed = build_news_feed(
+        articles=data.get_nfl_news(limit=80),
+        rostered_players_by_espn_id=rostered_by_espn_id,
+    )
 
     return {
         "slug": slug,
@@ -480,6 +586,9 @@ def build_league_report(
         "trades": trade_report,
         "waivers": waiver_report,
         "draft": draft_report,
+        "news": news_feed,
+        "rankings": rankings_payload,
+        "compare": compare_payload,
     }
 
 
@@ -513,6 +622,8 @@ def render_site(reports: list[dict]) -> None:
     trades_tmpl = env.get_template("trades.html.j2")
     waivers_tmpl = env.get_template("waivers.html.j2")
     draft_tmpl = env.get_template("draft.html.j2")
+    rankings_tmpl = env.get_template("rankings.html.j2")
+    compare_tmpl = env.get_template("compare.html.j2")
     for r in reports:
         out_dir = SITE / "leagues" / r["slug"]
         out_dir.mkdir(parents=True, exist_ok=True)
@@ -533,6 +644,16 @@ def render_site(reports: list[dict]) -> None:
             draft_dir = out_dir / "draft"
             draft_dir.mkdir(exist_ok=True)
             (draft_dir / "index.html").write_text(draft_tmpl.render(report=r))
+
+        if r.get("rankings"):
+            rankings_dir = out_dir / "rankings"
+            rankings_dir.mkdir(exist_ok=True)
+            (rankings_dir / "index.html").write_text(rankings_tmpl.render(report=r))
+
+        if r.get("compare"):
+            compare_dir = out_dir / "compare"
+            compare_dir.mkdir(exist_ok=True)
+            (compare_dir / "index.html").write_text(compare_tmpl.render(report=r))
 
     landing_tmpl = env.get_template("landing.html.j2")
     (SITE / "index.html").write_text(landing_tmpl.render(

@@ -66,6 +66,21 @@ def get_traded_picks(league_id: str) -> list[dict]:
     )
 
 
+ESPN_BASE = "https://site.api.espn.com/apis/site/v2/sports/football/nfl"
+
+
+def get_nfl_news(limit: int = 50) -> list[dict]:
+    """ESPN's NFL news endpoint. Returns articles with athlete categories.
+    Each article: {id, headline, description, published, categories: [...], links}.
+    Each category may be {type: 'athlete', athlete: {id, description}}."""
+    data_blob = _cached_get(
+        f"{ESPN_BASE}/news?limit={limit}",
+        f"espn_news_{limit}",
+        ttl_seconds=1800,  # 30 minutes — news moves fast
+    )
+    return data_blob.get("articles", [])
+
+
 def get_trending(kind: str = "add", lookback_hours: int = 24, limit: int = 50) -> list[dict]:
     """Sleeper's community-trending list. kind = 'add' or 'drop'.
     Returns [{player_id, count}], sorted desc by count."""
@@ -113,6 +128,7 @@ class Player:
     redraft_value: int       # this season only (FantasyCalc `redraftValue`)
     position_rank: int | None
     injury_status: str | None
+    espn_id: str | None = None  # for joining with ESPN news
 
     @property
     def is_skill(self) -> bool:
@@ -150,6 +166,7 @@ def build_player_index(
             redraft_value=entry.get("redraftValue", 0),
             position_rank=entry.get("positionRank"),
             injury_status=sleeper_p.get("injury_status"),
+            espn_id=str(p.get("espnId")) if p.get("espnId") else None,
         )
     return index
 

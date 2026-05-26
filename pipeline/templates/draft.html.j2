@@ -24,23 +24,74 @@
   </header>
 
   <p class="muted small" style="margin-top: 0.5rem;">
-    For each of your pick slots, we project which prospects will fall to you
-    using a strict "best player available by FantasyCalc dynasty value"
-    model. Real drafts have positional runs and reaches, so this is a starting
-    point — not a guarantee.
+    Two projections per pick slot: <strong>Adjusted</strong> (default) factors
+    league-wide positional demand into each prospect's value;
+    <strong>Strict</strong> assumes every manager drafts purely by FantasyCalc
+    value. Real drafts land between the two.
   </p>
 
-  {% macro prospect_row(p) %}
-  <article class="prospect-row">
+  {% if report.draft.position_demand %}
+  <h2>League Positional Demand</h2>
+  <div class="demand-grid">
+    {% for pos in ['QB', 'RB', 'WR', 'TE'] %}
+    {% set d = report.draft.position_demand[pos] %}
+    {% if d %}
+    <div class="demand-card">
+      <div>
+        <div class="demand-pos">{{ pos }}</div>
+        <div class="muted small">
+          spread {{ d.spread_ratio }}
+        </div>
+      </div>
+      <div class="demand-meter" title="Demand score: {{ d.demand_score }}">
+        <div class="demand-meter-fill" style="width: {{ (d.demand_score * 100) | round | int }}%;"></div>
+      </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+  <p class="muted small">
+    The wider the bar, the steeper the value gap between top and bottom teams
+    at that position — a proxy for how badly hungry teams need rookies there.
+    Adjusted board values scale by up to +20% at maximum demand.
+  </p>
+  {% endif %}
+
+  {% macro adjusted_prospect_row(p) %}
+  <article class="prospect-row {% if p.new_to_window %}prospect-rising{% endif %}">
     <div class="prospect-rank">#{{ p.projected_rank }}</div>
     <div class="prospect-main">
-      <span class="trade-player-name">{{ p.name }}</span>
-      <span class="pos-tag">{{ p.position }}{% if p.team %} · {{ p.team }}{% endif %}</span>
-      {% if p.injury_status %}<span class="injury Q">{{ p.injury_status }}</span>{% endif %}
+      <div>
+        <span class="trade-player-name">{{ p.name }}</span>
+        <span class="pos-tag">{{ p.position }}{% if p.team %} · {{ p.team }}{% endif %}</span>
+        {% if p.new_to_window %}<span class="rising-badge" title="Rises into this window under team-need adjustment">▲ rising</span>{% endif %}
+        {% if p.injury_status %}<span class="injury Q">{{ p.injury_status }}</span>{% endif %}
+      </div>
       <div class="muted small">
         {% if p.age %}age {{ p.age | round | int }} &middot; {% endif %}
         dyn <strong>{{ p.dynasty_value | money }}</strong>
+        {% if p.adjusted_value and p.adjusted_value != p.dynasty_value %}
+        → adjusted <strong>{{ p.adjusted_value | money }}</strong>
+        <span class="muted small">({{ p.adjusted_delta | signed }})</span>
+        {% endif %}
         {% if p.redraft_value %}&middot; redraft {{ p.redraft_value | money }}{% endif %}
+      </div>
+    </div>
+  </article>
+  {% endmacro %}
+
+  {% macro strict_prospect_row(p) %}
+  <article class="prospect-row {% if p.dropped_from_window %}prospect-falling{% endif %}">
+    <div class="prospect-rank">#{{ p.projected_rank }}</div>
+    <div class="prospect-main">
+      <div>
+        <span class="trade-player-name">{{ p.name }}</span>
+        <span class="pos-tag">{{ p.position }}{% if p.team %} · {{ p.team }}{% endif %}</span>
+        {% if p.dropped_from_window %}<span class="falling-badge" title="Drops out of this window under team-need adjustment">▼ falling</span>{% endif %}
+      </div>
+      <div class="muted small">
+        {% if p.age %}age {{ p.age | round | int }} &middot; {% endif %}
+        dyn <strong>{{ p.dynasty_value | money }}</strong>
       </div>
     </div>
   </article>
@@ -61,11 +112,19 @@
         </div>
       </div>
     </header>
-    <p class="muted small">
-      Projected board when you're on the clock — top {{ slot.projected_available | length }}
-      prospects estimated to be available at overall pick {{ slot.overall }}.
-    </p>
-    {% for p in slot.projected_available %}{{ prospect_row(p) }}{% endfor %}
+
+    <div class="draft-board-cols">
+      <div class="draft-board-col">
+        <h3 class="draft-board-title">Adjusted for team need</h3>
+        <p class="muted small">Top {{ slot.projected_adjusted | length }} after demand-weighting.</p>
+        {% for p in slot.projected_adjusted %}{{ adjusted_prospect_row(p) }}{% endfor %}
+      </div>
+      <div class="draft-board-col">
+        <h3 class="draft-board-title">Strict by FantasyCalc value</h3>
+        <p class="muted small">Top {{ slot.projected_strict | length }} assuming no positional bias.</p>
+        {% for p in slot.projected_strict %}{{ strict_prospect_row(p) }}{% endfor %}
+      </div>
+    </div>
   </section>
   {% endfor %}
 
@@ -73,10 +132,10 @@
   <section class="draft-slot draft-later">
     <h2>Falling beyond your last pick <span class="muted small">({{ report.draft.later_board | length }})</span></h2>
     <p class="muted small">
-      Prospects projected to go later than your latest pick. Useful for trade-back
-      decisions or eyeing late-round value.
+      Adjusted-board prospects projected to go later than your latest pick.
+      Useful for trade-back decisions or eyeing late-round value.
     </p>
-    {% for p in report.draft.later_board %}{{ prospect_row(p) }}{% endfor %}
+    {% for p in report.draft.later_board %}{{ adjusted_prospect_row(p) }}{% endfor %}
   </section>
   {% endif %}
 
@@ -88,22 +147,23 @@
       currently on a roster in your league.
     </p>
     <p>
-      <strong>Projected availability</strong> assumes other managers will
-      pick strictly by FantasyCalc dynasty value descending. At overall
-      pick N, the algorithm shows rookies ranked #N through #N+7. Reality
-      will diverge — TEs and QBs tend to fall further than their ranking,
-      RBs often go earlier in superflex / 1-QB formats, etc.
+      <strong>Strict board</strong>: assumes every manager picks purely by
+      FantasyCalc dynasty value descending. At overall pick N, rookies
+      ranked #N through #N+7 are shown.
     </p>
     <p>
-      <strong>Slot value</strong> comes from FantasyCalc's per-slot pick
-      values. Earlier picks (1.01, 1.02) are worth more because the player
-      pool is steeper at the top.
+      <strong>Adjusted board</strong>: each prospect's value is multiplied
+      by <code>1 + (4% × gap_teams_at_position) − (2% × surplus_teams_at_position)</code>.
+      Rookies at heavily-demanded positions move up the board; those at
+      saturated positions drift down. The result is a more realistic
+      best-player-available model that accounts for the league's actual
+      structure.
     </p>
     <p>
-      <strong>Limitations:</strong> No positional-need modeling per
-      opposing team. No model of draft-day surprises (combine risers,
-      trades, news). Assumes 10-team draft ordering — multi-team formats
-      would need slot remapping.
+      <strong>Limitations:</strong> Doesn't model individual teams' draft
+      tendencies, doesn't account for QB tiers (which often go in clusters),
+      and ignores news/landing-spot effects. Still a rough estimate — use as
+      a starting point, not gospel.
     </p>
   </div>
 

@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ report.name }} — Team Comparisons</title>
+  <link rel="stylesheet" href="../../../style.css">
+</head>
+<body class="mode-dynasty">
+<div class="container">
+  <header class="site">
+    <h1>Team Comparisons — {{ report.compare.my_team.team_name }}</h1>
+    <div class="tagline">
+      {{ report.name }} &middot; {{ report.season }} &middot;
+      Dynasty rank #{{ report.compare.my_team.dynasty_rank }} &middot;
+      Win-Now rank #{{ report.compare.my_team.winnow_rank }}
+    </div>
+    <nav>
+      <a href="../">&larr; Back to league</a>
+      {% if report.trades %}&middot; <a href="../trades/">Trade ideas</a>{% endif %}
+      {% if report.waivers %}&middot; <a href="../waivers/">Waiver wire</a>{% endif %}
+      {% if report.draft %}&middot; <a href="../draft/">Draft recommendations</a>{% endif %}
+      {% if report.rankings %}&middot; <a href="../rankings/">Power rankings</a>{% endif %}
+      <span class="muted small">&middot; Generated {{ report.generated_at }}</span>
+    </nav>
+  </header>
+
+  <p class="muted small" style="margin-top: 0.5rem;">
+    Side-by-side full-roster comparisons against every other team in your
+    league. Per-position totals come from FantasyCalc dynasty values. The
+    sign of each position diff shows who's ahead at that position.
+  </p>
+
+  {% macro player_row(p, is_mine) %}
+  <tr class="{% if is_mine %}mine-row{% endif %}">
+    <td>
+      {{ p.name }}
+      <span class="pos-tag">{{ p.position }}{% if p.team %} · {{ p.team }}{% endif %}</span>
+      {% if p.injury_status %}<span class="injury Q">{{ p.injury_status }}</span>{% endif %}
+    </td>
+    <td class="num muted small">{% if p.age %}{{ p.age | round | int }}{% endif %}</td>
+    <td class="num">{{ p.dynasty_value | money }}</td>
+  </tr>
+  {% endmacro %}
+
+  {% for cmp in report.compare.comparisons %}
+  <details class="compare-card" {% if loop.index <= 3 %}open{% endif %}>
+    <summary>
+      <strong>vs. {{ cmp.partner.team_name }}</strong>
+      <span class="muted small">({{ cmp.partner.owner_display_name }})</span>
+      <span class="muted small">
+        &middot; Dyn #{{ cmp.partner.dynasty_rank }} &middot; WN #{{ cmp.partner.winnow_rank }}
+      </span>
+      <span class="muted small">
+        &middot; Total assets:
+        <strong>{{ report.compare.my_team.team_name }}</strong> {{ cmp.total_my_assets | money }}
+        vs <strong>{{ cmp.partner.team_name }}</strong> {{ cmp.total_their_assets | money }}
+      </span>
+    </summary>
+
+    {% for pos in ['QB', 'RB', 'WR', 'TE'] %}
+    {% set my_players = report.compare.my_by_position[pos] %}
+    {% set their_players = cmp.their_by_position[pos] %}
+    {% set my_total = report.compare.my_totals[pos] %}
+    {% set their_total = cmp.their_totals[pos] %}
+    {% set diff = cmp.position_diffs[pos] %}
+    <section class="compare-pos">
+      <header class="compare-pos-header">
+        <h3>{{ pos }}</h3>
+        <div class="compare-pos-totals">
+          <span class="{{ 'good' if diff > 0 else ('bad' if diff < 0 else 'muted') }}">
+            {{ my_total | money }} vs {{ their_total | money }}
+            <span class="muted small">({{ diff | signed }})</span>
+          </span>
+        </div>
+      </header>
+      <div class="compare-grid">
+        <div class="compare-col compare-mine">
+          <div class="compare-col-label">{{ report.compare.my_team.team_name }}</div>
+          <table class="compare-table">
+            <tbody>
+              {% for p in my_players %}{{ player_row(p, true) }}{% endfor %}
+              {% if not my_players %}<tr><td colspan="3" class="muted small">No {{ pos }}s</td></tr>{% endif %}
+            </tbody>
+          </table>
+        </div>
+        <div class="compare-col compare-theirs">
+          <div class="compare-col-label">{{ cmp.partner.team_name }}</div>
+          <table class="compare-table">
+            <tbody>
+              {% for p in their_players %}{{ player_row(p, false) }}{% endfor %}
+              {% if not their_players %}<tr><td colspan="3" class="muted small">No {{ pos }}s</td></tr>{% endif %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    {% endfor %}
+
+    {% if report.compare.my_picks.count or cmp.their_picks.count %}
+    <section class="compare-pos">
+      <header class="compare-pos-header">
+        <h3>Draft Picks</h3>
+        <div class="compare-pos-totals">
+          <span class="muted small">
+            {{ report.compare.my_picks.count }} picks ({{ report.compare.my_picks.total_value | money }})
+            vs {{ cmp.their_picks.count }} picks ({{ cmp.their_picks.total_value | money }})
+          </span>
+        </div>
+      </header>
+      <div class="compare-grid">
+        <div class="compare-col compare-mine">
+          <table class="compare-table">
+            <tbody>
+              {% for p in report.compare.my_picks.picks %}
+              <tr class="mine-row">
+                <td>{{ p.name }} <span class="pos-tag pick-tag">PICK</span></td>
+                <td class="num muted small"></td>
+                <td class="num">{{ p.dynasty_value | money }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+        <div class="compare-col compare-theirs">
+          <table class="compare-table">
+            <tbody>
+              {% for p in cmp.their_picks.picks %}
+              <tr>
+                <td>{{ p.name }} <span class="pos-tag pick-tag">PICK</span></td>
+                <td class="num muted small"></td>
+                <td class="num">{{ p.dynasty_value | money }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    {% endif %}
+  </details>
+  {% endfor %}
+
+  <div class="methodology">
+    <h3>Methodology</h3>
+    <p>
+      Each comparison shows every rostered player at QB/RB/WR/TE on both
+      teams, sorted by FantasyCalc dynasty value. Position totals sum across
+      ALL players at that position — capturing depth, not just starters.
+    </p>
+    <p>
+      Draft picks are shown separately because they don't slot into
+      lineups but contribute to total asset value.
+    </p>
+    <p>
+      <strong>Limitations:</strong> Doesn't show K/DEF (FantasyCalc doesn't
+      value them). Doesn't account for keeper limits or contract structure.
+    </p>
+  </div>
+
+  <footer class="site">
+    Data: <a href="https://docs.sleeper.com">Sleeper</a> &middot;
+    <a href="https://fantasycalc.com">FantasyCalc</a>.
+  </footer>
+</div>
+</body>
+</html>

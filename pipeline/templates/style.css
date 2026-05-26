@@ -563,6 +563,306 @@ body.mode-winnow .dynasty-only { display: none; }
 
 .prospect-main .trade-player-name { font-weight: 600; }
 
+/* Draft board: two-column adjusted vs strict */
+.draft-board-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.draft-board-title {
+  margin: 0.25rem 0 0.1rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+}
+
+.draft-board-col {
+  background: var(--surface-2);
+  border-radius: 6px;
+  padding: 0.6rem 0.85rem;
+}
+
+.draft-board-col:first-child {
+  border-left: 3px solid var(--accent);
+}
+
+.draft-board-col:last-child {
+  border-left: 3px solid var(--muted);
+}
+
+@media (max-width: 720px) {
+  .draft-board-cols { grid-template-columns: 1fr; }
+}
+
+.rising-badge {
+  display: inline-block;
+  background: rgba(158, 206, 106, 0.18);
+  color: var(--good);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 0.05rem 0.4rem;
+  border-radius: 3px;
+  margin-left: 0.3rem;
+  text-transform: uppercase;
+}
+
+.falling-badge {
+  display: inline-block;
+  background: rgba(247, 118, 142, 0.15);
+  color: var(--bad);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 0.05rem 0.4rem;
+  border-radius: 3px;
+  margin-left: 0.3rem;
+  text-transform: uppercase;
+}
+
+.prospect-rising { background: rgba(158, 206, 106, 0.05); }
+.prospect-falling { opacity: 0.65; }
+
+/* League positional demand grid */
+.demand-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.6rem;
+  margin: 0.6rem 0;
+}
+
+.demand-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.6rem 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.demand-pos {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.demand-meter {
+  flex: 1;
+  height: 6px;
+  background: var(--surface-2);
+  border-radius: 3px;
+  overflow: hidden;
+  min-width: 60px;
+}
+
+.demand-meter-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--warn));
+  border-radius: 3px;
+  transition: width 0.2s ease;
+}
+
+/* ---- News feed ---- */
+.news-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.news-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 6px;
+  padding: 0.7rem 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.news-headline {
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.news-headline a { color: var(--text); }
+.news-headline a:hover { color: var(--accent); }
+
+.news-age { white-space: nowrap; font-weight: 400; }
+
+.news-desc { margin: 0.25rem 0 0.4rem; font-style: italic; }
+
+.news-players {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 0.4rem;
+}
+
+.news-player-tag {
+  background: var(--surface-2);
+  border-radius: 3px;
+  padding: 0.1rem 0.45rem;
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---- Power rankings ---- */
+.power-rankings td { vertical-align: middle; }
+
+.rank-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  justify-content: flex-end;
+}
+
+.rank-bar {
+  display: inline-block;
+  width: 60px;
+  height: 6px;
+  background: var(--surface-2);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.rank-bar-fill {
+  display: block;
+  height: 100%;
+  border-radius: 3px;
+}
+
+.rank-bar-label {
+  font-size: 0.78rem;
+  white-space: nowrap;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.trajectory-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+}
+
+.trajectory-badge.trajectory-win-now {
+  background: rgba(224, 175, 104, 0.18);
+  color: var(--warn);
+}
+
+.trajectory-badge.trajectory-rebuild {
+  background: rgba(122, 162, 247, 0.15);
+  color: var(--accent);
+}
+
+.trajectory-badge.trajectory-balanced {
+  background: var(--surface-2);
+  color: var(--muted);
+}
+
+@media (max-width: 640px) {
+  .rank-bar { width: 36px; }
+  .rank-bar-label { font-size: 0.7rem; }
+}
+
+/* ---- Compare-teams page ---- */
+.compare-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  margin-bottom: 0.7rem;
+}
+
+.compare-card > summary {
+  cursor: pointer;
+  padding: 0.5rem 0;
+  list-style: revert;
+}
+
+.compare-card[open] > summary {
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 0.75rem;
+}
+
+.compare-pos {
+  margin: 0.85rem 0;
+}
+
+.compare-pos-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 0.35rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.compare-pos-header h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.compare-pos-totals {
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.compare-col {
+  background: var(--surface-2);
+  border-radius: 6px;
+  padding: 0.5rem 0.7rem;
+}
+
+.compare-col-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.compare-table td {
+  padding: 0.2rem 0.3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.compare-table tr:last-child td { border-bottom: none; }
+
+.compare-table tr.mine-row td { background: rgba(122, 162, 247, 0.05); }
+
+@media (max-width: 720px) {
+  .compare-grid { grid-template-columns: 1fr; }
+  .compare-table { font-size: 0.78rem; }
+}
+
+/* ---- Sparkline column ---- */
+.sparkline-cell { color: var(--accent); }
+.sparkline { vertical-align: middle; }
+
 /* ---- Updated waiver row: compact, drop list inline ---- */
 .waiver-card {
   background: var(--surface);
