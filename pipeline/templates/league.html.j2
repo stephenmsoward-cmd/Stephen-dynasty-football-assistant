@@ -117,8 +117,9 @@
   </p>
 
   {% macro news_item(n) %}
-  <li class="news-item">
+  <li class="news-item {% if n.high_impact %}news-high-impact{% endif %}">
     <div class="news-headline">
+      {% if n.high_impact %}<span class="impact-badge" title="High-impact news likely to move player value (score {{ n.importance_score }})">HIGH IMPACT</span>{% endif %}
       {% if n.url %}<a href="{{ n.url }}" target="_blank" rel="noopener">{{ n.headline }}</a>
       {% else %}{{ n.headline }}{% endif %}
       <span class="muted small news-age">

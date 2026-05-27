@@ -35,7 +35,7 @@
     "BN",
     "BN"
   ],
-  "generated_at": "2026-05-26T23:17:32+00:00",
+  "generated_at": "2026-05-27T00:35:50+00:00",
   "previous_snapshot_date": "2026-05-26",
   "teams": [
     {
@@ -15509,7 +15509,7 @@
             "injury_status": "Questionable"
           }
         ],
-        "trending_count": 67671
+        "trending_count": 128817
       },
       {
         "pickup": {
@@ -15558,7 +15558,7 @@
             "injury_status": "Questionable"
           }
         ],
-        "trending_count": 4396
+        "trending_count": 4494
       },
       {
         "pickup": {
@@ -15607,7 +15607,7 @@
             "injury_status": "Questionable"
           }
         ],
-        "trending_count": 2702
+        "trending_count": 2898
       },
       {
         "pickup": {
@@ -15656,7 +15656,7 @@
             "injury_status": "Questionable"
           }
         ],
-        "trending_count": 2696
+        "trending_count": 2792
       },
       {
         "pickup": {
@@ -15705,7 +15705,7 @@
             "injury_status": "Questionable"
           }
         ],
-        "trending_count": 1640
+        "trending_count": 1776
       }
     ],
     "best_overall": [
@@ -15805,7 +15805,7 @@
             "injury_status": "Questionable"
           }
         ],
-        "trending_count": 4396
+        "trending_count": 4494
       },
       {
         "pickup": {
@@ -16004,7 +16004,7 @@
               "injury_status": "Questionable"
             }
           ],
-          "trending_count": 4396
+          "trending_count": 4494
         },
         {
           "pickup": {
@@ -16202,7 +16202,7 @@
               "injury_status": "Questionable"
             }
           ],
-          "trending_count": 67671
+          "trending_count": 128817
         }
       ],
       "TE": [
@@ -17328,18 +17328,38 @@
   },
   "news": [
     {
-      "headline": "Trevor Lawrence's family, friends voiced concern over faux haircut",
-      "description": "The Jaguars quarterback's trademark flowing blonde hair disappeared during the team's schedule reveal video.",
-      "url": "https://www.espn.com/nfl/story/_/id/48884765/trevor-lawrence-jacksonville-jaguars-schedule-release-hairstyle",
-      "published": "2026-05-26T22:40:49Z",
-      "age_hours": 0.6,
+      "headline": "Why Adam Schefter is concerned about Malik Nabers' Week 1 availability",
+      "description": "Adam Schefter tells Pat McAfee that he doesn't like what he's hearing surrounding Malik Nabers as he works back from a knee injury.",
+      "url": "https://www.espn.com/video/clip/_/id/48845314/why-adam-schefter-concerned-malik-nabers-week-1-availability",
+      "published": "2026-05-22T17:44:15Z",
+      "age_hours": 102.9,
+      "importance_score": 72,
+      "high_impact": true,
       "players": [
         {
-          "sleeper_id": "7523",
-          "name": "Trevor Lawrence",
-          "position": "QB",
-          "team": "JAX",
-          "dynasty_value": 2628
+          "sleeper_id": "11632",
+          "name": "Malik Nabers",
+          "position": "WR",
+          "team": "NYG",
+          "dynasty_value": 6869
+        }
+      ]
+    },
+    {
+      "headline": "Packers' Jacobs arrested, faces several domestic violence charges",
+      "description": "Packers running back Josh Jacobs was arrested Tuesday and booked on several domestic violence charges, according to the Hobart-Lawrence (Wisconsin) Police Department.",
+      "url": "https://www.espn.com/nfl/story/_/id/48885159/packers-jacobs-arrested-faces-several-domestic-violence-charges",
+      "published": "2026-05-26T23:14:31Z",
+      "age_hours": 1.4,
+      "importance_score": 60,
+      "high_impact": true,
+      "players": [
+        {
+          "sleeper_id": "5850",
+          "name": "Josh Jacobs",
+          "position": "RB",
+          "team": "GB",
+          "dynasty_value": 3244
         }
       ]
     },
@@ -17347,8 +17367,10 @@
       "headline": "Source: Bucs RB Bucky Irving (shoulder) likely ready by summer",
       "description": "Buccaneers running back Bucky Irving, who is rehabbing from offseason shoulder surgery, should be ready later this summer, a source told ESPN's Adam Schefter.",
       "url": "https://www.espn.com/nfl/story/_/id/48884875/source-bucs-rb-bucky-irving-shoulder-likely-ready-summer",
-      "published": "2026-05-26T22:31:50Z",
-      "age_hours": 0.8,
+      "published": "2026-05-26T23:09:32Z",
+      "age_hours": 1.4,
+      "importance_score": 60,
+      "high_impact": true,
       "players": [
         {
           "sleeper_id": "11584",
@@ -17360,11 +17382,31 @@
       ]
     },
     {
+      "headline": "Harbaugh: Nabers' knee injury 'not simple,' clouding return date",
+      "description": "The Giants don't know when star wide receiver Malik Nabers will be back from what coach John Harbaugh said Thursday was \"not a simple knee\" injury.",
+      "url": "https://www.espn.com/nfl/story/_/id/48837807/harbaugh-nabers-knee-injury-not-simple-clouding-return-date",
+      "published": "2026-05-21T20:59:51Z",
+      "age_hours": 123.6,
+      "importance_score": 36,
+      "high_impact": true,
+      "players": [
+        {
+          "sleeper_id": "11632",
+          "name": "Malik Nabers",
+          "position": "WR",
+          "team": "NYG",
+          "dynasty_value": 6869
+        }
+      ]
+    },
+    {
       "headline": "Patrick Mahomes back on field for Chiefs' first OTA practice",
       "description": "Chiefs QB Patrick Mahomes returned to the field with his teammates Tuesday for the first time since tearing the ACL and LCL in his left knee.",
       "url": "https://www.espn.com/nfl/story/_/id/48884510/sources-mahomes-back-field-chiefs-first-ota-practice",
       "published": "2026-05-26T22:23:02Z",
-      "age_hours": 0.9,
+      "age_hours": 2.2,
+      "importance_score": 30,
+      "high_impact": true,
       "players": [
         {
           "sleeper_id": "4046",
@@ -17376,114 +17418,13 @@
       ]
     },
     {
-      "headline": "Panthers QB Bryce Young becoming more vocal leader in Year 4",
-      "description": "Panthers quarterback Bryce Young has slowly been developing into a more vocal leader as he enters Year 4 of his tenure with the Panthers.",
-      "url": "https://www.espn.com/nfl/story/_/id/48884457/panthers-qb-bryce-young-becoming-more-vocal-leader-year-4",
-      "published": "2026-05-26T21:51:33Z",
-      "age_hours": 1.4,
-      "players": [
-        {
-          "sleeper_id": "9228",
-          "name": "Bryce Young",
-          "position": "QB",
-          "team": "CAR",
-          "dynasty_value": 1495
-        }
-      ]
-    },
-    {
-      "headline": "Texans give star WR Nico Collins raise in reworked deal",
-      "description": "Two-time Pro Bowl wide receiver Nico Collins and the Texans reached agreement on an adjusted contract that guarantees his salary the next two seasons and includes a $9 million cash increase this year and an $8 million cash increase next year.",
-      "url": "https://www.espn.com/nfl/story/_/id/48883953/texans-give-star-wr-nico-collins-raise-reworked-deal",
-      "published": "2026-05-26T21:30:11Z",
-      "age_hours": 1.8,
-      "players": [
-        {
-          "sleeper_id": "7569",
-          "name": "Nico Collins",
-          "position": "WR",
-          "team": "HOU",
-          "dynasty_value": 4181
-        }
-      ]
-    },
-    {
-      "headline": "Raiders to put 'a lot' of pressure on Ashton Jeanty in Year 2",
-      "description": "If Klint Kubiak's offense is going to function properly, it will need more out of the star running back.",
-      "url": "https://www.espn.com/nfl/story/_/id/48873026/las-vegas-raiders-nfl-pressure-ashton-jeanty-year-2",
-      "published": "2026-05-26T14:47:55Z",
-      "age_hours": 8.5,
-      "players": [
-        {
-          "sleeper_id": "12527",
-          "name": "Ashton Jeanty",
-          "position": "RB",
-          "team": "LV",
-          "dynasty_value": 7626
-        }
-      ]
-    },
-    {
-      "headline": "Titans say OSU's Carnell Tate was perfect fit for Cam Ward",
-      "description": "With premium defensive options on the board, Tennessee made unanimous decision to get an impact player on offense.",
-      "url": "https://www.espn.com/nfl/story/_/id/48826160/tennessee-titans-wr-carnell-tate-perfect-pairing-cam-ward",
-      "published": "2026-05-25T10:35:26Z",
-      "age_hours": 36.7,
-      "players": [
-        {
-          "sleeper_id": "12522",
-          "name": "Cam Ward",
-          "position": "QB",
-          "team": "TEN",
-          "dynasty_value": 1995
-        }
-      ]
-    },
-    {
-      "headline": "Will Pats QB Drake Maye improve in second year with McDaniels?",
-      "description": "The New England quarterback is entering a vital second season with his offensive coordinator.",
-      "url": "https://www.espn.com/nfl/story/_/id/48845555/new-england-patriots-qb-drake-maye-josh-mcdaniels-system-2026-season",
-      "published": "2026-05-24T10:00:05Z",
-      "age_hours": 61.3,
-      "players": [
-        {
-          "sleeper_id": "11564",
-          "name": "Drake Maye",
-          "position": "QB",
-          "team": "NE",
-          "dynasty_value": 4573
-        },
-        {
-          "sleeper_id": "12547",
-          "name": "Kyle Williams",
-          "position": "WR",
-          "team": "NE",
-          "dynasty_value": 796
-        }
-      ]
-    },
-    {
-      "headline": "Jordan Love, Ronika Stone welcome first child together",
-      "description": "Jordan Love and Ronika Stone have spent a full month with their newborn daughter.",
-      "url": "https://www.espn.com/nfl/story/_/id/48855003/green-bay-packers-jordan-love-ronika-stone-baby-announcement-daughter",
-      "published": "2026-05-23T22:38:18Z",
-      "age_hours": 72.7,
-      "players": [
-        {
-          "sleeper_id": "6804",
-          "name": "Jordan Love",
-          "position": "QB",
-          "team": "GB",
-          "dynasty_value": 2166
-        }
-      ]
-    },
-    {
       "headline": "Jacoby Brissett not close to reworked deal with Cardinals",
       "description": "A reworked deal between the Arizona Cardinals and quarterback Jacoby Brissett is still not close, a source told ESPN on Friday.",
       "url": "https://www.espn.com/nfl/story/_/id/48846780/jacoby-brissett-not-close-reworked-deal-cardinals",
       "published": "2026-05-22T21:42:04Z",
-      "age_hours": 97.6,
+      "age_hours": 98.9,
+      "importance_score": 15,
+      "high_impact": false,
       "players": [
         {
           "sleeper_id": "3257",
@@ -17491,6 +17432,78 @@
           "position": "QB",
           "team": "ARI",
           "dynasty_value": 860
+        }
+      ]
+    },
+    {
+      "headline": "Sources: Rams' Matthew Stafford lands 1-year, $55M extension",
+      "description": "Reigning NFL MVP Matthew Stafford and the Rams reached agreement on a one-year, $55 million extension, sources told ESPN's Adam Schefter. The QB is now tied to L.A. through the 2027 season, with $105 million remaining on his deal.",
+      "url": "https://www.espn.com/nfl/story/_/id/48839342/sources-matthew-stafford-rams-reach-1-year-55m-extension",
+      "published": "2026-05-22T16:23:50Z",
+      "age_hours": 104.2,
+      "importance_score": 15,
+      "high_impact": false,
+      "players": [
+        {
+          "sleeper_id": "421",
+          "name": "Matthew Stafford",
+          "position": "QB",
+          "team": "LAR",
+          "dynasty_value": 1385
+        }
+      ]
+    },
+    {
+      "headline": "Chris Canty: Rams wanted to make sure Stafford was happy after Simpson pick",
+      "description": "Chris Canty believes the Rams gave Matthew Stafford his one-year, $55 million extension to keep him happy after selecting Ty Simpson in the first round.",
+      "url": "https://www.espn.com/video/clip/_/id/48843248/rams-wanted-make-sure-stafford-was-happy-simpson-pick",
+      "published": "2026-05-22T12:37:38Z",
+      "age_hours": 108.0,
+      "importance_score": 15,
+      "high_impact": false,
+      "players": [
+        {
+          "sleeper_id": "421",
+          "name": "Matthew Stafford",
+          "position": "QB",
+          "team": "LAR",
+          "dynasty_value": 1385
+        }
+      ]
+    },
+    {
+      "headline": "Cards' Michael Wilson ready to build off big 2025 season",
+      "description": "Michael Wilson is eligible for an extension, and his production in the second half of last season could set him up for a nice payday.",
+      "url": "https://www.espn.com/nfl/story/_/id/48827099/cards-michael-wilson-ready-build-big-2025-season",
+      "published": "2026-05-21T10:00:03Z",
+      "age_hours": 134.6,
+      "importance_score": 5,
+      "high_impact": false,
+      "players": [
+        {
+          "sleeper_id": "10232",
+          "name": "Michael Wilson",
+          "position": "WR",
+          "team": "ARI",
+          "dynasty_value": 1862
+        }
+      ]
+    },
+    {
+      "headline": "Trevor Lawrence's family, friends voiced concern over faux haircut",
+      "description": "The Jaguars quarterback's trademark flowing blonde hair disappeared during the team's schedule reveal video.",
+      "url": "https://www.espn.com/nfl/story/_/id/48884765/trevor-lawrence-jacksonville-jaguars-schedule-release-hairstyle",
+      "published": "2026-05-26T23:00:12Z",
+      "age_hours": 1.6,
+      "importance_score": 0,
+      "high_impact": false,
+      "players": [
+        {
+          "sleeper_id": "7523",
+          "name": "Trevor Lawrence",
+          "position": "QB",
+          "team": "JAX",
+          "dynasty_value": 2628
         }
       ]
     }

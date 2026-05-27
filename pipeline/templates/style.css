@@ -680,6 +680,24 @@ body.mode-winnow .dynasty-only { display: none; }
   margin-bottom: 0.5rem;
 }
 
+.news-item.news-high-impact {
+  border-left-color: var(--bad);
+}
+
+.impact-badge {
+  display: inline-block;
+  background: rgba(247, 118, 142, 0.15);
+  color: var(--bad);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0.15rem 0.45rem;
+  border-radius: 3px;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
 .news-headline {
   font-weight: 600;
   font-size: 0.95rem;
