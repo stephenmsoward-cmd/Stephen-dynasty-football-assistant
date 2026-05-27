@@ -14,7 +14,9 @@ or change priority.
 | Pri | Idea | Effort | Impact | Notes |
 |---|---|---|---|---|
 | P0 | Partner-impact pitch language on trades | S | H | Pure templating over data we already have |
+| P0 | Per-team trajectory awareness in trade eval | M | H | Score each side under their *own* timeline, not the user's toggle |
 | P0 | Smarter drop suggestions on waivers | S | M | Position-matched drops, rotate candidates |
+| P1 | Filter implausible like-for-like trades | S | M | A QB+RB→QB+RB swap with no age/value asymmetry is a no-deal |
 | P1 | Hub grouping + left-hand nav | L | H | Architectural — pulls forward several other items |
 | P1 | Player-targeted trade hub | M | H | Best inside a restructured Trade Center |
 | P1 | Trade negotiation sandbox | M | M | "Paste in a trade, see the verdict" |
@@ -52,6 +54,56 @@ Example:
 > "Fills Mongo's WR depth gap (their rank #7) with Burden's youth.
 > The future 1st extends their rebuild window. You swap excess WR depth
 > for a starting TE."
+
+### Per-team trajectory awareness in trade evaluation &mdash; P0 · M · H
+
+Today the trade finder uses ONE value function (dynasty or win-now,
+selected by the user) for BOTH teams' lineup recomputation. In reality
+each manager evaluates trades by their own timeline:
+
+- Win-now teams care about redraft-value lineup improvement
+- Rebuild teams care about dynasty asset value (especially picks + youth)
+- Balanced teams care about both
+
+We already infer each team's timeline from the trajectory tag in
+`rankings.py` (win-now / rebuild / balanced). Trade evaluation should
+score each side using their trajectory's appropriate value function, not
+the user's selected mode.
+
+Concrete change:
+- `find_trades()` accepts `my_value_fn` and `their_value_fn` separately
+- The partner team's `their_value_fn` is chosen by their trajectory:
+  - "win-now" → redraft_value
+  - "rebuild" → dynasty_value (with extra weight on age + picks)
+  - "balanced" → dynasty_value (current behavior)
+- Tier classification (`mutual`, `buy`, `sell`) uses each side's
+  trajectory-adjusted improvement, not raw values
+
+This composes well with the partner-impact pitch (P0): once we know what
+the partner *actually* wants, the pitch can say "Glass bones is in
+rebuild mode; this trade fills their lineup gap AND nets them future
+asset value" — much more believable than abstract lineup math.
+
+### Filter implausible like-for-like trades &mdash; P1 · S · M
+
+A QB + RB → QB + RB trade (or any same-position-multiset swap) is rarely
+realistic unless there's meaningful age or quality asymmetry. If both
+sides come out roughly equivalent at the same positions, neither manager
+has a reason to pull the trigger.
+
+Concrete heuristic:
+1. Compute position multisets per side: `Counter([p.position for p in send])`
+2. If multisets are equal:
+   - Check per-position age difference between matched players
+   - Check per-position dynasty-value difference
+   - If neither shows asymmetry (e.g., >4 yr age gap or >25% value gap
+     for at least one position pair) → demote out of mutual tier or
+     drop entirely
+3. If position multisets differ → keep as-is (it's a real positional shift)
+
+Result: lateral swaps with no reason to happen disappear from the top
+tiers; trades with clear "older for younger" or "depth for star" stories
+remain.
 
 ### Smarter drop suggestions on waivers &mdash; P0 · S · M
 
