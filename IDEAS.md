@@ -13,7 +13,6 @@ or change priority.
 
 | Pri | Idea | Effort | Impact | Notes |
 |---|---|---|---|---|
-| P0 | Partner-impact pitch language on trades | S | H | Pure templating over data we already have |
 | P0 | Per-team trajectory awareness in trade eval | M | H | Score each side under their *own* timeline, not the user's toggle |
 | P0 | Smarter drop suggestions on waivers | S | M | Position-matched drops, rotate candidates |
 | P1 | Filter implausible like-for-like trades | S | M | A QB+RB→QB+RB swap with no age/value asymmetry is a no-deal |
@@ -40,21 +39,10 @@ or change priority.
 
 ## Detailed entries
 
-### Partner-impact pitch language &mdash; P0 · S · H
+### ~~Partner-impact pitch language~~ — SHIPPED
 
-On every trade recommendation, render 1–2 lines explaining the trade's
-impact to the *partner's* roster in human terms — what positional gap it
-fills, what their trajectory benefits — rather than just the abstract
-dynasty point delta.
-
-We already have the underlying data: per-team `position_strength`,
-trajectory labels (win-now / rebuild / balanced), and the player flow per
-side. This is templating, not generation.
-
-Example:
-> "Fills Mongo's WR depth gap (their rank #7) with Burden's youth.
-> The future 1st extends their rebuild window. You swap excess WR depth
-> for a starting TE."
+Done in `pipeline/pitch.py`. Every trade card carries a "How to pitch it"
+line framed around the partner's gaps, trajectory, and pick/youth angle.
 
 ### Per-team trajectory awareness in trade evaluation &mdash; P0 · M · H
 
