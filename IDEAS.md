@@ -18,7 +18,7 @@ or change priority.
 | Pri | Idea | Effort | Impact | Notes |
 |---|---|---|---|---|
 | P1 | Filter implausible like-for-like trades | S | M | A QB+RB→QB+RB swap with no age/value asymmetry is a no-deal |
-| P1 | Hub grouping + left-hand nav | L | H | Architectural — pulls forward several other items |
+| P1 | Tier-classification purity | S | M | "Buy" tier should be picks-out, not picks+a-star-out |
 | P1 | Player-targeted trade hub | M | H | Best inside a restructured Trade Center |
 | P1 | Trade negotiation sandbox | M | M | "Paste in a trade, see the verdict" |
 | P1 | Usage trends from nflverse | L | H | Only real "alpha" data source on the list |
@@ -55,6 +55,25 @@ inferred timeline. Trade cards annotate "Their lineup (win-now/dynasty)".
 Possible follow-up: weight rebuild-team improvement explicitly toward picks +
 youth (currently they just use dynasty value, which already favors youth).
 
+### Tier-classification purity &mdash; P1 · S · M
+
+The trade tiers classify by structural signals that can mislabel a trade.
+The "buy" tier ("Convert Futures to Win-Now: you send picks, get players
+who slot in now") fires on *"sending any pick AND my lineup improves"* — so
+a trade where you send a **pick plus a premium player** (e.g., CMC + a 2nd
+for two younger players) lands in "buy" even though you're not purely
+converting futures.
+
+Tighten the classifier so each tier matches its label:
+- **buy** = what you send is *predominantly* picks/futures (little or no
+  established win-now value going out)
+- **sell** = what you receive is *predominantly* picks/futures
+- Mixed player-for-player-plus-pick deals belong in "package" or a new
+  "reshape" tier, not "buy"/"sell"
+
+Closely related to the like-for-like filter below — both are about making
+the tier a trade lands in actually describe the trade.
+
 ### Filter implausible like-for-like trades &mdash; P1 · S · M
 
 A QB + RB → QB + RB trade (or any same-position-multiset swap) is rarely
@@ -82,21 +101,12 @@ Done. `_drop_candidates_for` now excludes optimal-lineup starters and
 prioritizes same-position non-starters (drop a QB for a QB), falling back to
 the lowest-value bench overall. Three options shown per pickup.
 
-### Hub grouping + left-hand nav &mdash; P1 · L · H
+### ~~Hub grouping + left-hand nav~~ — SHIPPED
 
-Group existing pages under thematic hubs with a persistent left-hand
-sidebar:
-
-| Hub | Pages |
-|---|---|
-| Draft Prep | Draft recs (+ later: rookie ADP, mock sims) |
-| Trade Center | Trade finder, trade hub, sandbox |
-| League Rankings / Projections | Standings, power rankings, compare |
-| Roster Optimization | News, waivers, start/sit (future) |
-
-Current "league landing" becomes a dashboard pulling key insights from
-each hub. This is the architectural move that turns a flat page list into
-a real product.
+Done. Persistent left sidebar grouped into Overview / League & Projections /
+Trade Center / Roster / Draft Prep, with active-page highlight and an
+in-sidebar section list. Collapses to a top bar on mobile. Future hubs/pages
+slot into `_nav.html.j2` with a one-line edit.
 
 ### Player-targeted trade hub &mdash; P1 · M · H
 
