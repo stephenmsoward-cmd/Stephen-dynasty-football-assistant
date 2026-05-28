@@ -18,7 +18,10 @@ permissions:
 
 concurrency:
   group: refresh
-  cancel-in-progress: false
+  # This job rebuilds the full state from scratch, so an in-flight run is
+  # always superseded by a newer one — cancel it to avoid redundant runs
+  # racing each other on the commit/push step.
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -52,13 +55,28 @@ jobs:
       - name: Commit history + docs updates
         # Pages is configured to deploy from main branch /docs, so this commit
         # IS the deploy. No separate upload-artifact / deploy-pages steps needed.
+        #
+        # Resilient push: concurrent runs (and manual pushes) can move `main`
+        # between our checkout and push, causing a non-fast-forward rejection.
+        # We rebase onto the latest main before each push attempt, preferring
+        # our freshly-built files on conflict (-X theirs = the commits being
+        # replayed = this run's build), and retry a few times.
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs history
           if git diff --cached --quiet; then
             echo "No changes to commit."
-          else
-            git commit -m "chore: refresh reports ($(date -u +%Y-%m-%d))"
-            git push
+            exit 0
           fi
+          git commit -m "chore: refresh reports ($(date -u +%Y-%m-%d))"
+          for attempt in 1 2 3 4 5; do
+            if git pull --rebase -X theirs origin main && git push origin main; then
+              echo "Pushed on attempt $attempt."
+              exit 0
+            fi
+            echo "Push attempt $attempt hit a race; retrying in 5s..."
+            sleep 5
+          done
+          echo "::error::Failed to push after 5 attempts."
+          exit 1
