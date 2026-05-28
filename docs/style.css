@@ -1178,6 +1178,26 @@ details.reveal-more[open] > summary {
 .trade-meta-item .good { color: var(--good); font-weight: 600; font-variant-numeric: tabular-nums; }
 .trade-meta-item .bad { color: var(--bad); font-weight: 600; font-variant-numeric: tabular-nums; }
 
+.trade-pitch {
+  margin-top: 0.7rem;
+  padding: 0.6rem 0.85rem;
+  background: var(--surface-2);
+  border-radius: 6px;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: var(--text);
+}
+
+.trade-pitch-label {
+  display: block;
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.2rem;
+}
+
 .team-trades {
   background: var(--surface);
   border: 1px solid var(--border);

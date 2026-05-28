@@ -35,7 +35,7 @@
     "BN",
     "BN"
   ],
-  "generated_at": "2026-05-28T11:26:28+00:00",
+  "generated_at": "2026-05-28T11:35:13+00:00",
   "previous_snapshot_date": "2026-05-27",
   "teams": [
     {
@@ -5103,7 +5103,8 @@
                 "my_lineup_new": 43745,
                 "their_lineup_old": 31173,
                 "their_lineup_new": 26544,
-                "score": 5206
+                "score": 5206,
+                "partner_pitch": "Glass bones & paper skin is balanced. They cash in Trey McBride for 2026 1st and 2027 1st."
               },
               {
                 "send": [
@@ -5158,7 +5159,8 @@
                 "my_lineup_new": 43156,
                 "their_lineup_old": 31173,
                 "their_lineup_new": 26496,
-                "score": 4458
+                "score": 4458,
+                "partner_pitch": "Glass bones & paper skin is balanced. They cash in CeeDee Lamb for 2026 1st and 2027 1st."
               },
               {
                 "send": [
@@ -5213,7 +5215,8 @@
                 "my_lineup_new": 42656,
                 "their_lineup_old": 31173,
                 "their_lineup_new": 26996,
-                "score": 4458
+                "score": 4458,
+                "partner_pitch": "Glass bones & paper skin is balanced. They cash in Drake London for 2026 1st and 2027 1st."
               },
               {
                 "send": [
@@ -5268,7 +5271,8 @@
                 "my_lineup_new": 42905,
                 "their_lineup_old": 31173,
                 "their_lineup_new": 27595,
-                "score": 4196
+                "score": 4196,
+                "partner_pitch": "Glass bones & paper skin is balanced. Jalen Hurts fills their QB gap (#10 of 10); they cash in Trey McBride for 2026 1st."
               },
               {
                 "send": [
@@ -5323,7 +5327,8 @@
                 "my_lineup_new": 42099,
                 "their_lineup_old": 31173,
                 "their_lineup_new": 28273,
-                "score": 3957
+                "score": 3957,
+                "partner_pitch": "Glass bones & paper skin is balanced. A.J. Brown upgrades their WR; they cash in Trey McBride for 2026 1st."
               }
             ]
           },
@@ -5391,7 +5396,8 @@
                 "my_lineup_new": 36073,
                 "their_lineup_old": 29257,
                 "their_lineup_new": 32318,
-                "score": 3585
+                "score": 3585,
+                "partner_pitch": "Samir\u2019s Tight End  is balanced. Christian McCaffrey upgrades their RB."
               },
               {
                 "send": [
@@ -5446,7 +5452,8 @@
                 "my_lineup_new": 36698,
                 "their_lineup_old": 29257,
                 "their_lineup_new": 31650,
-                "score": 3556
+                "score": 3556,
+                "partner_pitch": "Samir\u2019s Tight End  is balanced. Christian McCaffrey upgrades their RB."
               },
               {
                 "send": [
@@ -5501,7 +5508,8 @@
                 "my_lineup_new": 36100,
                 "their_lineup_old": 29257,
                 "their_lineup_new": 31901,
-                "score": 3556
+                "score": 3556,
+                "partner_pitch": "Samir\u2019s Tight End  is balanced. Christian McCaffrey upgrades their RB, dealing from their WR surplus."
               },
               {
                 "send": [
@@ -5556,7 +5564,8 @@
                 "my_lineup_new": 36147,
                 "their_lineup_old": 29257,
                 "their_lineup_new": 32201,
-                "score": 3556
+                "score": 3556,
+                "partner_pitch": "Samir\u2019s Tight End  is balanced. Christian McCaffrey upgrades their RB."
               },
               {
                 "send": [
@@ -5611,7 +5620,8 @@
                 "my_lineup_new": 36073,
                 "their_lineup_old": 29257,
                 "their_lineup_new": 32318,
-                "score": 3556
+                "score": 3556,
+                "partner_pitch": "Samir\u2019s Tight End  is balanced. Christian McCaffrey upgrades their RB, dealing from their WR surplus."
               }
             ]
           },
@@ -5679,7 +5689,8 @@
                 "my_lineup_new": 43134,
                 "their_lineup_old": 41707,
                 "their_lineup_new": 37078,
-                "score": 4458
+                "score": 4458,
+                "partner_pitch": "Da Bell of Da Ball is rebuilding. They cash in Omarion Hampton for 2026 1st and 2027 1st."
               },
               {
                 "send": [
@@ -5734,7 +5745,8 @@
                 "my_lineup_new": 42254,
                 "their_lineup_old": 41707,
                 "their_lineup_new": 37958,
-                "score": 4458
+                "score": 4458,
+                "partner_pitch": "Da Bell of Da Ball is rebuilding. They cash in Tetairoa McMillan for 2026 1st and 2027 1st, dealing from their WR surplus."
               },
               {
                 "send": [
@@ -5801,7 +5813,8 @@
                 "my_lineup_new": 41807,
                 "their_lineup_old": 41707,
                 "their_lineup_new": 38984,
-                "score": 3711
+                "score": 3711,
+                "partner_pitch": "Da Bell of Da Ball is rebuilding. They cash in Tyler Warren for 2026 1st and 2027 1st."
               },
               {
                 "send": [
@@ -5856,7 +5869,8 @@
                 "my_lineup_new": 36073,
                 "their_lineup_old": 41707,
                 "their_lineup_new": 44447,
-                "score": 3704
+                "score": 3704,
+                "partner_pitch": "Da Bell of Da Ball is rebuilding. Christian McCaffrey upgrades their RB, dealing from their QB surplus."
               },
               {
                 "send": [
@@ -5923,7 +5937,8 @@
                 "my_lineup_new": 41807,
                 "their_lineup_old": 41707,
                 "their_lineup_new": 38984,
-                "score": 3672
+                "score": 3672,
+                "partner_pitch": "Da Bell of Da Ball is rebuilding. They cash in Tyler Warren for 2026 1st and 2027 1st."
               }
             ]
           },
@@ -5991,7 +6006,8 @@
                 "my_lineup_new": 42406,
                 "their_lineup_old": 32775,
                 "their_lineup_new": 29068,
-                "score": 4458
+                "score": 4458,
+                "partner_pitch": "Bucky the Vampire Slayer is balanced. They cash in James Cook for 2026 1st and 2027 1st."
               },
               {
                 "send": [
@@ -6046,7 +6062,8 @@
                 "my_lineup_new": 41444,
                 "their_lineup_old": 32775,
                 "their_lineup_new": 30422,
-                "score": 3556
+                "score": 3556,
+                "partner_pitch": "Bucky the Vampire Slayer is balanced. They land Jalen Hurts; they cash in Josh Allen for 2026 1st, dealing from their QB surplus."
               },
               {
                 "send": [
@@ -6101,7 +6118,8 @@
                 "my_lineup_new": 42153,
                 "their_lineup_old": 32775,
                 "their_lineup_new": 29713,
-                "score": 3556
+                "score": 3556,
+                "partner_pitch": "Bucky the Vampire Slayer is balanced. RJ Harvey upgrades their RB; they cash in James Cook for 2026 1st."
               },
               {
                 "send": [
@@ -6156,7 +6174,8 @@
                 "my_lineup_new": 42406,
                 "their_lineup_old": 32775,
                 "their_lineup_new": 29460,
-                "score": 3556
+                "score": 3556,
+                "partner_pitch": "Bucky the Vampire Slayer is balanced. Mike Evans upgrades their WR; they cash in James Cook for 2026 1st."
               },
               {
                 "send": [
@@ -6211,7 +6230,8 @@
                 "my_lineup_new": 36289,
                 "their_lineup_old": 32775,
                 "their_lineup_new": 35230,
-                "score": 3556
+                "score": 3556,
+                "partner_pitch": "Bucky the Vampire Slayer is balanced. Christian McCaffrey upgrades their RB."
               }
             ]
           },
@@ -6279,7 +6299,8 @@
                 "my_lineup_new": 41946,
                 "their_lineup_old": 36452,
                 "their_lineup_new": 33597,
-                "score": 3556
+                "score": 3556,
+                "partner_pitch": "Mongo Money Makers is rebuilding. They land Christian McCaffrey; they cash in Ashton Jeanty for 2026 1st, dealing from their RB surplus."
               },
               {
                 "send": [
@@ -6334,7 +6355,8 @@
                 "my_lineup_new": 37095,
                 "their_lineup_old": 36452,
                 "their_lineup_new": 38448,
-                "score": 3556
+                "score": 3556,
+                "partner_pitch": "Mongo Money Makers is rebuilding. Ja'Marr Chase fills their WR gap (#9 of 10), dealing from their RB surplus."
               },
               {
                 "send": [
@@ -6389,7 +6411,8 @@
                 "my_lineup_new": 37593,
                 "their_lineup_old": 36452,
                 "their_lineup_new": 37950,
-                "score": 3556
+                "score": 3556,
+                "partner_pitch": "Mongo Money Makers is rebuilding. Jaxon Smith-Njigba fills their WR gap (#9 of 10), dealing from their RB surplus."
               },
               {
                 "send": [
@@ -6456,7 +6479,8 @@
                 "my_lineup_new": 41566,
                 "their_lineup_old": 36452,
                 "their_lineup_new": 34433,
-                "score": 3086
+                "score": 3086,
+                "partner_pitch": "Mongo Money Makers is rebuilding. They cash in Chase Brown for 2026 1st and 2027 1st, dealing from their RB surplus."
               },
               {
                 "send": [
@@ -6523,7 +6547,8 @@
                 "my_lineup_new": 41471,
                 "their_lineup_old": 36452,
                 "their_lineup_new": 34528,
-                "score": 3086
+                "score": 3086,
+                "partner_pitch": "Mongo Money Makers is rebuilding. They cash in Nico Collins for 2026 1st and 2027 1st, dealing from their TE surplus."
               }
             ]
           },
@@ -6591,7 +6616,8 @@
                 "my_lineup_new": 42603,
                 "their_lineup_old": 36279,
                 "their_lineup_new": 32592,
-                "score": 4458
+                "score": 4458,
+                "partner_pitch": "Saquantum Leap is competing now. They flip Jonathan Taylor for 2026 1st and 2027 1st, dealing from their RB surplus."
               },
               {
                 "send": [
@@ -6646,7 +6672,8 @@
                 "my_lineup_new": 36073,
                 "their_lineup_old": 36279,
                 "their_lineup_new": 38994,
-                "score": 3765
+                "score": 3765,
+                "partner_pitch": "Saquantum Leap is competing now. Christian McCaffrey adds proven production for their playoff push, dealing from their QB surplus."
               },
               {
                 "send": [
@@ -6701,7 +6728,8 @@
                 "my_lineup_new": 37085,
                 "their_lineup_old": 36279,
                 "their_lineup_new": 38884,
-                "score": 3754
+                "score": 3754,
+                "partner_pitch": "Saquantum Leap is competing now. Christian McCaffrey adds proven production for their playoff push, dealing from their QB surplus."
               },
               {
                 "send": [
@@ -6756,7 +6784,8 @@
                 "my_lineup_new": 36975,
                 "their_lineup_old": 36279,
                 "their_lineup_new": 38994,
-                "score": 3754
+                "score": 3754,
+                "partner_pitch": "Saquantum Leap is competing now. Christian McCaffrey adds proven production for their playoff push, dealing from their QB surplus."
               },
               {
                 "send": [
@@ -6811,7 +6840,8 @@
                 "my_lineup_new": 36591,
                 "their_lineup_old": 36279,
                 "their_lineup_new": 39681,
-                "score": 3754
+                "score": 3754,
+                "partner_pitch": "Saquantum Leap is competing now. Jaxon Smith-Njigba upgrades their WR, dealing from their QB surplus."
               }
             ]
           },
@@ -6879,7 +6909,8 @@
                 "my_lineup_new": 42370,
                 "their_lineup_old": 40479,
                 "their_lineup_new": 37894,
-                "score": 4196
+                "score": 4196,
+                "partner_pitch": "Ligma is balanced. Cam Ward fills their QB gap (#9 of 10); they cash in Colston Loveland for 2026 1st, dealing from their TE surplus."
               },
               {
                 "send": [
@@ -6934,7 +6965,8 @@
                 "my_lineup_new": 42023,
                 "their_lineup_old": 40479,
                 "their_lineup_new": 37948,
-                "score": 3957
+                "score": 3957,
+                "partner_pitch": "Ligma is balanced. Mike Evans fills their WR gap (#10 of 10); they cash in Colston Loveland for 2026 1st, dealing from their TE surplus."
               },
               {
                 "send": [
@@ -6989,7 +7021,8 @@
                 "my_lineup_new": 42370,
                 "their_lineup_old": 40479,
                 "their_lineup_new": 37894,
-                "score": 3957
+                "score": 3957,
+                "partner_pitch": "Ligma is balanced. They land Kenneth Gainwell; they cash in Colston Loveland for 2026 1st, dealing from their TE surplus."
               },
               {
                 "send": [
@@ -7044,7 +7077,8 @@
                 "my_lineup_new": 42370,
                 "their_lineup_old": 40479,
                 "their_lineup_new": 37894,
-                "score": 3943
+                "score": 3943,
+                "partner_pitch": "Ligma is balanced. They cash in Colston Loveland for 2026 1st and 2026 2nd, dealing from their TE surplus."
               },
               {
                 "send": [
@@ -7099,7 +7133,8 @@
                 "my_lineup_new": 42370,
                 "their_lineup_old": 40479,
                 "their_lineup_new": 37894,
-                "score": 3911
+                "score": 3911,
+                "partner_pitch": "Ligma is balanced. They land Tony Pollard; they cash in Colston Loveland for 2026 1st, dealing from their TE surplus."
               }
             ]
           },
@@ -7167,7 +7202,8 @@
                 "my_lineup_new": 40888,
                 "their_lineup_old": 35417,
                 "their_lineup_new": 33032,
-                "score": 3556
+                "score": 3556,
+                "partner_pitch": "Obijan Kenobi is balanced. Ja'Marr Chase upgrades their WR; they cash in Bijan Robinson for 2026 1st."
               },
               {
                 "send": [
@@ -7222,7 +7258,8 @@
                 "my_lineup_new": 41386,
                 "their_lineup_old": 35417,
                 "their_lineup_new": 32534,
-                "score": 3556
+                "score": 3556,
+                "partner_pitch": "Obijan Kenobi is balanced. Jaxon Smith-Njigba upgrades their WR; they cash in Bijan Robinson for 2026 1st."
               },
               {
                 "send": [
@@ -7277,7 +7314,8 @@
                 "my_lineup_new": 36121,
                 "their_lineup_old": 35417,
                 "their_lineup_new": 38040,
-                "score": 3556
+                "score": 3556,
+                "partner_pitch": "Obijan Kenobi is balanced. Christian McCaffrey upgrades their RB."
               },
               {
                 "send": [
@@ -7332,7 +7370,8 @@
                 "my_lineup_new": 36073,
                 "their_lineup_old": 35417,
                 "their_lineup_new": 38174,
-                "score": 3556
+                "score": 3556,
+                "partner_pitch": "Obijan Kenobi is balanced. Christian McCaffrey upgrades their RB."
               },
               {
                 "send": [
@@ -7387,7 +7426,8 @@
                 "my_lineup_new": 36073,
                 "their_lineup_old": 35417,
                 "their_lineup_new": 38174,
-                "score": 3281
+                "score": 3281,
+                "partner_pitch": "Obijan Kenobi is balanced. Christian McCaffrey upgrades their RB."
               }
             ]
           },
@@ -7455,7 +7495,8 @@
                 "my_lineup_new": 41639,
                 "their_lineup_old": 28370,
                 "their_lineup_new": 25497,
-                "score": 3957
+                "score": 3957,
+                "partner_pitch": "cropcreamer is balanced. Christian McCaffrey fills their RB gap (#10 of 10); they cash in Brock Bowers for 2026 1st, dealing from their TE surplus."
               },
               {
                 "send": [
@@ -7510,7 +7551,8 @@
                 "my_lineup_new": 36073,
                 "their_lineup_old": 28370,
                 "their_lineup_new": 31304,
-                "score": 3794
+                "score": 3794,
+                "partner_pitch": "cropcreamer is balanced. Christian McCaffrey fills their RB gap (#10 of 10)."
               },
               {
                 "send": [
@@ -7565,7 +7607,8 @@
                 "my_lineup_new": 36082,
                 "their_lineup_old": 28370,
                 "their_lineup_new": 31032,
-                "score": 3556
+                "score": 3556,
+                "partner_pitch": "cropcreamer is balanced. Christian McCaffrey fills their RB gap (#10 of 10)."
               },
               {
                 "send": [
@@ -7620,7 +7663,8 @@
                 "my_lineup_new": 36269,
                 "their_lineup_old": 28370,
                 "their_lineup_new": 31192,
-                "score": 3556
+                "score": 3556,
+                "partner_pitch": "cropcreamer is balanced. Christian McCaffrey fills their RB gap (#10 of 10)."
               },
               {
                 "send": [
@@ -7675,7 +7719,8 @@
                 "my_lineup_new": 36073,
                 "their_lineup_old": 28370,
                 "their_lineup_new": 31267,
-                "score": 3556
+                "score": 3556,
+                "partner_pitch": "cropcreamer is balanced. Christian McCaffrey fills their RB gap (#10 of 10)."
               }
             ]
           }
@@ -7751,7 +7796,8 @@
               "partner_team_name": "Saquantum Leap",
               "partner_owner": "AhjaySidhu",
               "partner_dynasty_rank": 5,
-              "partner_winnow_rank": 1
+              "partner_winnow_rank": 1,
+              "partner_pitch": "Saquantum Leap is competing now. Christian McCaffrey and Jalen Hurts add proven production for their playoff push, dealing from their QB surplus."
             },
             {
               "send": [
@@ -7822,7 +7868,8 @@
               "partner_team_name": "Saquantum Leap",
               "partner_owner": "AhjaySidhu",
               "partner_dynasty_rank": 5,
-              "partner_winnow_rank": 1
+              "partner_winnow_rank": 1,
+              "partner_pitch": "Saquantum Leap is competing now. Christian McCaffrey and Jalen Hurts add proven production for their playoff push, dealing from their QB surplus."
             },
             {
               "send": [
@@ -7893,7 +7940,8 @@
               "partner_team_name": "Saquantum Leap",
               "partner_owner": "AhjaySidhu",
               "partner_dynasty_rank": 5,
-              "partner_winnow_rank": 1
+              "partner_winnow_rank": 1,
+              "partner_pitch": "Saquantum Leap is competing now. Jaxon Smith-Njigba upgrades their WR, dealing from their QB surplus."
             },
             {
               "send": [
@@ -7964,7 +8012,8 @@
               "partner_team_name": "Saquantum Leap",
               "partner_owner": "AhjaySidhu",
               "partner_dynasty_rank": 5,
-              "partner_winnow_rank": 1
+              "partner_winnow_rank": 1,
+              "partner_pitch": "Saquantum Leap is competing now. Christian McCaffrey adds proven production for their playoff push; they flip Quinshon Judkins for 2027 1st, dealing from their QB surplus."
             },
             {
               "send": [
@@ -8035,7 +8084,8 @@
               "partner_team_name": "Saquantum Leap",
               "partner_owner": "AhjaySidhu",
               "partner_dynasty_rank": 5,
-              "partner_winnow_rank": 1
+              "partner_winnow_rank": 1,
+              "partner_pitch": "Saquantum Leap is competing now. Christian McCaffrey adds proven production for their playoff push; they flip Saquon Barkley for 2026 1st, dealing from their QB surplus."
             },
             {
               "send": [
@@ -8106,7 +8156,8 @@
               "partner_team_name": "Saquantum Leap",
               "partner_owner": "AhjaySidhu",
               "partner_dynasty_rank": 5,
-              "partner_winnow_rank": 1
+              "partner_winnow_rank": 1,
+              "partner_pitch": "Saquantum Leap is competing now. Christian McCaffrey and Jalen Hurts add proven production for their playoff push, dealing from their QB surplus."
             },
             {
               "send": [
@@ -8177,7 +8228,8 @@
               "partner_team_name": "Saquantum Leap",
               "partner_owner": "AhjaySidhu",
               "partner_dynasty_rank": 5,
-              "partner_winnow_rank": 1
+              "partner_winnow_rank": 1,
+              "partner_pitch": "Saquantum Leap is competing now. Jaxon Smith-Njigba upgrades their WR; they flip Puka Nacua for 2026 1st, dealing from their QB surplus."
             },
             {
               "send": [
@@ -8248,7 +8300,8 @@
               "partner_team_name": "Saquantum Leap",
               "partner_owner": "AhjaySidhu",
               "partner_dynasty_rank": 5,
-              "partner_winnow_rank": 1
+              "partner_winnow_rank": 1,
+              "partner_pitch": "Saquantum Leap is competing now. Christian McCaffrey adds proven production for their playoff push; they flip Quinshon Judkins for 2027 1st, dealing from their QB surplus."
             }
           ],
           "buy": [
@@ -8309,7 +8362,8 @@
               "partner_team_name": "Glass bones & paper skin",
               "partner_owner": "dkrauz",
               "partner_dynasty_rank": 8,
-              "partner_winnow_rank": 6
+              "partner_winnow_rank": 6,
+              "partner_pitch": "Glass bones & paper skin is balanced. They cash in Trey McBride for 2026 1st and 2027 1st."
             },
             {
               "send": [
@@ -8368,7 +8422,8 @@
               "partner_team_name": "Glass bones & paper skin",
               "partner_owner": "dkrauz",
               "partner_dynasty_rank": 8,
-              "partner_winnow_rank": 6
+              "partner_winnow_rank": 6,
+              "partner_pitch": "Glass bones & paper skin is balanced. They cash in CeeDee Lamb for 2026 1st and 2027 1st."
             },
             {
               "send": [
@@ -8427,7 +8482,8 @@
               "partner_team_name": "Glass bones & paper skin",
               "partner_owner": "dkrauz",
               "partner_dynasty_rank": 8,
-              "partner_winnow_rank": 6
+              "partner_winnow_rank": 6,
+              "partner_pitch": "Glass bones & paper skin is balanced. They cash in Drake London for 2026 1st and 2027 1st."
             },
             {
               "send": [
@@ -8486,7 +8542,8 @@
               "partner_team_name": "Da Bell of Da Ball",
               "partner_owner": "jmirandette",
               "partner_dynasty_rank": 1,
-              "partner_winnow_rank": 4
+              "partner_winnow_rank": 4,
+              "partner_pitch": "Da Bell of Da Ball is rebuilding. They cash in Omarion Hampton for 2026 1st and 2027 1st."
             },
             {
               "send": [
@@ -8545,7 +8602,8 @@
               "partner_team_name": "Da Bell of Da Ball",
               "partner_owner": "jmirandette",
               "partner_dynasty_rank": 1,
-              "partner_winnow_rank": 4
+              "partner_winnow_rank": 4,
+              "partner_pitch": "Da Bell of Da Ball is rebuilding. They cash in Tetairoa McMillan for 2026 1st and 2027 1st, dealing from their WR surplus."
             },
             {
               "send": [
@@ -8604,7 +8662,8 @@
               "partner_team_name": "Bucky the Vampire Slayer",
               "partner_owner": "ebbittm",
               "partner_dynasty_rank": 7,
-              "partner_winnow_rank": 5
+              "partner_winnow_rank": 5,
+              "partner_pitch": "Bucky the Vampire Slayer is balanced. They cash in James Cook for 2026 1st and 2027 1st."
             },
             {
               "send": [
@@ -8663,7 +8722,8 @@
               "partner_team_name": "Saquantum Leap",
               "partner_owner": "AhjaySidhu",
               "partner_dynasty_rank": 5,
-              "partner_winnow_rank": 1
+              "partner_winnow_rank": 1,
+              "partner_pitch": "Saquantum Leap is competing now. They flip Jonathan Taylor for 2026 1st and 2027 1st, dealing from their RB surplus."
             },
             {
               "send": [
@@ -8722,7 +8782,8 @@
               "partner_team_name": "Glass bones & paper skin",
               "partner_owner": "dkrauz",
               "partner_dynasty_rank": 8,
-              "partner_winnow_rank": 6
+              "partner_winnow_rank": 6,
+              "partner_pitch": "Glass bones & paper skin is balanced. Jalen Hurts fills their QB gap (#10 of 10); they cash in Trey McBride for 2026 1st."
             }
           ],
           "sell": [
@@ -8783,7 +8844,8 @@
               "partner_team_name": "cropcreamer",
               "partner_owner": "cropcreamer",
               "partner_dynasty_rank": 10,
-              "partner_winnow_rank": 10
+              "partner_winnow_rank": 10,
+              "partner_pitch": "cropcreamer is balanced. Christian McCaffrey fills their RB gap (#10 of 10)."
             },
             {
               "send": [
@@ -8842,7 +8904,8 @@
               "partner_team_name": "Saquantum Leap",
               "partner_owner": "AhjaySidhu",
               "partner_dynasty_rank": 5,
-              "partner_winnow_rank": 1
+              "partner_winnow_rank": 1,
+              "partner_pitch": "Saquantum Leap is competing now. Christian McCaffrey adds proven production for their playoff push, dealing from their QB surplus."
             },
             {
               "send": [
@@ -8901,7 +8964,8 @@
               "partner_team_name": "Da Bell of Da Ball",
               "partner_owner": "jmirandette",
               "partner_dynasty_rank": 1,
-              "partner_winnow_rank": 4
+              "partner_winnow_rank": 4,
+              "partner_pitch": "Da Bell of Da Ball is rebuilding. Christian McCaffrey upgrades their RB, dealing from their QB surplus."
             },
             {
               "send": [
@@ -8972,7 +9036,8 @@
               "partner_team_name": "Saquantum Leap",
               "partner_owner": "AhjaySidhu",
               "partner_dynasty_rank": 5,
-              "partner_winnow_rank": 1
+              "partner_winnow_rank": 1,
+              "partner_pitch": "Saquantum Leap is competing now. Jakobi Meyers upgrades their WR, dealing from their QB surplus."
             },
             {
               "send": [
@@ -9043,7 +9108,8 @@
               "partner_team_name": "Saquantum Leap",
               "partner_owner": "AhjaySidhu",
               "partner_dynasty_rank": 5,
-              "partner_winnow_rank": 1
+              "partner_winnow_rank": 1,
+              "partner_pitch": "Saquantum Leap is competing now. Jakobi Meyers upgrades their WR, dealing from their QB surplus."
             },
             {
               "send": [
@@ -9102,7 +9168,8 @@
               "partner_team_name": "Glass bones & paper skin",
               "partner_owner": "dkrauz",
               "partner_dynasty_rank": 8,
-              "partner_winnow_rank": 6
+              "partner_winnow_rank": 6,
+              "partner_pitch": "Glass bones & paper skin is balanced. Christian McCaffrey fills their RB gap (#8 of 10)."
             },
             {
               "send": [
@@ -9161,7 +9228,8 @@
               "partner_team_name": "Glass bones & paper skin",
               "partner_owner": "dkrauz",
               "partner_dynasty_rank": 8,
-              "partner_winnow_rank": 6
+              "partner_winnow_rank": 6,
+              "partner_pitch": "Glass bones & paper skin is balanced. Christian McCaffrey fills their RB gap (#8 of 10)."
             },
             {
               "send": [
@@ -9220,7 +9288,8 @@
               "partner_team_name": "Glass bones & paper skin",
               "partner_owner": "dkrauz",
               "partner_dynasty_rank": 8,
-              "partner_winnow_rank": 6
+              "partner_winnow_rank": 6,
+              "partner_pitch": "Glass bones & paper skin is balanced. Christian McCaffrey fills their RB gap (#8 of 10)."
             }
           ],
           "package": [
@@ -9281,7 +9350,8 @@
               "partner_team_name": "Saquantum Leap",
               "partner_owner": "AhjaySidhu",
               "partner_dynasty_rank": 5,
-              "partner_winnow_rank": 1
+              "partner_winnow_rank": 1,
+              "partner_pitch": "Saquantum Leap is competing now. Christian McCaffrey adds proven production for their playoff push, dealing from their QB surplus."
             },
             {
               "send": [
@@ -9340,7 +9410,8 @@
               "partner_team_name": "Saquantum Leap",
               "partner_owner": "AhjaySidhu",
               "partner_dynasty_rank": 5,
-              "partner_winnow_rank": 1
+              "partner_winnow_rank": 1,
+              "partner_pitch": "Saquantum Leap is competing now. Christian McCaffrey adds proven production for their playoff push, dealing from their QB surplus."
             },
             {
               "send": [
@@ -9399,7 +9470,8 @@
               "partner_team_name": "Saquantum Leap",
               "partner_owner": "AhjaySidhu",
               "partner_dynasty_rank": 5,
-              "partner_winnow_rank": 1
+              "partner_winnow_rank": 1,
+              "partner_pitch": "Saquantum Leap is competing now. Jaxon Smith-Njigba upgrades their WR, dealing from their QB surplus."
             },
             {
               "send": [
@@ -9458,7 +9530,8 @@
               "partner_team_name": "Saquantum Leap",
               "partner_owner": "AhjaySidhu",
               "partner_dynasty_rank": 5,
-              "partner_winnow_rank": 1
+              "partner_winnow_rank": 1,
+              "partner_pitch": "Saquantum Leap is competing now. Jaxon Smith-Njigba upgrades their WR, dealing from their QB surplus."
             },
             {
               "send": [
@@ -9529,7 +9602,8 @@
               "partner_team_name": "Da Bell of Da Ball",
               "partner_owner": "jmirandette",
               "partner_dynasty_rank": 1,
-              "partner_winnow_rank": 4
+              "partner_winnow_rank": 4,
+              "partner_pitch": "Da Bell of Da Ball is rebuilding. They cash in Tyler Warren for 2026 1st and 2027 1st."
             },
             {
               "send": [
@@ -9588,7 +9662,8 @@
               "partner_team_name": "Saquantum Leap",
               "partner_owner": "AhjaySidhu",
               "partner_dynasty_rank": 5,
-              "partner_winnow_rank": 1
+              "partner_winnow_rank": 1,
+              "partner_pitch": "Saquantum Leap is competing now. Christian McCaffrey adds proven production for their playoff push, dealing from their QB surplus."
             },
             {
               "send": [
@@ -9647,7 +9722,8 @@
               "partner_team_name": "Saquantum Leap",
               "partner_owner": "AhjaySidhu",
               "partner_dynasty_rank": 5,
-              "partner_winnow_rank": 1
+              "partner_winnow_rank": 1,
+              "partner_pitch": "Saquantum Leap is competing now. Christian McCaffrey adds proven production for their playoff push, dealing from their QB surplus."
             },
             {
               "send": [
@@ -9718,7 +9794,8 @@
               "partner_team_name": "Saquantum Leap",
               "partner_owner": "AhjaySidhu",
               "partner_dynasty_rank": 5,
-              "partner_winnow_rank": 1
+              "partner_winnow_rank": 1,
+              "partner_pitch": "Saquantum Leap is competing now. Christian McCaffrey adds proven production for their playoff push; they flip Lamar Jackson for 2026 2nd, dealing from their QB surplus."
             }
           ],
           "asymmetric": [
@@ -9767,7 +9844,8 @@
               "partner_team_name": "Saquantum Leap",
               "partner_owner": "AhjaySidhu",
               "partner_dynasty_rank": 5,
-              "partner_winnow_rank": 1
+              "partner_winnow_rank": 1,
+              "partner_pitch": "Saquantum Leap is competing now. Luther Burden upgrades their WR, dealing from their QB surplus."
             },
             {
               "send": [
@@ -9814,7 +9892,8 @@
               "partner_team_name": "Saquantum Leap",
               "partner_owner": "AhjaySidhu",
               "partner_dynasty_rank": 5,
-              "partner_winnow_rank": 1
+              "partner_winnow_rank": 1,
+              "partner_pitch": "Saquantum Leap is competing now. Luther Burden upgrades their WR, dealing from their QB surplus."
             },
             {
               "send": [
@@ -9861,7 +9940,8 @@
               "partner_team_name": "Saquantum Leap",
               "partner_owner": "AhjaySidhu",
               "partner_dynasty_rank": 5,
-              "partner_winnow_rank": 1
+              "partner_winnow_rank": 1,
+              "partner_pitch": "Saquantum Leap is competing now. A.J. Brown upgrades their WR, dealing from their QB surplus."
             },
             {
               "send": [
@@ -9908,7 +9988,8 @@
               "partner_team_name": "Saquantum Leap",
               "partner_owner": "AhjaySidhu",
               "partner_dynasty_rank": 5,
-              "partner_winnow_rank": 1
+              "partner_winnow_rank": 1,
+              "partner_pitch": "Saquantum Leap is competing now. A.J. Brown upgrades their WR, dealing from their QB surplus."
             },
             {
               "send": [
@@ -9955,7 +10036,8 @@
               "partner_team_name": "cropcreamer",
               "partner_owner": "cropcreamer",
               "partner_dynasty_rank": 10,
-              "partner_winnow_rank": 10
+              "partner_winnow_rank": 10,
+              "partner_pitch": "cropcreamer is balanced. RJ Harvey fills their RB gap (#10 of 10)."
             },
             {
               "send": [
@@ -10002,7 +10084,8 @@
               "partner_team_name": "cropcreamer",
               "partner_owner": "cropcreamer",
               "partner_dynasty_rank": 10,
-              "partner_winnow_rank": 10
+              "partner_winnow_rank": 10,
+              "partner_pitch": "cropcreamer is balanced. Luther Burden fills their WR gap (#8 of 10)."
             },
             {
               "send": [
@@ -10049,7 +10132,8 @@
               "partner_team_name": "cropcreamer",
               "partner_owner": "cropcreamer",
               "partner_dynasty_rank": 10,
-              "partner_winnow_rank": 10
+              "partner_winnow_rank": 10,
+              "partner_pitch": "cropcreamer is balanced. Mike Evans fills their WR gap (#8 of 10)."
             },
             {
               "send": [
@@ -10096,7 +10180,8 @@
               "partner_team_name": "cropcreamer",
               "partner_owner": "cropcreamer",
               "partner_dynasty_rank": 10,
-              "partner_winnow_rank": 10
+              "partner_winnow_rank": 10,
+              "partner_pitch": "cropcreamer is balanced. A.J. Brown fills their WR gap (#8 of 10)."
             }
           ]
         },
@@ -10175,7 +10260,8 @@
                 "my_lineup_new": 32778,
                 "their_lineup_old": 34330,
                 "their_lineup_new": 41960,
-                "score": 8154
+                "score": 8154,
+                "partner_pitch": "Glass bones & paper skin is balanced. Christian McCaffrey fills their RB gap (#8 of 10)."
               },
               {
                 "send": [
@@ -10230,7 +10316,8 @@
                 "my_lineup_new": 32778,
                 "their_lineup_old": 34330,
                 "their_lineup_new": 41960,
-                "score": 8132
+                "score": 8132,
+                "partner_pitch": "Glass bones & paper skin is balanced. Christian McCaffrey fills their RB gap (#8 of 10)."
               },
               {
                 "send": [
@@ -10285,7 +10372,8 @@
                 "my_lineup_new": 32778,
                 "their_lineup_old": 34330,
                 "their_lineup_new": 41960,
-                "score": 8126
+                "score": 8126,
+                "partner_pitch": "Glass bones & paper skin is balanced. Christian McCaffrey fills their RB gap (#8 of 10)."
               },
               {
                 "send": [
@@ -10340,7 +10428,8 @@
                 "my_lineup_new": 32778,
                 "their_lineup_old": 34330,
                 "their_lineup_new": 41960,
-                "score": 8085
+                "score": 8085,
+                "partner_pitch": "Glass bones & paper skin is balanced. Christian McCaffrey fills their RB gap (#8 of 10)."
               },
               {
                 "send": [
@@ -10395,7 +10484,8 @@
                 "my_lineup_new": 32778,
                 "their_lineup_old": 34330,
                 "their_lineup_new": 41960,
-                "score": 7903
+                "score": 7903,
+                "partner_pitch": "Glass bones & paper skin is balanced. Christian McCaffrey fills their RB gap (#8 of 10)."
               }
             ]
           },
@@ -10463,7 +10553,8 @@
                 "my_lineup_new": 32778,
                 "their_lineup_old": 28270,
                 "their_lineup_new": 35591,
-                "score": 7933
+                "score": 7933,
+                "partner_pitch": "Samir\u2019s Tight End  is balanced. Christian McCaffrey upgrades their RB."
               },
               {
                 "send": [
@@ -10518,7 +10609,8 @@
                 "my_lineup_new": 32778,
                 "their_lineup_old": 28270,
                 "their_lineup_new": 35591,
-                "score": 7845
+                "score": 7845,
+                "partner_pitch": "Samir\u2019s Tight End  is balanced. Christian McCaffrey upgrades their RB."
               },
               {
                 "send": [
@@ -10573,7 +10665,8 @@
                 "my_lineup_new": 32778,
                 "their_lineup_old": 28270,
                 "their_lineup_new": 35591,
-                "score": 7816
+                "score": 7816,
+                "partner_pitch": "Samir\u2019s Tight End  is balanced. Christian McCaffrey upgrades their RB, dealing from their WR surplus."
               },
               {
                 "send": [
@@ -10628,7 +10721,8 @@
                 "my_lineup_new": 32778,
                 "their_lineup_old": 28270,
                 "their_lineup_new": 35591,
-                "score": 7802
+                "score": 7802,
+                "partner_pitch": "Samir\u2019s Tight End  is balanced. Christian McCaffrey upgrades their RB."
               },
               {
                 "send": [
@@ -10683,7 +10777,8 @@
                 "my_lineup_new": 32778,
                 "their_lineup_old": 28270,
                 "their_lineup_new": 35590,
-                "score": 7692
+                "score": 7692,
+                "partner_pitch": "Samir\u2019s Tight End  is balanced. Christian McCaffrey upgrades their RB."
               }
             ]
           },
@@ -10751,7 +10846,8 @@
                 "my_lineup_new": 32778,
                 "their_lineup_old": 37417,
                 "their_lineup_new": 45105,
-                "score": 8652
+                "score": 8652,
+                "partner_pitch": "Da Bell of Da Ball is rebuilding. Christian McCaffrey upgrades their RB, dealing from their QB surplus."
               },
               {
                 "send": [
@@ -10806,7 +10902,8 @@
                 "my_lineup_new": 32778,
                 "their_lineup_old": 37417,
                 "their_lineup_new": 45105,
-                "score": 8504
+                "score": 8504,
+                "partner_pitch": "Da Bell of Da Ball is rebuilding. Christian McCaffrey upgrades their RB, dealing from their WR surplus."
               },
               {
                 "send": [
@@ -10861,7 +10958,8 @@
                 "my_lineup_new": 32778,
                 "their_lineup_old": 37417,
                 "their_lineup_new": 45105,
-                "score": 8212
+                "score": 8212,
+                "partner_pitch": "Da Bell of Da Ball is rebuilding. Christian McCaffrey upgrades their RB."
               },
               {
                 "send": [
@@ -10916,7 +11014,8 @@
                 "my_lineup_new": 32778,
                 "their_lineup_old": 37417,
                 "their_lineup_new": 45105,
-                "score": 8118
+                "score": 8118,
+                "partner_pitch": "Da Bell of Da Ball is rebuilding. Christian McCaffrey upgrades their RB, dealing from their QB surplus."
               },
               {
                 "send": [
@@ -10983,7 +11082,8 @@
                 "my_lineup_new": 32984,
                 "their_lineup_old": 37417,
                 "their_lineup_new": 44899,
-                "score": 8111
+                "score": 8111,
+                "partner_pitch": "Da Bell of Da Ball is rebuilding. Christian McCaffrey upgrades their RB, dealing from their WR surplus."
               }
             ]
           },
@@ -11051,7 +11151,8 @@
                 "my_lineup_new": 32778,
                 "their_lineup_old": 34893,
                 "their_lineup_new": 42336,
-                "score": 8184
+                "score": 8184,
+                "partner_pitch": "Bucky the Vampire Slayer is balanced. Christian McCaffrey upgrades their RB."
               },
               {
                 "send": [
@@ -11106,7 +11207,8 @@
                 "my_lineup_new": 32778,
                 "their_lineup_old": 34893,
                 "their_lineup_new": 42336,
-                "score": 8088
+                "score": 8088,
+                "partner_pitch": "Bucky the Vampire Slayer is balanced. Christian McCaffrey upgrades their RB, dealing from their QB surplus."
               },
               {
                 "send": [
@@ -11161,7 +11263,8 @@
                 "my_lineup_new": 32778,
                 "their_lineup_old": 34893,
                 "their_lineup_new": 42336,
-                "score": 7967
+                "score": 7967,
+                "partner_pitch": "Bucky the Vampire Slayer is balanced. Christian McCaffrey upgrades their RB."
               },
               {
                 "send": [
@@ -11216,7 +11319,8 @@
                 "my_lineup_new": 32778,
                 "their_lineup_old": 34893,
                 "their_lineup_new": 42336,
-                "score": 7936
+                "score": 7936,
+                "partner_pitch": "Bucky the Vampire Slayer is balanced. Christian McCaffrey upgrades their RB."
               },
               {
                 "send": [
@@ -11271,7 +11375,8 @@
                 "my_lineup_new": 32778,
                 "their_lineup_old": 34893,
                 "their_lineup_new": 42336,
-                "score": 7782
+                "score": 7782,
+                "partner_pitch": "Bucky the Vampire Slayer is balanced. Christian McCaffrey upgrades their RB."
               }
             ]
           },
@@ -11339,7 +11444,8 @@
                 "my_lineup_new": 33187,
                 "their_lineup_old": 33647,
                 "their_lineup_new": 41171,
-                "score": 8659
+                "score": 8659,
+                "partner_pitch": "Mongo Money Makers is rebuilding. They land Christian McCaffrey, dealing from their TE surplus."
               },
               {
                 "send": [
@@ -11394,7 +11500,8 @@
                 "my_lineup_new": 32778,
                 "their_lineup_old": 33647,
                 "their_lineup_new": 41171,
-                "score": 8434
+                "score": 8434,
+                "partner_pitch": "Mongo Money Makers is rebuilding. They land Christian McCaffrey."
               },
               {
                 "send": [
@@ -11449,7 +11556,8 @@
                 "my_lineup_new": 32778,
                 "their_lineup_old": 33647,
                 "their_lineup_new": 41171,
-                "score": 8404
+                "score": 8404,
+                "partner_pitch": "Mongo Money Makers is rebuilding. They land Christian McCaffrey."
               },
               {
                 "send": [
@@ -11504,7 +11612,8 @@
                 "my_lineup_new": 32778,
                 "their_lineup_old": 33647,
                 "their_lineup_new": 41171,
-                "score": 8214
+                "score": 8214,
+                "partner_pitch": "Mongo Money Makers is rebuilding. They land Christian McCaffrey."
               },
               {
                 "send": [
@@ -11559,7 +11668,8 @@
                 "my_lineup_new": 33026,
                 "their_lineup_old": 33647,
                 "their_lineup_new": 41171,
-                "score": 8092
+                "score": 8092,
+                "partner_pitch": "Mongo Money Makers is rebuilding. They land Christian McCaffrey, dealing from their TE surplus."
               }
             ]
           },
@@ -11627,7 +11737,8 @@
                 "my_lineup_new": 46137,
                 "their_lineup_old": 42678,
                 "their_lineup_new": 36007,
-                "score": 7973
+                "score": 7973,
+                "partner_pitch": "Saquantum Leap is competing now. Luther Burden upgrades their WR; they flip Jonathan Taylor for 2026 1st, dealing from their RB surplus."
               },
               {
                 "send": [
@@ -11682,7 +11793,8 @@
                 "my_lineup_new": 46137,
                 "their_lineup_old": 42678,
                 "their_lineup_new": 35805,
-                "score": 7617
+                "score": 7617,
+                "partner_pitch": "Saquantum Leap is competing now. They flip Jonathan Taylor for 2026 1st and 2027 1st, dealing from their RB surplus."
               },
               {
                 "send": [
@@ -11749,7 +11861,8 @@
                 "my_lineup_new": 46090,
                 "their_lineup_old": 42678,
                 "their_lineup_new": 35794,
-                "score": 7588
+                "score": 7588,
+                "partner_pitch": "Saquantum Leap is competing now. Luther Burden upgrades their WR; they flip Saquon Barkley for 2026 1st, dealing from their RB surplus."
               },
               {
                 "send": [
@@ -11804,7 +11917,8 @@
                 "my_lineup_new": 46137,
                 "their_lineup_old": 42678,
                 "their_lineup_new": 36007,
-                "score": 7439
+                "score": 7439,
+                "partner_pitch": "Saquantum Leap is competing now. Luther Burden upgrades their WR; they flip Jonathan Taylor for 2027 1st, dealing from their RB surplus."
               },
               {
                 "send": [
@@ -11871,7 +11985,8 @@
                 "my_lineup_new": 46090,
                 "their_lineup_old": 42678,
                 "their_lineup_new": 35592,
-                "score": 7232
+                "score": 7232,
+                "partner_pitch": "Saquantum Leap is competing now. They flip Saquon Barkley for 2026 1st and 2027 1st, dealing from their RB surplus."
               }
             ]
           },
@@ -11939,7 +12054,8 @@
                 "my_lineup_new": 33932,
                 "their_lineup_old": 38566,
                 "their_lineup_new": 45177,
-                "score": 7558
+                "score": 7558,
+                "partner_pitch": "Ligma is balanced. They land Christian McCaffrey, dealing from their TE surplus."
               },
               {
                 "send": [
@@ -11994,7 +12110,8 @@
                 "my_lineup_new": 32778,
                 "their_lineup_old": 38566,
                 "their_lineup_new": 45177,
-                "score": 7442
+                "score": 7442,
+                "partner_pitch": "Ligma is balanced. They land Christian McCaffrey."
               },
               {
                 "send": [
@@ -12049,7 +12166,8 @@
                 "my_lineup_new": 32855,
                 "their_lineup_old": 38566,
                 "their_lineup_new": 45177,
-                "score": 7258
+                "score": 7258,
+                "partner_pitch": "Ligma is balanced. They land Christian McCaffrey, dealing from their RB surplus."
               },
               {
                 "send": [
@@ -12104,7 +12222,8 @@
                 "my_lineup_new": 32778,
                 "their_lineup_old": 38566,
                 "their_lineup_new": 45177,
-                "score": 7237
+                "score": 7237,
+                "partner_pitch": "Ligma is balanced. They land Christian McCaffrey."
               },
               {
                 "send": [
@@ -12159,7 +12278,8 @@
                 "my_lineup_new": 32778,
                 "their_lineup_old": 38566,
                 "their_lineup_new": 45177,
-                "score": 7135
+                "score": 7135,
+                "partner_pitch": "Ligma is balanced. They land Christian McCaffrey."
               }
             ]
           },
@@ -12227,7 +12347,8 @@
                 "my_lineup_new": 32778,
                 "their_lineup_old": 30399,
                 "their_lineup_new": 37609,
-                "score": 8143
+                "score": 8143,
+                "partner_pitch": "Obijan Kenobi is balanced. Christian McCaffrey upgrades their RB."
               },
               {
                 "send": [
@@ -12282,7 +12403,8 @@
                 "my_lineup_new": 32778,
                 "their_lineup_old": 30399,
                 "their_lineup_new": 37609,
-                "score": 8009
+                "score": 8009,
+                "partner_pitch": "Obijan Kenobi is balanced. Christian McCaffrey upgrades their RB."
               },
               {
                 "send": [
@@ -12337,7 +12459,8 @@
                 "my_lineup_new": 32778,
                 "their_lineup_old": 30399,
                 "their_lineup_new": 37609,
-                "score": 7734
+                "score": 7734,
+                "partner_pitch": "Obijan Kenobi is balanced. Christian McCaffrey upgrades their RB."
               },
               {
                 "send": [
@@ -12392,7 +12515,8 @@
                 "my_lineup_new": 32778,
                 "their_lineup_old": 30399,
                 "their_lineup_new": 37609,
-                "score": 7733
+                "score": 7733,
+                "partner_pitch": "Obijan Kenobi is balanced. Christian McCaffrey upgrades their RB."
               },
               {
                 "send": [
@@ -12447,7 +12571,8 @@
                 "my_lineup_new": 32778,
                 "their_lineup_old": 30399,
                 "their_lineup_new": 37609,
-                "score": 7609
+                "score": 7609,
+                "partner_pitch": "Obijan Kenobi is balanced. Christian McCaffrey upgrades their RB."
               }
             ]
           },
@@ -12515,7 +12640,8 @@
                 "my_lineup_new": 32778,
                 "their_lineup_old": 21586,
                 "their_lineup_new": 29174,
-                "score": 8448
+                "score": 8448,
+                "partner_pitch": "cropcreamer is balanced. Christian McCaffrey fills their RB gap (#10 of 10)."
               },
               {
                 "send": [
@@ -12582,7 +12708,8 @@
                 "my_lineup_new": 32490,
                 "their_lineup_old": 21586,
                 "their_lineup_new": 29490,
-                "score": 8344
+                "score": 8344,
+                "partner_pitch": "cropcreamer is balanced. Christian McCaffrey fills their RB gap (#10 of 10)."
               },
               {
                 "send": [
@@ -12637,7 +12764,8 @@
                 "my_lineup_new": 32778,
                 "their_lineup_old": 21586,
                 "their_lineup_new": 29174,
-                "score": 8247
+                "score": 8247,
+                "partner_pitch": "cropcreamer is balanced. Christian McCaffrey fills their RB gap (#10 of 10)."
               },
               {
                 "send": [
@@ -12692,7 +12820,8 @@
                 "my_lineup_new": 32778,
                 "their_lineup_old": 21586,
                 "their_lineup_new": 29174,
-                "score": 8210
+                "score": 8210,
+                "partner_pitch": "cropcreamer is balanced. Christian McCaffrey fills their RB gap (#10 of 10)."
               },
               {
                 "send": [
@@ -12747,7 +12876,8 @@
                 "my_lineup_new": 32778,
                 "their_lineup_old": 21586,
                 "their_lineup_new": 29174,
-                "score": 8133
+                "score": 8133,
+                "partner_pitch": "cropcreamer is balanced. Christian McCaffrey fills their RB gap (#10 of 10)."
               }
             ]
           }
@@ -12823,7 +12953,8 @@
               "partner_team_name": "Mongo Money Makers",
               "partner_owner": "dantonio34",
               "partner_dynasty_rank": 4,
-              "partner_winnow_rank": 7
+              "partner_winnow_rank": 7,
+              "partner_pitch": "Mongo Money Makers is rebuilding. Jaxon Smith-Njigba fills their WR gap (#9 of 10), dealing from their RB surplus."
             },
             {
               "send": [
@@ -12894,7 +13025,8 @@
               "partner_team_name": "Ligma",
               "partner_owner": "nfaber",
               "partner_dynasty_rank": 2,
-              "partner_winnow_rank": 3
+              "partner_winnow_rank": 3,
+              "partner_pitch": "Ligma is balanced. Ja'Marr Chase fills their WR gap (#10 of 10), dealing from their RB surplus."
             },
             {
               "send": [
@@ -12965,7 +13097,8 @@
               "partner_team_name": "Mongo Money Makers",
               "partner_owner": "dantonio34",
               "partner_dynasty_rank": 4,
-              "partner_winnow_rank": 7
+              "partner_winnow_rank": 7,
+              "partner_pitch": "Mongo Money Makers is rebuilding. Mike Evans fills their WR gap (#9 of 10); they cash in Tucker Kraft for 2026 1st, dealing from their TE surplus."
             },
             {
               "send": [
@@ -13036,7 +13169,8 @@
               "partner_team_name": "Da Bell of Da Ball",
               "partner_owner": "jmirandette",
               "partner_dynasty_rank": 1,
-              "partner_winnow_rank": 4
+              "partner_winnow_rank": 4,
+              "partner_pitch": "Da Bell of Da Ball is rebuilding. Tony Pollard upgrades their RB."
             },
             {
               "send": [
@@ -13107,7 +13241,8 @@
               "partner_team_name": "Mongo Money Makers",
               "partner_owner": "dantonio34",
               "partner_dynasty_rank": 4,
-              "partner_winnow_rank": 7
+              "partner_winnow_rank": 7,
+              "partner_pitch": "Mongo Money Makers is rebuilding. Mike Evans fills their WR gap (#9 of 10); they cash in Tucker Kraft for 2026 1st, dealing from their TE surplus."
             },
             {
               "send": [
@@ -13178,7 +13313,8 @@
               "partner_team_name": "Mongo Money Makers",
               "partner_owner": "dantonio34",
               "partner_dynasty_rank": 4,
-              "partner_winnow_rank": 7
+              "partner_winnow_rank": 7,
+              "partner_pitch": "Mongo Money Makers is rebuilding. Mike Evans fills their WR gap (#9 of 10); they cash in Tucker Kraft for 2026 1st, dealing from their TE surplus."
             },
             {
               "send": [
@@ -13249,7 +13385,8 @@
               "partner_team_name": "Mongo Money Makers",
               "partner_owner": "dantonio34",
               "partner_dynasty_rank": 4,
-              "partner_winnow_rank": 7
+              "partner_winnow_rank": 7,
+              "partner_pitch": "Mongo Money Makers is rebuilding. Luther Burden fills their WR gap (#9 of 10), dealing from their TE surplus."
             },
             {
               "send": [
@@ -13320,7 +13457,8 @@
               "partner_team_name": "cropcreamer",
               "partner_owner": "cropcreamer",
               "partner_dynasty_rank": 10,
-              "partner_winnow_rank": 10
+              "partner_winnow_rank": 10,
+              "partner_pitch": "cropcreamer is balanced. Tony Pollard fills their RB gap (#10 of 10), dealing from their TE surplus."
             }
           ],
           "buy": [
@@ -13381,7 +13519,8 @@
               "partner_team_name": "Saquantum Leap",
               "partner_owner": "AhjaySidhu",
               "partner_dynasty_rank": 5,
-              "partner_winnow_rank": 1
+              "partner_winnow_rank": 1,
+              "partner_pitch": "Saquantum Leap is competing now. Luther Burden upgrades their WR; they flip Jonathan Taylor for 2026 1st, dealing from their RB surplus."
             },
             {
               "send": [
@@ -13452,7 +13591,8 @@
               "partner_team_name": "Glass bones & paper skin",
               "partner_owner": "dkrauz",
               "partner_dynasty_rank": 8,
-              "partner_winnow_rank": 6
+              "partner_winnow_rank": 6,
+              "partner_pitch": "Glass bones & paper skin is balanced. Luther Burden upgrades their WR; they cash in Derrick Henry for 2026 1st."
             },
             {
               "send": [
@@ -13511,7 +13651,8 @@
               "partner_team_name": "Saquantum Leap",
               "partner_owner": "AhjaySidhu",
               "partner_dynasty_rank": 5,
-              "partner_winnow_rank": 1
+              "partner_winnow_rank": 1,
+              "partner_pitch": "Saquantum Leap is competing now. They flip Jonathan Taylor for 2026 1st and 2027 1st, dealing from their RB surplus."
             },
             {
               "send": [
@@ -13582,7 +13723,8 @@
               "partner_team_name": "Saquantum Leap",
               "partner_owner": "AhjaySidhu",
               "partner_dynasty_rank": 5,
-              "partner_winnow_rank": 1
+              "partner_winnow_rank": 1,
+              "partner_pitch": "Saquantum Leap is competing now. Luther Burden upgrades their WR; they flip Saquon Barkley for 2026 1st, dealing from their RB surplus."
             },
             {
               "send": [
@@ -13653,7 +13795,8 @@
               "partner_team_name": "Glass bones & paper skin",
               "partner_owner": "dkrauz",
               "partner_dynasty_rank": 8,
-              "partner_winnow_rank": 6
+              "partner_winnow_rank": 6,
+              "partner_pitch": "Glass bones & paper skin is balanced. They cash in Derrick Henry for 2026 1st and 2027 1st."
             },
             {
               "send": [
@@ -13712,7 +13855,8 @@
               "partner_team_name": "Saquantum Leap",
               "partner_owner": "AhjaySidhu",
               "partner_dynasty_rank": 5,
-              "partner_winnow_rank": 1
+              "partner_winnow_rank": 1,
+              "partner_pitch": "Saquantum Leap is competing now. Luther Burden upgrades their WR; they flip Jonathan Taylor for 2027 1st, dealing from their RB surplus."
             },
             {
               "send": [
@@ -13783,7 +13927,8 @@
               "partner_team_name": "Glass bones & paper skin",
               "partner_owner": "dkrauz",
               "partner_dynasty_rank": 8,
-              "partner_winnow_rank": 6
+              "partner_winnow_rank": 6,
+              "partner_pitch": "Glass bones & paper skin is balanced. Luther Burden upgrades their WR; they cash in Derrick Henry for 2027 1st."
             },
             {
               "send": [
@@ -13842,7 +13987,8 @@
               "partner_team_name": "Glass bones & paper skin",
               "partner_owner": "dkrauz",
               "partner_dynasty_rank": 8,
-              "partner_winnow_rank": 6
+              "partner_winnow_rank": 6,
+              "partner_pitch": "Glass bones & paper skin is balanced. Luther Burden upgrades their WR; they cash in Trey McBride for 2026 1st."
             }
           ],
           "sell": [
@@ -13903,7 +14049,8 @@
               "partner_team_name": "Mongo Money Makers",
               "partner_owner": "dantonio34",
               "partner_dynasty_rank": 4,
-              "partner_winnow_rank": 7
+              "partner_winnow_rank": 7,
+              "partner_pitch": "Mongo Money Makers is rebuilding. They land Christian McCaffrey, dealing from their TE surplus."
             },
             {
               "send": [
@@ -13962,7 +14109,8 @@
               "partner_team_name": "Da Bell of Da Ball",
               "partner_owner": "jmirandette",
               "partner_dynasty_rank": 1,
-              "partner_winnow_rank": 4
+              "partner_winnow_rank": 4,
+              "partner_pitch": "Da Bell of Da Ball is rebuilding. Christian McCaffrey upgrades their RB, dealing from their QB surplus."
             },
             {
               "send": [
@@ -14021,7 +14169,8 @@
               "partner_team_name": "Da Bell of Da Ball",
               "partner_owner": "jmirandette",
               "partner_dynasty_rank": 1,
-              "partner_winnow_rank": 4
+              "partner_winnow_rank": 4,
+              "partner_pitch": "Da Bell of Da Ball is rebuilding. Christian McCaffrey upgrades their RB, dealing from their WR surplus."
             },
             {
               "send": [
@@ -14080,7 +14229,8 @@
               "partner_team_name": "cropcreamer",
               "partner_owner": "cropcreamer",
               "partner_dynasty_rank": 10,
-              "partner_winnow_rank": 10
+              "partner_winnow_rank": 10,
+              "partner_pitch": "cropcreamer is balanced. Christian McCaffrey fills their RB gap (#10 of 10)."
             },
             {
               "send": [
@@ -14139,7 +14289,8 @@
               "partner_team_name": "Mongo Money Makers",
               "partner_owner": "dantonio34",
               "partner_dynasty_rank": 4,
-              "partner_winnow_rank": 7
+              "partner_winnow_rank": 7,
+              "partner_pitch": "Mongo Money Makers is rebuilding. They land Christian McCaffrey."
             },
             {
               "send": [
@@ -14198,7 +14349,8 @@
               "partner_team_name": "Mongo Money Makers",
               "partner_owner": "dantonio34",
               "partner_dynasty_rank": 4,
-              "partner_winnow_rank": 7
+              "partner_winnow_rank": 7,
+              "partner_pitch": "Mongo Money Makers is rebuilding. They land Christian McCaffrey."
             },
             {
               "send": [
@@ -14269,7 +14421,8 @@
               "partner_team_name": "cropcreamer",
               "partner_owner": "cropcreamer",
               "partner_dynasty_rank": 10,
-              "partner_winnow_rank": 10
+              "partner_winnow_rank": 10,
+              "partner_pitch": "cropcreamer is balanced. Christian McCaffrey fills their RB gap (#10 of 10)."
             },
             {
               "send": [
@@ -14328,7 +14481,8 @@
               "partner_team_name": "cropcreamer",
               "partner_owner": "cropcreamer",
               "partner_dynasty_rank": 10,
-              "partner_winnow_rank": 10
+              "partner_winnow_rank": 10,
+              "partner_pitch": "cropcreamer is balanced. Christian McCaffrey fills their RB gap (#10 of 10)."
             }
           ],
           "package": [
@@ -14389,7 +14543,8 @@
               "partner_team_name": "Mongo Money Makers",
               "partner_owner": "dantonio34",
               "partner_dynasty_rank": 4,
-              "partner_winnow_rank": 7
+              "partner_winnow_rank": 7,
+              "partner_pitch": "Mongo Money Makers is rebuilding. They land Christian McCaffrey, dealing from their TE surplus."
             },
             {
               "send": [
@@ -14448,7 +14603,8 @@
               "partner_team_name": "Mongo Money Makers",
               "partner_owner": "dantonio34",
               "partner_dynasty_rank": 4,
-              "partner_winnow_rank": 7
+              "partner_winnow_rank": 7,
+              "partner_pitch": "Mongo Money Makers is rebuilding. They land Christian McCaffrey, dealing from their TE surplus."
             },
             {
               "send": [
@@ -14507,7 +14663,8 @@
               "partner_team_name": "Mongo Money Makers",
               "partner_owner": "dantonio34",
               "partner_dynasty_rank": 4,
-              "partner_winnow_rank": 7
+              "partner_winnow_rank": 7,
+              "partner_pitch": "Mongo Money Makers is rebuilding. They land Christian McCaffrey, dealing from their TE surplus."
             },
             {
               "send": [
@@ -14566,7 +14723,8 @@
               "partner_team_name": "cropcreamer",
               "partner_owner": "cropcreamer",
               "partner_dynasty_rank": 10,
-              "partner_winnow_rank": 10
+              "partner_winnow_rank": 10,
+              "partner_pitch": "cropcreamer is balanced. Christian McCaffrey fills their RB gap (#10 of 10)."
             },
             {
               "send": [
@@ -14625,7 +14783,8 @@
               "partner_team_name": "Mongo Money Makers",
               "partner_owner": "dantonio34",
               "partner_dynasty_rank": 4,
-              "partner_winnow_rank": 7
+              "partner_winnow_rank": 7,
+              "partner_pitch": "Mongo Money Makers is rebuilding. They land Christian McCaffrey."
             },
             {
               "send": [
@@ -14684,7 +14843,8 @@
               "partner_team_name": "cropcreamer",
               "partner_owner": "cropcreamer",
               "partner_dynasty_rank": 10,
-              "partner_winnow_rank": 10
+              "partner_winnow_rank": 10,
+              "partner_pitch": "cropcreamer is balanced. Christian McCaffrey fills their RB gap (#10 of 10)."
             },
             {
               "send": [
@@ -14743,7 +14903,8 @@
               "partner_team_name": "cropcreamer",
               "partner_owner": "cropcreamer",
               "partner_dynasty_rank": 10,
-              "partner_winnow_rank": 10
+              "partner_winnow_rank": 10,
+              "partner_pitch": "cropcreamer is balanced. Christian McCaffrey fills their RB gap (#10 of 10)."
             },
             {
               "send": [
@@ -14802,7 +14963,8 @@
               "partner_team_name": "cropcreamer",
               "partner_owner": "cropcreamer",
               "partner_dynasty_rank": 10,
-              "partner_winnow_rank": 10
+              "partner_winnow_rank": 10,
+              "partner_pitch": "cropcreamer is balanced. Christian McCaffrey fills their RB gap (#10 of 10)."
             }
           ],
           "asymmetric": [
@@ -14851,7 +15013,8 @@
               "partner_team_name": "Da Bell of Da Ball",
               "partner_owner": "jmirandette",
               "partner_dynasty_rank": 1,
-              "partner_winnow_rank": 4
+              "partner_winnow_rank": 4,
+              "partner_pitch": "Da Bell of Da Ball is rebuilding. Christian McCaffrey upgrades their RB, dealing from their WR surplus."
             },
             {
               "send": [
@@ -14898,7 +15061,8 @@
               "partner_team_name": "Glass bones & paper skin",
               "partner_owner": "dkrauz",
               "partner_dynasty_rank": 8,
-              "partner_winnow_rank": 6
+              "partner_winnow_rank": 6,
+              "partner_pitch": "Glass bones & paper skin is balanced. Christian McCaffrey fills their RB gap (#8 of 10)."
             },
             {
               "send": [
@@ -14945,7 +15109,8 @@
               "partner_team_name": "Glass bones & paper skin",
               "partner_owner": "dkrauz",
               "partner_dynasty_rank": 8,
-              "partner_winnow_rank": 6
+              "partner_winnow_rank": 6,
+              "partner_pitch": "Glass bones & paper skin is balanced. Luther Burden upgrades their WR."
             },
             {
               "send": [
@@ -14992,7 +15157,8 @@
               "partner_team_name": "cropcreamer",
               "partner_owner": "cropcreamer",
               "partner_dynasty_rank": 10,
-              "partner_winnow_rank": 10
+              "partner_winnow_rank": 10,
+              "partner_pitch": "cropcreamer is balanced. A.J. Brown fills their WR gap (#8 of 10)."
             },
             {
               "send": [
@@ -15039,7 +15205,8 @@
               "partner_team_name": "cropcreamer",
               "partner_owner": "cropcreamer",
               "partner_dynasty_rank": 10,
-              "partner_winnow_rank": 10
+              "partner_winnow_rank": 10,
+              "partner_pitch": "cropcreamer is balanced. Mike Evans fills their WR gap (#8 of 10)."
             },
             {
               "send": [
@@ -15086,7 +15253,8 @@
               "partner_team_name": "Glass bones & paper skin",
               "partner_owner": "dkrauz",
               "partner_dynasty_rank": 8,
-              "partner_winnow_rank": 6
+              "partner_winnow_rank": 6,
+              "partner_pitch": "Glass bones & paper skin is balanced. A.J. Brown upgrades their WR."
             },
             {
               "send": [
@@ -15133,7 +15301,8 @@
               "partner_team_name": "Bucky the Vampire Slayer",
               "partner_owner": "ebbittm",
               "partner_dynasty_rank": 7,
-              "partner_winnow_rank": 5
+              "partner_winnow_rank": 5,
+              "partner_pitch": "Bucky the Vampire Slayer is balanced. Christian McCaffrey upgrades their RB, dealing from their QB surplus."
             },
             {
               "send": [
@@ -15180,7 +15349,8 @@
               "partner_team_name": "Mongo Money Makers",
               "partner_owner": "dantonio34",
               "partner_dynasty_rank": 4,
-              "partner_winnow_rank": 7
+              "partner_winnow_rank": 7,
+              "partner_pitch": "Mongo Money Makers is rebuilding. Luther Burden fills their WR gap (#9 of 10), dealing from their TE surplus."
             }
           ]
         },
@@ -17117,7 +17287,7 @@
       "description": "Packers running back Josh Jacobs has been released from jail Wednesday amid an ongoing investigation following his arrest on several domestic violence charges.",
       "url": "https://www.espn.com/nfl/story/_/id/48892463/packers-josh-jacobs-released-jail-investigation-ongoing",
       "published": "2026-05-27T19:31:31Z",
-      "age_hours": 15.9,
+      "age_hours": 16.1,
       "importance_score": 120,
       "high_impact": true,
       "players": [
@@ -17135,7 +17305,7 @@
       "description": "Packers running back Josh Jacobs was arrested Tuesday and booked on several domestic violence charges, according to the Hobart-Lawrence (Wisconsin) Police Department.",
       "url": "https://www.espn.com/nfl/story/_/id/48885159/packers-jacobs-arrested-faces-several-domestic-violence-charges",
       "published": "2026-05-27T00:38:25Z",
-      "age_hours": 34.8,
+      "age_hours": 34.9,
       "importance_score": 60,
       "high_impact": true,
       "players": [
@@ -17153,7 +17323,7 @@
       "description": "Buccaneers running back Bucky Irving, who is rehabbing from offseason shoulder surgery, should be ready later this summer, a source told ESPN's Adam Schefter.",
       "url": "https://www.espn.com/nfl/story/_/id/48884875/source-bucs-rb-bucky-irving-shoulder-likely-ready-summer",
       "published": "2026-05-26T23:09:32Z",
-      "age_hours": 36.3,
+      "age_hours": 36.4,
       "importance_score": 60,
       "high_impact": true,
       "players": [
@@ -17171,7 +17341,7 @@
       "description": "Commanders coach Dan Quinn explains what he has seen from Jayden Daniels in the QB's return from injury.",
       "url": "https://www.espn.com/video/clip/_/id/48893979/why-jayden-daniels-mental-quickness-sticks-dan-quinn",
       "published": "2026-05-27T20:59:36Z",
-      "age_hours": 14.4,
+      "age_hours": 14.6,
       "importance_score": 30,
       "high_impact": true,
       "players": [
@@ -17189,7 +17359,7 @@
       "description": "Ian Rapoport joins Pat McAfee and reports the latest on the Packers running back after he was released from jail",
       "url": "https://www.espn.com/video/clip/_/id/48892661/next-josh-jacobs-release-jail",
       "published": "2026-05-27T18:24:52Z",
-      "age_hours": 17.0,
+      "age_hours": 17.2,
       "importance_score": 30,
       "high_impact": true,
       "players": [
@@ -17207,7 +17377,7 @@
       "description": "Men suspected of being part of a transnational gang that orchestrated burglaries at the homes of well-known athletes, including stars from the NBA and NFL, have been arrested in Argentina.",
       "url": "https://www.espn.com/nfl/story/_/id/48888296/argentine-police-arrest-suspects-us-athlete-burglaries",
       "published": "2026-05-27T06:46:24Z",
-      "age_hours": 28.7,
+      "age_hours": 28.8,
       "importance_score": 30,
       "high_impact": true,
       "players": [
@@ -17239,7 +17409,7 @@
       "description": "Chiefs QB Patrick Mahomes returned to the field with his teammates Tuesday for the first time since tearing the ACL and LCL in his left knee.",
       "url": "https://www.espn.com/nfl/story/_/id/48884510/sources-mahomes-back-field-chiefs-first-ota-practice",
       "published": "2026-05-26T22:23:02Z",
-      "age_hours": 37.1,
+      "age_hours": 37.2,
       "importance_score": 30,
       "high_impact": true,
       "players": [
@@ -17257,7 +17427,7 @@
       "description": "J.J. McCarthy says there isn't \"any awkwardness\" between him and Kyler Murray, whom the Vikings signed in March to compete for Minnesota's starting quarterback duties.",
       "url": "https://www.espn.com/nfl/story/_/id/48894057/mccarthy-no-awkwardness-murray-qb1-competition",
       "published": "2026-05-28T10:40:17Z",
-      "age_hours": 0.8,
+      "age_hours": 0.9,
       "importance_score": 15,
       "high_impact": false,
       "players": [
@@ -17282,7 +17452,7 @@
       "description": "Colts QB Anthony Richardson faces an uncertain future in Indianapolis and hasn't rescinded his recent trade request. But he's not letting any of that stand in the way of doing his job, he said Wednesday.",
       "url": "https://www.espn.com/nfl/story/_/id/48894300/future-uncertain-qb-anthony-richardson-here-right-now-colts",
       "published": "2026-05-27T21:59:30Z",
-      "age_hours": 13.4,
+      "age_hours": 13.6,
       "importance_score": 15,
       "high_impact": false,
       "players": [
@@ -17300,7 +17470,7 @@
       "description": "Eagles quarterback Jalen Hurts said his relationship with A.J. Brown is \"really good\" despite all the trade talk that continues around the star receiver.",
       "url": "https://www.espn.com/nfl/story/_/id/48894116/eagles-jalen-hurts-relationship-aj-brown-really-good",
       "published": "2026-05-27T21:57:01Z",
-      "age_hours": 13.5,
+      "age_hours": 13.6,
       "importance_score": 15,
       "high_impact": false,
       "players": [

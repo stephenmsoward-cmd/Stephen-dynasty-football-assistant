@@ -123,6 +123,12 @@
         <span class="{{ 'good' if c.my_asset_change >= 0 else 'bad' }}">{{ c.my_asset_change | signed }}</span>
       </span>
     </div>
+    {% if c.partner_pitch %}
+    <div class="trade-pitch">
+      <span class="trade-pitch-label">How to pitch it</span>
+      {{ c.partner_pitch }}
+    </div>
+    {% endif %}
   </article>
   {% endmacro %}
 

@@ -23,6 +23,7 @@ import data
 from data import Player
 from lineup import optimal_lineup
 from trades import TradeCandidate, find_trades
+from pitch import build_partner_pitch
 from waivers import build_waiver_report
 from draft import build_draft_report
 from news import build_news_feed
@@ -186,9 +187,28 @@ def _run_trade_search(
     teams_data: list[dict],
     team_meta: dict[int, dict],
     pos_ranks_for_mode: dict[str, int],
+    strength_by_team: dict[int, dict],
+    num_teams: int,
 ) -> dict:
     """Compute all candidates + tiers for one value mode (dynasty or winnow)."""
     vf = value_fn_for(mode)
+    rank_by_team = {
+        t["roster_id"]: (t["modes"]["dynasty"]["rank"], t["modes"]["winnow"]["rank"])
+        for t in teams_data
+    }
+
+    def pitch_for(c: TradeCandidate, rid: int) -> str:
+        dyn_rank, wn_rank = rank_by_team[rid]
+        return build_partner_pitch(
+            send=c.send,
+            receive=c.receive,
+            partner_name=team_meta[rid]["team_name"],
+            partner_strength=strength_by_team.get(rid, {}),
+            dynasty_rank=dyn_rank,
+            winnow_rank=wn_rank,
+            num_teams=num_teams,
+        )
+
     by_team: list[dict] = []
     all_candidates: list[tuple[int, TradeCandidate]] = []
     for rid, players_list in rostered_by_team.items():
@@ -205,16 +225,17 @@ def _run_trade_search(
             value_fn=vf,
         )
         top_for_team = candidates[:TOP_TRADES_PER_TEAM]
+        team_candidate_dicts = []
+        for c in top_for_team:
+            d = candidate_to_dict(c, pos_ranks_for_mode)
+            d["partner_pitch"] = pitch_for(c, rid)
+            team_candidate_dicts.append(d)
         by_team.append({
             "team": team_meta[rid],
-            "their_rank_dynasty": next(
-                t["modes"]["dynasty"]["rank"] for t in teams_data if t["roster_id"] == rid
-            ),
-            "their_rank_winnow": next(
-                t["modes"]["winnow"]["rank"] for t in teams_data if t["roster_id"] == rid
-            ),
+            "their_rank_dynasty": rank_by_team[rid][0],
+            "their_rank_winnow": rank_by_team[rid][1],
             "candidate_count": len(candidates),
-            "candidates": [candidate_to_dict(c, pos_ranks_for_mode) for c in top_for_team],
+            "candidates": team_candidate_dicts,
         })
         for c in candidates:
             all_candidates.append((rid, c))
@@ -224,12 +245,9 @@ def _run_trade_search(
         d = candidate_to_dict(c, pos_ranks_for_mode)
         d["partner_team_name"] = team_meta[rid]["team_name"]
         d["partner_owner"] = team_meta[rid]["owner_display_name"]
-        d["partner_dynasty_rank"] = next(
-            t["modes"]["dynasty"]["rank"] for t in teams_data if t["roster_id"] == rid
-        )
-        d["partner_winnow_rank"] = next(
-            t["modes"]["winnow"]["rank"] for t in teams_data if t["roster_id"] == rid
-        )
+        d["partner_dynasty_rank"] = rank_by_team[rid][0]
+        d["partner_winnow_rank"] = rank_by_team[rid][1]
+        d["partner_pitch"] = pitch_for(c, rid)
         tiers[c.tier].append(d)
     for tier in tiers:
         tiers[tier].sort(key=lambda d: d["score"], reverse=True)
@@ -259,8 +277,9 @@ def build_trade_report(
 
     my_team_data = next(t for t in teams_data if t["roster_id"] == my_roster_id)
 
-    # Per-mode positional strength (gaps shift between modes).
+    # Per-mode positional strength for MY team (gaps shift between modes).
     position_strengths: dict[str, dict] = {}
+    league_pos_totals_by_mode: dict[str, dict[str, list[int]]] = {}
     for mode in MODES:
         league_pos_totals: dict[str, list[int]] = {pos: [] for pos in SKILL_POSITIONS}
         for t in teams_data:
@@ -268,10 +287,22 @@ def build_trade_report(
                 league_pos_totals[pos].append(t["modes"][mode]["position_totals"].get(pos, 0))
         for pos in SKILL_POSITIONS:
             league_pos_totals[pos].sort(reverse=True)
+        league_pos_totals_by_mode[mode] = league_pos_totals
         position_strengths[mode] = position_strength(
             my_team_data["modes"][mode]["position_totals"],
             league_pos_totals,
         )
+
+    # Dynasty position strength for EVERY team — drives the partner pitch.
+    # Dynasty (not the active trade mode) because the pitch is about the
+    # partner's roster shape and timeline, which is a dynasty-level signal.
+    strength_by_team: dict[int, dict] = {
+        t["roster_id"]: position_strength(
+            t["modes"]["dynasty"]["position_totals"],
+            league_pos_totals_by_mode["dynasty"],
+        )
+        for t in teams_data
+    }
 
     # Run the trade search once per mode.
     mode_results: dict[str, dict] = {}
@@ -287,6 +318,8 @@ def build_trade_report(
             teams_data=teams_data,
             team_meta=team_meta,
             pos_ranks_for_mode=pos_ranks[mode],
+            strength_by_team=strength_by_team,
+            num_teams=len(teams_data),
         )
 
     return {
