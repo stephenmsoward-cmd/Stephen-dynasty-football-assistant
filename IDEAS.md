@@ -28,6 +28,7 @@ or change priority.
 | P2 | Player profile pages with history | M | M | Pays off as snapshots accumulate |
 | P2 | Roster age distribution chart per team | S | M | Quick "is this roster aging?" signal |
 | P2 | Global player search / filter | M | M | Cross-page utility |
+| P2 | Single-owner generated output (stop double-committing docs/) | S | M | Kills rebase friction + the CI push-race failure class |
 | P3 | Dark/light mode toggle | XS | L | System auto already works |
 | P3 | Per-league OG card images | S | L | One generic image already does the job |
 | P3 | Trade activity feed (across the league) | M | M | Sleeper exposes this; add only if a real use case shows up |
@@ -187,6 +188,30 @@ One page per player showing value history, news, usage trends, ownership
 Small visualization per team showing age curve of skill-position
 starters. Quick "is this roster aging?" signal complementing the
 trajectory tag.
+
+### Single-owner generated output &mdash; P2 · S · M
+
+Today both the local dev workflow and the nightly Action commit the
+generated `docs/` + `history/` files. Because they touch the same files,
+every local push collides with the Action's commits — resolved by hand
+each time with `git checkout --theirs` + rebase. It's also the root of
+the CI push-race failure (now mitigated by rebase-retry, but the friction
+remains).
+
+Pick ONE owner of the generated output:
+
+- **Option A — Action is sole committer.** Add `docs/` and `history/` to
+  `.gitignore`. Local dev builds into an untracked `docs/` for preview only.
+  The Action regenerates and commits. Pages keeps deploying from `main /docs`.
+  Pro: pushes never conflict. Con: deployed site only reflects committed
+  source after the next Action run (no instant local-built deploy).
+
+- **Option B — back to Pages-artifact deploy.** Gitignore `docs/`
+  entirely; the Action builds and deploys via `upload-pages-artifact` +
+  `deploy-pages` (the original setup). Requires Pages source = "GitHub
+  Actions" and the Actions infra to be healthy (it was flaky once).
+
+Option A is simpler and keeps the resilient branch-deploy we have now.
 
 ### Global player search / filter &mdash; P2 · M · M
 
