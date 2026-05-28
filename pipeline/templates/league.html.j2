@@ -39,7 +39,7 @@
     </button>
   </div>
 
-  {% macro standings_table(report, mode, other_mode, other_label) %}
+  {% macro standings_table(report, mode, other_mode, other_label, active_label) %}
   <table class="standings">
     <thead>
       <tr>
@@ -67,9 +67,9 @@
         <td class="num">
           {{ other_rank }}
           {% if delta > 0 %}
-          <span class="delta down" title="Falls {{ delta }} rank{{ 's' if delta != 1 else '' }} in {{ other_label }} mode">▼{{ delta }}</span>
+          <span class="delta down" title="Falls {{ delta }} rank{{ 's' if delta != 1 else '' }} in {{ active_label }} mode (vs #{{ other_rank }} in {{ other_label }})">▼{{ delta }}</span>
           {% elif delta < 0 %}
-          <span class="delta up" title="Rises {{ delta|abs }} rank{{ 's' if delta != -1 else '' }} in {{ other_label }} mode">▲{{ delta|abs }}</span>
+          <span class="delta up" title="Rises {{ delta|abs }} rank{{ 's' if delta != -1 else '' }} in {{ active_label }} mode (vs #{{ other_rank }} in {{ other_label }})">▲{{ delta|abs }}</span>
           {% endif %}
         </td>
         <td class="num hide-mobile">{{ m.position_totals.QB | money }}</td>
@@ -137,10 +137,10 @@
 
   <h2>Standings by Optimal Lineup Value</h2>
   <div class="dynasty-only">
-    {{ standings_table(report, 'dynasty', 'winnow', 'Win Now') }}
+    {{ standings_table(report, 'dynasty', 'winnow', 'Win Now', 'Dynasty') }}
   </div>
   <div class="winnow-only">
-    {{ standings_table(report, 'winnow', 'dynasty', 'Dynasty') }}
+    {{ standings_table(report, 'winnow', 'dynasty', 'Dynasty', 'Win Now') }}
   </div>
   {% if report.previous_snapshot_date %}
   <div class="muted small" style="margin-top:0.5rem">
