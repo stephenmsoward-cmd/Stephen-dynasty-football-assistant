@@ -35,7 +35,7 @@
     "BN",
     "BN"
   ],
-  "generated_at": "2026-05-28T23:42:35+00:00",
+  "generated_at": "2026-05-28T23:44:37+00:00",
   "previous_snapshot_date": "2026-05-27",
   "teams": [
     {
@@ -17369,7 +17369,7 @@
             "injury_status": null
           }
         ],
-        "trending_count": 19089
+        "trending_count": 19224
       },
       {
         "pickup": {
@@ -17418,7 +17418,7 @@
             "injury_status": null
           }
         ],
-        "trending_count": 3478
+        "trending_count": 3494
       },
       {
         "pickup": {
@@ -17467,7 +17467,7 @@
             "injury_status": null
           }
         ],
-        "trending_count": 3376
+        "trending_count": 3408
       },
       {
         "pickup": {
@@ -17516,7 +17516,7 @@
             "injury_status": "Questionable"
           }
         ],
-        "trending_count": 2961
+        "trending_count": 2989
       },
       {
         "pickup": {
@@ -17565,7 +17565,7 @@
             "injury_status": null
           }
         ],
-        "trending_count": 2051
+        "trending_count": 2065
       }
     ],
     "best_overall": [
@@ -17665,7 +17665,7 @@
             "injury_status": null
           }
         ],
-        "trending_count": 19089
+        "trending_count": 19224
       },
       {
         "pickup": {
@@ -17714,7 +17714,7 @@
             "injury_status": "Questionable"
           }
         ],
-        "trending_count": 2961
+        "trending_count": 2989
       },
       {
         "pickup": {
@@ -17864,7 +17864,7 @@
               "injury_status": "Questionable"
             }
           ],
-          "trending_count": 2961
+          "trending_count": 2989
         },
         {
           "pickup": {
@@ -18013,7 +18013,7 @@
               "injury_status": null
             }
           ],
-          "trending_count": 19089
+          "trending_count": 19224
         },
         {
           "pickup": {
@@ -18111,7 +18111,7 @@
               "injury_status": null
             }
           ],
-          "trending_count": 3478
+          "trending_count": 3494
         }
       ],
       "TE": [
@@ -19295,7 +19295,7 @@
       "description": "Chiefs quarterback Patrick Mahomes went through drills Thursday wearing a compression leg sleeve and black brace on his left leg.",
       "url": "https://www.espn.com/nfl/story/_/id/48903412/chiefs-mahomes-pleased-get-ota-reps-amid-knee-injury-recovery",
       "published": "2026-05-28T20:35:07Z",
-      "age_hours": 3.1,
+      "age_hours": 3.2,
       "importance_score": 30,
       "high_impact": true,
       "players": [
@@ -19313,7 +19313,7 @@
       "description": "Commanders coach Dan Quinn explains what he has seen from Jayden Daniels in the QB's return from injury.",
       "url": "https://www.espn.com/video/clip/_/id/48893979/why-jayden-daniels-mental-quickness-sticks-dan-quinn",
       "published": "2026-05-27T20:59:36Z",
-      "age_hours": 26.7,
+      "age_hours": 26.8,
       "importance_score": 30,
       "high_impact": true,
       "players": [
@@ -19349,7 +19349,7 @@
       "description": "Eligible for an extension for the first time, Texans quarterback C.J. Stroud says he has done his part to earn a new deal but isn't focused on the negotiations.",
       "url": "https://www.espn.com/nfl/story/_/id/48902660/cj-stroud-let-contract-talks-hang-season-prep",
       "published": "2026-05-28T19:34:22Z",
-      "age_hours": 4.1,
+      "age_hours": 4.2,
       "importance_score": 15,
       "high_impact": false,
       "players": [
@@ -19367,7 +19367,7 @@
       "description": "J.J. McCarthy says there isn't \"any awkwardness\" between him and Kyler Murray, whom the Vikings signed in March to compete for Minnesota's starting quarterback duties.",
       "url": "https://www.espn.com/nfl/story/_/id/48894057/mccarthy-no-awkwardness-murray-qb1-competition",
       "published": "2026-05-28T10:40:17Z",
-      "age_hours": 13.0,
+      "age_hours": 13.1,
       "importance_score": 15,
       "high_impact": false,
       "players": [
@@ -19392,7 +19392,7 @@
       "description": "Colts QB Anthony Richardson faces an uncertain future in Indianapolis and hasn't rescinded his recent trade request. But he's not letting any of that stand in the way of doing his job, he said Wednesday.",
       "url": "https://www.espn.com/nfl/story/_/id/48894300/future-uncertain-qb-anthony-richardson-here-right-now-colts",
       "published": "2026-05-27T21:59:30Z",
-      "age_hours": 25.7,
+      "age_hours": 25.8,
       "importance_score": 15,
       "high_impact": false,
       "players": [
