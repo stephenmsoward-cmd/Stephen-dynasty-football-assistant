@@ -47,6 +47,116 @@ a:hover { text-decoration: underline; }
   padding: 2.5rem 1.25rem 4rem;
 }
 
+/* ---- App layout: fixed left sidebar + offset content ---- */
+:root { --sidebar-w: 232px; }
+
+.layout { min-height: 100vh; }
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: var(--sidebar-w);
+  overflow-y: auto;
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  padding: 1.4rem 1rem 2rem;
+}
+
+.content {
+  margin-left: var(--sidebar-w);
+}
+
+.sidebar-brand {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.sidebar-brand a {
+  color: var(--text);
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+  display: block;
+}
+.sidebar-brand a:hover { color: var(--accent); text-decoration: none; }
+
+.sidebar-sub {
+  color: var(--muted);
+  font-size: 0.78rem;
+  margin-top: 0.25rem;
+}
+
+.nav-group { margin-bottom: 1.1rem; }
+.nav-group-footer { margin-top: 1.5rem; }
+
+.nav-group-label {
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 0.35rem;
+  padding-left: 0.6rem;
+}
+
+.nav-link {
+  display: block;
+  color: var(--text);
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  border-left: 2px solid transparent;
+  transition: background 0.12s, color 0.12s, border-color 0.12s;
+}
+
+.nav-link:hover {
+  background: var(--surface-2);
+  text-decoration: none;
+}
+
+.nav-link.active {
+  background: var(--surface-2);
+  color: var(--accent);
+  font-weight: 600;
+  border-left-color: var(--accent);
+}
+
+.nav-link.nav-back { color: var(--muted); font-size: 0.85rem; }
+
+@media (max-width: 860px) {
+  .sidebar {
+    position: static;
+    width: auto;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding: 0.9rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.3rem 0.5rem;
+  }
+  .content { margin-left: 0; }
+  .sidebar-brand {
+    width: 100%;
+    margin-bottom: 0.6rem;
+    padding-bottom: 0.6rem;
+  }
+  /* Flatten groups into a single horizontal nav row on mobile. */
+  .nav-group { display: contents; }
+  .nav-group-label { display: none; }
+  .nav-link {
+    border-left: none;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.85rem;
+  }
+  .nav-link.active { border-left: none; }
+}
+
 header.site {
   border-bottom: 1px solid var(--border);
   margin-bottom: 2rem;
@@ -923,72 +1033,42 @@ details.reveal-more[open] > summary {
   margin-bottom: 0.75rem;
 }
 
-/* ---- Floating table of contents ----
-   Pinned to the right viewport edge on screens wide enough that it won't
-   overlap the centered 1100px-max-width container. At ~1500px the math:
-   container right edge ≈ 50% + 570px ≈ 1320; TOC left ≈ vw - 220 ≈ 1280
-   still overlaps. We need ≥ 1560px for a clean 20px gap.
-*/
-.toc {
-  display: none;
+/* ---- In-sidebar section list (injected under the active nav item) ---- */
+.subnav {
+  margin: 0.15rem 0 0.5rem 0.6rem;
+  padding-left: 0.6rem;
+  border-left: 1px solid var(--border);
 }
 
-@media (min-width: 1560px) {
-  .toc {
-    display: block;
-    position: fixed;
-    top: 90px;
-    right: 20px;
-    width: 200px;
-    max-height: calc(100vh - 120px);
-    overflow-y: auto;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 0.85rem 1rem;
-    font-size: 0.82rem;
-    z-index: 10;
-  }
-}
-
-.toc-heading {
-  font-size: 0.65rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-weight: 600;
-  color: var(--muted);
-  margin-bottom: 0.5rem;
-}
-
-.toc ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.toc li { margin: 0; }
-
-.toc a {
+.subnav-link {
   display: block;
   color: var(--muted);
-  text-decoration: none;
-  padding: 0.25rem 0.55rem;
+  font-size: 0.8rem;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  line-height: 1.3;
   border-left: 2px solid transparent;
-  border-radius: 0 3px 3px 0;
-  margin-left: -0.55rem;
-  line-height: 1.35;
+  margin-left: -0.6rem;
+  padding-left: 0.6rem;
   transition: color 0.12s, border-color 0.12s, background 0.12s;
 }
 
-.toc a:hover {
+.subnav-link:hover {
   color: var(--text);
+  text-decoration: none;
   background: var(--surface-2);
 }
 
-.toc a.active {
+.subnav-link.active {
   color: var(--accent);
   border-left-color: var(--accent);
   font-weight: 600;
+}
+
+/* On mobile the sidebar is a flat horizontal bar — the section list would
+   clutter it, so hide it there. */
+@media (max-width: 860px) {
+  .subnav { display: none; }
 }
 
 /* ---- Updated waiver row: compact, drop list inline ---- */

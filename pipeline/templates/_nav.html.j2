@@ -1,0 +1,53 @@
+{# Left-hand sidebar navigation, grouped into hubs.
+   Caller sets:
+     report       — the league report dict
+     active_page  — one of: dashboard, rankings, compare, trades, waivers, draft
+     nav_prefix   — relative path to /leagues/<slug>/ ('' from dashboard, '../' from sub-pages)
+     root_prefix  — relative path to site root ('../../' from dashboard, '../../../' from sub-pages)
+#}
+<nav class="sidebar" aria-label="Site navigation">
+  <div class="sidebar-brand">
+    <a href="{{ nav_prefix }}">{{ report.name }}</a>
+    <div class="sidebar-sub">{{ report.season }} &middot; {{ report.total_rosters }} teams</div>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-label">Overview</div>
+    <a href="{{ nav_prefix }}" class="nav-link {% if active_page == 'dashboard' %}active{% endif %}">Dashboard</a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-label">League &amp; Projections</div>
+    {% if report.rankings %}
+    <a href="{{ nav_prefix }}rankings/" class="nav-link {% if active_page == 'rankings' %}active{% endif %}">Power Rankings</a>
+    {% endif %}
+    {% if report.compare %}
+    <a href="{{ nav_prefix }}compare/" class="nav-link {% if active_page == 'compare' %}active{% endif %}">Compare Teams</a>
+    {% endif %}
+  </div>
+
+  {% if report.trades %}
+  <div class="nav-group">
+    <div class="nav-group-label">Trade Center</div>
+    <a href="{{ nav_prefix }}trades/" class="nav-link {% if active_page == 'trades' %}active{% endif %}">Trade Finder</a>
+  </div>
+  {% endif %}
+
+  {% if report.waivers %}
+  <div class="nav-group">
+    <div class="nav-group-label">Roster</div>
+    <a href="{{ nav_prefix }}waivers/" class="nav-link {% if active_page == 'waivers' %}active{% endif %}">Waiver Wire</a>
+  </div>
+  {% endif %}
+
+  {% if report.draft %}
+  <div class="nav-group">
+    <div class="nav-group-label">Draft Prep</div>
+    <a href="{{ nav_prefix }}draft/" class="nav-link {% if active_page == 'draft' %}active{% endif %}">Draft Board</a>
+  </div>
+  {% endif %}
+
+  <div class="nav-group nav-group-footer">
+    <a href="{{ root_prefix }}" class="nav-link nav-back">&larr; All leagues</a>
+  </div>
+</nav>

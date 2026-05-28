@@ -11,8 +11,14 @@
   <link rel="stylesheet" href="../../../style.css">
 </head>
 <body class="mode-dynasty">
+{% set active_page = 'trades' %}
+{% set nav_prefix = '../' %}
+{% set root_prefix = '../../../' %}
+<div class="layout">
+{% include '_nav.html.j2' %}
+<main class="content">
 <div class="container">
-  <header class="site">
+  <header class="page-header">
     <h1>Trade Ideas — {{ report.trades.my_team.team_name }}</h1>
     <div class="tagline">
       {{ report.name }} &middot; {{ report.season }} &middot;
@@ -20,13 +26,8 @@
       Win-Now rank #{{ report.trades.my_team.winnow_rank }} &middot;
       {{ report.trades.my_team.pick_count }} pick{{ 's' if report.trades.my_team.pick_count != 1 else '' }}
       (value {{ report.trades.my_team.pick_value | money }})
-    </div>
-    <nav>
-      <a href="../">&larr; Back to league</a>
-      {% if report.waivers %}&middot; <a href="../waivers/">Waiver wire</a>{% endif %}
-      {% if report.draft %}&middot; <a href="../draft/">Draft recommendations</a>{% endif %}
       <span class="muted small">&middot; Generated {{ report.generated_at }}</span>
-    </nav>
+    </div>
   </header>
 
   <div class="mode-toggle" role="tablist" aria-label="Trade value mode">
@@ -232,6 +233,8 @@
     Data: <a href="https://docs.sleeper.com">Sleeper</a> &middot;
     <a href="https://fantasycalc.com">FantasyCalc</a>.
   </footer>
+</div>
+</main>
 </div>
 <script src="../../../app.js"></script>
 </body>

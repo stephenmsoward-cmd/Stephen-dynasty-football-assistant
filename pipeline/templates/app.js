@@ -16,8 +16,7 @@
     const url = new URL(location.href);
     url.searchParams.set('mode', mode);
     history.replaceState(null, '', url);
-    // Rebuild the TOC so mode-hidden sections drop out.
-    if (window.__rebuildToc) window.__rebuildToc();
+    if (window.__rebuildSubnav) window.__rebuildSubnav();
   }
 
   buttons.forEach(function (b) {
@@ -30,20 +29,19 @@
   }
 })();
 
-// Auto-build a floating table of contents from h2 elements on long pages.
-// Only renders if (a) the viewport is wide enough and (b) there are 3+ sections.
-// Re-renders when the mode toggle is flipped (called from above).
+// In-sidebar section list: under the active nav item, list this page's h2
+// sections as anchor links with scrollspy. Replaces the old floating TOC —
+// no overlap with content, and it lives where the user already looks for nav.
 
 (function () {
-  const container = document.querySelector('.container');
-  if (!container) return;
+  const container = document.querySelector('.content .container') || document.querySelector('.container');
+  const activeLink = document.querySelector('.sidebar .nav-link.active');
+  if (!container || !activeLink) return;
 
-  let existingToc = null;
+  let subnav = null;
   let observer = null;
 
   function isMuted(el) {
-    // Walk up and see if any ancestor is hidden via mode-only class given
-    // the current body mode.
     const bodyHasDynasty = document.body.classList.contains('mode-dynasty');
     const bodyHasWinnow = document.body.classList.contains('mode-winnow');
     let p = el;
@@ -58,14 +56,8 @@
   }
 
   function build() {
-    if (existingToc) {
-      existingToc.remove();
-      existingToc = null;
-    }
-    if (observer) {
-      observer.disconnect();
-      observer = null;
-    }
+    if (subnav) { subnav.remove(); subnav = null; }
+    if (observer) { observer.disconnect(); observer = null; }
 
     const headings = container.querySelectorAll('h2');
     if (headings.length < 3) return;
@@ -86,46 +78,33 @@
 
     if (unique.length < 3) return;
 
-    const toc = document.createElement('nav');
-    toc.className = 'toc';
-    toc.setAttribute('aria-label', 'On this page');
-    const heading = document.createElement('div');
-    heading.className = 'toc-heading';
-    heading.textContent = 'On this page';
-    toc.appendChild(heading);
-    const list = document.createElement('ul');
+    subnav = document.createElement('div');
+    subnav.className = 'subnav';
+    const linksById = {};
     unique.forEach(function (u) {
-      const li = document.createElement('li');
       const a = document.createElement('a');
       a.href = '#' + u.heading.id;
       a.textContent = u.label;
-      li.appendChild(a);
-      list.appendChild(li);
+      a.className = 'subnav-link';
+      subnav.appendChild(a);
+      linksById[u.heading.id] = a;
     });
-    toc.appendChild(list);
-    document.body.appendChild(toc);
-    existingToc = toc;
-
-    const linksById = {};
-    list.querySelectorAll('a').forEach(function (a) {
-      linksById[a.getAttribute('href').slice(1)] = a;
-    });
+    activeLink.insertAdjacentElement('afterend', subnav);
 
     observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
-        const id = entry.target.id;
-        const link = linksById[id];
+        const link = linksById[entry.target.id];
         if (!link) return;
         if (entry.isIntersecting) {
           Object.values(linksById).forEach(function (l) { l.classList.remove('active'); });
           link.classList.add('active');
         }
       });
-    }, { rootMargin: '-25% 0px -65% 0px' });
+    }, { rootMargin: '-15% 0px -70% 0px' });
 
     unique.forEach(function (u) { observer.observe(u.heading); });
   }
 
-  window.__rebuildToc = build;
+  window.__rebuildSubnav = build;
   build();
 })();

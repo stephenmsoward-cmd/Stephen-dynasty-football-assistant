@@ -11,38 +11,21 @@
   <link rel="stylesheet" href="../../style.css">
 </head>
 <body class="mode-dynasty">
+{% set active_page = 'dashboard' %}
+{% set nav_prefix = '' %}
+{% set root_prefix = '../../' %}
+<div class="layout">
+{% include '_nav.html.j2' %}
+<main class="content">
 <div class="container">
-  <header class="site">
+  <header class="page-header">
     <h1>{{ report.name }}</h1>
     <div class="tagline">
       Best-ball projection &middot; {{ report.season }} season &middot;
       {{ report.total_rosters }} teams &middot; {{ report.ppr }} PPR &middot;
       {{ report.pass_td }}-pt pass TDs
-    </div>
-    <nav>
-      <a href="../../">&larr; All leagues</a>
-      {% if report.trades %}
-      &middot;
-      <a href="trades/">Trade ideas for {{ report.trades.my_team.team_name }}</a>
-      {% endif %}
-      {% if report.waivers %}
-      &middot;
-      <a href="waivers/">Waiver wire</a>
-      {% endif %}
-      {% if report.draft %}
-      &middot;
-      <a href="draft/">Draft recommendations</a>
-      {% endif %}
-      {% if report.rankings %}
-      &middot;
-      <a href="rankings/">Power rankings</a>
-      {% endif %}
-      {% if report.compare %}
-      &middot;
-      <a href="compare/">Compare teams</a>
-      {% endif %}
       <span class="muted small">&middot; Generated {{ report.generated_at }}</span>
-    </nav>
+    </div>
   </header>
 
   <div class="mode-toggle" role="tablist" aria-label="Value mode">
@@ -274,6 +257,8 @@
     <a href="https://fantasycalc.com">FantasyCalc</a>.
     <a href="data.json">Raw JSON</a>.
   </footer>
+</div>
+</main>
 </div>
 <script src="../../app.js"></script>
 </body>
