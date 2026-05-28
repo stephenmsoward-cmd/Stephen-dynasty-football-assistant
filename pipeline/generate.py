@@ -242,6 +242,11 @@ def _run_trade_search(
             slots=slots,
             my_value_fn=my_vf,
             their_value_fn=their_value_fn(rid),
+            # My lens: win-now mode means I only count lineup gains; dynasty
+            # mode lets asset value count too. Partner: judged by their own
+            # trajectory (win-now teams won't accept a worse win-now lineup).
+            my_timeline=("win-now" if mode == "winnow" else "balanced"),
+            their_timeline=trajectory_of(rid),
         )
         top_for_team = candidates[:TOP_TRADES_PER_TEAM]
         team_candidate_dicts = []

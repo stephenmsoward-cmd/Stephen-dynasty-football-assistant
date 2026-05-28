@@ -35,7 +35,7 @@
     "BN",
     "BN"
   ],
-  "generated_at": "2026-05-28T12:50:05+00:00",
+  "generated_at": "2026-05-28T23:29:44+00:00",
   "previous_snapshot_date": "2026-05-27",
   "teams": [
     {
@@ -6586,7 +6586,7 @@
             },
             "their_rank_dynasty": 5,
             "their_rank_winnow": 1,
-            "candidate_count": 665,
+            "candidate_count": 360,
             "candidates": [
               {
                 "send": [
@@ -10373,7 +10373,7 @@
           "package": 8,
           "asymmetric": 8
         },
-        "total_candidates": 5689
+        "total_candidates": 5384
       },
       "winnow": {
         "by_team": [
@@ -10386,7 +10386,7 @@
             },
             "their_rank_dynasty": 8,
             "their_rank_winnow": 6,
-            "candidate_count": 819,
+            "candidate_count": 535,
             "candidates": [
               {
                 "send": [
@@ -10744,7 +10744,7 @@
             },
             "their_rank_dynasty": 9,
             "their_rank_winnow": 9,
-            "candidate_count": 768,
+            "candidate_count": 558,
             "candidates": [
               {
                 "send": [
@@ -11078,7 +11078,7 @@
             },
             "their_rank_dynasty": 1,
             "their_rank_winnow": 4,
-            "candidate_count": 484,
+            "candidate_count": 276,
             "candidates": [
               {
                 "send": [
@@ -11400,7 +11400,7 @@
             },
             "their_rank_dynasty": 7,
             "their_rank_winnow": 5,
-            "candidate_count": 673,
+            "candidate_count": 468,
             "candidates": [
               {
                 "send": [
@@ -11722,7 +11722,7 @@
             },
             "their_rank_dynasty": 4,
             "their_rank_winnow": 7,
-            "candidate_count": 689,
+            "candidate_count": 493,
             "candidates": [
               {
                 "send": [
@@ -12032,32 +12032,32 @@
             },
             "their_rank_dynasty": 5,
             "their_rank_winnow": 1,
-            "candidate_count": 965,
+            "candidate_count": 28,
             "candidates": [
               {
                 "send": [
                   {
-                    "sleeper_id": "PICK_2026_R1_O3",
-                    "name": "2026 R1 (Comedy of Errors)",
-                    "position": "PICK",
-                    "team": null,
-                    "age": null,
-                    "dynasty_value": 3556,
-                    "redraft_value": 0,
+                    "sleeper_id": "7564",
+                    "name": "Ja'Marr Chase",
+                    "position": "WR",
+                    "team": "CIN",
+                    "age": 26,
+                    "dynasty_value": 9642,
+                    "redraft_value": 9859,
                     "injury_status": null,
-                    "pos_rank_in_league": null,
-                    "is_pick": true
+                    "pos_rank_in_league": 1,
+                    "is_pick": false
                   },
                   {
-                    "sleeper_id": "12519",
-                    "name": "Luther Burden",
-                    "position": "WR",
-                    "team": "CHI",
-                    "age": 22,
-                    "dynasty_value": 3378,
-                    "redraft_value": 1627,
+                    "sleeper_id": "12522",
+                    "name": "Cam Ward",
+                    "position": "QB",
+                    "team": "TEN",
+                    "age": 24,
+                    "dynasty_value": 2012,
+                    "redraft_value": 274,
                     "injury_status": null,
-                    "pos_rank_in_league": 30,
+                    "pos_rank_in_league": 18,
                     "is_pick": false
                   }
                 ],
@@ -12073,175 +12073,199 @@
                     "injury_status": null,
                     "pos_rank_in_league": 3,
                     "is_pick": false
-                  }
-                ],
-                "structure": "2v1",
-                "tier": "buy",
-                "pick_flow": "to_them",
-                "my_lineup_change": 6671,
-                "their_lineup_change": -6671,
-                "my_asset_change": -1302,
-                "their_asset_change": 1302,
-                "my_value_delta": -1302,
-                "my_lineup_old": 39466,
-                "my_lineup_new": 46137,
-                "their_lineup_old": 42678,
-                "their_lineup_new": 36007,
-                "score": 7973,
-                "partner_pitch": "Saquantum Leap is competing now. Luther Burden upgrades their WR; they flip Jonathan Taylor for 2026 1st, dealing from their RB surplus.",
-                "partner_trajectory": "win-now"
-              },
-              {
-                "send": [
-                  {
-                    "sleeper_id": "PICK_2026_R1_O3",
-                    "name": "2026 R1 (Comedy of Errors)",
-                    "position": "PICK",
-                    "team": null,
-                    "age": null,
-                    "dynasty_value": 3556,
-                    "redraft_value": 0,
-                    "injury_status": null,
-                    "pos_rank_in_league": null,
-                    "is_pick": true
                   },
                   {
-                    "sleeper_id": "PICK_2027_R1_O3",
-                    "name": "2027 R1 (Comedy of Errors)",
-                    "position": "PICK",
-                    "team": null,
-                    "age": null,
-                    "dynasty_value": 3022,
-                    "redraft_value": 0,
-                    "injury_status": null,
-                    "pos_rank_in_league": null,
-                    "is_pick": true
-                  }
-                ],
-                "receive": [
-                  {
-                    "sleeper_id": "6813",
-                    "name": "Jonathan Taylor",
-                    "position": "RB",
-                    "team": "IND",
-                    "age": 27,
-                    "dynasty_value": 5632,
-                    "redraft_value": 8298,
-                    "injury_status": null,
-                    "pos_rank_in_league": 3,
-                    "is_pick": false
-                  }
-                ],
-                "structure": "2v1",
-                "tier": "buy",
-                "pick_flow": "to_them",
-                "my_lineup_change": 6671,
-                "their_lineup_change": -6873,
-                "my_asset_change": -946,
-                "their_asset_change": 946,
-                "my_value_delta": -946,
-                "my_lineup_old": 39466,
-                "my_lineup_new": 46137,
-                "their_lineup_old": 42678,
-                "their_lineup_new": 35805,
-                "score": 7617,
-                "partner_pitch": "Saquantum Leap is competing now. They flip Jonathan Taylor for 2026 1st and 2027 1st, dealing from their RB surplus.",
-                "partner_trajectory": "win-now"
-              },
-              {
-                "send": [
-                  {
-                    "sleeper_id": "PICK_2026_R1_O3",
-                    "name": "2026 R1 (Comedy of Errors)",
-                    "position": "PICK",
-                    "team": null,
-                    "age": null,
-                    "dynasty_value": 3556,
-                    "redraft_value": 0,
-                    "injury_status": null,
-                    "pos_rank_in_league": null,
-                    "is_pick": true
-                  },
-                  {
-                    "sleeper_id": "12519",
-                    "name": "Luther Burden",
-                    "position": "WR",
-                    "team": "CHI",
-                    "age": 22,
-                    "dynasty_value": 3378,
-                    "redraft_value": 1627,
-                    "injury_status": null,
-                    "pos_rank_in_league": 30,
-                    "is_pick": false
-                  }
-                ],
-                "receive": [
-                  {
-                    "sleeper_id": "4866",
-                    "name": "Saquon Barkley",
-                    "position": "RB",
-                    "team": "PHI",
+                    "sleeper_id": "4881",
+                    "name": "Lamar Jackson",
+                    "position": "QB",
+                    "team": "BAL",
                     "age": 29,
-                    "dynasty_value": 4108,
-                    "redraft_value": 6948,
+                    "dynasty_value": 3864,
+                    "redraft_value": 3726,
                     "injury_status": null,
-                    "pos_rank_in_league": 8,
+                    "pos_rank_in_league": 2,
+                    "is_pick": false
+                  }
+                ],
+                "structure": "2v2",
+                "tier": "package",
+                "pick_flow": "none",
+                "my_lineup_change": 420,
+                "their_lineup_change": 248,
+                "my_asset_change": -2158,
+                "their_asset_change": 2158,
+                "my_value_delta": -2158,
+                "my_lineup_old": 39466,
+                "my_lineup_new": 39886,
+                "their_lineup_old": 42678,
+                "their_lineup_new": 42926,
+                "score": 2826,
+                "partner_pitch": "Saquantum Leap is competing now. Ja'Marr Chase upgrades their WR, dealing from their QB surplus.",
+                "partner_trajectory": "win-now"
+              },
+              {
+                "send": [
+                  {
+                    "sleeper_id": "7564",
+                    "name": "Ja'Marr Chase",
+                    "position": "WR",
+                    "team": "CIN",
+                    "age": 26,
+                    "dynasty_value": 9642,
+                    "redraft_value": 9859,
+                    "injury_status": null,
+                    "pos_rank_in_league": 1,
                     "is_pick": false
                   },
                   {
-                    "sleeper_id": "4217",
-                    "name": "George Kittle",
-                    "position": "TE",
-                    "team": "SF",
-                    "age": 32,
-                    "dynasty_value": 1862,
-                    "redraft_value": 1599,
-                    "injury_status": "IR",
-                    "pos_rank_in_league": 6,
+                    "sleeper_id": "7567",
+                    "name": "Kenneth Gainwell",
+                    "position": "RB",
+                    "team": "TB",
+                    "age": 27,
+                    "dynasty_value": 1773,
+                    "redraft_value": 1206,
+                    "injury_status": null,
+                    "pos_rank_in_league": 31,
+                    "is_pick": false
+                  }
+                ],
+                "receive": [
+                  {
+                    "sleeper_id": "6813",
+                    "name": "Jonathan Taylor",
+                    "position": "RB",
+                    "team": "IND",
+                    "age": 27,
+                    "dynasty_value": 5632,
+                    "redraft_value": 8298,
+                    "injury_status": null,
+                    "pos_rank_in_league": 3,
+                    "is_pick": false
+                  },
+                  {
+                    "sleeper_id": "4881",
+                    "name": "Lamar Jackson",
+                    "position": "QB",
+                    "team": "BAL",
+                    "age": 29,
+                    "dynasty_value": 3864,
+                    "redraft_value": 3726,
+                    "injury_status": null,
+                    "pos_rank_in_league": 2,
+                    "is_pick": false
+                  }
+                ],
+                "structure": "2v2",
+                "tier": "package",
+                "pick_flow": "none",
+                "my_lineup_change": 420,
+                "their_lineup_change": 248,
+                "my_asset_change": -1919,
+                "their_asset_change": 1919,
+                "my_value_delta": -1919,
+                "my_lineup_old": 39466,
+                "my_lineup_new": 39886,
+                "their_lineup_old": 42678,
+                "their_lineup_new": 42926,
+                "score": 2587,
+                "partner_pitch": "Saquantum Leap is competing now. Ja'Marr Chase upgrades their WR, dealing from their QB surplus.",
+                "partner_trajectory": "win-now"
+              },
+              {
+                "send": [
+                  {
+                    "sleeper_id": "7564",
+                    "name": "Ja'Marr Chase",
+                    "position": "WR",
+                    "team": "CIN",
+                    "age": 26,
+                    "dynasty_value": 9642,
+                    "redraft_value": 9859,
+                    "injury_status": null,
+                    "pos_rank_in_league": 1,
+                    "is_pick": false
+                  },
+                  {
+                    "sleeper_id": "PICK_2026_R2_O3",
+                    "name": "2026 R2 (Comedy of Errors)",
+                    "position": "PICK",
+                    "team": null,
+                    "age": null,
+                    "dynasty_value": 1759,
+                    "redraft_value": 0,
+                    "injury_status": null,
+                    "pos_rank_in_league": null,
+                    "is_pick": true
+                  }
+                ],
+                "receive": [
+                  {
+                    "sleeper_id": "6813",
+                    "name": "Jonathan Taylor",
+                    "position": "RB",
+                    "team": "IND",
+                    "age": 27,
+                    "dynasty_value": 5632,
+                    "redraft_value": 8298,
+                    "injury_status": null,
+                    "pos_rank_in_league": 3,
+                    "is_pick": false
+                  },
+                  {
+                    "sleeper_id": "4881",
+                    "name": "Lamar Jackson",
+                    "position": "QB",
+                    "team": "BAL",
+                    "age": 29,
+                    "dynasty_value": 3864,
+                    "redraft_value": 3726,
+                    "injury_status": null,
+                    "pos_rank_in_league": 2,
                     "is_pick": false
                   }
                 ],
                 "structure": "2v2",
                 "tier": "buy",
                 "pick_flow": "to_them",
-                "my_lineup_change": 6624,
-                "their_lineup_change": -6884,
-                "my_asset_change": -964,
-                "their_asset_change": 964,
-                "my_value_delta": -964,
+                "my_lineup_change": 420,
+                "their_lineup_change": 248,
+                "my_asset_change": -1905,
+                "their_asset_change": 1905,
+                "my_value_delta": -1905,
                 "my_lineup_old": 39466,
-                "my_lineup_new": 46090,
+                "my_lineup_new": 39886,
                 "their_lineup_old": 42678,
-                "their_lineup_new": 35794,
-                "score": 7588,
-                "partner_pitch": "Saquantum Leap is competing now. Luther Burden upgrades their WR; they flip Saquon Barkley for 2026 1st, dealing from their RB surplus.",
+                "their_lineup_new": 42926,
+                "score": 2573,
+                "partner_pitch": "Saquantum Leap is competing now. Ja'Marr Chase upgrades their WR; they flip Jonathan Taylor for 2026 2nd, dealing from their QB surplus.",
                 "partner_trajectory": "win-now"
               },
               {
                 "send": [
                   {
-                    "sleeper_id": "12519",
-                    "name": "Luther Burden",
+                    "sleeper_id": "7564",
+                    "name": "Ja'Marr Chase",
                     "position": "WR",
-                    "team": "CHI",
-                    "age": 22,
-                    "dynasty_value": 3378,
-                    "redraft_value": 1627,
+                    "team": "CIN",
+                    "age": 26,
+                    "dynasty_value": 9642,
+                    "redraft_value": 9859,
                     "injury_status": null,
-                    "pos_rank_in_league": 30,
+                    "pos_rank_in_league": 1,
                     "is_pick": false
                   },
                   {
-                    "sleeper_id": "PICK_2027_R1_O3",
-                    "name": "2027 R1 (Comedy of Errors)",
-                    "position": "PICK",
-                    "team": null,
-                    "age": null,
-                    "dynasty_value": 3022,
-                    "redraft_value": 0,
+                    "sleeper_id": "5967",
+                    "name": "Tony Pollard",
+                    "position": "RB",
+                    "team": "TEN",
+                    "age": 29,
+                    "dynasty_value": 1727,
+                    "redraft_value": 1541,
                     "injury_status": null,
-                    "pos_rank_in_league": null,
-                    "is_pick": true
+                    "pos_rank_in_league": 28,
+                    "is_pick": false
                   }
                 ],
                 "receive": [
@@ -12256,91 +12280,103 @@
                     "injury_status": null,
                     "pos_rank_in_league": 3,
                     "is_pick": false
+                  },
+                  {
+                    "sleeper_id": "4881",
+                    "name": "Lamar Jackson",
+                    "position": "QB",
+                    "team": "BAL",
+                    "age": 29,
+                    "dynasty_value": 3864,
+                    "redraft_value": 3726,
+                    "injury_status": null,
+                    "pos_rank_in_league": 2,
+                    "is_pick": false
                   }
                 ],
-                "structure": "2v1",
-                "tier": "buy",
-                "pick_flow": "to_them",
-                "my_lineup_change": 6671,
-                "their_lineup_change": -6671,
-                "my_asset_change": -768,
-                "their_asset_change": 768,
-                "my_value_delta": -768,
+                "structure": "2v2",
+                "tier": "package",
+                "pick_flow": "none",
+                "my_lineup_change": 420,
+                "their_lineup_change": 248,
+                "my_asset_change": -1873,
+                "their_asset_change": 1873,
+                "my_value_delta": -1873,
                 "my_lineup_old": 39466,
-                "my_lineup_new": 46137,
+                "my_lineup_new": 39886,
                 "their_lineup_old": 42678,
-                "their_lineup_new": 36007,
-                "score": 7439,
-                "partner_pitch": "Saquantum Leap is competing now. Luther Burden upgrades their WR; they flip Jonathan Taylor for 2027 1st, dealing from their RB surplus.",
+                "their_lineup_new": 42926,
+                "score": 2541,
+                "partner_pitch": "Saquantum Leap is competing now. Ja'Marr Chase upgrades their WR, dealing from their QB surplus.",
                 "partner_trajectory": "win-now"
               },
               {
                 "send": [
                   {
-                    "sleeper_id": "PICK_2026_R1_O3",
-                    "name": "2026 R1 (Comedy of Errors)",
-                    "position": "PICK",
-                    "team": null,
-                    "age": null,
-                    "dynasty_value": 3556,
-                    "redraft_value": 0,
+                    "sleeper_id": "7564",
+                    "name": "Ja'Marr Chase",
+                    "position": "WR",
+                    "team": "CIN",
+                    "age": 26,
+                    "dynasty_value": 9642,
+                    "redraft_value": 9859,
                     "injury_status": null,
-                    "pos_rank_in_league": null,
-                    "is_pick": true
+                    "pos_rank_in_league": 1,
+                    "is_pick": false
                   },
                   {
-                    "sleeper_id": "PICK_2027_R1_O3",
-                    "name": "2027 R1 (Comedy of Errors)",
-                    "position": "PICK",
-                    "team": null,
-                    "age": null,
-                    "dynasty_value": 3022,
-                    "redraft_value": 0,
+                    "sleeper_id": "5947",
+                    "name": "Jakobi Meyers",
+                    "position": "WR",
+                    "team": "JAX",
+                    "age": 29,
+                    "dynasty_value": 1582,
+                    "redraft_value": 706,
                     "injury_status": null,
-                    "pos_rank_in_league": null,
-                    "is_pick": true
+                    "pos_rank_in_league": 38,
+                    "is_pick": false
                   }
                 ],
                 "receive": [
                   {
-                    "sleeper_id": "4866",
-                    "name": "Saquon Barkley",
+                    "sleeper_id": "6813",
+                    "name": "Jonathan Taylor",
                     "position": "RB",
-                    "team": "PHI",
-                    "age": 29,
-                    "dynasty_value": 4108,
-                    "redraft_value": 6948,
+                    "team": "IND",
+                    "age": 27,
+                    "dynasty_value": 5632,
+                    "redraft_value": 8298,
                     "injury_status": null,
-                    "pos_rank_in_league": 8,
+                    "pos_rank_in_league": 3,
                     "is_pick": false
                   },
                   {
-                    "sleeper_id": "4217",
-                    "name": "George Kittle",
-                    "position": "TE",
-                    "team": "SF",
-                    "age": 32,
-                    "dynasty_value": 1862,
-                    "redraft_value": 1599,
-                    "injury_status": "IR",
-                    "pos_rank_in_league": 6,
+                    "sleeper_id": "4881",
+                    "name": "Lamar Jackson",
+                    "position": "QB",
+                    "team": "BAL",
+                    "age": 29,
+                    "dynasty_value": 3864,
+                    "redraft_value": 3726,
+                    "injury_status": null,
+                    "pos_rank_in_league": 2,
                     "is_pick": false
                   }
                 ],
                 "structure": "2v2",
-                "tier": "buy",
-                "pick_flow": "to_them",
-                "my_lineup_change": 6624,
-                "their_lineup_change": -7086,
-                "my_asset_change": -608,
-                "their_asset_change": 608,
-                "my_value_delta": -608,
+                "tier": "package",
+                "pick_flow": "none",
+                "my_lineup_change": 420,
+                "their_lineup_change": 248,
+                "my_asset_change": -1728,
+                "their_asset_change": 1728,
+                "my_value_delta": -1728,
                 "my_lineup_old": 39466,
-                "my_lineup_new": 46090,
+                "my_lineup_new": 39886,
                 "their_lineup_old": 42678,
-                "their_lineup_new": 35592,
-                "score": 7232,
-                "partner_pitch": "Saquantum Leap is competing now. They flip Saquon Barkley for 2026 1st and 2027 1st, dealing from their RB surplus.",
+                "their_lineup_new": 42926,
+                "score": 2396,
+                "partner_pitch": "Saquantum Leap is competing now. Ja'Marr Chase and Jakobi Meyers upgrade their WR, dealing from their QB surplus.",
                 "partner_trajectory": "win-now"
               }
             ]
@@ -12354,7 +12390,7 @@
             },
             "their_rank_dynasty": 2,
             "their_rank_winnow": 3,
-            "candidate_count": 785,
+            "candidate_count": 569,
             "candidates": [
               {
                 "send": [
@@ -12700,7 +12736,7 @@
             },
             "their_rank_dynasty": 6,
             "their_rank_winnow": 8,
-            "candidate_count": 768,
+            "candidate_count": 554,
             "candidates": [
               {
                 "send": [
@@ -12912,22 +12948,8 @@
               {
                 "send": [
                   {
-                    "sleeper_id": "4034",
-                    "name": "Christian McCaffrey",
-                    "position": "RB",
-                    "team": "SF",
-                    "age": 29,
-                    "dynasty_value": 4791,
-                    "redraft_value": 8229,
-                    "injury_status": null,
-                    "pos_rank_in_league": 4,
-                    "is_pick": false
-                  }
-                ],
-                "receive": [
-                  {
-                    "sleeper_id": "PICK_2026_R1_O9",
-                    "name": "2026 R1 (Obijan Kenobi)",
+                    "sleeper_id": "PICK_2026_R1_O3",
+                    "name": "2026 R1 (Comedy of Errors)",
                     "position": "PICK",
                     "team": null,
                     "age": null,
@@ -12938,53 +12960,65 @@
                     "is_pick": true
                   },
                   {
-                    "sleeper_id": "8142",
-                    "name": "Alec Pierce",
+                    "sleeper_id": "12519",
+                    "name": "Luther Burden",
                     "position": "WR",
-                    "team": "IND",
-                    "age": 26,
-                    "dynasty_value": 2168,
-                    "redraft_value": 1019,
-                    "injury_status": "Questionable",
-                    "pos_rank_in_league": 35,
+                    "team": "CHI",
+                    "age": 22,
+                    "dynasty_value": 3378,
+                    "redraft_value": 1627,
+                    "injury_status": null,
+                    "pos_rank_in_league": 30,
                     "is_pick": false
                   }
                 ],
-                "structure": "1v2",
-                "tier": "sell",
-                "pick_flow": "to_me",
-                "my_lineup_change": -6688,
-                "their_lineup_change": 2623,
-                "my_asset_change": 933,
-                "their_asset_change": -933,
-                "my_value_delta": 933,
+                "receive": [
+                  {
+                    "sleeper_id": "12481",
+                    "name": "Cam Skattebo",
+                    "position": "RB",
+                    "team": "NYG",
+                    "age": 24,
+                    "dynasty_value": 3414,
+                    "redraft_value": 3432,
+                    "injury_status": "Questionable",
+                    "pos_rank_in_league": 21,
+                    "is_pick": false
+                  },
+                  {
+                    "sleeper_id": "7526",
+                    "name": "Jaylen Waddle",
+                    "position": "WR",
+                    "team": "DEN",
+                    "age": 27,
+                    "dynasty_value": 3058,
+                    "redraft_value": 3076,
+                    "injury_status": null,
+                    "pos_rank_in_league": 20,
+                    "is_pick": false
+                  }
+                ],
+                "structure": "2v2",
+                "tier": "buy",
+                "pick_flow": "to_them",
+                "my_lineup_change": 3018,
+                "their_lineup_change": -1648,
+                "my_asset_change": -462,
+                "their_asset_change": 462,
+                "my_value_delta": -462,
                 "my_lineup_old": 39466,
-                "my_lineup_new": 32778,
+                "my_lineup_new": 42484,
                 "their_lineup_old": 35417,
-                "their_lineup_new": 38040,
-                "score": 3556,
-                "partner_pitch": "Obijan Kenobi is balanced. Christian McCaffrey upgrades their RB.",
+                "their_lineup_new": 33769,
+                "score": 3480,
+                "partner_pitch": "Obijan Kenobi is balanced. Luther Burden upgrades their WR; they cash in Cam Skattebo for 2026 1st.",
                 "partner_trajectory": "balanced"
               },
               {
                 "send": [
                   {
-                    "sleeper_id": "4034",
-                    "name": "Christian McCaffrey",
-                    "position": "RB",
-                    "team": "SF",
-                    "age": 29,
-                    "dynasty_value": 4791,
-                    "redraft_value": 8229,
-                    "injury_status": null,
-                    "pos_rank_in_league": 4,
-                    "is_pick": false
-                  }
-                ],
-                "receive": [
-                  {
-                    "sleeper_id": "PICK_2026_R1_O9",
-                    "name": "2026 R1 (Obijan Kenobi)",
+                    "sleeper_id": "PICK_2026_R1_O3",
+                    "name": "2026 R1 (Comedy of Errors)",
                     "position": "PICK",
                     "team": null,
                     "age": null,
@@ -12995,32 +13029,58 @@
                     "is_pick": true
                   },
                   {
-                    "sleeper_id": "9487",
-                    "name": "Parker Washington",
-                    "position": "WR",
-                    "team": "JAX",
-                    "age": 24,
-                    "dynasty_value": 2034,
-                    "redraft_value": 472,
+                    "sleeper_id": "PICK_2027_R1_O3",
+                    "name": "2027 R1 (Comedy of Errors)",
+                    "position": "PICK",
+                    "team": null,
+                    "age": null,
+                    "dynasty_value": 3022,
+                    "redraft_value": 0,
                     "injury_status": null,
-                    "pos_rank_in_league": 43,
+                    "pos_rank_in_league": null,
+                    "is_pick": true
+                  }
+                ],
+                "receive": [
+                  {
+                    "sleeper_id": "12481",
+                    "name": "Cam Skattebo",
+                    "position": "RB",
+                    "team": "NYG",
+                    "age": 24,
+                    "dynasty_value": 3414,
+                    "redraft_value": 3432,
+                    "injury_status": "Questionable",
+                    "pos_rank_in_league": 21,
+                    "is_pick": false
+                  },
+                  {
+                    "sleeper_id": "7553",
+                    "name": "Kyle Pitts",
+                    "position": "TE",
+                    "team": "ATL",
+                    "age": 25,
+                    "dynasty_value": 2697,
+                    "redraft_value": 1495,
+                    "injury_status": null,
+                    "pos_rank_in_league": 7,
                     "is_pick": false
                   }
                 ],
-                "structure": "1v2",
-                "tier": "sell",
-                "pick_flow": "to_me",
-                "my_lineup_change": -6688,
-                "their_lineup_change": 2757,
-                "my_asset_change": 799,
-                "their_asset_change": -799,
-                "my_value_delta": 799,
+                "structure": "2v2",
+                "tier": "buy",
+                "pick_flow": "to_them",
+                "my_lineup_change": 3004,
+                "their_lineup_change": -4665,
+                "my_asset_change": -467,
+                "their_asset_change": 467,
+                "my_value_delta": -467,
                 "my_lineup_old": 39466,
-                "my_lineup_new": 32778,
+                "my_lineup_new": 42470,
                 "their_lineup_old": 35417,
-                "their_lineup_new": 38174,
-                "score": 3556,
-                "partner_pitch": "Obijan Kenobi is balanced. Christian McCaffrey upgrades their RB.",
+                "their_lineup_new": 30752,
+                "score": 3471,
+                "partner_pitch": "Obijan Kenobi is balanced. They cash in Cam Skattebo for 2026 1st and 2027 1st.",
                 "partner_trajectory": "balanced"
               }
             ]
@@ -13034,7 +13094,7 @@
             },
             "their_rank_dynasty": 10,
             "their_rank_winnow": 10,
-            "candidate_count": 861,
+            "candidate_count": 437,
             "candidates": [
               {
                 "send": [
@@ -13941,67 +14001,6 @@
               ],
               "receive": [
                 {
-                  "sleeper_id": "6813",
-                  "name": "Jonathan Taylor",
-                  "position": "RB",
-                  "team": "IND",
-                  "age": 27,
-                  "dynasty_value": 5632,
-                  "redraft_value": 8298,
-                  "injury_status": null,
-                  "pos_rank_in_league": 3,
-                  "is_pick": false
-                }
-              ],
-              "structure": "2v1",
-              "tier": "buy",
-              "pick_flow": "to_them",
-              "my_lineup_change": 6671,
-              "their_lineup_change": -6671,
-              "my_asset_change": -1302,
-              "their_asset_change": 1302,
-              "my_value_delta": -1302,
-              "my_lineup_old": 39466,
-              "my_lineup_new": 46137,
-              "their_lineup_old": 42678,
-              "their_lineup_new": 36007,
-              "score": 7973,
-              "partner_team_name": "Saquantum Leap",
-              "partner_owner": "AhjaySidhu",
-              "partner_dynasty_rank": 5,
-              "partner_winnow_rank": 1,
-              "partner_pitch": "Saquantum Leap is competing now. Luther Burden upgrades their WR; they flip Jonathan Taylor for 2026 1st, dealing from their RB surplus.",
-              "partner_trajectory": "win-now"
-            },
-            {
-              "send": [
-                {
-                  "sleeper_id": "PICK_2026_R1_O3",
-                  "name": "2026 R1 (Comedy of Errors)",
-                  "position": "PICK",
-                  "team": null,
-                  "age": null,
-                  "dynasty_value": 3556,
-                  "redraft_value": 0,
-                  "injury_status": null,
-                  "pos_rank_in_league": null,
-                  "is_pick": true
-                },
-                {
-                  "sleeper_id": "12519",
-                  "name": "Luther Burden",
-                  "position": "WR",
-                  "team": "CHI",
-                  "age": 22,
-                  "dynasty_value": 3378,
-                  "redraft_value": 1627,
-                  "injury_status": null,
-                  "pos_rank_in_league": 30,
-                  "is_pick": false
-                }
-              ],
-              "receive": [
-                {
                   "sleeper_id": "3198",
                   "name": "Derrick Henry",
                   "position": "RB",
@@ -14075,140 +14074,6 @@
               ],
               "receive": [
                 {
-                  "sleeper_id": "6813",
-                  "name": "Jonathan Taylor",
-                  "position": "RB",
-                  "team": "IND",
-                  "age": 27,
-                  "dynasty_value": 5632,
-                  "redraft_value": 8298,
-                  "injury_status": null,
-                  "pos_rank_in_league": 3,
-                  "is_pick": false
-                }
-              ],
-              "structure": "2v1",
-              "tier": "buy",
-              "pick_flow": "to_them",
-              "my_lineup_change": 6671,
-              "their_lineup_change": -6873,
-              "my_asset_change": -946,
-              "their_asset_change": 946,
-              "my_value_delta": -946,
-              "my_lineup_old": 39466,
-              "my_lineup_new": 46137,
-              "their_lineup_old": 42678,
-              "their_lineup_new": 35805,
-              "score": 7617,
-              "partner_team_name": "Saquantum Leap",
-              "partner_owner": "AhjaySidhu",
-              "partner_dynasty_rank": 5,
-              "partner_winnow_rank": 1,
-              "partner_pitch": "Saquantum Leap is competing now. They flip Jonathan Taylor for 2026 1st and 2027 1st, dealing from their RB surplus.",
-              "partner_trajectory": "win-now"
-            },
-            {
-              "send": [
-                {
-                  "sleeper_id": "PICK_2026_R1_O3",
-                  "name": "2026 R1 (Comedy of Errors)",
-                  "position": "PICK",
-                  "team": null,
-                  "age": null,
-                  "dynasty_value": 3556,
-                  "redraft_value": 0,
-                  "injury_status": null,
-                  "pos_rank_in_league": null,
-                  "is_pick": true
-                },
-                {
-                  "sleeper_id": "12519",
-                  "name": "Luther Burden",
-                  "position": "WR",
-                  "team": "CHI",
-                  "age": 22,
-                  "dynasty_value": 3378,
-                  "redraft_value": 1627,
-                  "injury_status": null,
-                  "pos_rank_in_league": 30,
-                  "is_pick": false
-                }
-              ],
-              "receive": [
-                {
-                  "sleeper_id": "4866",
-                  "name": "Saquon Barkley",
-                  "position": "RB",
-                  "team": "PHI",
-                  "age": 29,
-                  "dynasty_value": 4108,
-                  "redraft_value": 6948,
-                  "injury_status": null,
-                  "pos_rank_in_league": 8,
-                  "is_pick": false
-                },
-                {
-                  "sleeper_id": "4217",
-                  "name": "George Kittle",
-                  "position": "TE",
-                  "team": "SF",
-                  "age": 32,
-                  "dynasty_value": 1862,
-                  "redraft_value": 1599,
-                  "injury_status": "IR",
-                  "pos_rank_in_league": 6,
-                  "is_pick": false
-                }
-              ],
-              "structure": "2v2",
-              "tier": "buy",
-              "pick_flow": "to_them",
-              "my_lineup_change": 6624,
-              "their_lineup_change": -6884,
-              "my_asset_change": -964,
-              "their_asset_change": 964,
-              "my_value_delta": -964,
-              "my_lineup_old": 39466,
-              "my_lineup_new": 46090,
-              "their_lineup_old": 42678,
-              "their_lineup_new": 35794,
-              "score": 7588,
-              "partner_team_name": "Saquantum Leap",
-              "partner_owner": "AhjaySidhu",
-              "partner_dynasty_rank": 5,
-              "partner_winnow_rank": 1,
-              "partner_pitch": "Saquantum Leap is competing now. Luther Burden upgrades their WR; they flip Saquon Barkley for 2026 1st, dealing from their RB surplus.",
-              "partner_trajectory": "win-now"
-            },
-            {
-              "send": [
-                {
-                  "sleeper_id": "PICK_2026_R1_O3",
-                  "name": "2026 R1 (Comedy of Errors)",
-                  "position": "PICK",
-                  "team": null,
-                  "age": null,
-                  "dynasty_value": 3556,
-                  "redraft_value": 0,
-                  "injury_status": null,
-                  "pos_rank_in_league": null,
-                  "is_pick": true
-                },
-                {
-                  "sleeper_id": "PICK_2027_R1_O3",
-                  "name": "2027 R1 (Comedy of Errors)",
-                  "position": "PICK",
-                  "team": null,
-                  "age": null,
-                  "dynasty_value": 3022,
-                  "redraft_value": 0,
-                  "injury_status": null,
-                  "pos_rank_in_league": null,
-                  "is_pick": true
-                }
-              ],
-              "receive": [
-                {
                   "sleeper_id": "3198",
                   "name": "Derrick Henry",
                   "position": "RB",
@@ -14252,67 +14117,6 @@
               "partner_winnow_rank": 6,
               "partner_pitch": "Glass bones & paper skin is balanced. They cash in Derrick Henry for 2026 1st and 2027 1st.",
               "partner_trajectory": "balanced"
-            },
-            {
-              "send": [
-                {
-                  "sleeper_id": "12519",
-                  "name": "Luther Burden",
-                  "position": "WR",
-                  "team": "CHI",
-                  "age": 22,
-                  "dynasty_value": 3378,
-                  "redraft_value": 1627,
-                  "injury_status": null,
-                  "pos_rank_in_league": 30,
-                  "is_pick": false
-                },
-                {
-                  "sleeper_id": "PICK_2027_R1_O3",
-                  "name": "2027 R1 (Comedy of Errors)",
-                  "position": "PICK",
-                  "team": null,
-                  "age": null,
-                  "dynasty_value": 3022,
-                  "redraft_value": 0,
-                  "injury_status": null,
-                  "pos_rank_in_league": null,
-                  "is_pick": true
-                }
-              ],
-              "receive": [
-                {
-                  "sleeper_id": "6813",
-                  "name": "Jonathan Taylor",
-                  "position": "RB",
-                  "team": "IND",
-                  "age": 27,
-                  "dynasty_value": 5632,
-                  "redraft_value": 8298,
-                  "injury_status": null,
-                  "pos_rank_in_league": 3,
-                  "is_pick": false
-                }
-              ],
-              "structure": "2v1",
-              "tier": "buy",
-              "pick_flow": "to_them",
-              "my_lineup_change": 6671,
-              "their_lineup_change": -6671,
-              "my_asset_change": -768,
-              "their_asset_change": 768,
-              "my_value_delta": -768,
-              "my_lineup_old": 39466,
-              "my_lineup_new": 46137,
-              "their_lineup_old": 42678,
-              "their_lineup_new": 36007,
-              "score": 7439,
-              "partner_team_name": "Saquantum Leap",
-              "partner_owner": "AhjaySidhu",
-              "partner_dynasty_rank": 5,
-              "partner_winnow_rank": 1,
-              "partner_pitch": "Saquantum Leap is competing now. Luther Burden upgrades their WR; they flip Jonathan Taylor for 2027 1st, dealing from their RB surplus.",
-              "partner_trajectory": "win-now"
             },
             {
               "send": [
@@ -14447,277 +14251,265 @@
               "partner_winnow_rank": 6,
               "partner_pitch": "Glass bones & paper skin is balanced. Luther Burden upgrades their WR; they cash in Trey McBride for 2026 1st.",
               "partner_trajectory": "balanced"
+            },
+            {
+              "send": [
+                {
+                  "sleeper_id": "PICK_2026_R1_O3",
+                  "name": "2026 R1 (Comedy of Errors)",
+                  "position": "PICK",
+                  "team": null,
+                  "age": null,
+                  "dynasty_value": 3556,
+                  "redraft_value": 0,
+                  "injury_status": null,
+                  "pos_rank_in_league": null,
+                  "is_pick": true
+                },
+                {
+                  "sleeper_id": "PICK_2027_R1_O3",
+                  "name": "2027 R1 (Comedy of Errors)",
+                  "position": "PICK",
+                  "team": null,
+                  "age": null,
+                  "dynasty_value": 3022,
+                  "redraft_value": 0,
+                  "injury_status": null,
+                  "pos_rank_in_league": null,
+                  "is_pick": true
+                }
+              ],
+              "receive": [
+                {
+                  "sleeper_id": "8138",
+                  "name": "James Cook",
+                  "position": "RB",
+                  "team": "BUF",
+                  "age": 26,
+                  "dynasty_value": 5435,
+                  "redraft_value": 7710,
+                  "injury_status": null,
+                  "pos_rank_in_league": 7,
+                  "is_pick": false
+                }
+              ],
+              "structure": "2v1",
+              "tier": "buy",
+              "pick_flow": "to_them",
+              "my_lineup_change": 6083,
+              "their_lineup_change": -3707,
+              "my_asset_change": -1143,
+              "their_asset_change": 1143,
+              "my_value_delta": -1143,
+              "my_lineup_old": 39466,
+              "my_lineup_new": 45549,
+              "their_lineup_old": 32775,
+              "their_lineup_new": 29068,
+              "score": 7226,
+              "partner_team_name": "Bucky the Vampire Slayer",
+              "partner_owner": "ebbittm",
+              "partner_dynasty_rank": 7,
+              "partner_winnow_rank": 5,
+              "partner_pitch": "Bucky the Vampire Slayer is balanced. They cash in James Cook for 2026 1st and 2027 1st.",
+              "partner_trajectory": "balanced"
+            },
+            {
+              "send": [
+                {
+                  "sleeper_id": "12519",
+                  "name": "Luther Burden",
+                  "position": "WR",
+                  "team": "CHI",
+                  "age": 22,
+                  "dynasty_value": 3378,
+                  "redraft_value": 1627,
+                  "injury_status": null,
+                  "pos_rank_in_league": 30,
+                  "is_pick": false
+                },
+                {
+                  "sleeper_id": "PICK_2027_R1_O3",
+                  "name": "2027 R1 (Comedy of Errors)",
+                  "position": "PICK",
+                  "team": null,
+                  "age": null,
+                  "dynasty_value": 3022,
+                  "redraft_value": 0,
+                  "injury_status": null,
+                  "pos_rank_in_league": null,
+                  "is_pick": true
+                }
+              ],
+              "receive": [
+                {
+                  "sleeper_id": "8138",
+                  "name": "James Cook",
+                  "position": "RB",
+                  "team": "BUF",
+                  "age": 26,
+                  "dynasty_value": 5435,
+                  "redraft_value": 7710,
+                  "injury_status": null,
+                  "pos_rank_in_league": 7,
+                  "is_pick": false
+                }
+              ],
+              "structure": "2v1",
+              "tier": "buy",
+              "pick_flow": "to_them",
+              "my_lineup_change": 6083,
+              "their_lineup_change": -2057,
+              "my_asset_change": -965,
+              "their_asset_change": 965,
+              "my_value_delta": -965,
+              "my_lineup_old": 39466,
+              "my_lineup_new": 45549,
+              "their_lineup_old": 32775,
+              "their_lineup_new": 30718,
+              "score": 7048,
+              "partner_team_name": "Bucky the Vampire Slayer",
+              "partner_owner": "ebbittm",
+              "partner_dynasty_rank": 7,
+              "partner_winnow_rank": 5,
+              "partner_pitch": "Bucky the Vampire Slayer is balanced. Luther Burden upgrades their WR; they cash in James Cook for 2027 1st.",
+              "partner_trajectory": "balanced"
+            },
+            {
+              "send": [
+                {
+                  "sleeper_id": "PICK_2026_R1_O3",
+                  "name": "2026 R1 (Comedy of Errors)",
+                  "position": "PICK",
+                  "team": null,
+                  "age": null,
+                  "dynasty_value": 3556,
+                  "redraft_value": 0,
+                  "injury_status": null,
+                  "pos_rank_in_league": null,
+                  "is_pick": true
+                },
+                {
+                  "sleeper_id": "PICK_2027_R1_O3",
+                  "name": "2027 R1 (Comedy of Errors)",
+                  "position": "PICK",
+                  "team": null,
+                  "age": null,
+                  "dynasty_value": 3022,
+                  "redraft_value": 0,
+                  "injury_status": null,
+                  "pos_rank_in_league": null,
+                  "is_pick": true
+                }
+              ],
+              "receive": [
+                {
+                  "sleeper_id": "8130",
+                  "name": "Trey McBride",
+                  "position": "TE",
+                  "team": "ARI",
+                  "age": 26,
+                  "dynasty_value": 6026,
+                  "redraft_value": 6785,
+                  "injury_status": null,
+                  "pos_rank_in_league": 1,
+                  "is_pick": false
+                }
+              ],
+              "structure": "2v1",
+              "tier": "buy",
+              "pick_flow": "to_them",
+              "my_lineup_change": 6489,
+              "their_lineup_change": -4629,
+              "my_asset_change": -552,
+              "their_asset_change": 552,
+              "my_value_delta": -552,
+              "my_lineup_old": 39466,
+              "my_lineup_new": 45955,
+              "their_lineup_old": 31173,
+              "their_lineup_new": 26544,
+              "score": 7041,
+              "partner_team_name": "Glass bones & paper skin",
+              "partner_owner": "dkrauz",
+              "partner_dynasty_rank": 8,
+              "partner_winnow_rank": 6,
+              "partner_pitch": "Glass bones & paper skin is balanced. They cash in Trey McBride for 2026 1st and 2027 1st.",
+              "partner_trajectory": "balanced"
+            },
+            {
+              "send": [
+                {
+                  "sleeper_id": "7564",
+                  "name": "Ja'Marr Chase",
+                  "position": "WR",
+                  "team": "CIN",
+                  "age": 26,
+                  "dynasty_value": 9642,
+                  "redraft_value": 9859,
+                  "injury_status": null,
+                  "pos_rank_in_league": 1,
+                  "is_pick": false
+                },
+                {
+                  "sleeper_id": "PICK_2026_R2_O3",
+                  "name": "2026 R2 (Comedy of Errors)",
+                  "position": "PICK",
+                  "team": null,
+                  "age": null,
+                  "dynasty_value": 1759,
+                  "redraft_value": 0,
+                  "injury_status": null,
+                  "pos_rank_in_league": null,
+                  "is_pick": true
+                }
+              ],
+              "receive": [
+                {
+                  "sleeper_id": "8130",
+                  "name": "Trey McBride",
+                  "position": "TE",
+                  "team": "ARI",
+                  "age": 26,
+                  "dynasty_value": 6026,
+                  "redraft_value": 6785,
+                  "injury_status": null,
+                  "pos_rank_in_league": 1,
+                  "is_pick": false
+                },
+                {
+                  "sleeper_id": "3198",
+                  "name": "Derrick Henry",
+                  "position": "RB",
+                  "team": "BAL",
+                  "age": 32,
+                  "dynasty_value": 3194,
+                  "redraft_value": 6323,
+                  "injury_status": null,
+                  "pos_rank_in_league": 10,
+                  "is_pick": false
+                }
+              ],
+              "structure": "2v2",
+              "tier": "buy",
+              "pick_flow": "to_them",
+              "my_lineup_change": 2953,
+              "their_lineup_change": 1819,
+              "my_asset_change": -2181,
+              "their_asset_change": 2181,
+              "my_value_delta": -2181,
+              "my_lineup_old": 39466,
+              "my_lineup_new": 42419,
+              "their_lineup_old": 31173,
+              "their_lineup_new": 32992,
+              "score": 6953,
+              "partner_team_name": "Glass bones & paper skin",
+              "partner_owner": "dkrauz",
+              "partner_dynasty_rank": 8,
+              "partner_winnow_rank": 6,
+              "partner_pitch": "Glass bones & paper skin is balanced. Ja'Marr Chase upgrades their WR; they cash in Trey McBride for 2026 2nd.",
+              "partner_trajectory": "balanced"
             }
           ],
           "sell": [
-            {
-              "send": [
-                {
-                  "sleeper_id": "4034",
-                  "name": "Christian McCaffrey",
-                  "position": "RB",
-                  "team": "SF",
-                  "age": 29,
-                  "dynasty_value": 4791,
-                  "redraft_value": 8229,
-                  "injury_status": null,
-                  "pos_rank_in_league": 4,
-                  "is_pick": false
-                }
-              ],
-              "receive": [
-                {
-                  "sleeper_id": "PICK_2026_R1_O7",
-                  "name": "2026 R1 (Saquantum Leap)",
-                  "position": "PICK",
-                  "team": null,
-                  "age": null,
-                  "dynasty_value": 3556,
-                  "redraft_value": 0,
-                  "injury_status": null,
-                  "pos_rank_in_league": null,
-                  "is_pick": true
-                },
-                {
-                  "sleeper_id": "8183",
-                  "name": "Brock Purdy",
-                  "position": "QB",
-                  "team": "SF",
-                  "age": 26,
-                  "dynasty_value": 2285,
-                  "redraft_value": 725,
-                  "injury_status": null,
-                  "pos_rank_in_league": 14,
-                  "is_pick": false
-                }
-              ],
-              "structure": "1v2",
-              "tier": "sell",
-              "pick_flow": "to_me",
-              "my_lineup_change": -6688,
-              "their_lineup_change": 5534,
-              "my_asset_change": 1050,
-              "their_asset_change": -1050,
-              "my_value_delta": 1050,
-              "my_lineup_old": 39466,
-              "my_lineup_new": 32778,
-              "their_lineup_old": 42678,
-              "their_lineup_new": 48212,
-              "score": 6584,
-              "partner_team_name": "Saquantum Leap",
-              "partner_owner": "AhjaySidhu",
-              "partner_dynasty_rank": 5,
-              "partner_winnow_rank": 1,
-              "partner_pitch": "Saquantum Leap is competing now. Christian McCaffrey adds proven production for their playoff push, dealing from their QB surplus.",
-              "partner_trajectory": "win-now"
-            },
-            {
-              "send": [
-                {
-                  "sleeper_id": "4034",
-                  "name": "Christian McCaffrey",
-                  "position": "RB",
-                  "team": "SF",
-                  "age": 29,
-                  "dynasty_value": 4791,
-                  "redraft_value": 8229,
-                  "injury_status": null,
-                  "pos_rank_in_league": 4,
-                  "is_pick": false
-                },
-                {
-                  "sleeper_id": "5947",
-                  "name": "Jakobi Meyers",
-                  "position": "WR",
-                  "team": "JAX",
-                  "age": 29,
-                  "dynasty_value": 1582,
-                  "redraft_value": 706,
-                  "injury_status": null,
-                  "pos_rank_in_league": 38,
-                  "is_pick": false
-                }
-              ],
-              "receive": [
-                {
-                  "sleeper_id": "11560",
-                  "name": "Caleb Williams",
-                  "position": "QB",
-                  "team": "CHI",
-                  "age": 24,
-                  "dynasty_value": 3754,
-                  "redraft_value": 2413,
-                  "injury_status": null,
-                  "pos_rank_in_league": 7,
-                  "is_pick": false
-                },
-                {
-                  "sleeper_id": "PICK_2026_R1_O7",
-                  "name": "2026 R1 (Saquantum Leap)",
-                  "position": "PICK",
-                  "team": null,
-                  "age": null,
-                  "dynasty_value": 3556,
-                  "redraft_value": 0,
-                  "injury_status": null,
-                  "pos_rank_in_league": null,
-                  "is_pick": true
-                }
-              ],
-              "structure": "2v2",
-              "tier": "sell",
-              "pick_flow": "to_me",
-              "my_lineup_change": -6020,
-              "their_lineup_change": 5534,
-              "my_asset_change": 937,
-              "their_asset_change": -937,
-              "my_value_delta": 937,
-              "my_lineup_old": 39466,
-              "my_lineup_new": 33446,
-              "their_lineup_old": 42678,
-              "their_lineup_new": 48212,
-              "score": 6471,
-              "partner_team_name": "Saquantum Leap",
-              "partner_owner": "AhjaySidhu",
-              "partner_dynasty_rank": 5,
-              "partner_winnow_rank": 1,
-              "partner_pitch": "Saquantum Leap is competing now. Jakobi Meyers upgrades their WR, dealing from their QB surplus.",
-              "partner_trajectory": "win-now"
-            },
-            {
-              "send": [
-                {
-                  "sleeper_id": "4034",
-                  "name": "Christian McCaffrey",
-                  "position": "RB",
-                  "team": "SF",
-                  "age": 29,
-                  "dynasty_value": 4791,
-                  "redraft_value": 8229,
-                  "injury_status": null,
-                  "pos_rank_in_league": 4,
-                  "is_pick": false
-                }
-              ],
-              "receive": [
-                {
-                  "sleeper_id": "PICK_2026_R1_O7",
-                  "name": "2026 R1 (Saquantum Leap)",
-                  "position": "PICK",
-                  "team": null,
-                  "age": null,
-                  "dynasty_value": 3556,
-                  "redraft_value": 0,
-                  "injury_status": null,
-                  "pos_rank_in_league": null,
-                  "is_pick": true
-                },
-                {
-                  "sleeper_id": "2133",
-                  "name": "Davante Adams",
-                  "position": "WR",
-                  "team": "LAR",
-                  "age": 33,
-                  "dynasty_value": 2076,
-                  "redraft_value": 2695,
-                  "injury_status": null,
-                  "pos_rank_in_league": 23,
-                  "is_pick": false
-                }
-              ],
-              "structure": "1v2",
-              "tier": "sell",
-              "pick_flow": "to_me",
-              "my_lineup_change": -5620,
-              "their_lineup_change": 5534,
-              "my_asset_change": 841,
-              "their_asset_change": -841,
-              "my_value_delta": 841,
-              "my_lineup_old": 39466,
-              "my_lineup_new": 33846,
-              "their_lineup_old": 42678,
-              "their_lineup_new": 48212,
-              "score": 6375,
-              "partner_team_name": "Saquantum Leap",
-              "partner_owner": "AhjaySidhu",
-              "partner_dynasty_rank": 5,
-              "partner_winnow_rank": 1,
-              "partner_pitch": "Saquantum Leap is competing now. Christian McCaffrey adds proven production for their playoff push.",
-              "partner_trajectory": "win-now"
-            },
-            {
-              "send": [
-                {
-                  "sleeper_id": "4034",
-                  "name": "Christian McCaffrey",
-                  "position": "RB",
-                  "team": "SF",
-                  "age": 29,
-                  "dynasty_value": 4791,
-                  "redraft_value": 8229,
-                  "injury_status": null,
-                  "pos_rank_in_league": 4,
-                  "is_pick": false
-                },
-                {
-                  "sleeper_id": "5967",
-                  "name": "Tony Pollard",
-                  "position": "RB",
-                  "team": "TEN",
-                  "age": 29,
-                  "dynasty_value": 1727,
-                  "redraft_value": 1541,
-                  "injury_status": null,
-                  "pos_rank_in_league": 28,
-                  "is_pick": false
-                }
-              ],
-              "receive": [
-                {
-                  "sleeper_id": "11560",
-                  "name": "Caleb Williams",
-                  "position": "QB",
-                  "team": "CHI",
-                  "age": 24,
-                  "dynasty_value": 3754,
-                  "redraft_value": 2413,
-                  "injury_status": null,
-                  "pos_rank_in_league": 7,
-                  "is_pick": false
-                },
-                {
-                  "sleeper_id": "PICK_2026_R1_O7",
-                  "name": "2026 R1 (Saquantum Leap)",
-                  "position": "PICK",
-                  "team": null,
-                  "age": null,
-                  "dynasty_value": 3556,
-                  "redraft_value": 0,
-                  "injury_status": null,
-                  "pos_rank_in_league": null,
-                  "is_pick": true
-                }
-              ],
-              "structure": "2v2",
-              "tier": "sell",
-              "pick_flow": "to_me",
-              "my_lineup_change": -6174,
-              "their_lineup_change": 5534,
-              "my_asset_change": 792,
-              "their_asset_change": -792,
-              "my_value_delta": 792,
-              "my_lineup_old": 39466,
-              "my_lineup_new": 33292,
-              "their_lineup_old": 42678,
-              "their_lineup_new": 48212,
-              "score": 6326,
-              "partner_team_name": "Saquantum Leap",
-              "partner_owner": "AhjaySidhu",
-              "partner_dynasty_rank": 5,
-              "partner_winnow_rank": 1,
-              "partner_pitch": "Saquantum Leap is competing now. Christian McCaffrey and Tony Pollard add proven production for their playoff push, dealing from their QB surplus.",
-              "partner_trajectory": "win-now"
-            },
             {
               "send": [
                 {
@@ -14794,140 +14586,6 @@
             {
               "send": [
                 {
-                  "sleeper_id": "4034",
-                  "name": "Christian McCaffrey",
-                  "position": "RB",
-                  "team": "SF",
-                  "age": 29,
-                  "dynasty_value": 4791,
-                  "redraft_value": 8229,
-                  "injury_status": null,
-                  "pos_rank_in_league": 4,
-                  "is_pick": false
-                },
-                {
-                  "sleeper_id": "7567",
-                  "name": "Kenneth Gainwell",
-                  "position": "RB",
-                  "team": "TB",
-                  "age": 27,
-                  "dynasty_value": 1773,
-                  "redraft_value": 1206,
-                  "injury_status": null,
-                  "pos_rank_in_league": 31,
-                  "is_pick": false
-                }
-              ],
-              "receive": [
-                {
-                  "sleeper_id": "11560",
-                  "name": "Caleb Williams",
-                  "position": "QB",
-                  "team": "CHI",
-                  "age": 24,
-                  "dynasty_value": 3754,
-                  "redraft_value": 2413,
-                  "injury_status": null,
-                  "pos_rank_in_league": 7,
-                  "is_pick": false
-                },
-                {
-                  "sleeper_id": "PICK_2026_R1_O7",
-                  "name": "2026 R1 (Saquantum Leap)",
-                  "position": "PICK",
-                  "team": null,
-                  "age": null,
-                  "dynasty_value": 3556,
-                  "redraft_value": 0,
-                  "injury_status": null,
-                  "pos_rank_in_league": null,
-                  "is_pick": true
-                }
-              ],
-              "structure": "2v2",
-              "tier": "sell",
-              "pick_flow": "to_me",
-              "my_lineup_change": -6020,
-              "their_lineup_change": 5534,
-              "my_asset_change": 746,
-              "their_asset_change": -746,
-              "my_value_delta": 746,
-              "my_lineup_old": 39466,
-              "my_lineup_new": 33446,
-              "their_lineup_old": 42678,
-              "their_lineup_new": 48212,
-              "score": 6280,
-              "partner_team_name": "Saquantum Leap",
-              "partner_owner": "AhjaySidhu",
-              "partner_dynasty_rank": 5,
-              "partner_winnow_rank": 1,
-              "partner_pitch": "Saquantum Leap is competing now. Christian McCaffrey and Kenneth Gainwell add proven production for their playoff push, dealing from their QB surplus.",
-              "partner_trajectory": "win-now"
-            },
-            {
-              "send": [
-                {
-                  "sleeper_id": "4034",
-                  "name": "Christian McCaffrey",
-                  "position": "RB",
-                  "team": "SF",
-                  "age": 29,
-                  "dynasty_value": 4791,
-                  "redraft_value": 8229,
-                  "injury_status": null,
-                  "pos_rank_in_league": 4,
-                  "is_pick": false
-                }
-              ],
-              "receive": [
-                {
-                  "sleeper_id": "PICK_2026_R1_O7",
-                  "name": "2026 R1 (Saquantum Leap)",
-                  "position": "PICK",
-                  "team": null,
-                  "age": null,
-                  "dynasty_value": 3556,
-                  "redraft_value": 0,
-                  "injury_status": null,
-                  "pos_rank_in_league": null,
-                  "is_pick": true
-                },
-                {
-                  "sleeper_id": "12530",
-                  "name": "Travis Hunter",
-                  "position": "WR",
-                  "team": "JAX",
-                  "age": 23,
-                  "dynasty_value": 1945,
-                  "redraft_value": 253,
-                  "injury_status": "Questionable",
-                  "pos_rank_in_league": 49,
-                  "is_pick": false
-                }
-              ],
-              "structure": "1v2",
-              "tier": "sell",
-              "pick_flow": "to_me",
-              "my_lineup_change": -6688,
-              "their_lineup_change": 5534,
-              "my_asset_change": 710,
-              "their_asset_change": -710,
-              "my_value_delta": 710,
-              "my_lineup_old": 39466,
-              "my_lineup_new": 32778,
-              "their_lineup_old": 42678,
-              "their_lineup_new": 48212,
-              "score": 6244,
-              "partner_team_name": "Saquantum Leap",
-              "partner_owner": "AhjaySidhu",
-              "partner_dynasty_rank": 5,
-              "partner_winnow_rank": 1,
-              "partner_pitch": "Saquantum Leap is competing now. Christian McCaffrey adds proven production for their playoff push.",
-              "partner_trajectory": "win-now"
-            },
-            {
-              "send": [
-                {
                   "sleeper_id": "12519",
                   "name": "Luther Burden",
                   "position": "WR",
@@ -14991,6 +14649,444 @@
               "their_lineup_old": 31173,
               "their_lineup_new": 32040,
               "score": 6240,
+              "partner_team_name": "Glass bones & paper skin",
+              "partner_owner": "dkrauz",
+              "partner_dynasty_rank": 8,
+              "partner_winnow_rank": 6,
+              "partner_pitch": "Glass bones & paper skin is balanced. RJ Harvey fills their RB gap (#8 of 10).",
+              "partner_trajectory": "balanced"
+            },
+            {
+              "send": [
+                {
+                  "sleeper_id": "12519",
+                  "name": "Luther Burden",
+                  "position": "WR",
+                  "team": "CHI",
+                  "age": 22,
+                  "dynasty_value": 3378,
+                  "redraft_value": 1627,
+                  "injury_status": null,
+                  "pos_rank_in_league": 30,
+                  "is_pick": false
+                },
+                {
+                  "sleeper_id": "12489",
+                  "name": "RJ Harvey",
+                  "position": "RB",
+                  "team": "DEN",
+                  "age": 25,
+                  "dynasty_value": 2373,
+                  "redraft_value": 1863,
+                  "injury_status": null,
+                  "pos_rank_in_league": 25,
+                  "is_pick": false
+                }
+              ],
+              "receive": [
+                {
+                  "sleeper_id": "3198",
+                  "name": "Derrick Henry",
+                  "position": "RB",
+                  "team": "BAL",
+                  "age": 32,
+                  "dynasty_value": 3194,
+                  "redraft_value": 6323,
+                  "injury_status": null,
+                  "pos_rank_in_league": 10,
+                  "is_pick": false
+                },
+                {
+                  "sleeper_id": "PICK_2026_R2_O1",
+                  "name": "2026 R2 (Glass bones & paper skin)",
+                  "position": "PICK",
+                  "team": null,
+                  "age": null,
+                  "dynasty_value": 1759,
+                  "redraft_value": 0,
+                  "injury_status": null,
+                  "pos_rank_in_league": null,
+                  "is_pick": true
+                }
+              ],
+              "structure": "2v2",
+              "tier": "sell",
+              "pick_flow": "to_me",
+              "my_lineup_change": 4374,
+              "their_lineup_change": 867,
+              "my_asset_change": -798,
+              "their_asset_change": 798,
+              "my_value_delta": -798,
+              "my_lineup_old": 39466,
+              "my_lineup_new": 43840,
+              "their_lineup_old": 31173,
+              "their_lineup_new": 32040,
+              "score": 6039,
+              "partner_team_name": "Glass bones & paper skin",
+              "partner_owner": "dkrauz",
+              "partner_dynasty_rank": 8,
+              "partner_winnow_rank": 6,
+              "partner_pitch": "Glass bones & paper skin is balanced. RJ Harvey fills their RB gap (#8 of 10).",
+              "partner_trajectory": "balanced"
+            },
+            {
+              "send": [
+                {
+                  "sleeper_id": "12519",
+                  "name": "Luther Burden",
+                  "position": "WR",
+                  "team": "CHI",
+                  "age": 22,
+                  "dynasty_value": 3378,
+                  "redraft_value": 1627,
+                  "injury_status": null,
+                  "pos_rank_in_league": 30,
+                  "is_pick": false
+                },
+                {
+                  "sleeper_id": "7567",
+                  "name": "Kenneth Gainwell",
+                  "position": "RB",
+                  "team": "TB",
+                  "age": 27,
+                  "dynasty_value": 1773,
+                  "redraft_value": 1206,
+                  "injury_status": null,
+                  "pos_rank_in_league": 31,
+                  "is_pick": false
+                }
+              ],
+              "receive": [
+                {
+                  "sleeper_id": "3198",
+                  "name": "Derrick Henry",
+                  "position": "RB",
+                  "team": "BAL",
+                  "age": 32,
+                  "dynasty_value": 3194,
+                  "redraft_value": 6323,
+                  "injury_status": null,
+                  "pos_rank_in_league": 10,
+                  "is_pick": false
+                },
+                {
+                  "sleeper_id": "PICK_2027_R1_O1",
+                  "name": "2027 R1 (Glass bones & paper skin)",
+                  "position": "PICK",
+                  "team": null,
+                  "age": null,
+                  "dynasty_value": 3022,
+                  "redraft_value": 0,
+                  "injury_status": null,
+                  "pos_rank_in_league": null,
+                  "is_pick": true
+                }
+              ],
+              "structure": "2v2",
+              "tier": "sell",
+              "pick_flow": "to_me",
+              "my_lineup_change": 4696,
+              "their_lineup_change": 267,
+              "my_asset_change": 1065,
+              "their_asset_change": -1065,
+              "my_value_delta": 1065,
+              "my_lineup_old": 39466,
+              "my_lineup_new": 44162,
+              "their_lineup_old": 31173,
+              "their_lineup_new": 31440,
+              "score": 6028,
+              "partner_team_name": "Glass bones & paper skin",
+              "partner_owner": "dkrauz",
+              "partner_dynasty_rank": 8,
+              "partner_winnow_rank": 6,
+              "partner_pitch": "Glass bones & paper skin is balanced. Kenneth Gainwell fills their RB gap (#8 of 10).",
+              "partner_trajectory": "balanced"
+            },
+            {
+              "send": [
+                {
+                  "sleeper_id": "12519",
+                  "name": "Luther Burden",
+                  "position": "WR",
+                  "team": "CHI",
+                  "age": 22,
+                  "dynasty_value": 3378,
+                  "redraft_value": 1627,
+                  "injury_status": null,
+                  "pos_rank_in_league": 30,
+                  "is_pick": false
+                },
+                {
+                  "sleeper_id": "5967",
+                  "name": "Tony Pollard",
+                  "position": "RB",
+                  "team": "TEN",
+                  "age": 29,
+                  "dynasty_value": 1727,
+                  "redraft_value": 1541,
+                  "injury_status": null,
+                  "pos_rank_in_league": 28,
+                  "is_pick": false
+                }
+              ],
+              "receive": [
+                {
+                  "sleeper_id": "3198",
+                  "name": "Derrick Henry",
+                  "position": "RB",
+                  "team": "BAL",
+                  "age": 32,
+                  "dynasty_value": 3194,
+                  "redraft_value": 6323,
+                  "injury_status": null,
+                  "pos_rank_in_league": 10,
+                  "is_pick": false
+                },
+                {
+                  "sleeper_id": "PICK_2027_R1_O1",
+                  "name": "2027 R1 (Glass bones & paper skin)",
+                  "position": "PICK",
+                  "team": null,
+                  "age": null,
+                  "dynasty_value": 3022,
+                  "redraft_value": 0,
+                  "injury_status": null,
+                  "pos_rank_in_league": null,
+                  "is_pick": true
+                }
+              ],
+              "structure": "2v2",
+              "tier": "sell",
+              "pick_flow": "to_me",
+              "my_lineup_change": 4696,
+              "their_lineup_change": 221,
+              "my_asset_change": 1111,
+              "their_asset_change": -1111,
+              "my_value_delta": 1111,
+              "my_lineup_old": 39466,
+              "my_lineup_new": 44162,
+              "their_lineup_old": 31173,
+              "their_lineup_new": 31394,
+              "score": 6028,
+              "partner_team_name": "Glass bones & paper skin",
+              "partner_owner": "dkrauz",
+              "partner_dynasty_rank": 8,
+              "partner_winnow_rank": 6,
+              "partner_pitch": "Glass bones & paper skin is balanced. Tony Pollard fills their RB gap (#8 of 10).",
+              "partner_trajectory": "balanced"
+            },
+            {
+              "send": [
+                {
+                  "sleeper_id": "12519",
+                  "name": "Luther Burden",
+                  "position": "WR",
+                  "team": "CHI",
+                  "age": 22,
+                  "dynasty_value": 3378,
+                  "redraft_value": 1627,
+                  "injury_status": null,
+                  "pos_rank_in_league": 30,
+                  "is_pick": false
+                },
+                {
+                  "sleeper_id": "12522",
+                  "name": "Cam Ward",
+                  "position": "QB",
+                  "team": "TEN",
+                  "age": 24,
+                  "dynasty_value": 2012,
+                  "redraft_value": 274,
+                  "injury_status": null,
+                  "pos_rank_in_league": 18,
+                  "is_pick": false
+                }
+              ],
+              "receive": [
+                {
+                  "sleeper_id": "3198",
+                  "name": "Derrick Henry",
+                  "position": "RB",
+                  "team": "BAL",
+                  "age": 32,
+                  "dynasty_value": 3194,
+                  "redraft_value": 6323,
+                  "injury_status": null,
+                  "pos_rank_in_league": 10,
+                  "is_pick": false
+                },
+                {
+                  "sleeper_id": "PICK_2027_R1_O1",
+                  "name": "2027 R1 (Glass bones & paper skin)",
+                  "position": "PICK",
+                  "team": null,
+                  "age": null,
+                  "dynasty_value": 3022,
+                  "redraft_value": 0,
+                  "injury_status": null,
+                  "pos_rank_in_league": null,
+                  "is_pick": true
+                }
+              ],
+              "structure": "2v2",
+              "tier": "sell",
+              "pick_flow": "to_me",
+              "my_lineup_change": 4696,
+              "their_lineup_change": 395,
+              "my_asset_change": 826,
+              "their_asset_change": -826,
+              "my_value_delta": 826,
+              "my_lineup_old": 39466,
+              "my_lineup_new": 44162,
+              "their_lineup_old": 31173,
+              "their_lineup_new": 31568,
+              "score": 5917,
+              "partner_team_name": "Glass bones & paper skin",
+              "partner_owner": "dkrauz",
+              "partner_dynasty_rank": 8,
+              "partner_winnow_rank": 6,
+              "partner_pitch": "Glass bones & paper skin is balanced. Cam Ward fills their QB gap (#10 of 10).",
+              "partner_trajectory": "balanced"
+            },
+            {
+              "send": [
+                {
+                  "sleeper_id": "12519",
+                  "name": "Luther Burden",
+                  "position": "WR",
+                  "team": "CHI",
+                  "age": 22,
+                  "dynasty_value": 3378,
+                  "redraft_value": 1627,
+                  "injury_status": null,
+                  "pos_rank_in_league": 30,
+                  "is_pick": false
+                },
+                {
+                  "sleeper_id": "12522",
+                  "name": "Cam Ward",
+                  "position": "QB",
+                  "team": "TEN",
+                  "age": 24,
+                  "dynasty_value": 2012,
+                  "redraft_value": 274,
+                  "injury_status": null,
+                  "pos_rank_in_league": 18,
+                  "is_pick": false
+                }
+              ],
+              "receive": [
+                {
+                  "sleeper_id": "3198",
+                  "name": "Derrick Henry",
+                  "position": "RB",
+                  "team": "BAL",
+                  "age": 32,
+                  "dynasty_value": 3194,
+                  "redraft_value": 6323,
+                  "injury_status": null,
+                  "pos_rank_in_league": 10,
+                  "is_pick": false
+                },
+                {
+                  "sleeper_id": "PICK_2027_R2_O1",
+                  "name": "2027 R2 (Glass bones & paper skin)",
+                  "position": "PICK",
+                  "team": null,
+                  "age": null,
+                  "dynasty_value": 1495,
+                  "redraft_value": 0,
+                  "injury_status": null,
+                  "pos_rank_in_league": null,
+                  "is_pick": true
+                }
+              ],
+              "structure": "2v2",
+              "tier": "sell",
+              "pick_flow": "to_me",
+              "my_lineup_change": 4696,
+              "their_lineup_change": 395,
+              "my_asset_change": -701,
+              "their_asset_change": 701,
+              "my_value_delta": -701,
+              "my_lineup_old": 39466,
+              "my_lineup_new": 44162,
+              "their_lineup_old": 31173,
+              "their_lineup_new": 31568,
+              "score": 5792,
+              "partner_team_name": "Glass bones & paper skin",
+              "partner_owner": "dkrauz",
+              "partner_dynasty_rank": 8,
+              "partner_winnow_rank": 6,
+              "partner_pitch": "Glass bones & paper skin is balanced. Cam Ward fills their QB gap (#10 of 10).",
+              "partner_trajectory": "balanced"
+            },
+            {
+              "send": [
+                {
+                  "sleeper_id": "12519",
+                  "name": "Luther Burden",
+                  "position": "WR",
+                  "team": "CHI",
+                  "age": 22,
+                  "dynasty_value": 3378,
+                  "redraft_value": 1627,
+                  "injury_status": null,
+                  "pos_rank_in_league": 30,
+                  "is_pick": false
+                },
+                {
+                  "sleeper_id": "12489",
+                  "name": "RJ Harvey",
+                  "position": "RB",
+                  "team": "DEN",
+                  "age": 25,
+                  "dynasty_value": 2373,
+                  "redraft_value": 1863,
+                  "injury_status": null,
+                  "pos_rank_in_league": 25,
+                  "is_pick": false
+                }
+              ],
+              "receive": [
+                {
+                  "sleeper_id": "3198",
+                  "name": "Derrick Henry",
+                  "position": "RB",
+                  "team": "BAL",
+                  "age": 32,
+                  "dynasty_value": 3194,
+                  "redraft_value": 6323,
+                  "injury_status": null,
+                  "pos_rank_in_league": 10,
+                  "is_pick": false
+                },
+                {
+                  "sleeper_id": "PICK_2027_R1_O1",
+                  "name": "2027 R1 (Glass bones & paper skin)",
+                  "position": "PICK",
+                  "team": null,
+                  "age": null,
+                  "dynasty_value": 3022,
+                  "redraft_value": 0,
+                  "injury_status": null,
+                  "pos_rank_in_league": null,
+                  "is_pick": true
+                }
+              ],
+              "structure": "2v2",
+              "tier": "sell",
+              "pick_flow": "to_me",
+              "my_lineup_change": 4374,
+              "their_lineup_change": 867,
+              "my_asset_change": 465,
+              "their_asset_change": -465,
+              "my_value_delta": 465,
+              "my_lineup_old": 39466,
+              "my_lineup_new": 43840,
+              "their_lineup_old": 31173,
+              "their_lineup_new": 32040,
+              "score": 5706,
               "partner_team_name": "Glass bones & paper skin",
               "partner_owner": "dkrauz",
               "partner_dynasty_rank": 8,
@@ -15987,7 +16083,7 @@
           "package": 8,
           "asymmetric": 8
         },
-        "total_candidates": 6812
+        "total_candidates": 3918
       }
     },
     "mode": "dynasty"
@@ -16041,7 +16137,7 @@
             "injury_status": null
           }
         ],
-        "trending_count": 39843
+        "trending_count": 19089
       },
       {
         "pickup": {
@@ -16090,56 +16186,7 @@
             "injury_status": null
           }
         ],
-        "trending_count": 7439
-      },
-      {
-        "pickup": {
-          "sleeper_id": "8161",
-          "name": "Malik Willis",
-          "position": "QB",
-          "team": "MIA",
-          "age": 27,
-          "years_exp": 4,
-          "dynasty_value": 1262,
-          "redraft_value": 32,
-          "injury_status": null
-        },
-        "suggested_drops": [
-          {
-            "sleeper_id": "3257",
-            "name": "Jacoby Brissett",
-            "position": "QB",
-            "team": "ARI",
-            "age": 33,
-            "years_exp": 10,
-            "dynasty_value": 860,
-            "redraft_value": 0,
-            "injury_status": null
-          },
-          {
-            "sleeper_id": "7587",
-            "name": "Dyami Brown",
-            "position": "WR",
-            "team": "WAS",
-            "age": 26,
-            "years_exp": 5,
-            "dynasty_value": 0,
-            "redraft_value": 0,
-            "injury_status": null
-          },
-          {
-            "sleeper_id": "8800",
-            "name": "Malik Davis",
-            "position": "RB",
-            "team": "DAL",
-            "age": 27,
-            "years_exp": 4,
-            "dynasty_value": 0,
-            "redraft_value": 0,
-            "injury_status": "Questionable"
-          }
-        ],
-        "trending_count": 3304
+        "trending_count": 3478
       },
       {
         "pickup": {
@@ -16188,7 +16235,56 @@
             "injury_status": null
           }
         ],
-        "trending_count": 2960
+        "trending_count": 3376
+      },
+      {
+        "pickup": {
+          "sleeper_id": "8161",
+          "name": "Malik Willis",
+          "position": "QB",
+          "team": "MIA",
+          "age": 27,
+          "years_exp": 4,
+          "dynasty_value": 1262,
+          "redraft_value": 32,
+          "injury_status": null
+        },
+        "suggested_drops": [
+          {
+            "sleeper_id": "3257",
+            "name": "Jacoby Brissett",
+            "position": "QB",
+            "team": "ARI",
+            "age": 33,
+            "years_exp": 10,
+            "dynasty_value": 860,
+            "redraft_value": 0,
+            "injury_status": null
+          },
+          {
+            "sleeper_id": "7587",
+            "name": "Dyami Brown",
+            "position": "WR",
+            "team": "WAS",
+            "age": 26,
+            "years_exp": 5,
+            "dynasty_value": 0,
+            "redraft_value": 0,
+            "injury_status": null
+          },
+          {
+            "sleeper_id": "8800",
+            "name": "Malik Davis",
+            "position": "RB",
+            "team": "DAL",
+            "age": 27,
+            "years_exp": 4,
+            "dynasty_value": 0,
+            "redraft_value": 0,
+            "injury_status": "Questionable"
+          }
+        ],
+        "trending_count": 2961
       },
       {
         "pickup": {
@@ -16237,7 +16333,7 @@
             "injury_status": null
           }
         ],
-        "trending_count": 2240
+        "trending_count": 2051
       }
     ],
     "best_overall": [
@@ -16337,7 +16433,7 @@
             "injury_status": null
           }
         ],
-        "trending_count": 39843
+        "trending_count": 19089
       },
       {
         "pickup": {
@@ -16386,7 +16482,7 @@
             "injury_status": "Questionable"
           }
         ],
-        "trending_count": 3304
+        "trending_count": 2961
       },
       {
         "pickup": {
@@ -16536,7 +16632,7 @@
               "injury_status": "Questionable"
             }
           ],
-          "trending_count": 3304
+          "trending_count": 2961
         },
         {
           "pickup": {
@@ -16685,7 +16781,7 @@
               "injury_status": null
             }
           ],
-          "trending_count": 39843
+          "trending_count": 19089
         },
         {
           "pickup": {
@@ -16783,7 +16879,7 @@
               "injury_status": null
             }
           ],
-          "trending_count": 7439
+          "trending_count": 3478
         }
       ],
       "TE": [
@@ -17913,7 +18009,7 @@
       "description": "Packers running back Josh Jacobs has been released from jail Wednesday amid an ongoing investigation following his arrest on several domestic violence charges.",
       "url": "https://www.espn.com/nfl/story/_/id/48892463/packers-josh-jacobs-released-jail-investigation-ongoing",
       "published": "2026-05-27T19:31:31Z",
-      "age_hours": 17.3,
+      "age_hours": 28.0,
       "importance_score": 120,
       "high_impact": true,
       "players": [
@@ -17927,38 +18023,56 @@
       ]
     },
     {
-      "headline": "Packers' Jacobs arrested, faces several domestic violence charges",
-      "description": "Packers running back Josh Jacobs was arrested Tuesday and booked on several domestic violence charges, according to the Hobart-Lawrence (Wisconsin) Police Department.",
-      "url": "https://www.espn.com/nfl/story/_/id/48885159/packers-jacobs-arrested-faces-several-domestic-violence-charges",
-      "published": "2026-05-27T00:38:25Z",
-      "age_hours": 36.2,
-      "importance_score": 60,
+      "headline": "Raiders' Brock Bowers: Feel 100% after knee troubles in 2025",
+      "description": "Raiders tight end Brock Bowers said he feels \"100%\" healthy entering Year 3 after he had battled a knee injury for the majority of last season.",
+      "url": "https://www.espn.com/nfl/story/_/id/48904403/raiders-brock-bowers-feel-100-knee-troubles-2025",
+      "published": "2026-05-28T22:32:09Z",
+      "age_hours": 1.0,
+      "importance_score": 36,
       "high_impact": true,
       "players": [
         {
-          "sleeper_id": "5850",
-          "name": "Josh Jacobs",
-          "position": "RB",
-          "team": "GB",
-          "dynasty_value": 2950
+          "sleeper_id": "11604",
+          "name": "Brock Bowers",
+          "position": "TE",
+          "team": "LV",
+          "dynasty_value": 6938
         }
       ]
     },
     {
-      "headline": "Source: Bucs RB Bucky Irving (shoulder) likely ready by summer",
-      "description": "Buccaneers running back Bucky Irving, who is rehabbing from offseason shoulder surgery, should be ready later this summer, a source told ESPN's Adam Schefter.",
-      "url": "https://www.espn.com/nfl/story/_/id/48884875/source-bucs-rb-bucky-irving-shoulder-likely-ready-summer",
-      "published": "2026-05-26T23:09:32Z",
-      "age_hours": 37.7,
-      "importance_score": 60,
+      "headline": "Reid: Chiefs moving forward, will have to get Rice caught up",
+      "description": "While most of the Chiefs participated in voluntary workouts this week, Rashee Rice was back in Texas serving his 30-day jail sentence after violating the terms of his probation for his role in a car crash that left multiple people injured.",
+      "url": "https://www.espn.com/nfl/story/_/id/48903684/reid-chiefs-moving-forward-get-rice-caught-up",
+      "published": "2026-05-28T21:32:37Z",
+      "age_hours": 2.0,
+      "importance_score": 30,
       "high_impact": true,
       "players": [
         {
-          "sleeper_id": "11584",
-          "name": "Bucky Irving",
-          "position": "RB",
-          "team": "TB",
-          "dynasty_value": 3619
+          "sleeper_id": "10229",
+          "name": "Rashee Rice",
+          "position": "WR",
+          "team": "KC",
+          "dynasty_value": 3386
+        }
+      ]
+    },
+    {
+      "headline": "Chiefs' Mahomes pleased to get OTA reps amid knee injury recovery",
+      "description": "Chiefs quarterback Patrick Mahomes went through drills Thursday wearing a compression leg sleeve and black brace on his left leg.",
+      "url": "https://www.espn.com/nfl/story/_/id/48903412/chiefs-mahomes-pleased-get-ota-reps-amid-knee-injury-recovery",
+      "published": "2026-05-28T20:35:07Z",
+      "age_hours": 2.9,
+      "importance_score": 30,
+      "high_impact": true,
+      "players": [
+        {
+          "sleeper_id": "4046",
+          "name": "Patrick Mahomes",
+          "position": "QB",
+          "team": "KC",
+          "dynasty_value": 3015
         }
       ]
     },
@@ -17967,7 +18081,7 @@
       "description": "Commanders coach Dan Quinn explains what he has seen from Jayden Daniels in the QB's return from injury.",
       "url": "https://www.espn.com/video/clip/_/id/48893979/why-jayden-daniels-mental-quickness-sticks-dan-quinn",
       "published": "2026-05-27T20:59:36Z",
-      "age_hours": 15.8,
+      "age_hours": 26.5,
       "importance_score": 30,
       "high_impact": true,
       "players": [
@@ -17985,7 +18099,7 @@
       "description": "Ian Rapoport joins Pat McAfee and reports the latest on the Packers running back after he was released from jail",
       "url": "https://www.espn.com/video/clip/_/id/48892661/next-josh-jacobs-release-jail",
       "published": "2026-05-27T18:24:52Z",
-      "age_hours": 18.4,
+      "age_hours": 29.1,
       "importance_score": 30,
       "high_impact": true,
       "players": [
@@ -17999,52 +18113,20 @@
       ]
     },
     {
-      "headline": "Argentine police arrest suspects in U.S. athlete burglaries",
-      "description": "Men suspected of being part of a transnational gang that orchestrated burglaries at the homes of well-known athletes, including stars from the NBA and NFL, have been arrested in Argentina.",
-      "url": "https://www.espn.com/nfl/story/_/id/48888296/argentine-police-arrest-suspects-us-athlete-burglaries",
-      "published": "2026-05-27T06:46:24Z",
-      "age_hours": 30.1,
-      "importance_score": 30,
-      "high_impact": true,
+      "headline": "C.J. Stroud won't let contract talks hang over season prep",
+      "description": "Eligible for an extension for the first time, Texans quarterback C.J. Stroud says he has done his part to earn a new deal but isn't focused on the negotiations.",
+      "url": "https://www.espn.com/nfl/story/_/id/48902660/cj-stroud-let-contract-talks-hang-season-prep",
+      "published": "2026-05-28T19:34:22Z",
+      "age_hours": 3.9,
+      "importance_score": 15,
+      "high_impact": false,
       "players": [
         {
-          "sleeper_id": "4046",
-          "name": "Patrick Mahomes",
+          "sleeper_id": "9758",
+          "name": "C.J. Stroud",
           "position": "QB",
-          "team": "KC",
-          "dynasty_value": 3015
-        },
-        {
-          "sleeper_id": "1466",
-          "name": "Travis Kelce",
-          "position": "TE",
-          "team": "KC",
-          "dynasty_value": 1419
-        },
-        {
-          "sleeper_id": "6770",
-          "name": "Joe Burrow",
-          "position": "QB",
-          "team": "CIN",
-          "dynasty_value": 3674
-        }
-      ]
-    },
-    {
-      "headline": "Patrick Mahomes back on field for Chiefs' first OTA practice",
-      "description": "Chiefs QB Patrick Mahomes returned to the field with his teammates Tuesday for the first time since tearing the ACL and LCL in his left knee.",
-      "url": "https://www.espn.com/nfl/story/_/id/48884510/sources-mahomes-back-field-chiefs-first-ota-practice",
-      "published": "2026-05-26T22:23:02Z",
-      "age_hours": 38.5,
-      "importance_score": 30,
-      "high_impact": true,
-      "players": [
-        {
-          "sleeper_id": "4046",
-          "name": "Patrick Mahomes",
-          "position": "QB",
-          "team": "KC",
-          "dynasty_value": 3015
+          "team": "HOU",
+          "dynasty_value": 1880
         }
       ]
     },
@@ -18053,7 +18135,7 @@
       "description": "J.J. McCarthy says there isn't \"any awkwardness\" between him and Kyler Murray, whom the Vikings signed in March to compete for Minnesota's starting quarterback duties.",
       "url": "https://www.espn.com/nfl/story/_/id/48894057/mccarthy-no-awkwardness-murray-qb1-competition",
       "published": "2026-05-28T10:40:17Z",
-      "age_hours": 2.2,
+      "age_hours": 12.8,
       "importance_score": 15,
       "high_impact": false,
       "players": [
@@ -18078,7 +18160,7 @@
       "description": "Colts QB Anthony Richardson faces an uncertain future in Indianapolis and hasn't rescinded his recent trade request. But he's not letting any of that stand in the way of doing his job, he said Wednesday.",
       "url": "https://www.espn.com/nfl/story/_/id/48894300/future-uncertain-qb-anthony-richardson-here-right-now-colts",
       "published": "2026-05-27T21:59:30Z",
-      "age_hours": 14.8,
+      "age_hours": 25.5,
       "importance_score": 15,
       "high_impact": false,
       "players": [
@@ -18096,7 +18178,7 @@
       "description": "Eagles quarterback Jalen Hurts said his relationship with A.J. Brown is \"really good\" despite all the trade talk that continues around the star receiver.",
       "url": "https://www.espn.com/nfl/story/_/id/48894116/eagles-jalen-hurts-relationship-aj-brown-really-good",
       "published": "2026-05-27T21:57:01Z",
-      "age_hours": 14.9,
+      "age_hours": 25.5,
       "importance_score": 15,
       "high_impact": false,
       "players": [

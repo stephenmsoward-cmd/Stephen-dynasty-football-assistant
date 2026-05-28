@@ -177,22 +177,36 @@ def _meets_value_parity(send: list[Player], receive: list[Player], tolerance: fl
     return abs(s - r) / larger <= tolerance
 
 
+def _side_improves(timeline: str, lineup_change: int, asset_change: int) -> bool:
+    """Does this trade improve the side, judged by their timeline?
+
+    - win-now: ONLY their (this-season) lineup matters. Gaining dynasty asset
+      value does NOT compensate for a worse win-now lineup — a contender won't
+      ship a stud for picks just because the picks are "worth more."
+    - rebuild / balanced: either a lineup gain OR an asset-value gain counts.
+      Rebuilders happily trade current lineup for future capital.
+    """
+    if timeline == "win-now":
+        return lineup_change >= LINEUP_MIN_IMPROVEMENT
+    return (
+        lineup_change >= LINEUP_MIN_IMPROVEMENT
+        or asset_change >= ASSET_MIN_IMPROVEMENT
+    )
+
+
 def _passes_improvement(
     my_lineup_change: int,
     my_asset_change: int,
     their_lineup_change: int,
     their_asset_change: int,
+    my_timeline: str,
+    their_timeline: str,
 ) -> bool:
-    """Each side must improve on EITHER lineup or asset value."""
-    me_ok = (
-        my_lineup_change >= LINEUP_MIN_IMPROVEMENT
-        or my_asset_change >= ASSET_MIN_IMPROVEMENT
+    """Both sides must improve, each judged by their own timeline."""
+    return (
+        _side_improves(my_timeline, my_lineup_change, my_asset_change)
+        and _side_improves(their_timeline, their_lineup_change, their_asset_change)
     )
-    them_ok = (
-        their_lineup_change >= LINEUP_MIN_IMPROVEMENT
-        or their_asset_change >= ASSET_MIN_IMPROVEMENT
-    )
-    return me_ok and them_ok
 
 
 def _enumerate_packages(pool: list[Player], max_size: int) -> Iterable[tuple[Player, ...]]:
@@ -210,6 +224,8 @@ def find_trades(
     slots: list[str],
     my_value_fn: ValueFn,
     their_value_fn: ValueFn | None = None,
+    my_timeline: str = "balanced",
+    their_timeline: str = "balanced",
     value_tolerance: float = DEFAULT_VALUE_TOLERANCE,
     max_side_size: int = 2,
 ) -> list[TradeCandidate]:
@@ -274,6 +290,7 @@ def find_trades(
         if not _passes_improvement(
             my_lineup_change, my_val_delta,
             their_lineup_change, -my_val_delta,
+            my_timeline, their_timeline,
         ):
             return
 
