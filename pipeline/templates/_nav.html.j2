@@ -30,6 +30,9 @@
   <div class="nav-group">
     <div class="nav-group-label">Trade Center</div>
     <a href="{{ nav_prefix }}trades/" class="nav-link {% if active_page == 'trades' %}active{% endif %}">Trade Finder</a>
+    {% if report.trades.targets %}
+    <a href="{{ nav_prefix }}targets/" class="nav-link {% if active_page == 'targets' %}active{% endif %}">Trade Targets</a>
+    {% endif %}
   </div>
   {% endif %}
 

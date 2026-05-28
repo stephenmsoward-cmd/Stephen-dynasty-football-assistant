@@ -333,3 +333,95 @@ def find_trades(
 
     candidates.sort(key=lambda c: c.score, reverse=True)
     return candidates
+
+
+def find_acquisition_packages(
+    target: Player,
+    my_tradeable: list[Player],
+    my_players: list[Player],
+    their_tradeable: list[Player],
+    their_players: list[Player],
+    slots: list[str],
+    my_value_fn: ValueFn,
+    their_value_fn: ValueFn,
+    their_timeline: str,
+    value_tolerance: float = DEFAULT_VALUE_TOLERANCE,
+    max_send: int = 2,
+    max_results: int = 3,
+) -> list[TradeCandidate]:
+    """Packages I can send to acquire `target` (on the partner's roster).
+
+    Unlike find_trades, the receive side is fixed to just the target, and we
+    do NOT require my own lineup to improve — I covet this player and will pay
+    fair value. We still require value parity and that the partner accepts the
+    deal judged by THEIR timeline. Ranked by how easily the partner says yes,
+    then by least overpay on my side."""
+    target_value = target.dynasty_value
+    if target_value <= 0:
+        return []
+
+    my_baseline_lineup = optimal_lineup(my_players, slots, value_fn=my_value_fn).total_value
+    their_baseline_lineup = optimal_lineup(their_players, slots, value_fn=their_value_fn).total_value
+    my_baseline_asset = _asset_total(my_tradeable)
+    their_baseline_asset = _asset_total(their_tradeable)
+
+    my_valued = [p for p in my_tradeable if p.dynasty_value >= MIN_TRADEABLE_VALUE]
+    my_top = sorted(my_valued, key=lambda p: p.dynasty_value, reverse=True)[:PACKAGE_POOL_TOP_N]
+
+    receive = [target]
+    results: list[TradeCandidate] = []
+    seen: set[tuple[str, ...]] = set()
+
+    for size in range(1, max_send + 1):
+        for combo in combinations(my_top, size):
+            send_total = _asset_total(list(combo))
+            larger = max(send_total, target_value)
+            if larger == 0 or abs(send_total - target_value) / larger > value_tolerance:
+                continue
+            send_ids = tuple(sorted(p.sleeper_id for p in combo))
+            if send_ids in seen:
+                continue
+            seen.add(send_ids)
+
+            send_set = set(send_ids)
+            new_my_players = [p for p in my_players if p.sleeper_id not in send_set]
+            if not _is_pick(target):
+                new_my_players = new_my_players + [target]
+            new_their_players = [p for p in their_players if p.sleeper_id != target.sleeper_id] + [
+                p for p in combo if not _is_pick(p)
+            ]
+
+            new_my_lineup = optimal_lineup(new_my_players, slots, value_fn=my_value_fn).total_value
+            new_their_lineup = optimal_lineup(new_their_players, slots, value_fn=their_value_fn).total_value
+
+            my_val_delta = target_value - send_total
+            their_lineup_change = new_their_lineup - their_baseline_lineup
+            their_asset_change = -my_val_delta
+
+            # The partner must accept, judged by their timeline.
+            if not _side_improves(their_timeline, their_lineup_change, their_asset_change):
+                continue
+
+            c = TradeCandidate(
+                send=list(combo),
+                receive=list(receive),
+                my_lineup_old=my_baseline_lineup,
+                my_lineup_new=new_my_lineup,
+                their_lineup_old=their_baseline_lineup,
+                their_lineup_new=new_their_lineup,
+                my_asset_old=my_baseline_asset,
+                my_asset_new=my_baseline_asset + my_val_delta,
+                their_asset_old=their_baseline_asset,
+                their_asset_new=their_baseline_asset - my_val_delta,
+                structure=_structure(list(combo), receive),
+            )
+            c.pick_flow = _set_pick_flow(c)
+            results.append(c)
+
+    # Rank: easiest yes for the partner first (their benefit), then the deals
+    # where I give up the least excess value.
+    def partner_benefit(c: TradeCandidate) -> int:
+        return max(0, c.their_lineup_change) + max(0, c.their_asset_change)
+
+    results.sort(key=lambda c: (partner_benefit(c), c.my_value_delta), reverse=True)
+    return results[:max_results]

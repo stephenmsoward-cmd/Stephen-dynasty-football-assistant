@@ -22,7 +22,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 import data
 from data import Player
 from lineup import optimal_lineup
-from trades import TradeCandidate, find_trades
+from trades import TradeCandidate, find_trades, find_acquisition_packages
 from pitch import build_partner_pitch
 from waivers import build_waiver_report
 from draft import build_draft_report
@@ -348,6 +348,17 @@ def build_trade_report(
             num_teams=len(teams_data),
         )
 
+    targets = build_targets(
+        my_roster_id=my_roster_id,
+        rostered_by_team=rostered_by_team,
+        picks_by_team=picks_by_team,
+        teams_data=teams_data,
+        team_meta=team_meta,
+        slots=slots,
+        strength_by_team=strength_by_team,
+        num_teams=len(teams_data),
+    )
+
     return {
         "my_team": {
             **team_meta[my_roster_id],
@@ -360,8 +371,126 @@ def build_trade_report(
             "pick_value": sum(p.dynasty_value for p in my_picks),
         },
         "modes": mode_results,
+        "targets": targets,
         "mode": TRADE_MODE,
     }
+
+
+TARGETS_MIN_VALUE = 1500       # ignore depth pieces as targets
+TARGETS_MIN_IMPROVEMENT = 100  # must meaningfully lift my optimal lineup
+TOP_TARGETS = 12
+
+
+def _simple_player_dict(p: Player) -> dict:
+    return {
+        "name": p.name,
+        "position": p.position,
+        "team": p.team,
+        "age": p.age,
+        "dynasty_value": p.dynasty_value,
+        "redraft_value": p.redraft_value,
+        "injury_status": p.injury_status,
+        "is_pick": p.position == "PICK",
+    }
+
+
+def _team_trajectory(dynasty_rank: int, winnow_rank: int) -> str:
+    delta = dynasty_rank - winnow_rank
+    if delta > 2:
+        return "win-now"
+    if delta < -2:
+        return "rebuild"
+    return "balanced"
+
+
+def build_targets(
+    my_roster_id: int,
+    rostered_by_team: dict[int, list[Player]],
+    picks_by_team: dict[int, list[Player]],
+    teams_data: list[dict],
+    team_meta: dict[int, dict],
+    slots: list[str],
+    strength_by_team: dict[int, dict],
+    num_teams: int,
+) -> list[dict]:
+    """Players on other rosters whose acquisition would most improve MY dynasty
+    optimal lineup, each with the package(s) it would take to get them.
+
+    Dynasty-mode targeting (long-term roster building). Acquisition packages
+    are judged for partner-acceptance under the partner's own timeline."""
+    dyn_vf = value_fn_for("dynasty")
+    my_players = rostered_by_team[my_roster_id]
+    my_tradeable = my_players + picks_by_team.get(my_roster_id, [])
+    my_base_lineup = optimal_lineup(my_players, slots, value_fn=dyn_vf).total_value
+
+    rank_by_team = {
+        t["roster_id"]: (t["modes"]["dynasty"]["rank"], t["modes"]["winnow"]["rank"])
+        for t in teams_data
+    }
+
+    # Score every other-rostered skill player by how much they'd lift my lineup.
+    scored: list[tuple[int, Player, int]] = []
+    for rid, players in rostered_by_team.items():
+        if rid == my_roster_id:
+            continue
+        for p in players:
+            if not p.is_skill or p.dynasty_value < TARGETS_MIN_VALUE:
+                continue
+            new_lineup = optimal_lineup(my_players + [p], slots, value_fn=dyn_vf).total_value
+            improvement = new_lineup - my_base_lineup
+            if improvement >= TARGETS_MIN_IMPROVEMENT:
+                scored.append((improvement, p, rid))
+    scored.sort(key=lambda x: x[0], reverse=True)
+
+    targets: list[dict] = []
+    for improvement, p, rid in scored[:TOP_TARGETS]:
+        their_players = rostered_by_team[rid]
+        their_tradeable = their_players + picks_by_team.get(rid, [])
+        dyn_rank, wn_rank = rank_by_team[rid]
+        traj = _team_trajectory(dyn_rank, wn_rank)
+        their_vf = value_fn_for("winnow") if traj == "win-now" else value_fn_for("dynasty")
+
+        pkgs = find_acquisition_packages(
+            target=p,
+            my_tradeable=my_tradeable,
+            my_players=my_players,
+            their_tradeable=their_tradeable,
+            their_players=their_players,
+            slots=slots,
+            my_value_fn=dyn_vf,
+            their_value_fn=their_vf,
+            their_timeline=traj,
+        )
+        pkg_dicts = []
+        for c in pkgs:
+            pkg_dicts.append({
+                "send": [_simple_player_dict(sp) for sp in c.send],
+                "my_lineup_change": c.my_lineup_change,
+                "their_lineup_change": c.their_lineup_change,
+                "my_value_delta": c.my_value_delta,
+                "pitch": build_partner_pitch(
+                    send=c.send,
+                    receive=c.receive,
+                    partner_name=team_meta[rid]["team_name"],
+                    partner_strength=strength_by_team.get(rid, {}),
+                    dynasty_rank=dyn_rank,
+                    winnow_rank=wn_rank,
+                    num_teams=num_teams,
+                ),
+            })
+
+        targets.append({
+            "player": _simple_player_dict(p),
+            "owner_team": team_meta[rid]["team_name"],
+            "owner_owner": team_meta[rid]["owner_display_name"],
+            "owner_trajectory": traj,
+            "owner_dynasty_rank": dyn_rank,
+            "owner_winnow_rank": wn_rank,
+            "my_lineup_improvement": improvement,
+            "packages": pkg_dicts,
+            "acquirable": bool(pkg_dicts),
+        })
+    return targets
 
 
 def build_league_report(
@@ -692,6 +821,7 @@ def render_site(reports: list[dict]) -> None:
     draft_tmpl = env.get_template("draft.html.j2")
     rankings_tmpl = env.get_template("rankings.html.j2")
     compare_tmpl = env.get_template("compare.html.j2")
+    targets_tmpl = env.get_template("targets.html.j2")
     for r in reports:
         out_dir = SITE / "leagues" / r["slug"]
         out_dir.mkdir(parents=True, exist_ok=True)
@@ -702,6 +832,11 @@ def render_site(reports: list[dict]) -> None:
             trades_dir = out_dir / "trades"
             trades_dir.mkdir(exist_ok=True)
             (trades_dir / "index.html").write_text(trades_tmpl.render(report=r))
+
+        if r.get("trades") and r["trades"].get("targets"):
+            targets_dir = out_dir / "targets"
+            targets_dir.mkdir(exist_ok=True)
+            (targets_dir / "index.html").write_text(targets_tmpl.render(report=r))
 
         if r.get("waivers"):
             waivers_dir = out_dir / "waivers"

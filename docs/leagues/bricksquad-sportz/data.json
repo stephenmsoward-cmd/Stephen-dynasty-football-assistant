@@ -35,7 +35,7 @@
     "BN",
     "BN"
   ],
-  "generated_at": "2026-05-28T23:31:35+00:00",
+  "generated_at": "2026-05-28T23:42:35+00:00",
   "previous_snapshot_date": "2026-05-27",
   "teams": [
     {
@@ -16086,6 +16086,1238 @@
         "total_candidates": 3918
       }
     },
+    "targets": [
+      {
+        "player": {
+          "name": "Bijan Robinson",
+          "position": "RB",
+          "team": "ATL",
+          "age": 24,
+          "dynasty_value": 11439,
+          "redraft_value": 10504,
+          "injury_status": null,
+          "is_pick": false
+        },
+        "owner_team": "Obijan Kenobi",
+        "owner_owner": "GregariousG",
+        "owner_trajectory": "balanced",
+        "owner_dynasty_rank": 6,
+        "owner_winnow_rank": 8,
+        "my_lineup_improvement": 9319,
+        "packages": [
+          {
+            "send": [
+              {
+                "name": "Jaxon Smith-Njigba",
+                "position": "WR",
+                "team": "SEA",
+                "age": 24,
+                "dynasty_value": 9144,
+                "redraft_value": 8932,
+                "injury_status": null,
+                "is_pick": false
+              },
+              {
+                "name": "Christian McCaffrey",
+                "position": "RB",
+                "team": "SF",
+                "age": 29,
+                "dynasty_value": 4791,
+                "redraft_value": 8229,
+                "injury_status": null,
+                "is_pick": false
+              }
+            ],
+            "my_lineup_change": -723,
+            "their_lineup_change": 462,
+            "my_value_delta": -2496,
+            "pitch": "Obijan Kenobi is balanced. Christian McCaffrey upgrades their RB."
+          },
+          {
+            "send": [
+              {
+                "name": "Ja'Marr Chase",
+                "position": "WR",
+                "team": "CIN",
+                "age": 26,
+                "dynasty_value": 9642,
+                "redraft_value": 9859,
+                "injury_status": null,
+                "is_pick": false
+              },
+              {
+                "name": "2026 R1 (Comedy of Errors)",
+                "position": "PICK",
+                "team": null,
+                "age": null,
+                "dynasty_value": 3556,
+                "redraft_value": 0,
+                "injury_status": null,
+                "is_pick": true
+              }
+            ],
+            "my_lineup_change": 1797,
+            "their_lineup_change": -2385,
+            "my_value_delta": -1759,
+            "pitch": "Obijan Kenobi is balanced. Ja'Marr Chase upgrades their WR; they cash in Bijan Robinson for 2026 1st."
+          },
+          {
+            "send": [
+              {
+                "name": "Ja'Marr Chase",
+                "position": "WR",
+                "team": "CIN",
+                "age": 26,
+                "dynasty_value": 9642,
+                "redraft_value": 9859,
+                "injury_status": null,
+                "is_pick": false
+              },
+              {
+                "name": "A.J. Brown",
+                "position": "WR",
+                "team": "PHI",
+                "age": 28,
+                "dynasty_value": 3419,
+                "redraft_value": 4279,
+                "injury_status": null,
+                "is_pick": false
+              }
+            ],
+            "my_lineup_change": 151,
+            "their_lineup_change": -1134,
+            "my_value_delta": -1622,
+            "pitch": "Obijan Kenobi is balanced. Ja'Marr Chase and A.J. Brown upgrade their WR."
+          }
+        ],
+        "acquirable": true
+      },
+      {
+        "player": {
+          "name": "Jahmyr Gibbs",
+          "position": "RB",
+          "team": "DET",
+          "age": 24,
+          "dynasty_value": 10408,
+          "redraft_value": 10295,
+          "injury_status": null,
+          "is_pick": false
+        },
+        "owner_team": "Ligma",
+        "owner_owner": "nfaber",
+        "owner_trajectory": "balanced",
+        "owner_dynasty_rank": 2,
+        "owner_winnow_rank": 3,
+        "my_lineup_improvement": 8288,
+        "packages": [
+          {
+            "send": [
+              {
+                "name": "Jaxon Smith-Njigba",
+                "position": "WR",
+                "team": "SEA",
+                "age": 24,
+                "dynasty_value": 9144,
+                "redraft_value": 8932,
+                "injury_status": null,
+                "is_pick": false
+              },
+              {
+                "name": "2026 R1 (Comedy of Errors)",
+                "position": "PICK",
+                "team": null,
+                "age": null,
+                "dynasty_value": 3556,
+                "redraft_value": 0,
+                "injury_status": null,
+                "is_pick": true
+              }
+            ],
+            "my_lineup_change": 1264,
+            "their_lineup_change": -1264,
+            "my_value_delta": -2292,
+            "pitch": "Ligma is balanced. Jaxon Smith-Njigba fills their WR gap (#10 of 10); they cash in Jahmyr Gibbs for 2026 1st, dealing from their RB surplus."
+          },
+          {
+            "send": [
+              {
+                "name": "Ja'Marr Chase",
+                "position": "WR",
+                "team": "CIN",
+                "age": 26,
+                "dynasty_value": 9642,
+                "redraft_value": 9859,
+                "injury_status": null,
+                "is_pick": false
+              },
+              {
+                "name": "2027 R1 (Comedy of Errors)",
+                "position": "PICK",
+                "team": null,
+                "age": null,
+                "dynasty_value": 3022,
+                "redraft_value": 0,
+                "injury_status": null,
+                "is_pick": true
+              }
+            ],
+            "my_lineup_change": 766,
+            "their_lineup_change": -766,
+            "my_value_delta": -2256,
+            "pitch": "Ligma is balanced. Ja'Marr Chase fills their WR gap (#10 of 10); they cash in Jahmyr Gibbs for 2027 1st, dealing from their RB surplus."
+          },
+          {
+            "send": [
+              {
+                "name": "Jaxon Smith-Njigba",
+                "position": "WR",
+                "team": "SEA",
+                "age": 24,
+                "dynasty_value": 9144,
+                "redraft_value": 8932,
+                "injury_status": null,
+                "is_pick": false
+              },
+              {
+                "name": "A.J. Brown",
+                "position": "WR",
+                "team": "PHI",
+                "age": 28,
+                "dynasty_value": 3419,
+                "redraft_value": 4279,
+                "injury_status": null,
+                "is_pick": false
+              }
+            ],
+            "my_lineup_change": -382,
+            "their_lineup_change": -561,
+            "my_value_delta": -2155,
+            "pitch": "Ligma is balanced. Jaxon Smith-Njigba and A.J. Brown fill their WR gap (#10 of 10), dealing from their RB surplus."
+          }
+        ],
+        "acquirable": true
+      },
+      {
+        "player": {
+          "name": "Puka Nacua",
+          "position": "WR",
+          "team": "LAR",
+          "age": 24,
+          "dynasty_value": 8531,
+          "redraft_value": 8856,
+          "injury_status": null,
+          "is_pick": false
+        },
+        "owner_team": "Saquantum Leap",
+        "owner_owner": "AhjaySidhu",
+        "owner_trajectory": "win-now",
+        "owner_dynasty_rank": 5,
+        "owner_winnow_rank": 1,
+        "my_lineup_improvement": 6411,
+        "packages": [
+          {
+            "send": [
+              {
+                "name": "Ja'Marr Chase",
+                "position": "WR",
+                "team": "CIN",
+                "age": 26,
+                "dynasty_value": 9642,
+                "redraft_value": 9859,
+                "injury_status": null,
+                "is_pick": false
+              }
+            ],
+            "my_lineup_change": -1111,
+            "their_lineup_change": 1003,
+            "my_value_delta": -1111,
+            "pitch": "Saquantum Leap is competing now. Ja'Marr Chase upgrades their WR."
+          },
+          {
+            "send": [
+              {
+                "name": "Christian McCaffrey",
+                "position": "RB",
+                "team": "SF",
+                "age": 29,
+                "dynasty_value": 4791,
+                "redraft_value": 8229,
+                "injury_status": null,
+                "is_pick": false
+              },
+              {
+                "name": "A.J. Brown",
+                "position": "WR",
+                "team": "PHI",
+                "age": 28,
+                "dynasty_value": 3419,
+                "redraft_value": 4279,
+                "injury_status": null,
+                "is_pick": false
+              }
+            ],
+            "my_lineup_change": 2094,
+            "their_lineup_change": 957,
+            "my_value_delta": 321,
+            "pitch": "Saquantum Leap is competing now. A.J. Brown upgrades their WR."
+          },
+          {
+            "send": [
+              {
+                "name": "Jaxon Smith-Njigba",
+                "position": "WR",
+                "team": "SEA",
+                "age": 24,
+                "dynasty_value": 9144,
+                "redraft_value": 8932,
+                "injury_status": null,
+                "is_pick": false
+              }
+            ],
+            "my_lineup_change": -613,
+            "their_lineup_change": 76,
+            "my_value_delta": -613,
+            "pitch": "Saquantum Leap is competing now. Jaxon Smith-Njigba upgrades their WR."
+          }
+        ],
+        "acquirable": true
+      },
+      {
+        "player": {
+          "name": "Brock Bowers",
+          "position": "TE",
+          "team": "LV",
+          "age": 23,
+          "dynasty_value": 6938,
+          "redraft_value": 6156,
+          "injury_status": "Questionable",
+          "is_pick": false
+        },
+        "owner_team": "cropcreamer",
+        "owner_owner": "cropcreamer",
+        "owner_trajectory": "balanced",
+        "owner_dynasty_rank": 10,
+        "owner_winnow_rank": 10,
+        "my_lineup_improvement": 5566,
+        "packages": [
+          {
+            "send": [
+              {
+                "name": "Christian McCaffrey",
+                "position": "RB",
+                "team": "SF",
+                "age": 29,
+                "dynasty_value": 4791,
+                "redraft_value": 8229,
+                "injury_status": null,
+                "is_pick": false
+              },
+              {
+                "name": "2026 R1 (Comedy of Errors)",
+                "position": "PICK",
+                "team": null,
+                "age": null,
+                "dynasty_value": 3556,
+                "redraft_value": 0,
+                "injury_status": null,
+                "is_pick": true
+              }
+            ],
+            "my_lineup_change": 2548,
+            "their_lineup_change": -2873,
+            "my_value_delta": -1409,
+            "pitch": "cropcreamer is balanced. Christian McCaffrey fills their RB gap (#10 of 10); they cash in Brock Bowers for 2026 1st, dealing from their TE surplus."
+          },
+          {
+            "send": [
+              {
+                "name": "Christian McCaffrey",
+                "position": "RB",
+                "team": "SF",
+                "age": 29,
+                "dynasty_value": 4791,
+                "redraft_value": 8229,
+                "injury_status": null,
+                "is_pick": false
+              },
+              {
+                "name": "A.J. Brown",
+                "position": "WR",
+                "team": "PHI",
+                "age": 28,
+                "dynasty_value": 3419,
+                "redraft_value": 4279,
+                "injury_status": null,
+                "is_pick": false
+              }
+            ],
+            "my_lineup_change": 856,
+            "their_lineup_change": -1348,
+            "my_value_delta": -1272,
+            "pitch": "cropcreamer is balanced. Christian McCaffrey fills their RB gap (#10 of 10), dealing from their TE surplus."
+          },
+          {
+            "send": [
+              {
+                "name": "Christian McCaffrey",
+                "position": "RB",
+                "team": "SF",
+                "age": 29,
+                "dynasty_value": 4791,
+                "redraft_value": 8229,
+                "injury_status": null,
+                "is_pick": false
+              },
+              {
+                "name": "Luther Burden",
+                "position": "WR",
+                "team": "CHI",
+                "age": 22,
+                "dynasty_value": 3378,
+                "redraft_value": 1627,
+                "injury_status": null,
+                "is_pick": false
+              }
+            ],
+            "my_lineup_change": 897,
+            "their_lineup_change": -1389,
+            "my_value_delta": -1231,
+            "pitch": "cropcreamer is balanced. Christian McCaffrey fills their RB gap (#10 of 10), dealing from their TE surplus."
+          }
+        ],
+        "acquirable": true
+      },
+      {
+        "player": {
+          "name": "Ashton Jeanty",
+          "position": "RB",
+          "team": "LV",
+          "age": 22,
+          "dynasty_value": 7646,
+          "redraft_value": 7832,
+          "injury_status": null,
+          "is_pick": false
+        },
+        "owner_team": "Mongo Money Makers",
+        "owner_owner": "dantonio34",
+        "owner_trajectory": "rebuild",
+        "owner_dynasty_rank": 4,
+        "owner_winnow_rank": 7,
+        "my_lineup_improvement": 5526,
+        "packages": [
+          {
+            "send": [
+              {
+                "name": "Jaxon Smith-Njigba",
+                "position": "WR",
+                "team": "SEA",
+                "age": 24,
+                "dynasty_value": 9144,
+                "redraft_value": 8932,
+                "injury_status": null,
+                "is_pick": false
+              }
+            ],
+            "my_lineup_change": -1498,
+            "their_lineup_change": 1498,
+            "my_value_delta": -1498,
+            "pitch": "Mongo Money Makers is rebuilding. Jaxon Smith-Njigba fills their WR gap (#9 of 10), dealing from their RB surplus."
+          },
+          {
+            "send": [
+              {
+                "name": "Christian McCaffrey",
+                "position": "RB",
+                "team": "SF",
+                "age": 29,
+                "dynasty_value": 4791,
+                "redraft_value": 8229,
+                "injury_status": null,
+                "is_pick": false
+              },
+              {
+                "name": "2026 R1 (Comedy of Errors)",
+                "position": "PICK",
+                "team": null,
+                "age": null,
+                "dynasty_value": 3556,
+                "redraft_value": 0,
+                "injury_status": null,
+                "is_pick": true
+              }
+            ],
+            "my_lineup_change": 2855,
+            "their_lineup_change": -2855,
+            "my_value_delta": -701,
+            "pitch": "Mongo Money Makers is rebuilding. They land Christian McCaffrey; they cash in Ashton Jeanty for 2026 1st, dealing from their RB surplus."
+          },
+          {
+            "send": [
+              {
+                "name": "Christian McCaffrey",
+                "position": "RB",
+                "team": "SF",
+                "age": 29,
+                "dynasty_value": 4791,
+                "redraft_value": 8229,
+                "injury_status": null,
+                "is_pick": false
+              },
+              {
+                "name": "A.J. Brown",
+                "position": "WR",
+                "team": "PHI",
+                "age": 28,
+                "dynasty_value": 3419,
+                "redraft_value": 4279,
+                "injury_status": null,
+                "is_pick": false
+              }
+            ],
+            "my_lineup_change": 1209,
+            "their_lineup_change": -2340,
+            "my_value_delta": -564,
+            "pitch": "Mongo Money Makers is rebuilding. A.J. Brown fills their WR gap (#9 of 10), dealing from their RB surplus."
+          }
+        ],
+        "acquirable": true
+      },
+      {
+        "player": {
+          "name": "Amon-Ra St. Brown",
+          "position": "WR",
+          "team": "DET",
+          "age": 26,
+          "dynasty_value": 7304,
+          "redraft_value": 8594,
+          "injury_status": null,
+          "is_pick": false
+        },
+        "owner_team": "Samir\u2019s Tight End ",
+        "owner_owner": "samirmerheb",
+        "owner_trajectory": "balanced",
+        "owner_dynasty_rank": 9,
+        "owner_winnow_rank": 9,
+        "my_lineup_improvement": 5184,
+        "packages": [
+          {
+            "send": [
+              {
+                "name": "Christian McCaffrey",
+                "position": "RB",
+                "team": "SF",
+                "age": 29,
+                "dynasty_value": 4791,
+                "redraft_value": 8229,
+                "injury_status": null,
+                "is_pick": false
+              },
+              {
+                "name": "2026 R1 (Comedy of Errors)",
+                "position": "PICK",
+                "team": null,
+                "age": null,
+                "dynasty_value": 3556,
+                "redraft_value": 0,
+                "injury_status": null,
+                "is_pick": true
+              }
+            ],
+            "my_lineup_change": 2166,
+            "their_lineup_change": -2513,
+            "my_value_delta": -1043,
+            "pitch": "Samir\u2019s Tight End  is balanced. Christian McCaffrey upgrades their RB; they cash in Amon-Ra St. Brown for 2026 1st, dealing from their WR surplus."
+          },
+          {
+            "send": [
+              {
+                "name": "Christian McCaffrey",
+                "position": "RB",
+                "team": "SF",
+                "age": 29,
+                "dynasty_value": 4791,
+                "redraft_value": 8229,
+                "injury_status": null,
+                "is_pick": false
+              },
+              {
+                "name": "A.J. Brown",
+                "position": "WR",
+                "team": "PHI",
+                "age": 28,
+                "dynasty_value": 3419,
+                "redraft_value": 4279,
+                "injury_status": null,
+                "is_pick": false
+              }
+            ],
+            "my_lineup_change": 867,
+            "their_lineup_change": -824,
+            "my_value_delta": -906,
+            "pitch": "Samir\u2019s Tight End  is balanced. Christian McCaffrey upgrades their RB, dealing from their WR surplus."
+          },
+          {
+            "send": [
+              {
+                "name": "Christian McCaffrey",
+                "position": "RB",
+                "team": "SF",
+                "age": 29,
+                "dynasty_value": 4791,
+                "redraft_value": 8229,
+                "injury_status": null,
+                "is_pick": false
+              },
+              {
+                "name": "Luther Burden",
+                "position": "WR",
+                "team": "CHI",
+                "age": 22,
+                "dynasty_value": 3378,
+                "redraft_value": 1627,
+                "injury_status": null,
+                "is_pick": false
+              }
+            ],
+            "my_lineup_change": 908,
+            "their_lineup_change": -865,
+            "my_value_delta": -865,
+            "pitch": "Samir\u2019s Tight End  is balanced. Christian McCaffrey upgrades their RB, dealing from their WR surplus."
+          }
+        ],
+        "acquirable": true
+      },
+      {
+        "player": {
+          "name": "Justin Jefferson",
+          "position": "WR",
+          "team": "MIN",
+          "age": 26,
+          "dynasty_value": 7166,
+          "redraft_value": 8629,
+          "injury_status": null,
+          "is_pick": false
+        },
+        "owner_team": "Bucky the Vampire Slayer",
+        "owner_owner": "ebbittm",
+        "owner_trajectory": "balanced",
+        "owner_dynasty_rank": 7,
+        "owner_winnow_rank": 5,
+        "my_lineup_improvement": 5046,
+        "packages": [
+          {
+            "send": [
+              {
+                "name": "Christian McCaffrey",
+                "position": "RB",
+                "team": "SF",
+                "age": 29,
+                "dynasty_value": 4791,
+                "redraft_value": 8229,
+                "injury_status": null,
+                "is_pick": false
+              },
+              {
+                "name": "2026 R1 (Comedy of Errors)",
+                "position": "PICK",
+                "team": null,
+                "age": null,
+                "dynasty_value": 3556,
+                "redraft_value": 0,
+                "injury_status": null,
+                "is_pick": true
+              }
+            ],
+            "my_lineup_change": 2028,
+            "their_lineup_change": -2375,
+            "my_value_delta": -1181,
+            "pitch": "Bucky the Vampire Slayer is balanced. Christian McCaffrey upgrades their RB; they cash in Justin Jefferson for 2026 1st."
+          },
+          {
+            "send": [
+              {
+                "name": "Christian McCaffrey",
+                "position": "RB",
+                "team": "SF",
+                "age": 29,
+                "dynasty_value": 4791,
+                "redraft_value": 8229,
+                "injury_status": null,
+                "is_pick": false
+              },
+              {
+                "name": "A.J. Brown",
+                "position": "WR",
+                "team": "PHI",
+                "age": 28,
+                "dynasty_value": 3419,
+                "redraft_value": 4279,
+                "injury_status": null,
+                "is_pick": false
+              }
+            ],
+            "my_lineup_change": 729,
+            "their_lineup_change": -932,
+            "my_value_delta": -1044,
+            "pitch": "Bucky the Vampire Slayer is balanced. Christian McCaffrey upgrades their RB."
+          },
+          {
+            "send": [
+              {
+                "name": "Christian McCaffrey",
+                "position": "RB",
+                "team": "SF",
+                "age": 29,
+                "dynasty_value": 4791,
+                "redraft_value": 8229,
+                "injury_status": null,
+                "is_pick": false
+              },
+              {
+                "name": "Luther Burden",
+                "position": "WR",
+                "team": "CHI",
+                "age": 22,
+                "dynasty_value": 3378,
+                "redraft_value": 1627,
+                "injury_status": null,
+                "is_pick": false
+              }
+            ],
+            "my_lineup_change": 770,
+            "their_lineup_change": -973,
+            "my_value_delta": -1003,
+            "pitch": "Bucky the Vampire Slayer is balanced. Christian McCaffrey upgrades their RB."
+          }
+        ],
+        "acquirable": true
+      },
+      {
+        "player": {
+          "name": "Malik Nabers",
+          "position": "WR",
+          "team": "NYG",
+          "age": 22,
+          "dynasty_value": 6803,
+          "redraft_value": 6021,
+          "injury_status": "IR",
+          "is_pick": false
+        },
+        "owner_team": "Da Bell of Da Ball",
+        "owner_owner": "jmirandette",
+        "owner_trajectory": "rebuild",
+        "owner_dynasty_rank": 1,
+        "owner_winnow_rank": 4,
+        "my_lineup_improvement": 4683,
+        "packages": [
+          {
+            "send": [
+              {
+                "name": "Christian McCaffrey",
+                "position": "RB",
+                "team": "SF",
+                "age": 29,
+                "dynasty_value": 4791,
+                "redraft_value": 8229,
+                "injury_status": null,
+                "is_pick": false
+              },
+              {
+                "name": "2026 R1 (Comedy of Errors)",
+                "position": "PICK",
+                "team": null,
+                "age": null,
+                "dynasty_value": 3556,
+                "redraft_value": 0,
+                "injury_status": null,
+                "is_pick": true
+              }
+            ],
+            "my_lineup_change": 1665,
+            "their_lineup_change": -2012,
+            "my_value_delta": -1544,
+            "pitch": "Da Bell of Da Ball is rebuilding. Christian McCaffrey upgrades their RB; they cash in Malik Nabers for 2026 1st, dealing from their WR surplus."
+          },
+          {
+            "send": [
+              {
+                "name": "Christian McCaffrey",
+                "position": "RB",
+                "team": "SF",
+                "age": 29,
+                "dynasty_value": 4791,
+                "redraft_value": 8229,
+                "injury_status": null,
+                "is_pick": false
+              },
+              {
+                "name": "A.J. Brown",
+                "position": "WR",
+                "team": "PHI",
+                "age": 28,
+                "dynasty_value": 3419,
+                "redraft_value": 4279,
+                "injury_status": null,
+                "is_pick": false
+              }
+            ],
+            "my_lineup_change": 366,
+            "their_lineup_change": -644,
+            "my_value_delta": -1407,
+            "pitch": "Da Bell of Da Ball is rebuilding. Christian McCaffrey upgrades their RB, dealing from their WR surplus."
+          },
+          {
+            "send": [
+              {
+                "name": "Christian McCaffrey",
+                "position": "RB",
+                "team": "SF",
+                "age": 29,
+                "dynasty_value": 4791,
+                "redraft_value": 8229,
+                "injury_status": null,
+                "is_pick": false
+              },
+              {
+                "name": "Luther Burden",
+                "position": "WR",
+                "team": "CHI",
+                "age": 22,
+                "dynasty_value": 3378,
+                "redraft_value": 1627,
+                "injury_status": null,
+                "is_pick": false
+              }
+            ],
+            "my_lineup_change": 407,
+            "their_lineup_change": -685,
+            "my_value_delta": -1366,
+            "pitch": "Da Bell of Da Ball is rebuilding. Christian McCaffrey upgrades their RB, dealing from their WR surplus."
+          }
+        ],
+        "acquirable": true
+      },
+      {
+        "player": {
+          "name": "Trey McBride",
+          "position": "TE",
+          "team": "ARI",
+          "age": 26,
+          "dynasty_value": 6026,
+          "redraft_value": 6785,
+          "injury_status": null,
+          "is_pick": false
+        },
+        "owner_team": "Glass bones & paper skin",
+        "owner_owner": "dkrauz",
+        "owner_trajectory": "balanced",
+        "owner_dynasty_rank": 8,
+        "owner_winnow_rank": 6,
+        "my_lineup_improvement": 4654,
+        "packages": [
+          {
+            "send": [
+              {
+                "name": "Christian McCaffrey",
+                "position": "RB",
+                "team": "SF",
+                "age": 29,
+                "dynasty_value": 4791,
+                "redraft_value": 8229,
+                "injury_status": null,
+                "is_pick": false
+              },
+              {
+                "name": "RJ Harvey",
+                "position": "RB",
+                "team": "DEN",
+                "age": 25,
+                "dynasty_value": 2373,
+                "redraft_value": 1863,
+                "injury_status": null,
+                "is_pick": false
+              }
+            ],
+            "my_lineup_change": 990,
+            "their_lineup_change": -892,
+            "my_value_delta": -1138,
+            "pitch": "Glass bones & paper skin is balanced. Christian McCaffrey and RJ Harvey fill their RB gap (#8 of 10)."
+          },
+          {
+            "send": [
+              {
+                "name": "2026 R1 (Comedy of Errors)",
+                "position": "PICK",
+                "team": null,
+                "age": null,
+                "dynasty_value": 3556,
+                "redraft_value": 0,
+                "injury_status": null,
+                "is_pick": true
+              },
+              {
+                "name": "A.J. Brown",
+                "position": "WR",
+                "team": "PHI",
+                "age": 28,
+                "dynasty_value": 3419,
+                "redraft_value": 4279,
+                "injury_status": null,
+                "is_pick": false
+              }
+            ],
+            "my_lineup_change": 3008,
+            "their_lineup_change": -2900,
+            "my_value_delta": -949,
+            "pitch": "Glass bones & paper skin is balanced. A.J. Brown upgrades their WR; they cash in Trey McBride for 2026 1st."
+          },
+          {
+            "send": [
+              {
+                "name": "2026 R1 (Comedy of Errors)",
+                "position": "PICK",
+                "team": null,
+                "age": null,
+                "dynasty_value": 3556,
+                "redraft_value": 0,
+                "injury_status": null,
+                "is_pick": true
+              },
+              {
+                "name": "Luther Burden",
+                "position": "WR",
+                "team": "CHI",
+                "age": 22,
+                "dynasty_value": 3378,
+                "redraft_value": 1627,
+                "injury_status": null,
+                "is_pick": false
+              }
+            ],
+            "my_lineup_change": 3049,
+            "their_lineup_change": -2941,
+            "my_value_delta": -908,
+            "pitch": "Glass bones & paper skin is balanced. Luther Burden upgrades their WR; they cash in Trey McBride for 2026 1st."
+          }
+        ],
+        "acquirable": true
+      },
+      {
+        "player": {
+          "name": "De'Von Achane",
+          "position": "RB",
+          "team": "MIA",
+          "age": 24,
+          "dynasty_value": 6681,
+          "redraft_value": 8133,
+          "injury_status": "Questionable",
+          "is_pick": false
+        },
+        "owner_team": "Ligma",
+        "owner_owner": "nfaber",
+        "owner_trajectory": "balanced",
+        "owner_dynasty_rank": 2,
+        "owner_winnow_rank": 3,
+        "my_lineup_improvement": 4561,
+        "packages": [
+          {
+            "send": [
+              {
+                "name": "Christian McCaffrey",
+                "position": "RB",
+                "team": "SF",
+                "age": 29,
+                "dynasty_value": 4791,
+                "redraft_value": 8229,
+                "injury_status": null,
+                "is_pick": false
+              },
+              {
+                "name": "2026 R1 (Comedy of Errors)",
+                "position": "PICK",
+                "team": null,
+                "age": null,
+                "dynasty_value": 3556,
+                "redraft_value": 0,
+                "injury_status": null,
+                "is_pick": true
+              }
+            ],
+            "my_lineup_change": 1890,
+            "their_lineup_change": -1890,
+            "my_value_delta": -1666,
+            "pitch": "Ligma is balanced. They land Christian McCaffrey; they cash in De'Von Achane for 2026 1st, dealing from their RB surplus."
+          },
+          {
+            "send": [
+              {
+                "name": "Christian McCaffrey",
+                "position": "RB",
+                "team": "SF",
+                "age": 29,
+                "dynasty_value": 4791,
+                "redraft_value": 8229,
+                "injury_status": null,
+                "is_pick": false
+              },
+              {
+                "name": "A.J. Brown",
+                "position": "WR",
+                "team": "PHI",
+                "age": 28,
+                "dynasty_value": 3419,
+                "redraft_value": 4279,
+                "injury_status": null,
+                "is_pick": false
+              }
+            ],
+            "my_lineup_change": 244,
+            "their_lineup_change": -1187,
+            "my_value_delta": -1529,
+            "pitch": "Ligma is balanced. A.J. Brown fills their WR gap (#10 of 10), dealing from their RB surplus."
+          },
+          {
+            "send": [
+              {
+                "name": "Christian McCaffrey",
+                "position": "RB",
+                "team": "SF",
+                "age": 29,
+                "dynasty_value": 4791,
+                "redraft_value": 8229,
+                "injury_status": null,
+                "is_pick": false
+              },
+              {
+                "name": "Luther Burden",
+                "position": "WR",
+                "team": "CHI",
+                "age": 22,
+                "dynasty_value": 3378,
+                "redraft_value": 1627,
+                "injury_status": null,
+                "is_pick": false
+              }
+            ],
+            "my_lineup_change": 285,
+            "their_lineup_change": -1228,
+            "my_value_delta": -1488,
+            "pitch": "Ligma is balanced. Luther Burden fills their WR gap (#10 of 10), dealing from their RB surplus."
+          }
+        ],
+        "acquirable": true
+      },
+      {
+        "player": {
+          "name": "CeeDee Lamb",
+          "position": "WR",
+          "team": "DAL",
+          "age": 27,
+          "dynasty_value": 6185,
+          "redraft_value": 7613,
+          "injury_status": null,
+          "is_pick": false
+        },
+        "owner_team": "Glass bones & paper skin",
+        "owner_owner": "dkrauz",
+        "owner_trajectory": "balanced",
+        "owner_dynasty_rank": 8,
+        "owner_winnow_rank": 6,
+        "my_lineup_improvement": 4065,
+        "packages": [
+          {
+            "send": [
+              {
+                "name": "Christian McCaffrey",
+                "position": "RB",
+                "team": "SF",
+                "age": 29,
+                "dynasty_value": 4791,
+                "redraft_value": 8229,
+                "injury_status": null,
+                "is_pick": false
+              },
+              {
+                "name": "Jalen Hurts",
+                "position": "QB",
+                "team": "PHI",
+                "age": 27,
+                "dynasty_value": 2852,
+                "redraft_value": 1745,
+                "injury_status": null,
+                "is_pick": false
+              }
+            ],
+            "my_lineup_change": 207,
+            "their_lineup_change": -343,
+            "my_value_delta": -1458,
+            "pitch": "Glass bones & paper skin is balanced. Jalen Hurts fills their QB gap (#10 of 10)."
+          },
+          {
+            "send": [
+              {
+                "name": "Christian McCaffrey",
+                "position": "RB",
+                "team": "SF",
+                "age": 29,
+                "dynasty_value": 4791,
+                "redraft_value": 8229,
+                "injury_status": null,
+                "is_pick": false
+              },
+              {
+                "name": "RJ Harvey",
+                "position": "RB",
+                "team": "DEN",
+                "age": 25,
+                "dynasty_value": 2373,
+                "redraft_value": 1863,
+                "injury_status": null,
+                "is_pick": false
+              }
+            ],
+            "my_lineup_change": 401,
+            "their_lineup_change": -711,
+            "my_value_delta": -979,
+            "pitch": "Glass bones & paper skin is balanced. Christian McCaffrey and RJ Harvey fill their RB gap (#8 of 10)."
+          },
+          {
+            "send": [
+              {
+                "name": "2026 R1 (Comedy of Errors)",
+                "position": "PICK",
+                "team": null,
+                "age": null,
+                "dynasty_value": 3556,
+                "redraft_value": 0,
+                "injury_status": null,
+                "is_pick": true
+              },
+              {
+                "name": "A.J. Brown",
+                "position": "WR",
+                "team": "PHI",
+                "age": 28,
+                "dynasty_value": 3419,
+                "redraft_value": 4279,
+                "injury_status": null,
+                "is_pick": false
+              }
+            ],
+            "my_lineup_change": 2766,
+            "their_lineup_change": -2766,
+            "my_value_delta": -790,
+            "pitch": "Glass bones & paper skin is balanced. A.J. Brown upgrades their WR; they cash in CeeDee Lamb for 2026 1st."
+          }
+        ],
+        "acquirable": true
+      },
+      {
+        "player": {
+          "name": "Omarion Hampton",
+          "position": "RB",
+          "team": "LAC",
+          "age": 23,
+          "dynasty_value": 6163,
+          "redraft_value": 6864,
+          "injury_status": null,
+          "is_pick": false
+        },
+        "owner_team": "Da Bell of Da Ball",
+        "owner_owner": "jmirandette",
+        "owner_trajectory": "rebuild",
+        "owner_dynasty_rank": 1,
+        "owner_winnow_rank": 4,
+        "my_lineup_improvement": 4043,
+        "packages": [
+          {
+            "send": [
+              {
+                "name": "Christian McCaffrey",
+                "position": "RB",
+                "team": "SF",
+                "age": 29,
+                "dynasty_value": 4791,
+                "redraft_value": 8229,
+                "injury_status": null,
+                "is_pick": false
+              },
+              {
+                "name": "Jalen Hurts",
+                "position": "QB",
+                "team": "PHI",
+                "age": 27,
+                "dynasty_value": 2852,
+                "redraft_value": 1745,
+                "injury_status": null,
+                "is_pick": false
+              }
+            ],
+            "my_lineup_change": 532,
+            "their_lineup_change": -1372,
+            "my_value_delta": -1480,
+            "pitch": "Da Bell of Da Ball is rebuilding. Christian McCaffrey upgrades their RB."
+          },
+          {
+            "send": [
+              {
+                "name": "Christian McCaffrey",
+                "position": "RB",
+                "team": "SF",
+                "age": 29,
+                "dynasty_value": 4791,
+                "redraft_value": 8229,
+                "injury_status": null,
+                "is_pick": false
+              },
+              {
+                "name": "RJ Harvey",
+                "position": "RB",
+                "team": "DEN",
+                "age": 25,
+                "dynasty_value": 2373,
+                "redraft_value": 1863,
+                "injury_status": null,
+                "is_pick": false
+              }
+            ],
+            "my_lineup_change": 772,
+            "their_lineup_change": -1050,
+            "my_value_delta": -1001,
+            "pitch": "Da Bell of Da Ball is rebuilding. Christian McCaffrey and RJ Harvey upgrade their RB."
+          },
+          {
+            "send": [
+              {
+                "name": "2026 R1 (Comedy of Errors)",
+                "position": "PICK",
+                "team": null,
+                "age": null,
+                "dynasty_value": 3556,
+                "redraft_value": 0,
+                "injury_status": null,
+                "is_pick": true
+              },
+              {
+                "name": "A.J. Brown",
+                "position": "WR",
+                "team": "PHI",
+                "age": 28,
+                "dynasty_value": 3419,
+                "redraft_value": 4279,
+                "injury_status": null,
+                "is_pick": false
+              }
+            ],
+            "my_lineup_change": 2744,
+            "their_lineup_change": -3261,
+            "my_value_delta": -812,
+            "pitch": "Da Bell of Da Ball is rebuilding. They land A.J. Brown; they cash in Omarion Hampton for 2026 1st."
+          }
+        ],
+        "acquirable": true
+      }
+    ],
     "mode": "dynasty"
   },
   "waivers": {
@@ -16137,7 +17369,7 @@
             "injury_status": null
           }
         ],
-        "trending_count": 19224
+        "trending_count": 19089
       },
       {
         "pickup": {
@@ -16186,7 +17418,7 @@
             "injury_status": null
           }
         ],
-        "trending_count": 3494
+        "trending_count": 3478
       },
       {
         "pickup": {
@@ -16235,7 +17467,7 @@
             "injury_status": null
           }
         ],
-        "trending_count": 3408
+        "trending_count": 3376
       },
       {
         "pickup": {
@@ -16284,7 +17516,7 @@
             "injury_status": "Questionable"
           }
         ],
-        "trending_count": 2989
+        "trending_count": 2961
       },
       {
         "pickup": {
@@ -16333,7 +17565,7 @@
             "injury_status": null
           }
         ],
-        "trending_count": 2065
+        "trending_count": 2051
       }
     ],
     "best_overall": [
@@ -16433,7 +17665,7 @@
             "injury_status": null
           }
         ],
-        "trending_count": 19224
+        "trending_count": 19089
       },
       {
         "pickup": {
@@ -16482,7 +17714,7 @@
             "injury_status": "Questionable"
           }
         ],
-        "trending_count": 2989
+        "trending_count": 2961
       },
       {
         "pickup": {
@@ -16632,7 +17864,7 @@
               "injury_status": "Questionable"
             }
           ],
-          "trending_count": 2989
+          "trending_count": 2961
         },
         {
           "pickup": {
@@ -16781,7 +18013,7 @@
               "injury_status": null
             }
           ],
-          "trending_count": 19224
+          "trending_count": 19089
         },
         {
           "pickup": {
@@ -16879,7 +18111,7 @@
               "injury_status": null
             }
           ],
-          "trending_count": 3494
+          "trending_count": 3478
         }
       ],
       "TE": [
@@ -18009,7 +19241,7 @@
       "description": "Packers running back Josh Jacobs has been released from jail Wednesday amid an ongoing investigation following his arrest on several domestic violence charges.",
       "url": "https://www.espn.com/nfl/story/_/id/48892463/packers-josh-jacobs-released-jail-investigation-ongoing",
       "published": "2026-05-27T19:31:31Z",
-      "age_hours": 28.0,
+      "age_hours": 28.2,
       "importance_score": 120,
       "high_impact": true,
       "players": [
@@ -18027,7 +19259,7 @@
       "description": "Raiders tight end Brock Bowers said he feels \"100%\" healthy entering Year 3 after he had battled a knee injury for the majority of last season.",
       "url": "https://www.espn.com/nfl/story/_/id/48904403/raiders-brock-bowers-feel-100-knee-troubles-2025",
       "published": "2026-05-28T22:32:09Z",
-      "age_hours": 1.0,
+      "age_hours": 1.2,
       "importance_score": 36,
       "high_impact": true,
       "players": [
@@ -18045,7 +19277,7 @@
       "description": "While most of the Chiefs participated in voluntary workouts this week, Rashee Rice was back in Texas serving his 30-day jail sentence after violating the terms of his probation for his role in a car crash that left multiple people injured.",
       "url": "https://www.espn.com/nfl/story/_/id/48903684/reid-chiefs-moving-forward-get-rice-caught-up",
       "published": "2026-05-28T21:32:37Z",
-      "age_hours": 2.0,
+      "age_hours": 2.2,
       "importance_score": 30,
       "high_impact": true,
       "players": [
@@ -18063,7 +19295,7 @@
       "description": "Chiefs quarterback Patrick Mahomes went through drills Thursday wearing a compression leg sleeve and black brace on his left leg.",
       "url": "https://www.espn.com/nfl/story/_/id/48903412/chiefs-mahomes-pleased-get-ota-reps-amid-knee-injury-recovery",
       "published": "2026-05-28T20:35:07Z",
-      "age_hours": 2.9,
+      "age_hours": 3.1,
       "importance_score": 30,
       "high_impact": true,
       "players": [
@@ -18081,7 +19313,7 @@
       "description": "Commanders coach Dan Quinn explains what he has seen from Jayden Daniels in the QB's return from injury.",
       "url": "https://www.espn.com/video/clip/_/id/48893979/why-jayden-daniels-mental-quickness-sticks-dan-quinn",
       "published": "2026-05-27T20:59:36Z",
-      "age_hours": 26.5,
+      "age_hours": 26.7,
       "importance_score": 30,
       "high_impact": true,
       "players": [
@@ -18099,7 +19331,7 @@
       "description": "Ian Rapoport joins Pat McAfee and reports the latest on the Packers running back after he was released from jail",
       "url": "https://www.espn.com/video/clip/_/id/48892661/next-josh-jacobs-release-jail",
       "published": "2026-05-27T18:24:52Z",
-      "age_hours": 29.1,
+      "age_hours": 29.3,
       "importance_score": 30,
       "high_impact": true,
       "players": [
@@ -18117,7 +19349,7 @@
       "description": "Eligible for an extension for the first time, Texans quarterback C.J. Stroud says he has done his part to earn a new deal but isn't focused on the negotiations.",
       "url": "https://www.espn.com/nfl/story/_/id/48902660/cj-stroud-let-contract-talks-hang-season-prep",
       "published": "2026-05-28T19:34:22Z",
-      "age_hours": 4.0,
+      "age_hours": 4.1,
       "importance_score": 15,
       "high_impact": false,
       "players": [
@@ -18135,7 +19367,7 @@
       "description": "J.J. McCarthy says there isn't \"any awkwardness\" between him and Kyler Murray, whom the Vikings signed in March to compete for Minnesota's starting quarterback duties.",
       "url": "https://www.espn.com/nfl/story/_/id/48894057/mccarthy-no-awkwardness-murray-qb1-competition",
       "published": "2026-05-28T10:40:17Z",
-      "age_hours": 12.9,
+      "age_hours": 13.0,
       "importance_score": 15,
       "high_impact": false,
       "players": [
@@ -18160,7 +19392,7 @@
       "description": "Colts QB Anthony Richardson faces an uncertain future in Indianapolis and hasn't rescinded his recent trade request. But he's not letting any of that stand in the way of doing his job, he said Wednesday.",
       "url": "https://www.espn.com/nfl/story/_/id/48894300/future-uncertain-qb-anthony-richardson-here-right-now-colts",
       "published": "2026-05-27T21:59:30Z",
-      "age_hours": 25.5,
+      "age_hours": 25.7,
       "importance_score": 15,
       "high_impact": false,
       "players": [
@@ -18178,7 +19410,7 @@
       "description": "Eagles quarterback Jalen Hurts said his relationship with A.J. Brown is \"really good\" despite all the trade talk that continues around the star receiver.",
       "url": "https://www.espn.com/nfl/story/_/id/48894116/eagles-jalen-hurts-relationship-aj-brown-really-good",
       "published": "2026-05-27T21:57:01Z",
-      "age_hours": 25.6,
+      "age_hours": 25.8,
       "importance_score": 15,
       "high_impact": false,
       "players": [

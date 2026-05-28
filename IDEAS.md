@@ -19,7 +19,6 @@ or change priority.
 |---|---|---|---|---|
 | P1 | Filter implausible like-for-like trades | S | M | A QB+RB→QB+RB swap with no age/value asymmetry is a no-deal |
 | P1 | Tier-classification purity | S | M | "Buy" tier should be picks-out, not picks+a-star-out |
-| P1 | Player-targeted trade hub | M | H | Best inside a restructured Trade Center |
 | P1 | Trade negotiation sandbox | M | M | "Paste in a trade, see the verdict" |
 | P1 | Usage trends from nflverse | L | H | Only real "alpha" data source on the list |
 | P1 | Landing page with client-side league input | M | H | Any visitor can drop in a league ID and see a report |
@@ -108,16 +107,13 @@ Trade Center / Roster / Draft Prep, with active-page highlight and an
 in-sidebar section list. Collapses to a top bar on mobile. Future hubs/pages
 slot into `_nav.html.j2` with a one-line edit.
 
-### Player-targeted trade hub &mdash; P1 · M · H
+### ~~Player-targeted trade hub~~ — SHIPPED
 
-Pick a player you covet from another team; system surfaces trade packages
-that would acquire them, ranked by what the partner would actually
-accept.
-
-The `find_trades` algorithm already accepts a tradeable pool. Add a
-filter that requires the candidate's `receive` set to include a specific
-target player. UI: target-player picker on the trades page (or inside
-the restructured Trade Center).
+Done. `/targets/` page under Trade Center: the players who'd most lift my
+optimal lineup (`find_acquisition_packages` in trades.py), each with 1–3
+acquisition packages judged for partner-acceptance under their timeline,
+plus a pitch. Possible follow-ups: a balancing throw-in coming back, a
+free-text "I want player X" picker, and win-now-mode targeting.
 
 ### Trade negotiation sandbox &mdash; P1 · M · M
 

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ report.name }} — Trade Targets</title>
+  {% set og_title = 'Trade Targets — ' + report.trades.my_team.team_name %}
+  {% set og_description = 'Players who would most upgrade your lineup, and the realistic packages to acquire each — judged by what their manager would accept.' %}
+  {% set og_path = '/leagues/' + report.slug + '/targets/' %}
+  {% include '_meta.html.j2' %}
+  <link rel="stylesheet" href="../../../style.css">
+</head>
+<body class="mode-dynasty">
+{% set active_page = 'targets' %}
+{% set nav_prefix = '../' %}
+{% set root_prefix = '../../../' %}
+<div class="layout">
+{% include '_nav.html.j2' %}
+<main class="content">
+<div class="container">
+  <header class="page-header">
+    <h1>Trade Targets — {{ report.trades.my_team.team_name }}</h1>
+    <div class="tagline">
+      {{ report.name }} &middot; {{ report.season }} &middot;
+      Players who'd most upgrade your lineup, and what it takes to get each
+      <span class="muted small">&middot; Generated {{ report.generated_at }}</span>
+    </div>
+  </header>
+
+  <p class="muted small" style="margin-top: 0.5rem;">
+    Ranked by how much each player would lift your dynasty optimal lineup.
+    Packages are filtered to ones the <em>partner</em> would plausibly accept
+    (judged by their timeline) with FantasyCalc value parity within 20%.
+    "Your net" accounts for what you give up — coveting a stud often means a
+    net lineup dip elsewhere.
+  </p>
+
+  {% macro send_chip(p) %}
+  <span class="target-send-player {% if p.is_pick %}is-pick{% endif %}">
+    {{ p.name }}
+    {% if p.is_pick %}<span class="pos-tag pick-tag">PICK</span>
+    {% else %}<span class="pos-tag">{{ p.position }}{% if p.team %} · {{ p.team }}{% endif %}</span>{% endif %}
+    <span class="muted small">{{ p.dynasty_value | money }}</span>
+  </span>
+  {% endmacro %}
+
+  {% for t in report.trades.targets %}
+  <section class="target-card">
+    <div class="target-header">
+      <div class="target-player">
+        <span class="target-name">{{ t.player.name }}</span>
+        <span class="pos-tag">{{ t.player.position }}{% if t.player.team %} · {{ t.player.team }}{% endif %}</span>
+        {% if t.player.injury_status %}<span class="injury Q">{{ t.player.injury_status }}</span>{% endif %}
+        <span class="muted small">dyn {{ t.player.dynasty_value | money }}{% if t.player.age %} · age {{ t.player.age | round | int }}{% endif %}</span>
+      </div>
+      <div class="target-meta muted small">
+        on <strong>{{ t.owner_team }}</strong>
+        <span class="trajectory-badge trajectory-{{ t.owner_trajectory }}">{{ t.owner_trajectory }}</span>
+        &middot; <span class="good">+{{ t.my_lineup_improvement | money }}</span> to your lineup
+      </div>
+    </div>
+
+    {% if t.packages %}
+    <div class="target-packages">
+      <div class="target-packages-label">What it takes</div>
+      {% for pkg in t.packages %}
+      <div class="target-package">
+        <div class="target-package-send">
+          <span class="muted small">You send</span>
+          {% for p in pkg.send %}{{ send_chip(p) }}{% endfor %}
+        </div>
+        <div class="target-package-meta">
+          <span>Your net lineup:
+            <span class="{{ 'good' if pkg.my_lineup_change > 0 else ('bad' if pkg.my_lineup_change < 0 else 'muted') }}">{{ pkg.my_lineup_change | signed }}</span>
+          </span>
+          <span>Their lineup:
+            <span class="{{ 'good' if pkg.their_lineup_change > 0 else ('bad' if pkg.their_lineup_change < 0 else 'muted') }}">{{ pkg.their_lineup_change | signed }}</span>
+          </span>
+          <span>Value gap:
+            <span class="{{ 'good' if pkg.my_value_delta >= 0 else 'bad' }}">{{ pkg.my_value_delta | signed }}</span>
+          </span>
+        </div>
+        <div class="target-package-pitch">{{ pkg.pitch }}</div>
+      </div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="target-tough muted small">
+      Tough to pry loose — no value-fair package
+      {% if t.owner_trajectory == 'win-now' %}(they're competing now and won't downgrade their lineup){% else %}clears their bar right now{% endif %}.
+    </div>
+    {% endif %}
+  </section>
+  {% endfor %}
+
+  {% if not report.trades.targets %}
+  <p class="muted">No clear upgrade targets right now — your starting lineup is strong across the board.</p>
+  {% endif %}
+
+  <div class="methodology">
+    <h3>Methodology</h3>
+    <p>
+      <strong>Target selection:</strong> every skill player on another roster
+      (dynasty value ≥ {{ 1500 }}) is tested by adding them to your roster and
+      recomputing your optimal lineup. The ones that lift it most become
+      targets — capped at the top {{ 12 }}.
+    </p>
+    <p>
+      <strong>Packages:</strong> combinations of 1–2 of your assets whose total
+      dynasty value matches the target within 20%. We require the partner to
+      accept (their lineup or asset value improves, judged by their timeline);
+      we do NOT require your own lineup to improve, since you're paying for a
+      player you want. Ranked by how clearly the partner benefits.
+    </p>
+    <p>
+      <strong>Limitations:</strong> the return is just the target (no balancing
+      throw-in coming back yet). Dynasty-mode targeting only. Win-now teams
+      rarely surface as sources — they won't sell a stud for what you can offer.
+    </p>
+  </div>
+
+  <footer class="site">
+    Data: <a href="https://docs.sleeper.com">Sleeper</a> &middot;
+    <a href="https://fantasycalc.com">FantasyCalc</a>.
+  </footer>
+</div>
+</main>
+</div>
+<script src="../../../app.js"></script>
+</body>
+</html>
