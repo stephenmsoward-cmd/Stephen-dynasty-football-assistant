@@ -40,19 +40,39 @@ class PickupSuggestion:
     trending_count: int | None
 
 
-def _drop_candidates_for(pickup: Player, my_roster: list[Player]) -> list[Player]:
-    """Return up to DROPS_PER_PICKUP suggested drop candidates the pickup
-    could plausibly replace, sorted by ascending dynasty value."""
-    if pickup.position in {"K", "DEF"}:
-        candidates = [p for p in my_roster if p.position == pickup.position]
-    elif pickup.is_skill:
-        candidates = [p for p in my_roster if p.is_skill]
-    else:
-        candidates = [p for p in my_roster if p.position != "PICK"]
+def _drop_candidates_for(
+    pickup: Player,
+    my_roster: list[Player],
+    starter_ids: set[str],
+) -> list[Player]:
+    """Return up to DROPS_PER_PICKUP suggested drop candidates.
 
-    candidates = [c for c in candidates if c.dynasty_value < pickup.dynasty_value]
-    candidates.sort(key=lambda p: p.dynasty_value)
-    return candidates[:DROPS_PER_PICKUP]
+    Rules:
+    - Never suggest a player in the optimal starting lineup.
+    - Only suggest players worth less than the pickup.
+    - Prioritize same-position non-starters (drop a QB for a QB), then fall
+      back to the lowest-value bench players overall.
+    """
+    if pickup.position in {"K", "DEF"}:
+        pool = [p for p in my_roster if p.position == pickup.position]
+    elif pickup.is_skill:
+        pool = [p for p in my_roster if p.is_skill]
+    else:
+        pool = [p for p in my_roster if p.position != "PICK"]
+
+    pool = [
+        c for c in pool
+        if c.dynasty_value < pickup.dynasty_value and c.sleeper_id not in starter_ids
+    ]
+    same_pos = sorted(
+        [c for c in pool if c.position == pickup.position],
+        key=lambda p: p.dynasty_value,
+    )
+    other = sorted(
+        [c for c in pool if c.position != pickup.position],
+        key=lambda p: p.dynasty_value,
+    )
+    return (same_pos + other)[:DROPS_PER_PICKUP]
 
 
 def build_waiver_report(
@@ -60,9 +80,11 @@ def build_waiver_report(
     available_players: list[Player],
     trending_adds: dict[str, int],
     gap_positions: list[str],
+    starter_ids: set[str] | None = None,
 ) -> dict:
     """Returns the waiver payload. Rookies are excluded from the pool here
     (they live on the draft page)."""
+    starters = starter_ids or set()
     veterans = [p for p in available_players if not _is_rookie(p)]
     pool = sorted(
         [p for p in veterans if p.dynasty_value >= MIN_PICKUP_VALUE],
@@ -71,7 +93,7 @@ def build_waiver_report(
     )
 
     def make_suggestion(p: Player) -> PickupSuggestion:
-        drops = _drop_candidates_for(p, my_roster)
+        drops = _drop_candidates_for(p, my_roster, starters)
         return PickupSuggestion(
             pickup=p,
             suggested_drops=drops,

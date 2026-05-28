@@ -190,12 +190,30 @@ def _run_trade_search(
     strength_by_team: dict[int, dict],
     num_teams: int,
 ) -> dict:
-    """Compute all candidates + tiers for one value mode (dynasty or winnow)."""
-    vf = value_fn_for(mode)
+    """Compute all candidates + tiers for one value mode (dynasty or winnow).
+
+    `mode` is MY lens (the toggle). Each partner's lineup is judged under
+    THEIR own timeline, inferred from their trajectory: win-now partners by
+    redraft value, rebuild/balanced partners by dynasty value."""
+    my_vf = value_fn_for(mode)
     rank_by_team = {
         t["roster_id"]: (t["modes"]["dynasty"]["rank"], t["modes"]["winnow"]["rank"])
         for t in teams_data
     }
+
+    def trajectory_of(rid: int) -> str:
+        dyn, wn = rank_by_team[rid]
+        delta = dyn - wn
+        if delta > 2:
+            return "win-now"
+        if delta < -2:
+            return "rebuild"
+        return "balanced"
+
+    def their_value_fn(rid: int):
+        # Win-now teams optimize for this-season production; everyone else for
+        # long-term dynasty value.
+        return value_fn_for("winnow") if trajectory_of(rid) == "win-now" else value_fn_for("dynasty")
 
     def pitch_for(c: TradeCandidate, rid: int) -> str:
         dyn_rank, wn_rank = rank_by_team[rid]
@@ -222,13 +240,15 @@ def _run_trade_search(
             their_tradeable=their_tradeable,
             their_players=players_list,
             slots=slots,
-            value_fn=vf,
+            my_value_fn=my_vf,
+            their_value_fn=their_value_fn(rid),
         )
         top_for_team = candidates[:TOP_TRADES_PER_TEAM]
         team_candidate_dicts = []
         for c in top_for_team:
             d = candidate_to_dict(c, pos_ranks_for_mode)
             d["partner_pitch"] = pitch_for(c, rid)
+            d["partner_trajectory"] = trajectory_of(rid)
             team_candidate_dicts.append(d)
         by_team.append({
             "team": team_meta[rid],
@@ -248,6 +268,7 @@ def _run_trade_search(
         d["partner_dynasty_rank"] = rank_by_team[rid][0]
         d["partner_winnow_rank"] = rank_by_team[rid][1]
         d["partner_pitch"] = pitch_for(c, rid)
+        d["partner_trajectory"] = trajectory_of(rid)
         tiers[c.tier].append(d)
     for tier in tiers:
         tiers[tier].sort(key=lambda d: d["score"], reverse=True)
@@ -509,11 +530,17 @@ def build_league_report(
                 # roster's long-term shape; win-now gaps shift with redraft values).
                 strength = trade_report["my_team"]["position_strength"]["dynasty"]
                 gap_positions = [pos for pos, info in strength.items() if info["label"] == "gap"]
+            # Starters in my dynasty optimal lineup — never suggest dropping these.
+            my_team_record = next(t for t in teams if t["roster_id"] == my_roster_id)
+            my_starter_ids = {
+                p["sleeper_id"] for p in my_team_record["modes"]["dynasty"]["lineup"]
+            }
             waiver_report = build_waiver_report(
                 my_roster=rostered_by_team[my_roster_id],
                 available_players=available_players,
                 trending_adds=trending_adds,
                 gap_positions=gap_positions,
+                starter_ids=my_starter_ids,
             )
 
     draft_report = None

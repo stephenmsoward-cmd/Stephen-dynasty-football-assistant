@@ -208,16 +208,24 @@ def find_trades(
     their_tradeable: list[Player],
     their_players: list[Player],
     slots: list[str],
-    value_fn: ValueFn,
+    my_value_fn: ValueFn,
+    their_value_fn: ValueFn | None = None,
     value_tolerance: float = DEFAULT_VALUE_TOLERANCE,
     max_side_size: int = 2,
 ) -> list[TradeCandidate]:
     """Brute-force enumeration of 1-for-1, 2-for-1, 1-for-2, 2-for-2.
-    Heavy pre-filtering on value parity to keep lineup recomputes manageable."""
+    Heavy pre-filtering on value parity to keep lineup recomputes manageable.
 
-    # Baselines.
-    my_baseline_lineup = optimal_lineup(my_players, slots, value_fn=value_fn).total_value
-    their_baseline_lineup = optimal_lineup(their_players, slots, value_fn=value_fn).total_value
+    Each team's lineup is evaluated under its OWN value function. `my_value_fn`
+    reflects the lens the user is viewing (dynasty or win-now); `their_value_fn`
+    reflects the partner's inferred timeline (win-now teams judge by redraft,
+    rebuild/balanced by dynasty). Defaults to my_value_fn if unspecified."""
+    if their_value_fn is None:
+        their_value_fn = my_value_fn
+
+    # Baselines, each under the relevant team's value function.
+    my_baseline_lineup = optimal_lineup(my_players, slots, value_fn=my_value_fn).total_value
+    their_baseline_lineup = optimal_lineup(their_players, slots, value_fn=their_value_fn).total_value
     my_baseline_asset = _asset_total(my_tradeable)
     their_baseline_asset = _asset_total(their_tradeable)
 
@@ -252,8 +260,8 @@ def find_trades(
             p for p in send if not _is_pick(p)
         ]
 
-        new_my_lineup = optimal_lineup(new_my_players, slots, value_fn=value_fn).total_value
-        new_their_lineup = optimal_lineup(new_their_players, slots, value_fn=value_fn).total_value
+        new_my_lineup = optimal_lineup(new_my_players, slots, value_fn=my_value_fn).total_value
+        new_their_lineup = optimal_lineup(new_their_players, slots, value_fn=their_value_fn).total_value
 
         # Asset value: zero-sum on dynasty market. Sum stays balanced.
         my_val_delta = _asset_total(list(receive)) - _asset_total(list(send))

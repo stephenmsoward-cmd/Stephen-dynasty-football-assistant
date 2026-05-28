@@ -112,7 +112,7 @@
         <span class="muted small">({{ c.my_lineup_old | money }} → {{ c.my_lineup_new | money }})</span>
       </span>
       <span class="trade-meta-item">
-        Their lineup:
+        Their lineup{% if c.partner_trajectory == 'win-now' %} <span class="muted small">(win-now)</span>{% else %} <span class="muted small">(dynasty)</span>{% endif %}:
         <span class="{{ 'good' if c.their_lineup_change > 0 else ('bad' if c.their_lineup_change < 0 else 'muted') }}">
           {{ c.their_lineup_change | signed }}
         </span>

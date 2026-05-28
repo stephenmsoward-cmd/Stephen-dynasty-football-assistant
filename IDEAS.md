@@ -9,12 +9,14 @@ or change priority.
 - **Impact**: H (changes daily use, big UX or signal jump) · M (noticeable improvement) · L (polish, marginal)
 - **Priority**: P0 (do soon) · P1 (do next) · P2 (later, often blocked on season/data) · P3 (nice-to-have)
 
+> **All P0s shipped** as of this pass — partner-impact pitch, per-team
+> trajectory awareness, and smarter waiver drops. P1 is now the top of the
+> stack.
+
 ## Priority matrix
 
 | Pri | Idea | Effort | Impact | Notes |
 |---|---|---|---|---|
-| P0 | Per-team trajectory awareness in trade eval | M | H | Score each side under their *own* timeline, not the user's toggle |
-| P0 | Smarter drop suggestions on waivers | S | M | Position-matched drops, rotate candidates |
 | P1 | Filter implausible like-for-like trades | S | M | A QB+RB→QB+RB swap with no age/value asymmetry is a no-deal |
 | P1 | Hub grouping + left-hand nav | L | H | Architectural — pulls forward several other items |
 | P1 | Player-targeted trade hub | M | H | Best inside a restructured Trade Center |
@@ -44,34 +46,14 @@ or change priority.
 Done in `pipeline/pitch.py`. Every trade card carries a "How to pitch it"
 line framed around the partner's gaps, trajectory, and pick/youth angle.
 
-### Per-team trajectory awareness in trade evaluation &mdash; P0 · M · H
+### ~~Per-team trajectory awareness in trade evaluation~~ — SHIPPED
 
-Today the trade finder uses ONE value function (dynasty or win-now,
-selected by the user) for BOTH teams' lineup recomputation. In reality
-each manager evaluates trades by their own timeline:
-
-- Win-now teams care about redraft-value lineup improvement
-- Rebuild teams care about dynasty asset value (especially picks + youth)
-- Balanced teams care about both
-
-We already infer each team's timeline from the trajectory tag in
-`rankings.py` (win-now / rebuild / balanced). Trade evaluation should
-score each side using their trajectory's appropriate value function, not
-the user's selected mode.
-
-Concrete change:
-- `find_trades()` accepts `my_value_fn` and `their_value_fn` separately
-- The partner team's `their_value_fn` is chosen by their trajectory:
-  - "win-now" → redraft_value
-  - "rebuild" → dynasty_value (with extra weight on age + picks)
-  - "balanced" → dynasty_value (current behavior)
-- Tier classification (`mutual`, `buy`, `sell`) uses each side's
-  trajectory-adjusted improvement, not raw values
-
-This composes well with the partner-impact pitch (P0): once we know what
-the partner *actually* wants, the pitch can say "Glass bones is in
-rebuild mode; this trade fills their lineup gap AND nets them future
-asset value" — much more believable than abstract lineup math.
+Done. `find_trades()` takes `my_value_fn` + `their_value_fn`; the partner's
+lineup is judged under their trajectory (win-now → redraft, rebuild/balanced
+→ dynasty). The toggle is now "my lens"; the partner's side is fixed by their
+inferred timeline. Trade cards annotate "Their lineup (win-now/dynasty)".
+Possible follow-up: weight rebuild-team improvement explicitly toward picks +
+youth (currently they just use dynasty value, which already favors youth).
 
 ### Filter implausible like-for-like trades &mdash; P1 · S · M
 
@@ -94,14 +76,11 @@ Result: lateral swaps with no reason to happen disappear from the top
 tiers; trades with clear "older for younger" or "depth for star" stories
 remain.
 
-### Smarter drop suggestions on waivers &mdash; P0 · S · M
+### ~~Smarter drop suggestions on waivers~~ — SHIPPED
 
-Currently waiver pickups always suggest the lowest-value rostered skill
-player as the drop candidate. Improve by:
-- Matching drop position to pickup position when sensible (RB pickup →
-  RB drop)
-- Surfacing 2–3 candidates instead of always the same one
-- Avoiding suggesting starters
+Done. `_drop_candidates_for` now excludes optimal-lineup starters and
+prioritizes same-position non-starters (drop a QB for a QB), falling back to
+the lowest-value bench overall. Three options shown per pickup.
 
 ### Hub grouping + left-hand nav &mdash; P1 · L · H
 
