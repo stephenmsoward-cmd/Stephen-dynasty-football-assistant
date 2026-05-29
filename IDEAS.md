@@ -33,13 +33,9 @@ or change priority.
 
 | Pri | Idea | Effort | Impact | Notes |
 |---|---|---|---|---|
-| P1 | Filter implausible like-for-like trades | S | M | A QB+RB→QB+RB swap with no age/value asymmetry is a no-deal |
-| P1 | Tier-classification purity | S | M | "Buy" tier should be picks-out, not picks+a-star-out |
 | P1 | Trade negotiation sandbox | M | M | "Paste in a trade, see the verdict" (review: "trade analyzer") |
 | P1 | Usage trends from nflverse | L | H | Only real "alpha" data source on the list |
 | P1 | Landing page with client-side league input | M | H | Any visitor drops in a league ID, sees a report (review: "league import") |
-| P1 | Landing page hero + feature showcase | M | H | Front door must sell what's inside — review's #1 fix; pairs with the row above |
-| P1 | Roster diagnosis (team-direction narrative) | M | H | Prose "contender/rebuild + named weaknesses" per team — the dashboard→assistant leap |
 | P2 | ESPN / FantasyPros projection swap-in | S | H | Blocked on data — publishes late July |
 | P2 | Start/sit recommendations | M | H | In-season only |
 | P2 | Bye-week awareness on lineups + waivers | S | M | In-season only |
@@ -49,7 +45,7 @@ or change priority.
 | P2 | Single-owner generated output (stop double-committing docs/) | S | M | Kills rebase friction + the CI push-race failure class |
 | P2 | Weekly auto-digest (risers / overvalued / holes / trade ops) | M | H | Synthesize a sticky summary from data we already have |
 | P2 | Explain the "why" behind calls (age cliffs, scarcity) | S | M | Trust signal — attach reasoning to buy/sell/hold |
-| P2 | Design polish pass (hierarchy, tier colors, badges) + mobile QA | S | M | Mostly the landing page; league pages already carded |
+| P2 | Design polish pass (tier colors, wider tables on mobile) | S | M | Landing hierarchy + mobile rankings table DONE; tier colors + trades/compare mobile remain |
 | P3 | Dark/light mode toggle | XS | L | System auto already works |
 | P3 | Per-league OG card images | S | L | One generic image already does the job |
 | P3 | Trade activity feed (across the league) | M | M | Sleeper exposes this; add only if a real use case shows up |
@@ -80,45 +76,26 @@ inferred timeline. Trade cards annotate "Their lineup (win-now/dynasty)".
 Possible follow-up: weight rebuild-team improvement explicitly toward picks +
 youth (currently they just use dynasty value, which already favors youth).
 
-### Tier-classification purity &mdash; P1 · S · M
+### ~~Tier-classification purity~~ — SHIPPED
 
-The trade tiers classify by structural signals that can mislabel a trade.
-The "buy" tier ("Convert Futures to Win-Now: you send picks, get players
-who slot in now") fires on *"sending any pick AND my lineup improves"* — so
-a trade where you send a **pick plus a premium player** (e.g., CMC + a 2nd
-for two younger players) lands in "buy" even though you're not purely
-converting futures.
+Done in `trades.py::_classify`. "buy"/"sell" now require the pick side to be
+*predominantly* picks by dynasty value (`PREDOMINANTLY_PICKS = 0.6`), so a
+pick + an established star going out is no longer a "buy" — it falls through
+to "package" as a reshape. Verified: every buy has `pick_value_share(send)
+>= 0.6`, every sell `>= 0.6` on receive; e.g. "send CMC + Meyers → Caleb
+Williams + 2026 R1" (receive pick share 0.49) now lands in package, not sell.
+Template tier blurbs updated to say "mostly picks." Left "reshape" as a
+possible future sub-tier; routing to "package" avoided UI churn.
 
-Tighten the classifier so each tier matches its label:
-- **buy** = what you send is *predominantly* picks/futures (little or no
-  established win-now value going out)
-- **sell** = what you receive is *predominantly* picks/futures
-- Mixed player-for-player-plus-pick deals belong in "package" or a new
-  "reshape" tier, not "buy"/"sell"
+### ~~Filter implausible like-for-like trades~~ — SHIPPED
 
-Closely related to the like-for-like filter below — both are about making
-the tier a trade lands in actually describe the trade.
-
-### Filter implausible like-for-like trades &mdash; P1 · S · M
-
-A QB + RB → QB + RB trade (or any same-position-multiset swap) is rarely
-realistic unless there's meaningful age or quality asymmetry. If both
-sides come out roughly equivalent at the same positions, neither manager
-has a reason to pull the trigger.
-
-Concrete heuristic:
-1. Compute position multisets per side: `Counter([p.position for p in send])`
-2. If multisets are equal:
-   - Check per-position age difference between matched players
-   - Check per-position dynasty-value difference
-   - If neither shows asymmetry (e.g., >4 yr age gap or >25% value gap
-     for at least one position pair) → demote out of mutual tier or
-     drop entirely
-3. If position multisets differ → keep as-is (it's a real positional shift)
-
-Result: lateral swaps with no reason to happen disappear from the top
-tiers; trades with clear "older for younger" or "depth for star" stories
-remain.
+Done in `trades.py::_is_implausible_lateral`, applied during `find_trades`
+enumeration. Same position multiset on both sides + no matched pair with a
+≥4-yr age gap or >25% dynasty-value gap → dropped (a wash). Differing
+multisets are kept (real positional shifts). Verified zero lateral washes
+leak into any tier across both modes; mutual-tier reshapes with a clear
+value/age story still survive. Not applied to acquisition packages (there the
+user has explicitly chosen the target).
 
 ### ~~Smarter drop suggestions on waivers~~ — SHIPPED
 
@@ -256,37 +233,22 @@ otherwise.
 
 ## From the external review (2026-05)
 
-### Landing page hero + feature showcase &mdash; P1 · M · H
+### ~~Landing page hero + feature showcase~~ — SHIPPED
 
-The landing page (`landing.html.j2`) is a bare league list plus a "what
-this is" blurb. It's the only page most visitors see, and it sells none of
-what's actually built. Reviewer's #1 fix.
+Done. `landing.html.j2` now leads with a hero (value prop + "See a live
+example" CTA + a trust line on live Sleeper/FantasyCalc data) and a
+feature-card grid linking into each tool of the example league. Replaced the
+bare league list. Pairs with the still-open client-side league-input row.
 
-- Hero line that names the value: best-ball lineups, trade targets with
-  partner-acceptance logic, power rankings, draft boards, news — refreshed
-  nightly, grounded on live Sleeper + FantasyCalc data.
-- A short feature grid (cards w/ one-line + screenshot/thumbnail) linking
-  straight into a live example league.
-- Keep it static; it's presentation, not new compute. Pairs naturally with
-  the client-side league-input row (the "try it on your league" CTA).
+### ~~Roster diagnosis — team-direction narrative~~ — SHIPPED
 
-### Roster diagnosis — team-direction narrative &mdash; P1 · M · H
-
-The "dashboard → assistant" leap the reviewer kept circling. We already
-compute the signals (trajectory tag, per-position strength gap/surplus,
-ages, lineup value); what's missing is *prose that states an opinion*.
-
-Per team, generate 2–4 sentences:
-- Direction: contender / on-the-bubble / rebuild (reuse trajectory + record
-  once in-season).
-- Named strengths and weaknesses ("WR is young but lacks a weekly top-5
-  ceiling"; "RB depth thin behind your RB1").
-- One actionable nudge ("consolidate depth for an elite WR"; "start cashing
-  aging vets for picks").
-
-Pure templating over existing data, same approach as `pitch.py`. This is
-also where "smarter recommendation text" and the "team direction engine"
-ideas land.
+Done in `diagnosis.py`. A 2–4 sentence opinionated read per team: direction
+(contender/rebuild via standing × trajectory), strongest position, soft
+spot, an aging-anchor callout (position-aware cliff ages — a 30-yo QB isn't
+flagged), and one next move. Pure templating like `pitch.py`. Surfaced as a
+card atop the league overview (my team) and as prose under every team on
+power rankings, with color-coded direction badges. This also covers the
+review's "smarter recommendation text" and "team direction engine."
 
 ### Weekly auto-digest &mdash; P2 · M · H
 
@@ -310,15 +272,16 @@ production-cliff age bands, positional scarcity, depth behind a starter.
 Small, mostly a reasoning-string layer over data we have; complements the
 roster diagnosis above.
 
-### Design polish pass &mdash; P2 · S · M
+### Design polish pass &mdash; P2 · S · M (partially done)
 
 Reviewer rated UI/UX lowest. League pages are already carded with a sidebar,
 trajectory badges, and good/bad color coding, so this is targeted, not a
 rebuild:
-- Landing page hierarchy (the worst offender) — headings, spacing, cards.
-- Consistent tier colors / badges across rankings and values.
-- Mobile QA on the newest surfaces: targets timeline toggle wrapping,
-  package meta rows, and any wide tables scrolling cleanly.
+- ~~Landing page hierarchy~~ — DONE via the hero + feature grid.
+- ~~Power rankings table on mobile~~ — DONE: metric columns hidden ≤640px,
+  `.table-scroll` safety net, direction badge wraps; no page overflow at 375px.
+- Consistent tier colors / badges across rankings and values — still open.
+- Mobile QA on the remaining wide tables (trades sides, compare) — still open.
 
 ### P3 grab-bag from the review
 

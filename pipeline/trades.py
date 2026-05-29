@@ -14,13 +14,20 @@ gains lineup value. Both sides have a reason to say yes.
 
 Tier classification (set per candidate):
   - "mutual"   — both lineups strictly improve (classic balanced swap)
-  - "buy"      — you send pick(s), receive player(s); you gain win-now lineup
-  - "sell"     — you receive pick(s), send player(s); you gain future asset
+  - "buy"      — you send PREDOMINANTLY picks/futures, receive player(s); you
+                 gain win-now lineup (a star going out alongside a pick is a
+                 reshape, not a buy → falls to "package")
+  - "sell"     — you receive PREDOMINANTLY picks/futures, send player(s); you
+                 gain future asset
   - "package"  — multi-player (any 2-for-1 / 1-for-2 / 2-for-2)
   - "asymmetric" — falls through other categories (still passes filters)
+
+Like-for-like washes (same position multiset on both sides with no age or
+value asymmetry) are dropped during enumeration — see _is_implausible_lateral.
 """
 from __future__ import annotations
 
+from collections import Counter, defaultdict
 from dataclasses import dataclass, field
 from itertools import combinations
 from typing import Callable, Iterable
@@ -55,6 +62,17 @@ PACKAGE_POOL_TOP_N = 15
 # Minimum dynasty value to consider an asset tradeable at all.
 MIN_TRADEABLE_VALUE = 300
 
+# Like-for-like (same position multiset, e.g. QB+RB ↔ QB+RB) swaps are
+# implausible unless there's a real age or value story on at least one matched
+# pair — otherwise neither manager has a reason to pull the trigger.
+LATERAL_AGE_ASYMMETRY = 4        # years between matched same-position players
+LATERAL_VALUE_ASYMMETRY = 0.25   # relative dynasty-value gap between them
+
+# A side counts as "predominantly picks/futures" when picks make up at least
+# this share of its outgoing dynasty value. Keeps the buy/sell tiers pure:
+# a pick + an established star going out is NOT a "buy", it's a reshape.
+PREDOMINANTLY_PICKS = 0.6
+
 
 def _is_pick(p: Player) -> bool:
     return p.position == "PICK"
@@ -62,6 +80,49 @@ def _is_pick(p: Player) -> bool:
 
 def _asset_total(assets: list[Player]) -> int:
     return sum(p.dynasty_value for p in assets)
+
+
+def _pick_value_share(assets: list[Player]) -> float:
+    """Fraction of a side's dynasty value that comes from draft picks."""
+    total = _asset_total(assets)
+    if total <= 0:
+        return 0.0
+    return sum(p.dynasty_value for p in assets if _is_pick(p)) / total
+
+
+def _position_multiset(assets: list[Player]) -> Counter:
+    return Counter(p.position for p in assets)
+
+
+def _is_implausible_lateral(send: list[Player], receive: list[Player]) -> bool:
+    """True when the two sides have the SAME position multiset and no matched
+    pair shows a meaningful age or value gap — a wash neither side benefits
+    from. Pairs same-position players by descending dynasty value before
+    comparing (so a stud-for-stud, scrub-for-scrub match is judged per tier).
+
+    A differing multiset (e.g. RB+pick ↔ WR) is a real positional shift and is
+    never treated as a lateral wash.
+    """
+    if _position_multiset(send) != _position_multiset(receive):
+        return False
+
+    send_by_pos: dict[str, list[Player]] = defaultdict(list)
+    recv_by_pos: dict[str, list[Player]] = defaultdict(list)
+    for p in send:
+        send_by_pos[p.position].append(p)
+    for p in receive:
+        recv_by_pos[p.position].append(p)
+
+    for pos, s_list in send_by_pos.items():
+        s_sorted = sorted(s_list, key=lambda p: p.dynasty_value, reverse=True)
+        r_sorted = sorted(recv_by_pos[pos], key=lambda p: p.dynasty_value, reverse=True)
+        for sp, rp in zip(s_sorted, r_sorted):
+            larger = max(sp.dynasty_value, rp.dynasty_value)
+            if larger > 0 and abs(sp.dynasty_value - rp.dynasty_value) / larger > LATERAL_VALUE_ASYMMETRY:
+                return False  # meaningful value gap → a real upgrade/downgrade
+            if sp.age is not None and rp.age is not None and abs(sp.age - rp.age) >= LATERAL_AGE_ASYMMETRY:
+                return False  # meaningful age gap → an old-for-young story
+    return True
 
 
 @dataclass
@@ -140,11 +201,15 @@ def _classify(c: TradeCandidate) -> str:
 
     sending_pick = any(_is_pick(p) for p in c.send)
     receiving_pick = any(_is_pick(p) for p in c.receive)
+    # Tier purity: "buy"/"sell" only when the pick side is PREDOMINANTLY picks.
+    # Sending a star alongside a pick is a reshape, not a futures-for-now buy.
+    send_mostly_picks = _pick_value_share(c.send) >= PREDOMINANTLY_PICKS
+    receive_mostly_picks = _pick_value_share(c.receive) >= PREDOMINANTLY_PICKS
 
-    if sending_pick and not receiving_pick and my_l_up:
-        return "buy"   # I send picks, I gain win-now value
-    if receiving_pick and not sending_pick and their_l_up:
-        return "sell"  # I get picks, they gain win-now value (and I gain asset)
+    if send_mostly_picks and not receiving_pick and my_l_up:
+        return "buy"   # I send (mostly) picks, I gain win-now value
+    if receive_mostly_picks and not sending_pick and their_l_up:
+        return "sell"  # I get (mostly) picks, they gain win-now value (I gain asset)
 
     if len(c.send) > 1 or len(c.receive) > 1:
         return "package"
@@ -339,6 +404,11 @@ def find_trades(
             their_lineup_change, -my_val_delta,
             my_timeline, their_timeline,
         ):
+            return
+
+        # Drop like-for-like washes (e.g. QB+RB ↔ QB+RB at parity, similar age)
+        # — neither manager has a reason to make them.
+        if _is_implausible_lateral(list(send), list(receive)):
             return
 
         c = TradeCandidate(
