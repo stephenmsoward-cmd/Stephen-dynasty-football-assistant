@@ -383,6 +383,7 @@ TOP_TARGETS = 12
 
 def _simple_player_dict(p: Player) -> dict:
     return {
+        "sleeper_id": p.sleeper_id,
         "name": p.name,
         "position": p.position,
         "team": p.team,
@@ -459,47 +460,52 @@ def build_targets(
         their_players = rostered_by_team[rid]
         their_tradeable = their_players + picks_by_team.get(rid, [])
         dyn_rank, wn_rank = rank_by_team[rid]
-        traj = _team_trajectory(dyn_rank, wn_rank)
-        their_vf = value_fn_for("winnow") if traj == "win-now" else value_fn_for("dynasty")
+        inferred = _team_trajectory(dyn_rank, wn_rank)
 
         improvement = optimal_lineup(my_players + [p], slots, value_fn=dyn_vf).total_value - my_base_lineup
-        pkgs = find_acquisition_packages(
-            target=p,
-            my_tradeable=my_tradeable,
-            my_players=my_players,
-            their_tradeable=their_tradeable,
-            their_players=their_players,
-            slots=slots,
-            my_value_fn=dyn_vf,
-            their_value_fn=their_vf,
-            their_timeline=traj,
-        )
-        pkg_dicts = [{
-            "send": [_simple_player_dict(sp) for sp in c.send],
-            "my_lineup_change": c.my_lineup_change,
-            "their_lineup_change": c.their_lineup_change,
-            "my_value_delta": c.my_value_delta,
-            "pitch": build_partner_pitch(
-                send=c.send,
-                receive=c.receive,
-                partner_name=team_meta[rid]["team_name"],
-                partner_strength=strength_by_team.get(rid, {}),
-                dynasty_rank=dyn_rank,
-                winnow_rank=wn_rank,
-                num_teams=num_teams,
-            ),
-        } for c in pkgs]
+
+        # Compute packages under each possible timeline the user might assign
+        # to this manager — so the override toggle has real data to show.
+        packages_by_timeline: dict[str, list[dict]] = {}
+        for tl in ("win-now", "balanced", "rebuild"):
+            their_vf = value_fn_for("winnow") if tl == "win-now" else value_fn_for("dynasty")
+            pkgs = find_acquisition_packages(
+                target=p,
+                my_tradeable=my_tradeable,
+                my_players=my_players,
+                their_tradeable=their_tradeable,
+                their_players=their_players,
+                slots=slots,
+                my_value_fn=dyn_vf,
+                their_value_fn=their_vf,
+                their_timeline=tl,
+            )
+            packages_by_timeline[tl] = [{
+                "send": [_simple_player_dict(sp) for sp in c.send],
+                "my_lineup_change": c.my_lineup_change,
+                "their_lineup_change": c.their_lineup_change,
+                "my_value_delta": c.my_value_delta,
+                "pitch": build_partner_pitch(
+                    send=c.send,
+                    receive=c.receive,
+                    partner_name=team_meta[rid]["team_name"],
+                    partner_strength=strength_by_team.get(rid, {}),
+                    dynasty_rank=dyn_rank,
+                    winnow_rank=wn_rank,
+                    num_teams=num_teams,
+                    trajectory_override=tl,
+                ),
+            } for c in pkgs]
 
         return {
             "player": _simple_player_dict(p),
             "owner_team": team_meta[rid]["team_name"],
             "owner_owner": team_meta[rid]["owner_display_name"],
-            "owner_trajectory": traj,
+            "inferred_trajectory": inferred,
             "owner_dynasty_rank": dyn_rank,
             "owner_winnow_rank": wn_rank,
             "my_lineup_improvement": improvement,
-            "packages": pkg_dicts,
-            "acquirable": bool(pkg_dicts),
+            "packages_by_timeline": packages_by_timeline,
         }
 
     index: dict[str, dict] = {p.sleeper_id: entry_for(p) for p in pickable}

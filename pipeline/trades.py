@@ -209,6 +209,53 @@ def _passes_improvement(
     )
 
 
+# A rebuild team will eat this much FantasyCalc market loss to acquire futures.
+REBUILD_DISCOUNT = 600
+# How much younger the incoming package must average vs the outgoing target
+# to count as a youth infusion.
+YOUTH_AGE_GAP = 2
+
+
+def _brings_youth_or_picks(incoming: list[Player], outgoing: Player) -> bool:
+    """Does the incoming package skew toward future value relative to what's
+    being given up — i.e. picks, or notably younger players?"""
+    if any(_is_pick(p) for p in incoming):
+        return True
+    skill_ages = [p.age for p in incoming if p.is_skill and p.age]
+    if not skill_ages or outgoing.age is None:
+        return False
+    avg_incoming_age = sum(skill_ages) / len(skill_ages)
+    return avg_incoming_age <= outgoing.age - YOUTH_AGE_GAP
+
+
+def _partner_accepts_acquisition(
+    their_timeline: str,
+    their_lineup_change: int,
+    their_asset_change: int,
+    send: list[Player],   # what the partner RECEIVES (my outgoing package)
+    target: Player,       # what the partner GIVES UP
+) -> bool:
+    """Acceptance for an acquisition, judged by the partner's timeline.
+
+    - win-now: their (this-season) lineup must improve.
+    - balanced: lineup OR asset-value gain.
+    - rebuild: balanced, OR a roughly-fair package (down to a small market
+      discount) that brings picks/youth — rebuilders pay slightly under market
+      to accumulate future capital."""
+    if their_timeline == "win-now":
+        return their_lineup_change >= LINEUP_MIN_IMPROVEMENT
+    base = (
+        their_lineup_change >= LINEUP_MIN_IMPROVEMENT
+        or their_asset_change >= ASSET_MIN_IMPROVEMENT
+    )
+    if their_timeline == "rebuild":
+        return base or (
+            _brings_youth_or_picks(send, target)
+            and their_asset_change >= -REBUILD_DISCOUNT
+        )
+    return base
+
+
 def _enumerate_packages(pool: list[Player], max_size: int) -> Iterable[tuple[Player, ...]]:
     """Yield 1-tuples, 2-tuples, ... up to max_size from pool."""
     for size in range(1, max_size + 1):
@@ -399,7 +446,10 @@ def find_acquisition_packages(
             their_asset_change = -my_val_delta
 
             # The partner must accept, judged by their timeline.
-            if not _side_improves(their_timeline, their_lineup_change, their_asset_change):
+            if not _partner_accepts_acquisition(
+                their_timeline, their_lineup_change, their_asset_change,
+                send=list(combo), target=target,
+            ):
                 continue
 
             c = TradeCandidate(

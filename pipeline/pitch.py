@@ -71,8 +71,11 @@ def build_partner_pitch(
     dynasty_rank: int,
     winnow_rank: int,
     num_teams: int,
+    trajectory_override: str | None = None,
 ) -> str:
-    trajectory = _trajectory(dynasty_rank, winnow_rank)
+    # Callers (e.g. the trade-target timeline override) can force a timeline;
+    # otherwise infer it from the rank spread.
+    trajectory = trajectory_override or _trajectory(dynasty_rank, winnow_rank)
 
     in_skill = [p for p in send if p.is_skill]
     in_picks = [p for p in send if p.position == "PICK"]

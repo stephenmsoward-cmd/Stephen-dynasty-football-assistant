@@ -18,9 +18,43 @@
 {% include '_nav.html.j2' %}
 <main class="content">
 <div class="container">
-  {# ---- Server-side card macro (mirrors the JS renderer in targets.js) ---- #}
+  {# ---- Package list (one timeline). Mirrors packagesHtml() in targets.js. ---- #}
+  {% macro _packages(packages, timeline) %}
+  {% if packages %}
+  <div class="target-packages">
+    <div class="target-packages-label">What it takes</div>
+    {% for pkg in packages %}
+    <div class="target-package">
+      <div class="target-package-send">
+        <span class="muted small">You send</span>
+        {% for p in pkg.send %}
+        <span class="target-send-player {% if p.is_pick %}is-pick{% endif %}">{{ p.name }}
+          {% if p.is_pick %}<span class="pos-tag pick-tag">PICK</span>{% else %}<span class="pos-tag">{{ p.position }}{% if p.team %} · {{ p.team }}{% endif %}</span>{% endif %}
+          <span class="muted small">{{ p.dynasty_value | money }}</span>
+        </span>
+        {% endfor %}
+      </div>
+      <div class="target-package-meta">
+        <span>Your net lineup: <span class="{{ 'good' if pkg.my_lineup_change > 0 else ('bad' if pkg.my_lineup_change < 0 else 'muted') }}">{{ pkg.my_lineup_change | signed }}</span></span>
+        <span>Their lineup: <span class="{{ 'good' if pkg.their_lineup_change > 0 else ('bad' if pkg.their_lineup_change < 0 else 'muted') }}">{{ pkg.their_lineup_change | signed }}</span></span>
+        <span>Value gap: <span class="{{ 'good' if pkg.my_value_delta >= 0 else 'bad' }}">{{ pkg.my_value_delta | signed }}</span></span>
+      </div>
+      <div class="target-package-pitch">{{ pkg.pitch }}</div>
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="target-tough muted small">
+    No value-fair package clears their bar
+    {% if timeline == 'win-now' %}as a win-now team (they won't downgrade their lineup){% elif timeline == 'rebuild' %}even as a rebuilder{% else %}as a balanced team{% endif %}.
+  </div>
+  {% endif %}
+  {% endmacro %}
+
+  {# ---- Full target card with timeline toggle. ---- #}
   {% macro _target_card(t) %}
-  <section class="target-card">
+  {% set inferred = t.inferred_trajectory %}
+  <section class="target-card" data-target-id="{{ t.player.sleeper_id }}">
     <div class="target-header">
       <div class="target-player">
         <span class="target-name">{{ t.player.name }}</span>
@@ -30,39 +64,20 @@
       </div>
       <div class="target-meta muted small">
         on <strong>{{ t.owner_team }}</strong>
-        <span class="trajectory-badge trajectory-{{ t.owner_trajectory }}">{{ t.owner_trajectory }}</span>
         &middot; <span class="good">+{{ t.my_lineup_improvement | money }}</span> to your lineup
       </div>
     </div>
-    {% if t.packages %}
-    <div class="target-packages">
-      <div class="target-packages-label">What it takes</div>
-      {% for pkg in t.packages %}
-      <div class="target-package">
-        <div class="target-package-send">
-          <span class="muted small">You send</span>
-          {% for p in pkg.send %}
-          <span class="target-send-player {% if p.is_pick %}is-pick{% endif %}">{{ p.name }}
-            {% if p.is_pick %}<span class="pos-tag pick-tag">PICK</span>{% else %}<span class="pos-tag">{{ p.position }}{% if p.team %} · {{ p.team }}{% endif %}</span>{% endif %}
-            <span class="muted small">{{ p.dynasty_value | money }}</span>
-          </span>
-          {% endfor %}
-        </div>
-        <div class="target-package-meta">
-          <span>Your net lineup: <span class="{{ 'good' if pkg.my_lineup_change > 0 else ('bad' if pkg.my_lineup_change < 0 else 'muted') }}">{{ pkg.my_lineup_change | signed }}</span></span>
-          <span>Their lineup: <span class="{{ 'good' if pkg.their_lineup_change > 0 else ('bad' if pkg.their_lineup_change < 0 else 'muted') }}">{{ pkg.their_lineup_change | signed }}</span></span>
-          <span>Value gap: <span class="{{ 'good' if pkg.my_value_delta >= 0 else 'bad' }}">{{ pkg.my_value_delta | signed }}</span></span>
-        </div>
-        <div class="target-package-pitch">{{ pkg.pitch }}</div>
-      </div>
+    <div class="timeline-toggle" role="tablist" aria-label="Assume their timeline">
+      <span class="timeline-toggle-label">Treat them as:</span>
+      {% for tl in ['win-now', 'balanced', 'rebuild'] %}
+      <button type="button" data-timeline="{{ tl }}" class="{% if tl == inferred %}active{% endif %}">
+        {{ tl }}{% if tl == inferred %} <span class="inferred-dot" title="Inferred from their rankings">•</span>{% endif %}
+      </button>
       {% endfor %}
     </div>
-    {% else %}
-    <div class="target-tough muted small">
-      Tough to pry loose — no value-fair package
-      {% if t.owner_trajectory == 'win-now' %}(they're competing now and won't downgrade their lineup){% else %}clears their bar right now{% endif %}.
+    <div class="target-packages-host">
+      {{ _packages(t.packages_by_timeline[inferred], inferred) }}
     </div>
-    {% endif %}
   </section>
   {% endmacro %}
 
