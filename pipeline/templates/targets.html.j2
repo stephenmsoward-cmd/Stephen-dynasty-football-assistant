@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>{{ report.name }} — Trade Targets</title>
   {% set og_title = 'Trade Targets — ' + report.trades.my_team.team_name %}
-  {% set og_description = 'Players who would most upgrade your lineup, and the realistic packages to acquire each — judged by what their manager would accept.' %}
+  {% set og_description = 'Pick a player on another roster and see the realistic packages to acquire them — judged by what their manager would accept.' %}
   {% set og_path = '/leagues/' + report.slug + '/targets/' %}
   {% include '_meta.html.j2' %}
   <link rel="stylesheet" href="../../../style.css">
@@ -18,33 +18,8 @@
 {% include '_nav.html.j2' %}
 <main class="content">
 <div class="container">
-  <header class="page-header">
-    <h1>Trade Targets — {{ report.trades.my_team.team_name }}</h1>
-    <div class="tagline">
-      {{ report.name }} &middot; {{ report.season }} &middot;
-      Players who'd most upgrade your lineup, and what it takes to get each
-      <span class="muted small">&middot; Generated {{ report.generated_at }}</span>
-    </div>
-  </header>
-
-  <p class="muted small" style="margin-top: 0.5rem;">
-    Ranked by how much each player would lift your dynasty optimal lineup.
-    Packages are filtered to ones the <em>partner</em> would plausibly accept
-    (judged by their timeline) with FantasyCalc value parity within 20%.
-    "Your net" accounts for what you give up — coveting a stud often means a
-    net lineup dip elsewhere.
-  </p>
-
-  {% macro send_chip(p) %}
-  <span class="target-send-player {% if p.is_pick %}is-pick{% endif %}">
-    {{ p.name }}
-    {% if p.is_pick %}<span class="pos-tag pick-tag">PICK</span>
-    {% else %}<span class="pos-tag">{{ p.position }}{% if p.team %} · {{ p.team }}{% endif %}</span>{% endif %}
-    <span class="muted small">{{ p.dynasty_value | money }}</span>
-  </span>
-  {% endmacro %}
-
-  {% for t in report.trades.targets %}
+  {# ---- Server-side card macro (mirrors the JS renderer in targets.js) ---- #}
+  {% macro _target_card(t) %}
   <section class="target-card">
     <div class="target-header">
       <div class="target-player">
@@ -59,7 +34,6 @@
         &middot; <span class="good">+{{ t.my_lineup_improvement | money }}</span> to your lineup
       </div>
     </div>
-
     {% if t.packages %}
     <div class="target-packages">
       <div class="target-packages-label">What it takes</div>
@@ -67,18 +41,17 @@
       <div class="target-package">
         <div class="target-package-send">
           <span class="muted small">You send</span>
-          {% for p in pkg.send %}{{ send_chip(p) }}{% endfor %}
+          {% for p in pkg.send %}
+          <span class="target-send-player {% if p.is_pick %}is-pick{% endif %}">{{ p.name }}
+            {% if p.is_pick %}<span class="pos-tag pick-tag">PICK</span>{% else %}<span class="pos-tag">{{ p.position }}{% if p.team %} · {{ p.team }}{% endif %}</span>{% endif %}
+            <span class="muted small">{{ p.dynasty_value | money }}</span>
+          </span>
+          {% endfor %}
         </div>
         <div class="target-package-meta">
-          <span>Your net lineup:
-            <span class="{{ 'good' if pkg.my_lineup_change > 0 else ('bad' if pkg.my_lineup_change < 0 else 'muted') }}">{{ pkg.my_lineup_change | signed }}</span>
-          </span>
-          <span>Their lineup:
-            <span class="{{ 'good' if pkg.their_lineup_change > 0 else ('bad' if pkg.their_lineup_change < 0 else 'muted') }}">{{ pkg.their_lineup_change | signed }}</span>
-          </span>
-          <span>Value gap:
-            <span class="{{ 'good' if pkg.my_value_delta >= 0 else 'bad' }}">{{ pkg.my_value_delta | signed }}</span>
-          </span>
+          <span>Your net lineup: <span class="{{ 'good' if pkg.my_lineup_change > 0 else ('bad' if pkg.my_lineup_change < 0 else 'muted') }}">{{ pkg.my_lineup_change | signed }}</span></span>
+          <span>Their lineup: <span class="{{ 'good' if pkg.their_lineup_change > 0 else ('bad' if pkg.their_lineup_change < 0 else 'muted') }}">{{ pkg.their_lineup_change | signed }}</span></span>
+          <span>Value gap: <span class="{{ 'good' if pkg.my_value_delta >= 0 else 'bad' }}">{{ pkg.my_value_delta | signed }}</span></span>
         </div>
         <div class="target-package-pitch">{{ pkg.pitch }}</div>
       </div>
@@ -91,31 +64,62 @@
     </div>
     {% endif %}
   </section>
-  {% endfor %}
+  {% endmacro %}
 
-  {% if not report.trades.targets %}
-  <p class="muted">No clear upgrade targets right now — your starting lineup is strong across the board.</p>
-  {% endif %}
+  <header class="page-header">
+    <h1>Trade Targets — {{ report.trades.my_team.team_name }}</h1>
+    <div class="tagline">
+      {{ report.name }} &middot; {{ report.season }} &middot;
+      Pick a player you covet, or browse the suggestions below
+      <span class="muted small">&middot; Generated {{ report.generated_at }}</span>
+    </div>
+  </header>
+
+  <section class="target-picker">
+    <label for="target-select" class="target-picker-label">Target a player on another roster</label>
+    <select id="target-select">
+      <option value="">— pick a player (top 20 RB/WR, top 10 QB/TE) —</option>
+      {% for group in report.trades.targets.picker %}
+      <optgroup label="{{ group.position }}">
+        {% for opt in group.players %}
+        <option value="{{ opt.id }}">{{ opt.label }}</option>
+        {% endfor %}
+      </optgroup>
+      {% endfor %}
+    </select>
+    <div id="target-result" class="target-result"></div>
+  </section>
+
+  <h2>Suggested Targets <span class="muted small">(biggest lineup upgrades)</span></h2>
+  <p class="muted small">
+    Ranked by how much each player would lift your dynasty optimal lineup.
+    "Your net" accounts for what you give up. Packages are filtered to ones the
+    partner would plausibly accept (their timeline), value parity within 20%.
+  </p>
+  <div id="featured-targets">
+    {% for t in report.trades.targets.featured %}
+    {{ _target_card(t) }}
+    {% endfor %}
+  </div>
 
   <div class="methodology">
     <h3>Methodology</h3>
     <p>
-      <strong>Target selection:</strong> every skill player on another roster
-      (dynasty value ≥ {{ 1500 }}) is tested by adding them to your roster and
-      recomputing your optimal lineup. The ones that lift it most become
-      targets — capped at the top {{ 12 }}.
+      <strong>Pickable set:</strong> the top 20 RB and WR and top 10 QB and TE
+      by dynasty value across other rosters. Pick any of them above.
     </p>
     <p>
-      <strong>Packages:</strong> combinations of 1–2 of your assets whose total
-      dynasty value matches the target within 20%. We require the partner to
-      accept (their lineup or asset value improves, judged by their timeline);
-      we do NOT require your own lineup to improve, since you're paying for a
-      player you want. Ranked by how clearly the partner benefits.
+      <strong>Packages:</strong> 1–2 of your assets whose total dynasty value
+      matches the target within 20%. The partner must accept (their lineup or
+      asset value improves, judged by their timeline); we don't require your
+      own lineup to improve, since you're paying for a player you want.
+      Packages are ranked by your net outcome first, then by how clearly the
+      partner benefits.
     </p>
     <p>
-      <strong>Limitations:</strong> the return is just the target (no balancing
-      throw-in coming back yet). Dynasty-mode targeting only. Win-now teams
-      rarely surface as sources — they won't sell a stud for what you can offer.
+      <strong>Limitations:</strong> return is just the target (no balancing
+      throw-in yet). Dynasty-mode targeting. Win-now teams rarely appear as
+      sources — they won't downgrade their lineup for picks.
     </p>
   </div>
 
@@ -126,6 +130,9 @@
 </div>
 </main>
 </div>
+
+<script type="application/json" id="target-index">{{ report.trades.targets.index | tojson }}</script>
 <script src="../../../app.js"></script>
+<script src="../../../targets.js"></script>
 </body>
 </html>

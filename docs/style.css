@@ -1198,7 +1198,46 @@ details.reveal-more[open] > summary {
   margin-bottom: 0.2rem;
 }
 
-/* ---- Trade Targets page ---- */
+/* ---- Trade Targets picker ---- */
+.target-picker {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.target-picker-label {
+  display: block;
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 0.4rem;
+}
+
+#target-select {
+  width: 100%;
+  max-width: 480px;
+  padding: 0.55rem 0.7rem;
+  font: inherit;
+  font-size: 0.92rem;
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+#target-select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.target-result:not(:empty) { margin-top: 1rem; }
+.target-result .target-card { margin: 0; }
+
+/* ---- Trade Targets cards ---- */
 .target-card {
   background: var(--surface);
   border: 1px solid var(--border);

@@ -418,10 +418,10 @@ def find_acquisition_packages(
             c.pick_flow = _set_pick_flow(c)
             results.append(c)
 
-    # Rank: easiest yes for the partner first (their benefit), then the deals
-    # where I give up the least excess value.
+    # Rank: best outcome for ME first (least painful acquisition — my net
+    # lineup change), then by how clearly the partner benefits (easier yes).
     def partner_benefit(c: TradeCandidate) -> int:
         return max(0, c.their_lineup_change) + max(0, c.their_asset_change)
 
-    results.sort(key=lambda c: (partner_benefit(c), c.my_value_delta), reverse=True)
+    results.sort(key=lambda c: (c.my_lineup_change, partner_benefit(c)), reverse=True)
     return results[:max_results]

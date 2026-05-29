@@ -403,6 +403,12 @@ def _team_trajectory(dynasty_rank: int, winnow_rank: int) -> str:
     return "balanced"
 
 
+# How many of the top players (by dynasty value) at each position, on OTHER
+# rosters, are eligible to target via the picker.
+POSITION_PICK_LIMITS = {"QB": 10, "RB": 20, "WR": 20, "TE": 10}
+TOP_FEATURED = 12
+
+
 def build_targets(
     my_roster_id: int,
     rostered_by_team: dict[int, list[Player]],
@@ -412,12 +418,15 @@ def build_targets(
     slots: list[str],
     strength_by_team: dict[int, dict],
     num_teams: int,
-) -> list[dict]:
-    """Players on other rosters whose acquisition would most improve MY dynasty
-    optimal lineup, each with the package(s) it would take to get them.
+) -> dict:
+    """Acquisition packages for the top players at each position on other
+    rosters (top 20 RB/WR, top 10 QB/TE). Returns:
+      - index: {sleeper_id: entry} for the picker
+      - picker: position-grouped option lists for the dropdown
+      - featured: the entries that most improve MY lineup (suggested targets)
 
-    Dynasty-mode targeting (long-term roster building). Acquisition packages
-    are judged for partner-acceptance under the partner's own timeline."""
+    Dynasty-mode targeting. Packages are judged for partner-acceptance under
+    the partner's own timeline."""
     dyn_vf = value_fn_for("dynasty")
     my_players = rostered_by_team[my_roster_id]
     my_tradeable = my_players + picks_by_team.get(my_roster_id, [])
@@ -428,28 +437,32 @@ def build_targets(
         for t in teams_data
     }
 
-    # Score every other-rostered skill player by how much they'd lift my lineup.
-    scored: list[tuple[int, Player, int]] = []
+    # Owning team per player (only other rosters).
+    owner_of: dict[str, int] = {}
+    by_position: dict[str, list[Player]] = {pos: [] for pos in POSITION_PICK_LIMITS}
     for rid, players in rostered_by_team.items():
         if rid == my_roster_id:
             continue
         for p in players:
-            if not p.is_skill or p.dynasty_value < TARGETS_MIN_VALUE:
-                continue
-            new_lineup = optimal_lineup(my_players + [p], slots, value_fn=dyn_vf).total_value
-            improvement = new_lineup - my_base_lineup
-            if improvement >= TARGETS_MIN_IMPROVEMENT:
-                scored.append((improvement, p, rid))
-    scored.sort(key=lambda x: x[0], reverse=True)
+            if p.position in by_position and p.dynasty_value > 0:
+                by_position[p.position].append(p)
+                owner_of[p.sleeper_id] = rid
 
-    targets: list[dict] = []
-    for improvement, p, rid in scored[:TOP_TARGETS]:
+    # Pickable set: top-N by dynasty value per position.
+    pickable: list[Player] = []
+    for pos, limit in POSITION_PICK_LIMITS.items():
+        ranked = sorted(by_position[pos], key=lambda p: p.dynasty_value, reverse=True)
+        pickable.extend(ranked[:limit])
+
+    def entry_for(p: Player) -> dict:
+        rid = owner_of[p.sleeper_id]
         their_players = rostered_by_team[rid]
         their_tradeable = their_players + picks_by_team.get(rid, [])
         dyn_rank, wn_rank = rank_by_team[rid]
         traj = _team_trajectory(dyn_rank, wn_rank)
         their_vf = value_fn_for("winnow") if traj == "win-now" else value_fn_for("dynasty")
 
+        improvement = optimal_lineup(my_players + [p], slots, value_fn=dyn_vf).total_value - my_base_lineup
         pkgs = find_acquisition_packages(
             target=p,
             my_tradeable=my_tradeable,
@@ -461,25 +474,23 @@ def build_targets(
             their_value_fn=their_vf,
             their_timeline=traj,
         )
-        pkg_dicts = []
-        for c in pkgs:
-            pkg_dicts.append({
-                "send": [_simple_player_dict(sp) for sp in c.send],
-                "my_lineup_change": c.my_lineup_change,
-                "their_lineup_change": c.their_lineup_change,
-                "my_value_delta": c.my_value_delta,
-                "pitch": build_partner_pitch(
-                    send=c.send,
-                    receive=c.receive,
-                    partner_name=team_meta[rid]["team_name"],
-                    partner_strength=strength_by_team.get(rid, {}),
-                    dynasty_rank=dyn_rank,
-                    winnow_rank=wn_rank,
-                    num_teams=num_teams,
-                ),
-            })
+        pkg_dicts = [{
+            "send": [_simple_player_dict(sp) for sp in c.send],
+            "my_lineup_change": c.my_lineup_change,
+            "their_lineup_change": c.their_lineup_change,
+            "my_value_delta": c.my_value_delta,
+            "pitch": build_partner_pitch(
+                send=c.send,
+                receive=c.receive,
+                partner_name=team_meta[rid]["team_name"],
+                partner_strength=strength_by_team.get(rid, {}),
+                dynasty_rank=dyn_rank,
+                winnow_rank=wn_rank,
+                num_teams=num_teams,
+            ),
+        } for c in pkgs]
 
-        targets.append({
+        return {
             "player": _simple_player_dict(p),
             "owner_team": team_meta[rid]["team_name"],
             "owner_owner": team_meta[rid]["owner_display_name"],
@@ -489,8 +500,33 @@ def build_targets(
             "my_lineup_improvement": improvement,
             "packages": pkg_dicts,
             "acquirable": bool(pkg_dicts),
+        }
+
+    index: dict[str, dict] = {p.sleeper_id: entry_for(p) for p in pickable}
+
+    # Picker dropdown: grouped by position, ordered by dynasty value.
+    picker = []
+    for pos in ["QB", "RB", "WR", "TE"]:
+        ranked = sorted(by_position[pos], key=lambda p: p.dynasty_value, reverse=True)[:POSITION_PICK_LIMITS[pos]]
+        picker.append({
+            "position": pos,
+            "players": [
+                {
+                    "id": p.sleeper_id,
+                    "label": f"{p.name} ({p.team or 'FA'}) — {index[p.sleeper_id]['owner_team']}",
+                }
+                for p in ranked
+            ],
         })
-    return targets
+
+    # Featured: best lineup-improvers, for the default suggestions view.
+    featured = sorted(
+        [e for e in index.values() if e["my_lineup_improvement"] >= TARGETS_MIN_IMPROVEMENT],
+        key=lambda e: e["my_lineup_improvement"],
+        reverse=True,
+    )[:TOP_FEATURED]
+
+    return {"index": index, "picker": picker, "featured": featured}
 
 
 def build_league_report(
@@ -868,9 +904,10 @@ def render_site(reports: list[dict]) -> None:
     if css_src.exists():
         (SITE / "style.css").write_text(css_src.read_text())
 
-    js_src = TEMPLATES / "app.js"
-    if js_src.exists():
-        (SITE / "app.js").write_text(js_src.read_text())
+    for js_name in ("app.js", "targets.js"):
+        js_src = TEMPLATES / js_name
+        if js_src.exists():
+            (SITE / js_name).write_text(js_src.read_text())
 
     # OG card image (shared across all pages; per-page titles in meta tags).
     make_og_image(SITE / "og.png")
