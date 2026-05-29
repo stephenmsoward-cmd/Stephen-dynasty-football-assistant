@@ -21,6 +21,7 @@ TRAJECTORY_PHRASE = {
     "balanced": "balanced",
 }
 
+_PICK_SLOT_RE = re.compile(r"(\d{4})\s+(\d+)\.(\d+)")
 _PICK_RE = re.compile(r"(\d{4})\s+R(\d+)")
 _ORDINAL = {1: "1st", 2: "2nd", 3: "3rd", 4: "4th", 5: "5th"}
 
@@ -35,9 +36,14 @@ def _trajectory(dynasty_rank: int, winnow_rank: int) -> str:
 
 
 def _asset_label(p: Player) -> str:
-    """Clean label for a player or pick. '2026 R1 (Foo)' -> '2026 1st'."""
+    """Clean label for a player or pick. '2026 1.10 (Foo)' -> '2026 1.10';
+    '2026 R1 (Foo)' -> '2026 1st'."""
     if p.position == "PICK":
-        m = _PICK_RE.search(p.name or "")
+        name = p.name or ""
+        m = _PICK_SLOT_RE.search(name)
+        if m:
+            return f"{m.group(1)} {int(m.group(2))}.{int(m.group(3)):02d}"
+        m = _PICK_RE.search(name)
         if m:
             year, rnd = m.group(1), int(m.group(2))
             return f"{year} {_ORDINAL.get(rnd, str(rnd) + 'th')}"

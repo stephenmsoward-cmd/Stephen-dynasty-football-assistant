@@ -561,16 +561,22 @@ def build_league_report(
     # Pick ownership.
     traded_picks = data.get_traded_picks(league_id)
     pick_averages = data.pick_round_averages(fc_values)
+    pick_slots = data.pick_slot_values(fc_values)
     draft_rounds = league["settings"].get("draft_rounds", 3)
     current_season = int(league["season"])
     pick_seasons = [str(current_season + i) for i in range(PICK_SEASONS_AHEAD)]
     roster_ids = [r["roster_id"] for r in rosters]
+    # Seasons whose draft order is locked (linear) → value picks by exact slot
+    # (1.01 ≠ 1.10). Future seasons with no draft yet stay on the round average.
+    slot_by_season = data.draft_slots_by_season(league_id, set(pick_seasons))
     pick_ownership = data.compute_pick_ownership(
         roster_ids=roster_ids,
         draft_rounds=draft_rounds,
         seasons=pick_seasons,
         traded_picks=traded_picks,
         pick_averages=pick_averages,
+        slot_by_season=slot_by_season,
+        slot_values=pick_slots,
     )
 
     # First pass: collect active players per team.

@@ -87,6 +87,17 @@ Williams + 2026 R1" (receive pick share 0.49) now lands in package, not sell.
 Template tier blurbs updated to say "mostly picks." Left "reshape" as a
 possible future sub-tier; routing to "package" avoided UI churn.
 
+### ~~Slot-aware draft pick values (known seasons)~~ — SHIPPED
+
+Done. When a season's Sleeper draft has a locked LINEAR order
+(`data.draft_slots_by_season`), each pick is valued at its exact slot via
+FantasyCalc `pick_slot_values` instead of the round average — so a 2026 1.01
+(7,321) is worth ~2.9× a 1.10 (2,551), and a contender's late 1st no longer
+equals a rebuilder's early 1st. Seasons with no draft created yet (2027+)
+keep the discounted round-average fallback. Picks display their slot
+("2026 1.10") when known, round ("2027 R1") otherwise; pitch labels handle
+both. Flows through trades, targets, rankings, and asset value.
+
 ### ~~Filter implausible like-for-like trades~~ — SHIPPED
 
 Done in `trades.py::_is_implausible_lateral`, applied during `find_trades`

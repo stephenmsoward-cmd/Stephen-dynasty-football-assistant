@@ -66,6 +66,46 @@ def get_traded_picks(league_id: str) -> list[dict]:
     )
 
 
+def get_drafts(league_id: str) -> list[dict]:
+    """Summaries of every draft Sleeper has created for the league."""
+    return _cached_get(
+        f"{SLEEPER_BASE}/league/{league_id}/drafts",
+        f"sleeper_drafts_{league_id}",
+        ttl_seconds=3600,
+    )
+
+
+def get_draft(draft_id: str) -> dict:
+    """Full draft object, including slot_to_roster_id once the order is set."""
+    return _cached_get(
+        f"{SLEEPER_BASE}/draft/{draft_id}",
+        f"sleeper_draft_{draft_id}",
+        ttl_seconds=3600,
+    )
+
+
+def draft_slots_by_season(league_id: str, seasons: set[str]) -> dict[str, dict[int, int]]:
+    """For each requested season whose Sleeper draft has a fixed LINEAR order,
+    return {original_roster_id: draft_slot}. Snake drafts are skipped — their
+    per-round slot isn't stable, so we keep the round-average fallback for them.
+    """
+    out: dict[str, dict[int, int]] = {}
+    for summary in get_drafts(league_id):
+        season = summary.get("season")
+        if season not in seasons or summary.get("type") != "linear":
+            continue
+        draft = get_draft(summary["draft_id"])
+        slot_to_roster = draft.get("slot_to_roster_id") or {}
+        roster_to_slot = {
+            int(rid): int(slot)
+            for slot, rid in slot_to_roster.items()
+            if rid is not None
+        }
+        if roster_to_slot:
+            out[season] = roster_to_slot
+    return out
+
+
 ESPN_BASE = "https://site.api.espn.com/apis/site/v2/sports/football/nfl"
 
 
@@ -280,14 +320,21 @@ class DraftPick:
     original_roster_id: int   # who would have this by default
     current_roster_id: int    # who has it now after trades
     dynasty_value: int
+    slot: int | None = None   # exact draft slot when the order is known (linear)
 
     def sleeper_id(self) -> str:
         return f"PICK_{self.season}_R{self.round}_O{self.original_roster_id}"
 
+    def _label(self) -> str:
+        # "2026 1.10" when the slot is locked; "2026 R1" otherwise.
+        if self.slot is not None:
+            return f"{self.season} {self.round}.{self.slot:02d}"
+        return f"{self.season} R{self.round}"
+
     def display_name(self, original_team_name: str | None = None) -> str:
         if original_team_name:
-            return f"{self.season} R{self.round} ({original_team_name})"
-        return f"{self.season} R{self.round}"
+            return f"{self._label()} ({original_team_name})"
+        return self._label()
 
 
 def compute_pick_ownership(
@@ -296,9 +343,20 @@ def compute_pick_ownership(
     seasons: list[str],
     traded_picks: list[dict],
     pick_averages: dict[tuple[str, int], int],
+    slot_by_season: dict[str, dict[int, int]] | None = None,
+    slot_values: dict[tuple[str, int, int], int] | None = None,
 ) -> dict[int, list[DraftPick]]:
     """Walks every (season, round, original_owner) pick, applies trades, and
-    returns {current_owner_roster_id: [DraftPick, ...]}."""
+    returns {current_owner_roster_id: [DraftPick, ...]}.
+
+    When the draft order for a season is known (``slot_by_season`` maps the
+    pick's ORIGINAL owner to a draft slot, e.g. a locked linear rookie draft),
+    the pick is valued at its exact slot via ``slot_values`` — so a 1.01 is
+    worth more than a 1.10. Otherwise it falls back to the round average.
+    """
+    slot_by_season = slot_by_season or {}
+    slot_values = slot_values or {}
+
     # Index trades by (season, round, original_owner) → current_owner
     trade_index: dict[tuple[str, int, int], int] = {
         (t["season"], t["round"], t["roster_id"]): t["owner_id"]
@@ -307,11 +365,17 @@ def compute_pick_ownership(
     latest = latest_pick_season(pick_averages)
     by_owner: dict[int, list[DraftPick]] = {rid: [] for rid in roster_ids}
     for season in seasons:
+        season_slots = slot_by_season.get(season, {})
         for rnd in range(1, draft_rounds + 1):
-            value = pick_value(season, rnd, pick_averages, latest_known_season=latest)
-            if value <= 0:
-                continue
+            round_avg = pick_value(season, rnd, pick_averages, latest_known_season=latest)
             for original in roster_ids:
+                # Slot is the ORIGINAL owner's draft position (linear → same
+                # slot each round). Value at that slot if we have it.
+                slot = season_slots.get(original)
+                slot_val = slot_values.get((season, rnd, slot)) if slot is not None else None
+                value = slot_val if slot_val is not None else round_avg
+                if value <= 0:
+                    continue
                 current = trade_index.get((season, rnd, original), original)
                 if current not in by_owner:
                     by_owner[current] = []
@@ -321,6 +385,7 @@ def compute_pick_ownership(
                     original_roster_id=original,
                     current_roster_id=current,
                     dynasty_value=value,
+                    slot=slot if slot_val is not None else None,
                 ))
     return by_owner
 
