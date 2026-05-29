@@ -35,7 +35,7 @@
     "BN",
     "BN"
   ],
-  "generated_at": "2026-05-29T11:16:08+00:00",
+  "generated_at": "2026-05-29T11:21:51+00:00",
   "previous_snapshot_date": "2026-05-29",
   "teams": [
     {
@@ -529,10 +529,10 @@
       },
       "rank_delta": -3,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 30.0,4.6 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 30.0,4.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "dynasty_points": 3,
-        "winnow_points": 3
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 20.3,4.2 39.7,15.5 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 20.3,4.0 39.7,17.0 59.0,16.1\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty_points": 4,
+        "winnow_points": 4
       }
     },
     {
@@ -1026,10 +1026,10 @@
       },
       "rank_delta": -1,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,9.3 30.0,1.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 30.0,2.1 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "dynasty_points": 3,
-        "winnow_points": 3
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,8.9 20.3,1.0 39.7,16.2 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 20.3,2.1 39.7,16.9 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty_points": 4,
+        "winnow_points": 4
       }
     },
     {
@@ -1491,10 +1491,10 @@
       },
       "rank_delta": 1,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,15.6 30.0,17.0 59.0,1.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 30.0,10.5 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "dynasty_points": 3,
-        "winnow_points": 3
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,15.8 20.3,17.0 39.7,2.9 59.0,1.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 20.3,9.7 39.7,15.6 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty_points": 4,
+        "winnow_points": 4
       }
     },
     {
@@ -1988,10 +1988,10 @@
       },
       "rank_delta": -3,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,8.3 30.0,1.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,6.5 30.0,1.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "dynasty_points": 3,
-        "winnow_points": 3
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,8.3 20.3,1.0 39.7,17.0 59.0,15.3\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,6.5 20.3,1.0 39.7,17.0 59.0,13.7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty_points": 4,
+        "winnow_points": 4
       }
     },
     {
@@ -2485,10 +2485,10 @@
       },
       "rank_delta": 4,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 30.0,4.6 59.0,1.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 30.0,1.0 59.0,8.3\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "dynasty_points": 3,
-        "winnow_points": 3
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 20.3,5.9 39.7,2.7 59.0,1.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 20.3,1.0 39.7,8.3 59.0,5.6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty_points": 4,
+        "winnow_points": 4
       }
     },
     {
@@ -2982,10 +2982,10 @@
       },
       "rank_delta": -2,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 30.0,11.6 59.0,1.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 30.0,7.7 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "dynasty_points": 3,
-        "winnow_points": 3
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,15.0 20.3,10.3 39.7,1.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 20.3,6.3 39.7,13.6 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty_points": 4,
+        "winnow_points": 4
       }
     },
     {
@@ -3479,10 +3479,10 @@
       },
       "rank_delta": 2,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 30.0,1.0 59.0,4.8\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,2.9 30.0,1.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "dynasty_points": 3,
-        "winnow_points": 3
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,4.9 20.3,1.0 39.7,1.9 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,2.2 20.3,1.0 39.7,10.7 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty_points": 4,
+        "winnow_points": 4
       }
     },
     {
@@ -3976,10 +3976,10 @@
       },
       "rank_delta": 2,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 30.0,3.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 30.0,2.3 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "dynasty_points": 3,
-        "winnow_points": 3
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 20.3,3.0 39.7,17.0 59.0,16.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 20.3,2.1 39.7,14.8 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty_points": 4,
+        "winnow_points": 4
       }
     },
     {
@@ -4473,10 +4473,10 @@
       },
       "rank_delta": 0,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 30.0,1.0 59.0,14.4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,8.6 30.0,1.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "dynasty_points": 3,
-        "winnow_points": 3
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,15.6 20.3,1.0 39.7,13.3 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,8.2 20.3,1.0 39.7,16.3 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty_points": 4,
+        "winnow_points": 4
       }
     },
     {
@@ -4970,10 +4970,10 @@
       },
       "rank_delta": 0,
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,7.5 30.0,17.0 59.0,1.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 30.0,3.6 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "dynasty_points": 3,
-        "winnow_points": 3
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,15.2 20.3,17.0 39.7,14.0 59.0,1.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 20.3,3.6 39.7,17.0 59.0,7.2\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty_points": 4,
+        "winnow_points": 4
       }
     }
   ],
@@ -36610,7 +36610,7 @@
       "description": "Packers running back Josh Jacobs has been released from jail Wednesday amid an ongoing investigation following his arrest on several domestic violence charges.",
       "url": "https://www.espn.com/nfl/story/_/id/48892463/packers-josh-jacobs-released-jail-investigation-ongoing",
       "published": "2026-05-27T19:31:31Z",
-      "age_hours": 39.7,
+      "age_hours": 39.8,
       "importance_score": 120,
       "high_impact": true,
       "players": [
@@ -36628,7 +36628,7 @@
       "description": "Raiders tight end Brock Bowers said he feels \"100%\" healthy entering Year 3 after he had battled a knee injury for the majority of last season.",
       "url": "https://www.espn.com/nfl/story/_/id/48904403/raiders-brock-bowers-feel-100-knee-troubles-2025",
       "published": "2026-05-28T22:32:09Z",
-      "age_hours": 12.7,
+      "age_hours": 12.8,
       "importance_score": 36,
       "high_impact": true,
       "players": [
@@ -36646,7 +36646,7 @@
       "description": "While most of the Chiefs participated in voluntary workouts this week, Rashee Rice was back in Texas serving his 30-day jail sentence after violating the terms of his probation for his role in a car crash that left multiple people injured.",
       "url": "https://www.espn.com/nfl/story/_/id/48903684/reid-chiefs-moving-forward-get-rice-caught-up",
       "published": "2026-05-28T21:32:37Z",
-      "age_hours": 13.7,
+      "age_hours": 13.8,
       "importance_score": 30,
       "high_impact": true,
       "players": [
@@ -36664,7 +36664,7 @@
       "description": "Chiefs quarterback Patrick Mahomes went through drills Thursday wearing a compression leg sleeve and black brace on his left leg.",
       "url": "https://www.espn.com/nfl/story/_/id/48903412/chiefs-mahomes-pleased-get-ota-reps-amid-knee-injury-recovery",
       "published": "2026-05-28T20:35:07Z",
-      "age_hours": 14.7,
+      "age_hours": 14.8,
       "importance_score": 30,
       "high_impact": true,
       "players": [
@@ -36682,7 +36682,7 @@
       "description": "Commanders coach Dan Quinn explains what he has seen from Jayden Daniels in the QB's return from injury.",
       "url": "https://www.espn.com/video/clip/_/id/48893979/why-jayden-daniels-mental-quickness-sticks-dan-quinn",
       "published": "2026-05-27T20:59:36Z",
-      "age_hours": 38.3,
+      "age_hours": 38.4,
       "importance_score": 30,
       "high_impact": true,
       "players": [
@@ -36718,7 +36718,7 @@
       "description": "Murray and McCarthy are competing for the starting job, and we got an initial glimpse into how things could play out.",
       "url": "https://www.espn.com/nfl/story/_/id/48901198/nfl-minnesota-vikings-kyler-murray-jj-mccarthy",
       "published": "2026-05-29T10:00:11Z",
-      "age_hours": 1.3,
+      "age_hours": 1.4,
       "importance_score": 15,
       "high_impact": false,
       "players": [
@@ -36743,7 +36743,7 @@
       "description": "Eligible for an extension for the first time, Texans quarterback C.J. Stroud says he has done his part to earn a new deal but isn't focused on the negotiations.",
       "url": "https://www.espn.com/nfl/story/_/id/48902660/cj-stroud-let-contract-talks-hang-season-prep",
       "published": "2026-05-28T19:34:22Z",
-      "age_hours": 15.7,
+      "age_hours": 15.8,
       "importance_score": 15,
       "high_impact": false,
       "players": [
@@ -36761,7 +36761,7 @@
       "description": "J.J. McCarthy says there isn't \"any awkwardness\" between him and Kyler Murray, whom the Vikings signed in March to compete for Minnesota's starting quarterback duties.",
       "url": "https://www.espn.com/nfl/story/_/id/48894057/mccarthy-no-awkwardness-murray-qb1-competition",
       "published": "2026-05-28T10:40:17Z",
-      "age_hours": 24.6,
+      "age_hours": 24.7,
       "importance_score": 15,
       "high_impact": false,
       "players": [
@@ -36786,7 +36786,7 @@
       "description": "Colts QB Anthony Richardson faces an uncertain future in Indianapolis and hasn't rescinded his recent trade request. But he's not letting any of that stand in the way of doing his job, he said Wednesday.",
       "url": "https://www.espn.com/nfl/story/_/id/48894300/future-uncertain-qb-anthony-richardson-here-right-now-colts",
       "published": "2026-05-27T21:59:30Z",
-      "age_hours": 37.3,
+      "age_hours": 37.4,
       "importance_score": 15,
       "high_impact": false,
       "players": [
