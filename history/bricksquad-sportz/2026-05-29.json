@@ -35,7 +35,7 @@
     "BN",
     "BN"
   ],
-  "generated_at": "2026-05-29T12:41:10+00:00",
+  "generated_at": "2026-05-29T12:46:39+00:00",
   "previous_snapshot_date": "2026-05-29",
   "my_roster_id": 3,
   "teams": [
@@ -34586,7 +34586,7 @@
             "injury_status": "Questionable"
           }
         ],
-        "trending_count": 12501
+        "trending_count": 12483
       },
       {
         "pickup": {
@@ -34635,7 +34635,7 @@
             "injury_status": null
           }
         ],
-        "trending_count": 3144
+        "trending_count": 3128
       },
       {
         "pickup": {
@@ -34733,7 +34733,7 @@
             "injury_status": "Questionable"
           }
         ],
-        "trending_count": 2404
+        "trending_count": 2387
       },
       {
         "pickup": {
@@ -34882,7 +34882,7 @@
             "injury_status": "Questionable"
           }
         ],
-        "trending_count": 12501
+        "trending_count": 12483
       },
       {
         "pickup": {
@@ -35230,7 +35230,7 @@
               "injury_status": "Questionable"
             }
           ],
-          "trending_count": 12501
+          "trending_count": 12483
         },
         {
           "pickup": {
@@ -35328,7 +35328,7 @@
               "injury_status": "Questionable"
             }
           ],
-          "trending_count": 2404
+          "trending_count": 2387
         }
       ],
       "TE": [
@@ -36458,7 +36458,7 @@
       "description": "Packers running back Josh Jacobs has been released from jail Wednesday amid an ongoing investigation following his arrest on several domestic violence charges.",
       "url": "https://www.espn.com/nfl/story/_/id/48892463/packers-josh-jacobs-released-jail-investigation-ongoing",
       "published": "2026-05-27T19:31:31Z",
-      "age_hours": 41.2,
+      "age_hours": 41.3,
       "importance_score": 120,
       "high_impact": true,
       "players": [
@@ -36494,7 +36494,7 @@
       "description": "While most of the Chiefs participated in voluntary workouts this week, Rashee Rice was back in Texas serving his 30-day jail sentence after violating the terms of his probation for his role in a car crash that left multiple people injured.",
       "url": "https://www.espn.com/nfl/story/_/id/48903684/reid-chiefs-moving-forward-get-rice-caught-up",
       "published": "2026-05-28T21:32:37Z",
-      "age_hours": 15.1,
+      "age_hours": 15.2,
       "importance_score": 30,
       "high_impact": true,
       "players": [
@@ -36512,7 +36512,7 @@
       "description": "Chiefs quarterback Patrick Mahomes went through drills Thursday wearing a compression leg sleeve and black brace on his left leg.",
       "url": "https://www.espn.com/nfl/story/_/id/48903412/chiefs-mahomes-pleased-get-ota-reps-amid-knee-injury-recovery",
       "published": "2026-05-28T20:35:07Z",
-      "age_hours": 16.1,
+      "age_hours": 16.2,
       "importance_score": 30,
       "high_impact": true,
       "players": [
@@ -36530,7 +36530,7 @@
       "description": "Commanders coach Dan Quinn explains what he has seen from Jayden Daniels in the QB's return from injury.",
       "url": "https://www.espn.com/video/clip/_/id/48893979/why-jayden-daniels-mental-quickness-sticks-dan-quinn",
       "published": "2026-05-27T20:59:36Z",
-      "age_hours": 39.7,
+      "age_hours": 39.8,
       "importance_score": 30,
       "high_impact": true,
       "players": [
@@ -36548,7 +36548,7 @@
       "description": "Ian Rapoport joins Pat McAfee and reports the latest on the Packers running back after he was released from jail",
       "url": "https://www.espn.com/video/clip/_/id/48892661/next-josh-jacobs-release-jail",
       "published": "2026-05-27T18:24:52Z",
-      "age_hours": 42.3,
+      "age_hours": 42.4,
       "importance_score": 30,
       "high_impact": true,
       "players": [
@@ -36566,7 +36566,7 @@
       "description": "Murray and McCarthy are competing for the starting job, and we got an initial glimpse into how things could play out.",
       "url": "https://www.espn.com/nfl/story/_/id/48901198/nfl-minnesota-vikings-kyler-murray-jj-mccarthy",
       "published": "2026-05-29T10:00:11Z",
-      "age_hours": 2.7,
+      "age_hours": 2.8,
       "importance_score": 15,
       "high_impact": false,
       "players": [
@@ -36591,7 +36591,7 @@
       "description": "Eligible for an extension for the first time, Texans quarterback C.J. Stroud says he has done his part to earn a new deal but isn't focused on the negotiations.",
       "url": "https://www.espn.com/nfl/story/_/id/48902660/cj-stroud-let-contract-talks-hang-season-prep",
       "published": "2026-05-28T19:34:22Z",
-      "age_hours": 17.1,
+      "age_hours": 17.2,
       "importance_score": 15,
       "high_impact": false,
       "players": [
@@ -36609,7 +36609,7 @@
       "description": "J.J. McCarthy says there isn't \"any awkwardness\" between him and Kyler Murray, whom the Vikings signed in March to compete for Minnesota's starting quarterback duties.",
       "url": "https://www.espn.com/nfl/story/_/id/48894057/mccarthy-no-awkwardness-murray-qb1-competition",
       "published": "2026-05-28T10:40:17Z",
-      "age_hours": 26.0,
+      "age_hours": 26.1,
       "importance_score": 15,
       "high_impact": false,
       "players": [
@@ -36634,7 +36634,7 @@
       "description": "Colts QB Anthony Richardson faces an uncertain future in Indianapolis and hasn't rescinded his recent trade request. But he's not letting any of that stand in the way of doing his job, he said Wednesday.",
       "url": "https://www.espn.com/nfl/story/_/id/48894300/future-uncertain-qb-anthony-richardson-here-right-now-colts",
       "published": "2026-05-27T21:59:30Z",
-      "age_hours": 38.7,
+      "age_hours": 38.8,
       "importance_score": 15,
       "high_impact": false,
       "players": [
