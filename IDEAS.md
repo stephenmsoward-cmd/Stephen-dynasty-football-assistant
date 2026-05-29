@@ -13,15 +13,33 @@ or change priority.
 > trajectory awareness, and smarter waiver drops. P1 is now the top of the
 > stack.
 
+> **External review triage (2026-05).** A reviewer scored the project
+> Concept 8 / Tech 7.5 / **UI-UX 5.5** / Differentiation 7, growth "high."
+> Most of it evaluated the public **landing page** and underrates the depth
+> already inside league pages (trade targets + timeline override, partner
+> pitches, power rankings, news scoring, draft boards, compare). The valid,
+> high-leverage core: the **front door doesn't show what's behind it**, and
+> the product reads "data tool" more than "opinionated assistant." Net-new
+> items added below: landing hero + showcase, roster diagnosis narrative,
+> weekly auto-digest, explain-the-why, design polish, plus P3 (tiered
+> rankings, chat assistant, draft simulator, branding, methodology hub).
+> Already-covered review points mapped to existing rows: "league import" →
+> client-side input, "trade analyzer" → negotiation sandbox, "cross-league
+> portfolio" → multi-league. "Team direction" framing already exists as the
+> win-now/balanced/rebuild trajectory tags — the gap is *prose*, folded into
+> roster diagnosis.
+
 ## Priority matrix
 
 | Pri | Idea | Effort | Impact | Notes |
 |---|---|---|---|---|
 | P1 | Filter implausible like-for-like trades | S | M | A QB+RB→QB+RB swap with no age/value asymmetry is a no-deal |
 | P1 | Tier-classification purity | S | M | "Buy" tier should be picks-out, not picks+a-star-out |
-| P1 | Trade negotiation sandbox | M | M | "Paste in a trade, see the verdict" |
+| P1 | Trade negotiation sandbox | M | M | "Paste in a trade, see the verdict" (review: "trade analyzer") |
 | P1 | Usage trends from nflverse | L | H | Only real "alpha" data source on the list |
-| P1 | Landing page with client-side league input | M | H | Any visitor can drop in a league ID and see a report |
+| P1 | Landing page with client-side league input | M | H | Any visitor drops in a league ID, sees a report (review: "league import") |
+| P1 | Landing page hero + feature showcase | M | H | Front door must sell what's inside — review's #1 fix; pairs with the row above |
+| P1 | Roster diagnosis (team-direction narrative) | M | H | Prose "contender/rebuild + named weaknesses" per team — the dashboard→assistant leap |
 | P2 | ESPN / FantasyPros projection swap-in | S | H | Blocked on data — publishes late July |
 | P2 | Start/sit recommendations | M | H | In-season only |
 | P2 | Bye-week awareness on lineups + waivers | S | M | In-season only |
@@ -29,12 +47,20 @@ or change priority.
 | P2 | Roster age distribution chart per team | S | M | Quick "is this roster aging?" signal |
 | P2 | Global player search / filter | M | M | Cross-page utility |
 | P2 | Single-owner generated output (stop double-committing docs/) | S | M | Kills rebase friction + the CI push-race failure class |
+| P2 | Weekly auto-digest (risers / overvalued / holes / trade ops) | M | H | Synthesize a sticky summary from data we already have |
+| P2 | Explain the "why" behind calls (age cliffs, scarcity) | S | M | Trust signal — attach reasoning to buy/sell/hold |
+| P2 | Design polish pass (hierarchy, tier colors, badges) + mobile QA | S | M | Mostly the landing page; league pages already carded |
 | P3 | Dark/light mode toggle | XS | L | System auto already works |
 | P3 | Per-league OG card images | S | L | One generic image already does the job |
 | P3 | Trade activity feed (across the league) | M | M | Sleeper exposes this; add only if a real use case shows up |
 | P3 | Trade equity tracking over time | M | L | Needs months of history before it says anything |
-| P3 | Multi-league support per user | L | M | Defer until anyone outside our league actually uses it |
+| P3 | Multi-league support per user | L | M | Defer until someone outside our league uses it; unblocks cross-league exposure (review) |
 | P3 | Notifications (Discord / email) | L | L | Premature — open the site instead |
+| P3 | Tiered player rankings view | S | M | Visual tiers + colors on rankings/values |
+| P3 | AI chat assistant over league data | L | M | NL Q&A — needs a hosted endpoint, breaks static-only |
+| P3 | Rookie draft simulator | L | M | Mock the rookie draft against the need-adjusted board |
+| P3 | Branding / visual identity (name, logo, palette) | S | L | Dark mode + trajectory badges already exist |
+| P3 | Data sources & methodology hub | XS | L | Consolidate trust signals now scattered in footers |
 
 ---
 
@@ -225,3 +251,89 @@ until anyone outside our league actually uses the tool.
 Push alerts when team value changes significantly, or when a trending
 add becomes available. Premature — opening the site is fine until proven
 otherwise.
+
+---
+
+## From the external review (2026-05)
+
+### Landing page hero + feature showcase &mdash; P1 · M · H
+
+The landing page (`landing.html.j2`) is a bare league list plus a "what
+this is" blurb. It's the only page most visitors see, and it sells none of
+what's actually built. Reviewer's #1 fix.
+
+- Hero line that names the value: best-ball lineups, trade targets with
+  partner-acceptance logic, power rankings, draft boards, news — refreshed
+  nightly, grounded on live Sleeper + FantasyCalc data.
+- A short feature grid (cards w/ one-line + screenshot/thumbnail) linking
+  straight into a live example league.
+- Keep it static; it's presentation, not new compute. Pairs naturally with
+  the client-side league-input row (the "try it on your league" CTA).
+
+### Roster diagnosis — team-direction narrative &mdash; P1 · M · H
+
+The "dashboard → assistant" leap the reviewer kept circling. We already
+compute the signals (trajectory tag, per-position strength gap/surplus,
+ages, lineup value); what's missing is *prose that states an opinion*.
+
+Per team, generate 2–4 sentences:
+- Direction: contender / on-the-bubble / rebuild (reuse trajectory + record
+  once in-season).
+- Named strengths and weaknesses ("WR is young but lacks a weekly top-5
+  ceiling"; "RB depth thin behind your RB1").
+- One actionable nudge ("consolidate depth for an elite WR"; "start cashing
+  aging vets for picks").
+
+Pure templating over existing data, same approach as `pitch.py`. This is
+also where "smarter recommendation text" and the "team direction engine"
+ideas land.
+
+### Weekly auto-digest &mdash; P2 · M · H
+
+A synthesized weekly summary — the stickiness play. All inputs already
+exist; this is selection + phrasing:
+- Biggest riser / faller (history deltas, or news-feed impact once usage
+  trends land).
+- Most overvalued / undervalued asset on my roster (value vs. lineup
+  contribution).
+- Top roster weakness (position gap).
+- One or two live trade opportunities (pull from existing finder/targets).
+
+Render as a panel on the league overview; later this is the natural payload
+for the Notifications idea.
+
+### Explain the "why" behind calls &mdash; P2 · S · M
+
+Trust signal. Attach a short reason to buy/sell/hold and to target/avoid
+calls, grounded in heuristics rather than just value numbers — e.g. RB
+production-cliff age bands, positional scarcity, depth behind a starter.
+Small, mostly a reasoning-string layer over data we have; complements the
+roster diagnosis above.
+
+### Design polish pass &mdash; P2 · S · M
+
+Reviewer rated UI/UX lowest. League pages are already carded with a sidebar,
+trajectory badges, and good/bad color coding, so this is targeted, not a
+rebuild:
+- Landing page hierarchy (the worst offender) — headings, spacing, cards.
+- Consistent tier colors / badges across rankings and values.
+- Mobile QA on the newest surfaces: targets timeline toggle wrapping,
+  package meta rows, and any wide tables scrolling cleanly.
+
+### P3 grab-bag from the review
+
+- **Tiered player rankings view** (S/M): visual tier breaks + color on
+  rankings/values, the way managers actually think about players.
+- **AI chat assistant** (L/M): natural-language Q&A over league data. Note:
+  needs a hosted inference endpoint + key — breaks the static-only, zero-cost
+  model, so it's a deliberate architecture decision, not a quick add.
+- **Rookie draft simulator** (L/M): mock the rookie draft against the
+  need-adjusted board we already build in `draft.py`.
+- **Branding / visual identity** (S/L): a real name, logo, and palette. Dark
+  mode + trajectory badges already exist; this is identity polish.
+- **Data sources & methodology hub** (XS/L): one page consolidating the
+  trust signals currently scattered across page footers (Sleeper,
+  FantasyCalc, how values + lineups are computed).
+- **Cross-league player exposure**: blocked on multi-league support; once a
+  user has >1 league, "how much Bijan do I have across all of them?" is a
+  genuinely underserved feature.
