@@ -35,8 +35,9 @@
     "BN",
     "BN"
   ],
-  "generated_at": "2026-05-29T11:21:51+00:00",
+  "generated_at": "2026-05-29T11:34:12+00:00",
   "previous_snapshot_date": "2026-05-29",
+  "my_roster_id": 3,
   "teams": [
     {
       "roster_id": 4,
@@ -528,6 +529,15 @@
         }
       },
       "rank_delta": -3,
+      "diagnosis": {
+        "direction": "Contender built to last",
+        "trajectory": "rebuild",
+        "standing": "top",
+        "strength_pos": "QB",
+        "gap_pos": null,
+        "avg_age": 23.6,
+        "summary": "Da Bell of Da Ball ranks 1st of 10 in dynasty value, but sits 4th win-now \u2014 young and still maturing. QB leads the way (2nd of 10) with no glaring hole elsewhere. The starting core is young (avg age 23.6) \u2014 time is on your side. Lean in \u2014 consolidate depth into a difference-maker while you're built to win."
+      },
       "sparkline": {
         "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 20.3,4.2 39.7,15.5 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
         "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 20.3,4.0 39.7,17.0 59.0,16.1\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
@@ -1025,6 +1035,15 @@
         }
       },
       "rank_delta": -1,
+      "diagnosis": {
+        "direction": "Balanced contender",
+        "trajectory": "balanced",
+        "standing": "top",
+        "strength_pos": "RB",
+        "gap_pos": "WR",
+        "avg_age": 24.9,
+        "summary": "Ligma ranks 2nd of 10 in dynasty value. RB is a strength (1st of 10), while WR is the soft spot (10th). The starting core is young (avg age 24.9) \u2014 time is on your side. Lean in \u2014 turn depth or picks into an upgrade at WR."
+      },
       "sparkline": {
         "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,8.9 20.3,1.0 39.7,16.2 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
         "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 20.3,2.1 39.7,16.9 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
@@ -1490,6 +1509,15 @@
         }
       },
       "rank_delta": 1,
+      "diagnosis": {
+        "direction": "Balanced contender",
+        "trajectory": "balanced",
+        "standing": "top",
+        "strength_pos": "WR",
+        "gap_pos": "TE",
+        "avg_age": 26.8,
+        "summary": "Comedy of Errors ranks 3rd of 10 in dynasty value. WR is a strength (1st of 10), while TE is the soft spot (10th). Watch the clock: Mike Evans (32) and 1 other aging starter anchor the lineup. Lean in \u2014 turn depth or picks into an upgrade at TE."
+      },
       "sparkline": {
         "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,15.8 20.3,17.0 39.7,2.9 59.0,1.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
         "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 20.3,9.7 39.7,15.6 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
@@ -1987,6 +2015,15 @@
         }
       },
       "rank_delta": -3,
+      "diagnosis": {
+        "direction": "Young and rising",
+        "trajectory": "rebuild",
+        "standing": "middle",
+        "strength_pos": "RB",
+        "gap_pos": "WR",
+        "avg_age": 24.4,
+        "summary": "Mongo Money Makers ranks 4th of 10 in dynasty value, but sits 7th win-now \u2014 young and still maturing. RB is a strength (3rd of 10), while WR is the soft spot (9th). The starting core is young (avg age 24.4) \u2014 time is on your side. Keep stacking youth and picks (you already hold 6 picks worth 11,996)."
+      },
       "sparkline": {
         "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,8.3 20.3,1.0 39.7,17.0 59.0,15.3\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
         "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,6.5 20.3,1.0 39.7,17.0 59.0,13.7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
@@ -2484,6 +2521,15 @@
         }
       },
       "rank_delta": 4,
+      "diagnosis": {
+        "direction": "Pushing to contend",
+        "trajectory": "win-now",
+        "standing": "middle",
+        "strength_pos": "RB",
+        "gap_pos": null,
+        "avg_age": 27.9,
+        "summary": "Saquantum Leap ranks 5th of 10 in dynasty value, and rises to 1st win-now \u2014 a veteran-leaning roster. RB leads the way (2nd of 10) with no glaring hole elsewhere. Watch the clock: Davante Adams (33) and 3 other aging starters anchor the lineup. A targeted upgrade could push you into the top tier."
+      },
       "sparkline": {
         "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 20.3,5.9 39.7,2.7 59.0,1.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
         "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 20.3,1.0 39.7,8.3 59.0,5.6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
@@ -2981,6 +3027,15 @@
         }
       },
       "rank_delta": -2,
+      "diagnosis": {
+        "direction": "Middle of the pack",
+        "trajectory": "balanced",
+        "standing": "middle",
+        "strength_pos": null,
+        "gap_pos": null,
+        "avg_age": 25.6,
+        "summary": "Obijan Kenobi ranks 6th of 10 in dynasty value. The roster is balanced across positions. A targeted upgrade could push you into the top tier."
+      },
       "sparkline": {
         "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,15.0 20.3,10.3 39.7,1.0 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
         "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 20.3,6.3 39.7,13.6 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
@@ -3478,6 +3533,15 @@
         }
       },
       "rank_delta": 2,
+      "diagnosis": {
+        "direction": "Middle of the pack",
+        "trajectory": "balanced",
+        "standing": "middle",
+        "strength_pos": "QB",
+        "gap_pos": "TE",
+        "avg_age": 27.1,
+        "summary": "Bucky the Vampire Slayer ranks 7th of 10 in dynasty value. QB is a strength (1st of 10), while TE is the soft spot (9th). Watch the clock: Travis Kelce (36) anchors the lineup. A targeted move at TE could tip you toward contention."
+      },
       "sparkline": {
         "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,4.9 20.3,1.0 39.7,1.9 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
         "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,2.2 20.3,1.0 39.7,10.7 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
@@ -3975,6 +4039,15 @@
         }
       },
       "rank_delta": 2,
+      "diagnosis": {
+        "direction": "Rebuilding",
+        "trajectory": "balanced",
+        "standing": "bottom",
+        "strength_pos": "WR",
+        "gap_pos": "QB",
+        "avg_age": 27.3,
+        "summary": "Glass bones & paper skin ranks 8th of 10 in dynasty value. WR is a strength (3rd of 10), while QB is the soft spot (10th). Watch the clock: Derrick Henry (32) and 1 other aging starter anchor the lineup. Keep stacking youth and picks; cash Derrick Henry while the value holds (you already hold 6 picks worth 11,996)."
+      },
       "sparkline": {
         "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 20.3,3.0 39.7,17.0 59.0,16.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
         "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 20.3,2.1 39.7,14.8 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
@@ -4472,6 +4545,15 @@
         }
       },
       "rank_delta": 0,
+      "diagnosis": {
+        "direction": "Rebuilding",
+        "trajectory": "balanced",
+        "standing": "bottom",
+        "strength_pos": null,
+        "gap_pos": "TE",
+        "avg_age": 26.3,
+        "summary": "Samir\u2019s Tight End  ranks 9th of 10 in dynasty value. TE is the clear soft spot (8th of 10). Watch the clock: Terry McLaurin (30) anchors the lineup. Keep stacking youth and picks; cash Terry McLaurin while the value holds (you already hold 6 picks worth 11,996)."
+      },
       "sparkline": {
         "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,15.6 20.3,1.0 39.7,13.3 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
         "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,8.2 20.3,1.0 39.7,16.3 59.0,17.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
@@ -4969,6 +5051,15 @@
         }
       },
       "rank_delta": 0,
+      "diagnosis": {
+        "direction": "Rebuilding",
+        "trajectory": "balanced",
+        "standing": "bottom",
+        "strength_pos": "TE",
+        "gap_pos": "RB",
+        "avg_age": 24.9,
+        "summary": "cropcreamer ranks 10th of 10 in dynasty value. TE is a strength (2nd of 10), while RB is the soft spot (10th). The starting core is young (avg age 24.9) \u2014 time is on your side. Keep stacking youth and picks (you already hold 7 picks worth 13,185)."
+      },
       "sparkline": {
         "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,15.2 20.3,17.0 39.7,14.0 59.0,1.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
         "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 20.3,3.6 39.7,17.0 59.0,7.2\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
@@ -36610,7 +36701,7 @@
       "description": "Packers running back Josh Jacobs has been released from jail Wednesday amid an ongoing investigation following his arrest on several domestic violence charges.",
       "url": "https://www.espn.com/nfl/story/_/id/48892463/packers-josh-jacobs-released-jail-investigation-ongoing",
       "published": "2026-05-27T19:31:31Z",
-      "age_hours": 39.8,
+      "age_hours": 40.0,
       "importance_score": 120,
       "high_impact": true,
       "players": [
@@ -36628,7 +36719,7 @@
       "description": "Raiders tight end Brock Bowers said he feels \"100%\" healthy entering Year 3 after he had battled a knee injury for the majority of last season.",
       "url": "https://www.espn.com/nfl/story/_/id/48904403/raiders-brock-bowers-feel-100-knee-troubles-2025",
       "published": "2026-05-28T22:32:09Z",
-      "age_hours": 12.8,
+      "age_hours": 13.0,
       "importance_score": 36,
       "high_impact": true,
       "players": [
@@ -36646,7 +36737,7 @@
       "description": "While most of the Chiefs participated in voluntary workouts this week, Rashee Rice was back in Texas serving his 30-day jail sentence after violating the terms of his probation for his role in a car crash that left multiple people injured.",
       "url": "https://www.espn.com/nfl/story/_/id/48903684/reid-chiefs-moving-forward-get-rice-caught-up",
       "published": "2026-05-28T21:32:37Z",
-      "age_hours": 13.8,
+      "age_hours": 14.0,
       "importance_score": 30,
       "high_impact": true,
       "players": [
@@ -36664,7 +36755,7 @@
       "description": "Chiefs quarterback Patrick Mahomes went through drills Thursday wearing a compression leg sleeve and black brace on his left leg.",
       "url": "https://www.espn.com/nfl/story/_/id/48903412/chiefs-mahomes-pleased-get-ota-reps-amid-knee-injury-recovery",
       "published": "2026-05-28T20:35:07Z",
-      "age_hours": 14.8,
+      "age_hours": 15.0,
       "importance_score": 30,
       "high_impact": true,
       "players": [
@@ -36682,7 +36773,7 @@
       "description": "Commanders coach Dan Quinn explains what he has seen from Jayden Daniels in the QB's return from injury.",
       "url": "https://www.espn.com/video/clip/_/id/48893979/why-jayden-daniels-mental-quickness-sticks-dan-quinn",
       "published": "2026-05-27T20:59:36Z",
-      "age_hours": 38.4,
+      "age_hours": 38.6,
       "importance_score": 30,
       "high_impact": true,
       "players": [
@@ -36700,7 +36791,7 @@
       "description": "Ian Rapoport joins Pat McAfee and reports the latest on the Packers running back after he was released from jail",
       "url": "https://www.espn.com/video/clip/_/id/48892661/next-josh-jacobs-release-jail",
       "published": "2026-05-27T18:24:52Z",
-      "age_hours": 40.9,
+      "age_hours": 41.2,
       "importance_score": 30,
       "high_impact": true,
       "players": [
@@ -36718,7 +36809,7 @@
       "description": "Murray and McCarthy are competing for the starting job, and we got an initial glimpse into how things could play out.",
       "url": "https://www.espn.com/nfl/story/_/id/48901198/nfl-minnesota-vikings-kyler-murray-jj-mccarthy",
       "published": "2026-05-29T10:00:11Z",
-      "age_hours": 1.4,
+      "age_hours": 1.6,
       "importance_score": 15,
       "high_impact": false,
       "players": [
@@ -36743,7 +36834,7 @@
       "description": "Eligible for an extension for the first time, Texans quarterback C.J. Stroud says he has done his part to earn a new deal but isn't focused on the negotiations.",
       "url": "https://www.espn.com/nfl/story/_/id/48902660/cj-stroud-let-contract-talks-hang-season-prep",
       "published": "2026-05-28T19:34:22Z",
-      "age_hours": 15.8,
+      "age_hours": 16.0,
       "importance_score": 15,
       "high_impact": false,
       "players": [
@@ -36761,7 +36852,7 @@
       "description": "J.J. McCarthy says there isn't \"any awkwardness\" between him and Kyler Murray, whom the Vikings signed in March to compete for Minnesota's starting quarterback duties.",
       "url": "https://www.espn.com/nfl/story/_/id/48894057/mccarthy-no-awkwardness-murray-qb1-competition",
       "published": "2026-05-28T10:40:17Z",
-      "age_hours": 24.7,
+      "age_hours": 24.9,
       "importance_score": 15,
       "high_impact": false,
       "players": [
@@ -36786,7 +36877,7 @@
       "description": "Colts QB Anthony Richardson faces an uncertain future in Indianapolis and hasn't rescinded his recent trade request. But he's not letting any of that stand in the way of doing his job, he said Wednesday.",
       "url": "https://www.espn.com/nfl/story/_/id/48894300/future-uncertain-qb-anthony-richardson-here-right-now-colts",
       "published": "2026-05-27T21:59:30Z",
-      "age_hours": 37.4,
+      "age_hours": 37.6,
       "importance_score": 15,
       "high_impact": false,
       "players": [
@@ -36814,6 +36905,15 @@
         "player_count": 27,
         "pick_count": 6,
         "pick_value": 12475,
+        "diagnosis": {
+          "direction": "Contender built to last",
+          "trajectory": "rebuild",
+          "standing": "top",
+          "strength_pos": "QB",
+          "gap_pos": null,
+          "avg_age": 23.6,
+          "summary": "Da Bell of Da Ball ranks 1st of 10 in dynasty value, but sits 4th win-now \u2014 young and still maturing. QB leads the way (2nd of 10) with no glaring hole elsewhere. The starting core is young (avg age 23.6) \u2014 time is on your side. Lean in \u2014 consolidate depth into a difference-maker while you're built to win."
+        },
         "asset_rank": 1,
         "composite_score": 2.0,
         "trajectory": "rebuild",
@@ -36834,6 +36934,15 @@
         "player_count": 26,
         "pick_count": 6,
         "pick_value": 11996,
+        "diagnosis": {
+          "direction": "Pushing to contend",
+          "trajectory": "win-now",
+          "standing": "middle",
+          "strength_pos": "RB",
+          "gap_pos": null,
+          "avg_age": 27.9,
+          "summary": "Saquantum Leap ranks 5th of 10 in dynasty value, and rises to 1st win-now \u2014 a veteran-leaning roster. RB leads the way (2nd of 10) with no glaring hole elsewhere. Watch the clock: Davante Adams (33) and 3 other aging starters anchor the lineup. A targeted upgrade could push you into the top tier."
+        },
         "asset_rank": 2,
         "composite_score": 2.6666666666666665,
         "trajectory": "win-now",
@@ -36854,6 +36963,15 @@
         "player_count": 26,
         "pick_count": 6,
         "pick_value": 11996,
+        "diagnosis": {
+          "direction": "Balanced contender",
+          "trajectory": "balanced",
+          "standing": "top",
+          "strength_pos": "RB",
+          "gap_pos": "WR",
+          "avg_age": 24.9,
+          "summary": "Ligma ranks 2nd of 10 in dynasty value. RB is a strength (1st of 10), while WR is the soft spot (10th). The starting core is young (avg age 24.9) \u2014 time is on your side. Lean in \u2014 turn depth or picks into an upgrade at WR."
+        },
         "asset_rank": 3,
         "composite_score": 2.6666666666666665,
         "trajectory": "balanced",
@@ -36874,6 +36992,15 @@
         "player_count": 27,
         "pick_count": 4,
         "pick_value": 9318,
+        "diagnosis": {
+          "direction": "Balanced contender",
+          "trajectory": "balanced",
+          "standing": "top",
+          "strength_pos": "WR",
+          "gap_pos": "TE",
+          "avg_age": 26.8,
+          "summary": "Comedy of Errors ranks 3rd of 10 in dynasty value. WR is a strength (1st of 10), while TE is the soft spot (10th). Watch the clock: Mike Evans (32) and 1 other aging starter anchor the lineup. Lean in \u2014 turn depth or picks into an upgrade at TE."
+        },
         "asset_rank": 4,
         "composite_score": 3.0,
         "trajectory": "balanced",
@@ -36894,6 +37021,15 @@
         "player_count": 27,
         "pick_count": 6,
         "pick_value": 11996,
+        "diagnosis": {
+          "direction": "Young and rising",
+          "trajectory": "rebuild",
+          "standing": "middle",
+          "strength_pos": "RB",
+          "gap_pos": "WR",
+          "avg_age": 24.4,
+          "summary": "Mongo Money Makers ranks 4th of 10 in dynasty value, but sits 7th win-now \u2014 young and still maturing. RB is a strength (3rd of 10), while WR is the soft spot (9th). The starting core is young (avg age 24.4) \u2014 time is on your side. Keep stacking youth and picks (you already hold 6 picks worth 11,996)."
+        },
         "asset_rank": 5,
         "composite_score": 5.333333333333333,
         "trajectory": "rebuild",
@@ -36914,6 +37050,15 @@
         "player_count": 26,
         "pick_count": 6,
         "pick_value": 11996,
+        "diagnosis": {
+          "direction": "Middle of the pack",
+          "trajectory": "balanced",
+          "standing": "middle",
+          "strength_pos": "QB",
+          "gap_pos": "TE",
+          "avg_age": 27.1,
+          "summary": "Bucky the Vampire Slayer ranks 7th of 10 in dynasty value. QB is a strength (1st of 10), while TE is the soft spot (9th). Watch the clock: Travis Kelce (36) anchors the lineup. A targeted move at TE could tip you toward contention."
+        },
         "asset_rank": 7,
         "composite_score": 6.333333333333333,
         "trajectory": "balanced",
@@ -36934,6 +37079,15 @@
         "player_count": 25,
         "pick_count": 7,
         "pick_value": 13006,
+        "diagnosis": {
+          "direction": "Middle of the pack",
+          "trajectory": "balanced",
+          "standing": "middle",
+          "strength_pos": null,
+          "gap_pos": null,
+          "avg_age": 25.6,
+          "summary": "Obijan Kenobi ranks 6th of 10 in dynasty value. The roster is balanced across positions. A targeted upgrade could push you into the top tier."
+        },
         "asset_rank": 6,
         "composite_score": 6.666666666666667,
         "trajectory": "balanced",
@@ -36954,6 +37108,15 @@
         "player_count": 27,
         "pick_count": 6,
         "pick_value": 11996,
+        "diagnosis": {
+          "direction": "Rebuilding",
+          "trajectory": "balanced",
+          "standing": "bottom",
+          "strength_pos": "WR",
+          "gap_pos": "QB",
+          "avg_age": 27.3,
+          "summary": "Glass bones & paper skin ranks 8th of 10 in dynasty value. WR is a strength (3rd of 10), while QB is the soft spot (10th). Watch the clock: Derrick Henry (32) and 1 other aging starter anchor the lineup. Keep stacking youth and picks; cash Derrick Henry while the value holds (you already hold 6 picks worth 11,996)."
+        },
         "asset_rank": 9,
         "composite_score": 7.666666666666667,
         "trajectory": "balanced",
@@ -36974,6 +37137,15 @@
         "player_count": 26,
         "pick_count": 7,
         "pick_value": 13185,
+        "diagnosis": {
+          "direction": "Rebuilding",
+          "trajectory": "balanced",
+          "standing": "bottom",
+          "strength_pos": "TE",
+          "gap_pos": "RB",
+          "avg_age": 24.9,
+          "summary": "cropcreamer ranks 10th of 10 in dynasty value. TE is a strength (2nd of 10), while RB is the soft spot (10th). The starting core is young (avg age 24.9) \u2014 time is on your side. Keep stacking youth and picks (you already hold 7 picks worth 13,185)."
+        },
         "asset_rank": 8,
         "composite_score": 9.333333333333334,
         "trajectory": "balanced",
@@ -36994,6 +37166,15 @@
         "player_count": 23,
         "pick_count": 6,
         "pick_value": 11996,
+        "diagnosis": {
+          "direction": "Rebuilding",
+          "trajectory": "balanced",
+          "standing": "bottom",
+          "strength_pos": null,
+          "gap_pos": "TE",
+          "avg_age": 26.3,
+          "summary": "Samir\u2019s Tight End  ranks 9th of 10 in dynasty value. TE is the clear soft spot (8th of 10). Watch the clock: Terry McLaurin (30) anchors the lineup. Keep stacking youth and picks; cash Terry McLaurin while the value holds (you already hold 6 picks worth 11,996)."
+        },
         "asset_rank": 10,
         "composite_score": 9.333333333333334,
         "trajectory": "balanced",

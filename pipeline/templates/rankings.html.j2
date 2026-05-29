@@ -55,8 +55,8 @@
         </td>
         <td class="muted hide-mobile">{{ r.owner_display_name }}</td>
         <td>
-          <span class="trajectory-badge trajectory-{{ r.trajectory }}">
-            {{ r.trajectory }}
+          <span class="direction-badge direction-{{ r.trajectory }}">
+            {{ r.diagnosis.direction if r.diagnosis else r.trajectory }}
           </span>
         </td>
         <td class="num">
@@ -79,6 +79,12 @@
         </td>
         <td class="num"><strong>{{ "%.2f" | format(r.composite_score) }}</strong></td>
       </tr>
+      {% if r.diagnosis %}
+      <tr class="diagnosis-row">
+        <td></td>
+        <td colspan="7" class="muted small">{{ r.diagnosis.summary }}</td>
+      </tr>
+      {% endif %}
       {% endfor %}
     </tbody>
   </table>

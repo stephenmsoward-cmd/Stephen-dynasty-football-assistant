@@ -39,6 +39,20 @@
     </button>
   </div>
 
+  {% if report.my_roster_id %}
+  {% set ns = namespace(me=none) %}
+  {% for t in report.teams %}{% if t.roster_id == report.my_roster_id %}{% set ns.me = t %}{% endif %}{% endfor %}
+  {% if ns.me and ns.me.diagnosis %}
+  <section class="diagnosis-card">
+    <div class="diagnosis-head">
+      <span class="diagnosis-label">Roster diagnosis</span>
+      <span class="direction-badge direction-{{ ns.me.diagnosis.trajectory }}">{{ ns.me.diagnosis.direction }}</span>
+    </div>
+    <p class="diagnosis-summary">{{ ns.me.diagnosis.summary }}</p>
+  </section>
+  {% endif %}
+  {% endif %}
+
   {% macro standings_table(report, mode, other_mode, other_label, active_label) %}
   <table class="standings">
     <thead>

@@ -352,6 +352,108 @@ footer.site {
 
 .methodology h3 { color: var(--text); margin-top: 0; }
 
+/* ---- Landing page: hero + feature showcase ---- */
+.landing .container { max-width: 920px; }
+
+.hero {
+  padding: 2.5rem 0 2rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1rem;
+}
+.hero-eyebrow {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.6rem;
+}
+.hero h1 {
+  font-size: 2.3rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.75rem;
+}
+.hero-sub {
+  font-size: 1.08rem;
+  line-height: 1.5;
+  color: var(--muted);
+  max-width: 36em;
+  margin: 0 0 1.5rem;
+}
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1.1rem;
+}
+.btn {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.6rem 1.15rem;
+  border-radius: 7px;
+  border: 1px solid var(--border);
+  transition: background 0.12s, border-color 0.12s, transform 0.05s;
+}
+.btn:active { transform: translateY(1px); }
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #0f1115;
+}
+.btn-primary:hover { filter: brightness(1.08); }
+.btn-secondary {
+  background: var(--surface);
+  color: var(--text);
+}
+.btn-secondary:hover { border-color: var(--accent); }
+.trust-line {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
+  gap: 0.8rem;
+}
+a.feature-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 1.1rem;
+  color: var(--text);
+}
+a.feature-card:hover {
+  border-color: var(--accent);
+  background: var(--surface-2);
+}
+.feature-card h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.02rem;
+}
+.feature-card p {
+  margin: 0 0 0.75rem;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: var(--muted);
+  flex: 1;
+}
+.feature-link {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+@media (max-width: 640px) {
+  .hero h1 { font-size: 1.7rem; }
+  .hero-sub { font-size: 1rem; }
+  .hero-cta .btn { flex: 1; text-align: center; }
+}
+
 /* ---- Mode toggle ---- */
 .mode-toggle {
   display: inline-flex;
@@ -895,6 +997,65 @@ body.mode-winnow .dynasty-only { display: none; }
 .trajectory-badge.trajectory-balanced {
   background: var(--surface-2);
   color: var(--muted);
+}
+
+/* Roster diagnosis — direction label + opinionated prose. */
+.direction-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.18rem 0.55rem;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+.direction-badge.direction-win-now {
+  background: rgba(224, 175, 104, 0.18);
+  color: var(--warn);
+}
+.direction-badge.direction-rebuild {
+  background: rgba(122, 162, 247, 0.15);
+  color: var(--accent);
+}
+.direction-badge.direction-balanced {
+  background: var(--surface-2);
+  color: var(--text);
+}
+
+.diagnosis-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 8px;
+  padding: 0.85rem 1.1rem;
+  margin: 1rem 0 1.25rem;
+}
+.diagnosis-head {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.45rem;
+}
+.diagnosis-label {
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  color: var(--muted);
+}
+.diagnosis-summary {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.diagnosis-row td {
+  padding-top: 0;
+  padding-bottom: 0.6rem;
+  border-top: none;
+  line-height: 1.4;
 }
 
 @media (max-width: 640px) {

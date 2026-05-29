@@ -3,28 +3,85 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Dynasty Tools</title>
+  <title>Dynasty Tools — scouting for Sleeper dynasty leagues</title>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Dynasty Tools">
 <meta property="og:title" content="Dynasty Tools">
-<meta property="og:description" content="Best-ball projections, trade analytics, draft boards, and waiver wire for Sleeper dynasty leagues. Refreshed nightly.">
+<meta property="og:description" content="Best-ball standings, trade finder, acquisition targets, power rankings, waivers, and draft prep for Sleeper dynasty leagues. Grounded on live data, refreshed nightly.">
 <meta property="og:image" content="https://stephenmsoward-cmd.github.io/Stephen-dynasty-football-assistant/og.png">
 <meta property="og:url" content="https://stephenmsoward-cmd.github.io/Stephen-dynasty-football-assistant/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Dynasty Tools">
-<meta name="twitter:description" content="Best-ball projections, trade analytics, draft boards, and waiver wire for Sleeper dynasty leagues. Refreshed nightly.">
+<meta name="twitter:description" content="Best-ball standings, trade finder, acquisition targets, power rankings, waivers, and draft prep for Sleeper dynasty leagues. Grounded on live data, refreshed nightly.">
 <meta name="twitter:image" content="https://stephenmsoward-cmd.github.io/Stephen-dynasty-football-assistant/og.png">
-<meta name="description" content="Best-ball projections, trade analytics, draft boards, and waiver wire for Sleeper dynasty leagues. Refreshed nightly.">  <link rel="stylesheet" href="style.css">
+<meta name="description" content="Best-ball standings, trade finder, acquisition targets, power rankings, waivers, and draft prep for Sleeper dynasty leagues. Grounded on live data, refreshed nightly.">  <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="landing">
 <div class="container">
-  <header class="site">
-    <h1>Dynasty Tools</h1>
-    <div class="tagline">Best-ball projections and analytics for Sleeper dynasty leagues.</div>
-    <nav>
-      <a href="https://github.com/stephenmsoward-cmd/Stephen-dynasty-football-assistant">GitHub</a>
-    </nav>
-  </header>
+
+  <section class="hero">
+    <div class="hero-eyebrow">Dynasty Tools</div>
+    <h1>Your dynasty league, fully scouted.</h1>
+    <p class="hero-sub">
+      Best-ball standings, a trade finder, acquisition targets, power rankings,
+      waivers, and draft prep for Sleeper dynasty leagues — every roster broken
+      down so you always know your next move.
+    </p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="leagues/bricksquad-sportz/">See a live example &rarr;</a>
+      <a class="btn btn-secondary" href="https://github.com/stephenmsoward-cmd/Stephen-dynasty-football-assistant">View source</a>
+    </div>
+    <div class="trust-line">
+      Grounded on live <a href="https://docs.sleeper.com">Sleeper</a> rosters and
+      <a href="https://fantasycalc.com">FantasyCalc</a> trade values — no guesses,
+      refreshed nightly.
+    </div>
+  </section>
+
+  <h2>What you get</h2>
+  <div class="feature-grid">
+    <a class="feature-card" href="leagues/bricksquad-sportz/">
+      <h3>Best-Ball Standings</h3>
+      <p>Every roster's optimal lineup under Dynasty and Win-Now value, with rank deltas and nightly trend lines.</p>
+      <span class="feature-link">Open standings &rarr;</span>
+    </a>
+
+    <a class="feature-card" href="leagues/bricksquad-sportz/rankings/">
+      <h3>Roster Diagnosis</h3>
+      <p>An opinionated read on each team — contender or rebuild, your strength, your soft spot, and the next move to make.</p>
+      <span class="feature-link">See the read &rarr;</span>
+    </a>
+
+    <a class="feature-card" href="leagues/bricksquad-sportz/trades/">
+      <h3>Trade Finder</h3>
+      <p>Mutually beneficial deals across the league, judged by each partner's own timeline, each with a plain-English pitch.</p>
+      <span class="feature-link">Find trades &rarr;</span>
+    </a>
+
+    <a class="feature-card" href="leagues/bricksquad-sportz/targets/">
+      <h3>Trade Targets</h3>
+      <p>Pick any player on another roster and see the realistic packages to land them — and override how their manager is judged.</p>
+      <span class="feature-link">Target a player &rarr;</span>
+    </a>
+
+    <a class="feature-card" href="leagues/bricksquad-sportz/rankings/">
+      <h3>Power Rankings</h3>
+      <p>A composite of Dynasty value, Win-Now value, and total asset value (players + picks), with a trajectory tag per team.</p>
+      <span class="feature-link">Rank the league &rarr;</span>
+    </a>
+
+    <a class="feature-card" href="leagues/bricksquad-sportz/waivers/">
+      <h3>Waiver Wire</h3>
+      <p>Trending free agents matched to your roster's gaps, each paired with a smart drop suggestion that protects your starters.</p>
+      <span class="feature-link">Work the wire &rarr;</span>
+    </a>
+
+    <a class="feature-card" href="leagues/bricksquad-sportz/draft/">
+      <h3>Draft Board</h3>
+      <p>Rookie boards — both a strict value board and one adjusted for league-wide positional need — tuned to your picks.</p>
+      <span class="feature-link">Prep the draft &rarr;</span>
+    </a>
+  </div>
 
   <h2>Leagues</h2>
   <ul class="league-list">
@@ -37,27 +94,32 @@
   </ul>
 
   <div class="methodology">
-    <h3>What this is</h3>
+    <h3>How it works</h3>
     <p>
-      For each team in a Sleeper dynasty league, this site computes the
-      <strong>optimal starting lineup</strong> from all rostered players (excluding taxi and IR)
-      using the league's actual slot configuration. Values come from FantasyCalc's dynasty
-      trade values and reflect multi-year expected production with age baked in.
+      For each team in a Sleeper dynasty league, the site solves for the
+      <strong>optimal starting lineup</strong> from all rostered players
+      (excluding taxi and IR) under the league's actual slot configuration.
+      Player values come from FantasyCalc — <strong>dynasty</strong> values
+      (multi-year, age-weighted) and <strong>win-now</strong> redraft values —
+      so every ranking, trade, and target is grounded on the same live numbers
+      rather than a model's memory.
     </p>
     <p>
-      It's a way to see how teams stack up if everyone fielded their best possible lineup
-      each week — the "best ball" version of the standings.
+      Everything rebuilds nightly from the Sleeper and FantasyCalc APIs, so
+      rosters, injuries, and values stay current through the season.
     </p>
     <h3>Add your league</h3>
     <p>
       Open a pull request adding your league ID and a slug to
-      <code>leagues.yml</code>. The nightly Action will build a report at
+      <code>leagues.yml</code>. The nightly Action builds a report at
       <code>/leagues/&lt;slug&gt;/</code>.
     </p>
   </div>
 
   <footer class="site">
-    Generated 2026-05-29T11:21:51+00:00.
+    Data: <a href="https://docs.sleeper.com">Sleeper</a> &middot;
+    <a href="https://fantasycalc.com">FantasyCalc</a>.
+    Generated 2026-05-29T11:34:12+00:00.
   </footer>
 </div>
 </body>

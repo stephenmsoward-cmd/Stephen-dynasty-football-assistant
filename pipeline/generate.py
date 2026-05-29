@@ -29,6 +29,7 @@ from draft import build_draft_report
 from news import build_news_feed
 from rankings import build_power_rankings
 from compare import build_compare_report
+from diagnosis import build_team_diagnosis
 from history import build_team_series, sparkline_svg
 from og import make_og_image
 
@@ -661,6 +662,38 @@ def build_league_report(
     # Default sort: by dynasty rank for the JSON stable order.
     teams.sort(key=lambda t: t["modes"]["dynasty"]["rank"])
 
+    # Roster diagnosis: an opinionated read per team (direction + next move).
+    # Uses dynasty positional strength against the league, so compute the
+    # league-wide position totals once and label each team off them.
+    diag_pos_totals: dict[str, list[int]] = {pos: [] for pos in SKILL_POSITIONS}
+    for t in teams:
+        for pos in SKILL_POSITIONS:
+            diag_pos_totals[pos].append(t["modes"]["dynasty"]["position_totals"].get(pos, 0))
+    for pos in SKILL_POSITIONS:
+        diag_pos_totals[pos].sort(reverse=True)
+    for t in teams:
+        rid = t["roster_id"]
+        my_picks = picks_by_team.get(rid, [])
+        t["diagnosis"] = build_team_diagnosis(
+            team_name=t["team_name"],
+            dynasty_rank=t["modes"]["dynasty"]["rank"],
+            winnow_rank=t["modes"]["winnow"]["rank"],
+            num_teams=len(teams),
+            position_strength=position_strength(
+                t["modes"]["dynasty"]["position_totals"], diag_pos_totals
+            ),
+            starters=t["modes"]["dynasty"]["lineup"],
+            pick_count=len(my_picks),
+            pick_value=sum(p.dynasty_value for p in my_picks),
+        )
+
+    # Resolve "my" roster once, so the overview can surface my diagnosis.
+    my_roster_id = None
+    if my_user_id:
+        my_roster_id = next(
+            (r["roster_id"] for r in rosters if r["owner_id"] == my_user_id), None
+        )
+
     trade_report = None
     if my_user_id:
         my_roster_id = next(
@@ -820,6 +853,7 @@ def build_league_report(
         "roster_positions": slots,
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "previous_snapshot_date": prev_date,
+        "my_roster_id": my_roster_id,
         "teams": teams,
         "trades": trade_report,
         "waivers": waiver_report,

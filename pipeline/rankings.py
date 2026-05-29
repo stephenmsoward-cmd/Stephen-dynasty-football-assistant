@@ -51,6 +51,7 @@ def build_power_rankings(
             "player_count": len(players),
             "pick_count": len(picks),
             "pick_value": sum(p.dynasty_value for p in picks),
+            "diagnosis": t.get("diagnosis"),
         })
 
     # Asset rank.
