@@ -1058,6 +1058,12 @@ body.mode-winnow .dynasty-only { display: none; }
   line-height: 1.4;
 }
 
+/* Safety net for wide tables on tablet widths: scroll the table within its
+   own box rather than overflowing the page. On phones the metric columns are
+   hidden (.hide-mobile) so the table fits and the diagnosis prose reads full
+   width. */
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
 @media (max-width: 640px) {
   .rank-bar { width: 36px; }
   .rank-bar-label { font-size: 0.7rem; }
@@ -1568,4 +1574,8 @@ details.reveal-more[open] > summary {
 
   .waiver-row { grid-template-columns: 1fr; }
   .waiver-arrow { transform: rotate(90deg); padding: 0.2rem 0; }
+
+  /* Let the direction label wrap instead of forcing table width. */
+  .direction-badge { white-space: normal; }
+  .diagnosis-row td { font-size: 0.82rem; }
 }

@@ -33,6 +33,7 @@
     teams whose Dynasty and Win-Now ranks differ by more than {{ 2 }} slots.
   </p>
 
+  <div class="table-scroll">
   <table class="standings power-rankings">
     <thead>
       <tr>
@@ -40,9 +41,9 @@
         <th>Team</th>
         <th class="hide-mobile">Owner</th>
         <th>Trajectory</th>
-        <th class="num">Dynasty</th>
-        <th class="num">Win-Now</th>
-        <th class="num">Assets</th>
+        <th class="num hide-mobile">Dynasty</th>
+        <th class="num hide-mobile">Win-Now</th>
+        <th class="num hide-mobile">Assets</th>
         <th class="num">Composite</th>
       </tr>
     </thead>
@@ -59,19 +60,19 @@
             {{ r.diagnosis.direction if r.diagnosis else r.trajectory }}
           </span>
         </td>
-        <td class="num">
+        <td class="num hide-mobile">
           <div class="rank-bar-row">
             <span class="rank-bar"><span class="rank-bar-fill" style="width: {{ r.dynasty_bar_pct }}%; background: var(--accent);"></span></span>
             <span class="rank-bar-label">#{{ r.dynasty_rank }} · {{ r.dynasty_total | money }}</span>
           </div>
         </td>
-        <td class="num">
+        <td class="num hide-mobile">
           <div class="rank-bar-row">
             <span class="rank-bar"><span class="rank-bar-fill" style="width: {{ r.winnow_bar_pct }}%; background: var(--warn);"></span></span>
             <span class="rank-bar-label">#{{ r.winnow_rank }} · {{ r.winnow_total | money }}</span>
           </div>
         </td>
-        <td class="num">
+        <td class="num hide-mobile">
           <div class="rank-bar-row">
             <span class="rank-bar"><span class="rank-bar-fill" style="width: {{ r.asset_bar_pct }}%; background: var(--good);"></span></span>
             <span class="rank-bar-label">#{{ r.asset_rank }} · {{ r.asset_value | money }}</span>
@@ -88,6 +89,7 @@
       {% endfor %}
     </tbody>
   </table>
+  </div>
 
   <div class="methodology">
     <h3>Methodology</h3>
