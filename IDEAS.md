@@ -51,6 +51,7 @@ or change priority.
 | P3 | Trade activity feed (across the league) | M | M | Sleeper exposes this; add only if a real use case shows up |
 | P3 | Trade equity tracking over time | M | L | Needs months of history before it says anything |
 | P3 | Multi-league support per user | L | M | Defer until someone outside our league uses it; unblocks cross-league exposure (review) |
+| P3 | Fleaflicker / multi-platform support | L | M | Second data adapter; hard part is the player-name join to FantasyCalc + ESPN |
 | P3 | Notifications (Discord / email) | L | L | Premature — open the site instead |
 | P3 | Tiered player rankings view | S | M | Visual tiers + colors on rankings/values |
 | P3 | AI chat assistant over league data | L | M | NL Q&A — needs a hosted endpoint, breaks static-only |
@@ -236,6 +237,32 @@ months of data before it says anything reliable.
 
 A user owns multiple leagues. Today each league is independent. Defer
 until anyone outside our league actually uses the tool.
+
+### Fleaflicker / multi-platform support &mdash; P3 · L · M
+
+Today everything is Sleeper-only: `data.py` hits `api.sleeper.app` for
+rosters, users, traded picks, drafts, and the player DB, and `leagues.yml`
+takes a Sleeper `league_id`. Fleaflicker has a public read-only JSON API
+(`https://www.fleaflicker.com/api/...`, no auth for public leagues) exposing
+standings, rosters, trades, and draft data, so it's feasible as a second
+adapter.
+
+Scope:
+- New Fleaflicker client mirroring the Sleeper fetchers, plus a
+  `platform: sleeper|fleaflicker` field in `leagues.yml` to dispatch.
+- **Hard part — the value/news join.** FantasyCalc values are keyed on
+  Sleeper IDs / names and the `Player` model leans on `sleeper_id` + `espn_id`
+  throughout. Fleaflicker uses its own player IDs, so players must be matched
+  by **name** (+ team/position tiebreakers) to FantasyCalc and ESPN news.
+  Name-matching edge cases (Jr./II, "D.J." vs "DJ", recently-traded teams)
+  are where the real work is.
+- Picks/draft order differ from Sleeper's `traded_picks` + `/drafts`, so the
+  pick-ownership + slot-aware valuation need a Fleaflicker equivalent.
+
+Everything downstream (lineup solver, trades, targets, diagnosis, rankings,
+pitches) is platform-agnostic once a league is expressed as
+`{players, owners, picks}` — the work is almost entirely the adapter + the ID
+join. Verify against a real public Fleaflicker league before building.
 
 ### Notifications (Discord / email) &mdash; P3 · L · L
 
