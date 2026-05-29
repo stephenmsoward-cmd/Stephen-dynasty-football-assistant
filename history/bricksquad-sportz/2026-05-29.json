@@ -35,7 +35,7 @@
     "BN",
     "BN"
   ],
-  "generated_at": "2026-05-29T12:17:46+00:00",
+  "generated_at": "2026-05-29T12:33:49+00:00",
   "previous_snapshot_date": "2026-05-29",
   "my_roster_id": 3,
   "teams": [
@@ -34990,7 +34990,7 @@
             "injury_status": "Questionable"
           }
         ],
-        "trending_count": 13374
+        "trending_count": 12483
       },
       {
         "pickup": {
@@ -35039,7 +35039,7 @@
             "injury_status": null
           }
         ],
-        "trending_count": 3192
+        "trending_count": 3128
       },
       {
         "pickup": {
@@ -35088,7 +35088,7 @@
             "injury_status": null
           }
         ],
-        "trending_count": 2737
+        "trending_count": 2751
       },
       {
         "pickup": {
@@ -35137,7 +35137,7 @@
             "injury_status": "Questionable"
           }
         ],
-        "trending_count": 2497
+        "trending_count": 2387
       },
       {
         "pickup": {
@@ -35186,7 +35186,7 @@
             "injury_status": null
           }
         ],
-        "trending_count": 1876
+        "trending_count": 1778
       }
     ],
     "best_overall": [
@@ -35286,7 +35286,7 @@
             "injury_status": "Questionable"
           }
         ],
-        "trending_count": 13374
+        "trending_count": 12483
       },
       {
         "pickup": {
@@ -35335,7 +35335,7 @@
             "injury_status": null
           }
         ],
-        "trending_count": 2737
+        "trending_count": 2751
       },
       {
         "pickup": {
@@ -35485,7 +35485,7 @@
               "injury_status": null
             }
           ],
-          "trending_count": 2737
+          "trending_count": 2751
         },
         {
           "pickup": {
@@ -35634,7 +35634,7 @@
               "injury_status": "Questionable"
             }
           ],
-          "trending_count": 13374
+          "trending_count": 12483
         },
         {
           "pickup": {
@@ -35732,7 +35732,7 @@
               "injury_status": "Questionable"
             }
           ],
-          "trending_count": 2497
+          "trending_count": 2387
         }
       ],
       "TE": [
@@ -36862,7 +36862,7 @@
       "description": "Packers running back Josh Jacobs has been released from jail Wednesday amid an ongoing investigation following his arrest on several domestic violence charges.",
       "url": "https://www.espn.com/nfl/story/_/id/48892463/packers-josh-jacobs-released-jail-investigation-ongoing",
       "published": "2026-05-27T19:31:31Z",
-      "age_hours": 40.8,
+      "age_hours": 41.0,
       "importance_score": 120,
       "high_impact": true,
       "players": [
@@ -36880,7 +36880,7 @@
       "description": "Raiders tight end Brock Bowers said he feels \"100%\" healthy entering Year 3 after he had battled a knee injury for the majority of last season.",
       "url": "https://www.espn.com/nfl/story/_/id/48904403/raiders-brock-bowers-feel-100-knee-troubles-2025",
       "published": "2026-05-28T22:32:09Z",
-      "age_hours": 13.8,
+      "age_hours": 14.0,
       "importance_score": 36,
       "high_impact": true,
       "players": [
@@ -36898,7 +36898,7 @@
       "description": "While most of the Chiefs participated in voluntary workouts this week, Rashee Rice was back in Texas serving his 30-day jail sentence after violating the terms of his probation for his role in a car crash that left multiple people injured.",
       "url": "https://www.espn.com/nfl/story/_/id/48903684/reid-chiefs-moving-forward-get-rice-caught-up",
       "published": "2026-05-28T21:32:37Z",
-      "age_hours": 14.8,
+      "age_hours": 15.0,
       "importance_score": 30,
       "high_impact": true,
       "players": [
@@ -36916,7 +36916,7 @@
       "description": "Chiefs quarterback Patrick Mahomes went through drills Thursday wearing a compression leg sleeve and black brace on his left leg.",
       "url": "https://www.espn.com/nfl/story/_/id/48903412/chiefs-mahomes-pleased-get-ota-reps-amid-knee-injury-recovery",
       "published": "2026-05-28T20:35:07Z",
-      "age_hours": 15.7,
+      "age_hours": 16.0,
       "importance_score": 30,
       "high_impact": true,
       "players": [
@@ -36934,7 +36934,7 @@
       "description": "Commanders coach Dan Quinn explains what he has seen from Jayden Daniels in the QB's return from injury.",
       "url": "https://www.espn.com/video/clip/_/id/48893979/why-jayden-daniels-mental-quickness-sticks-dan-quinn",
       "published": "2026-05-27T20:59:36Z",
-      "age_hours": 39.3,
+      "age_hours": 39.6,
       "importance_score": 30,
       "high_impact": true,
       "players": [
@@ -36952,7 +36952,7 @@
       "description": "Ian Rapoport joins Pat McAfee and reports the latest on the Packers running back after he was released from jail",
       "url": "https://www.espn.com/video/clip/_/id/48892661/next-josh-jacobs-release-jail",
       "published": "2026-05-27T18:24:52Z",
-      "age_hours": 41.9,
+      "age_hours": 42.1,
       "importance_score": 30,
       "high_impact": true,
       "players": [
@@ -36970,7 +36970,7 @@
       "description": "Murray and McCarthy are competing for the starting job, and we got an initial glimpse into how things could play out.",
       "url": "https://www.espn.com/nfl/story/_/id/48901198/nfl-minnesota-vikings-kyler-murray-jj-mccarthy",
       "published": "2026-05-29T10:00:11Z",
-      "age_hours": 2.3,
+      "age_hours": 2.6,
       "importance_score": 15,
       "high_impact": false,
       "players": [
@@ -36995,7 +36995,7 @@
       "description": "Eligible for an extension for the first time, Texans quarterback C.J. Stroud says he has done his part to earn a new deal but isn't focused on the negotiations.",
       "url": "https://www.espn.com/nfl/story/_/id/48902660/cj-stroud-let-contract-talks-hang-season-prep",
       "published": "2026-05-28T19:34:22Z",
-      "age_hours": 16.7,
+      "age_hours": 17.0,
       "importance_score": 15,
       "high_impact": false,
       "players": [
@@ -37013,7 +37013,7 @@
       "description": "J.J. McCarthy says there isn't \"any awkwardness\" between him and Kyler Murray, whom the Vikings signed in March to compete for Minnesota's starting quarterback duties.",
       "url": "https://www.espn.com/nfl/story/_/id/48894057/mccarthy-no-awkwardness-murray-qb1-competition",
       "published": "2026-05-28T10:40:17Z",
-      "age_hours": 25.6,
+      "age_hours": 25.9,
       "importance_score": 15,
       "high_impact": false,
       "players": [
@@ -37038,7 +37038,7 @@
       "description": "Colts QB Anthony Richardson faces an uncertain future in Indianapolis and hasn't rescinded his recent trade request. But he's not letting any of that stand in the way of doing his job, he said Wednesday.",
       "url": "https://www.espn.com/nfl/story/_/id/48894300/future-uncertain-qb-anthony-richardson-here-right-now-colts",
       "published": "2026-05-27T21:59:30Z",
-      "age_hours": 38.3,
+      "age_hours": 38.6,
       "importance_score": 15,
       "high_impact": false,
       "players": [
