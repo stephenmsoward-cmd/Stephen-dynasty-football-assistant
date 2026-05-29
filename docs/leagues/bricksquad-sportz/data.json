@@ -35,7 +35,7 @@
     "BN",
     "BN"
   ],
-  "generated_at": "2026-05-29T12:33:49+00:00",
+  "generated_at": "2026-05-29T12:41:10+00:00",
   "previous_snapshot_date": "2026-05-29",
   "my_roster_id": 3,
   "teams": [
@@ -5759,7 +5759,7 @@
             },
             "their_rank_dynasty": 1,
             "their_rank_winnow": 4,
-            "candidate_count": 487,
+            "candidate_count": 416,
             "candidates": [
               {
                 "send": [
@@ -6355,7 +6355,7 @@
             },
             "their_rank_dynasty": 4,
             "their_rank_winnow": 7,
-            "candidate_count": 602,
+            "candidate_count": 529,
             "candidates": [
               {
                 "send": [
@@ -6531,8 +6531,22 @@
               {
                 "send": [
                   {
-                    "sleeper_id": "PICK_2027_R1_O3",
-                    "name": "2027 R1 (Comedy of Errors)",
+                    "sleeper_id": "4034",
+                    "name": "Christian McCaffrey",
+                    "position": "RB",
+                    "team": "SF",
+                    "age": 29,
+                    "dynasty_value": 4780,
+                    "redraft_value": 8212,
+                    "injury_status": null,
+                    "pos_rank_in_league": 8,
+                    "is_pick": false
+                  }
+                ],
+                "receive": [
+                  {
+                    "sleeper_id": "PICK_2027_R1_O6",
+                    "name": "2027 R1 (Mongo Money Makers)",
                     "position": "PICK",
                     "team": null,
                     "age": null,
@@ -6543,53 +6557,65 @@
                     "is_pick": true
                   },
                   {
-                    "sleeper_id": "2216",
-                    "name": "Mike Evans",
-                    "position": "WR",
-                    "team": "SF",
-                    "age": 32,
-                    "dynasty_value": 2000,
-                    "redraft_value": 2323,
+                    "sleeper_id": "12506",
+                    "name": "Harold Fannin",
+                    "position": "TE",
+                    "team": "CLE",
+                    "age": 21,
+                    "dynasty_value": 2897,
+                    "redraft_value": 717,
                     "injury_status": null,
-                    "pos_rank_in_league": 36,
+                    "pos_rank_in_league": 6,
                     "is_pick": false
                   }
                 ],
-                "receive": [
-                  {
-                    "sleeper_id": "12529",
-                    "name": "TreVeyon Henderson",
-                    "position": "RB",
-                    "team": "NE",
-                    "age": 23,
-                    "dynasty_value": 4020,
-                    "redraft_value": 4125,
-                    "injury_status": null,
-                    "pos_rank_in_league": 14,
-                    "is_pick": false
-                  }
-                ],
-                "structure": "2v1",
-                "tier": "buy",
-                "pick_flow": "to_them",
-                "my_lineup_change": 2020,
-                "their_lineup_change": -1911,
-                "my_asset_change": -992,
-                "their_asset_change": 992,
-                "my_value_delta": -992,
+                "structure": "1v2",
+                "tier": "package",
+                "pick_flow": "to_me",
+                "my_lineup_change": -1487,
+                "their_lineup_change": 1883,
+                "my_asset_change": 1129,
+                "their_asset_change": -1129,
+                "my_value_delta": 1129,
                 "my_lineup_old": 39099,
-                "my_lineup_new": 41119,
+                "my_lineup_new": 37612,
                 "their_lineup_old": 36492,
-                "their_lineup_new": 34581,
+                "their_lineup_new": 38375,
                 "score": 3012,
-                "partner_pitch": "Mongo Money Makers is rebuilding. Mike Evans fills their WR gap (#9 of 10); they cash in TreVeyon Henderson for 2027 1st, dealing from their RB surplus.",
+                "partner_pitch": "",
                 "partner_trajectory": "rebuild"
               },
               {
                 "send": [
                   {
-                    "sleeper_id": "PICK_2027_R1_O3",
-                    "name": "2027 R1 (Comedy of Errors)",
+                    "sleeper_id": "7564",
+                    "name": "Ja'Marr Chase",
+                    "position": "WR",
+                    "team": "CIN",
+                    "age": 26,
+                    "dynasty_value": 9630,
+                    "redraft_value": 9847,
+                    "injury_status": null,
+                    "pos_rank_in_league": 1,
+                    "is_pick": false
+                  }
+                ],
+                "receive": [
+                  {
+                    "sleeper_id": "12527",
+                    "name": "Ashton Jeanty",
+                    "position": "RB",
+                    "team": "LV",
+                    "age": 22,
+                    "dynasty_value": 7631,
+                    "redraft_value": 7835,
+                    "injury_status": null,
+                    "pos_rank_in_league": 3,
+                    "is_pick": false
+                  },
+                  {
+                    "sleeper_id": "PICK_2027_R1_O6",
+                    "name": "2027 R1 (Mongo Money Makers)",
                     "position": "PICK",
                     "team": null,
                     "age": null,
@@ -6598,48 +6624,22 @@
                     "injury_status": null,
                     "pos_rank_in_league": null,
                     "is_pick": true
-                  },
-                  {
-                    "sleeper_id": "2216",
-                    "name": "Mike Evans",
-                    "position": "WR",
-                    "team": "SF",
-                    "age": 32,
-                    "dynasty_value": 2000,
-                    "redraft_value": 2323,
-                    "injury_status": null,
-                    "pos_rank_in_league": 36,
-                    "is_pick": false
                   }
                 ],
-                "receive": [
-                  {
-                    "sleeper_id": "7569",
-                    "name": "Nico Collins",
-                    "position": "WR",
-                    "team": "HOU",
-                    "age": 27,
-                    "dynasty_value": 4150,
-                    "redraft_value": 4877,
-                    "injury_status": null,
-                    "pos_rank_in_league": 12,
-                    "is_pick": false
-                  }
-                ],
-                "structure": "2v1",
-                "tier": "buy",
-                "pick_flow": "to_them",
-                "my_lineup_change": 2150,
-                "their_lineup_change": -2041,
-                "my_asset_change": -862,
-                "their_asset_change": 862,
-                "my_value_delta": -862,
+                "structure": "1v2",
+                "tier": "package",
+                "pick_flow": "to_me",
+                "my_lineup_change": -1999,
+                "their_lineup_change": 1999,
+                "my_asset_change": 1013,
+                "their_asset_change": -1013,
+                "my_value_delta": 1013,
                 "my_lineup_old": 39099,
-                "my_lineup_new": 41249,
+                "my_lineup_new": 37100,
                 "their_lineup_old": 36492,
-                "their_lineup_new": 34451,
+                "their_lineup_new": 38491,
                 "score": 3012,
-                "partner_pitch": "Mongo Money Makers is rebuilding. Mike Evans fills their WR gap (#9 of 10); they cash in Nico Collins for 2027 1st.",
+                "partner_pitch": "Mongo Money Makers is rebuilding. Ja'Marr Chase fills their WR gap (#9 of 10), dealing from their RB surplus.",
                 "partner_trajectory": "rebuild"
               }
             ]
@@ -8781,67 +8781,6 @@
                   "is_pick": true
                 },
                 {
-                  "sleeper_id": "2216",
-                  "name": "Mike Evans",
-                  "position": "WR",
-                  "team": "SF",
-                  "age": 32,
-                  "dynasty_value": 2000,
-                  "redraft_value": 2323,
-                  "injury_status": null,
-                  "pos_rank_in_league": 36,
-                  "is_pick": false
-                }
-              ],
-              "receive": [
-                {
-                  "sleeper_id": "12518",
-                  "name": "Tyler Warren",
-                  "position": "TE",
-                  "team": "IND",
-                  "age": 24,
-                  "dynasty_value": 4218,
-                  "redraft_value": 3182,
-                  "injury_status": null,
-                  "pos_rank_in_league": 4,
-                  "is_pick": false
-                }
-              ],
-              "structure": "2v1",
-              "tier": "buy",
-              "pick_flow": "to_them",
-              "my_lineup_change": 2614,
-              "their_lineup_change": -2870,
-              "my_asset_change": -794,
-              "their_asset_change": 794,
-              "my_value_delta": -794,
-              "my_lineup_old": 39099,
-              "my_lineup_new": 41713,
-              "their_lineup_old": 41619,
-              "their_lineup_new": 38749,
-              "score": 3408,
-              "partner_team_name": "Da Bell of Da Ball",
-              "partner_owner": "jmirandette",
-              "partner_dynasty_rank": 1,
-              "partner_winnow_rank": 4,
-              "partner_pitch": "Da Bell of Da Ball is rebuilding. They land Mike Evans; they cash in Tyler Warren for 2027 1st.",
-              "partner_trajectory": "rebuild"
-            },
-            {
-              "send": [
-                {
-                  "sleeper_id": "PICK_2027_R1_O3",
-                  "name": "2027 R1 (Comedy of Errors)",
-                  "position": "PICK",
-                  "team": null,
-                  "age": null,
-                  "dynasty_value": 3012,
-                  "redraft_value": 0,
-                  "injury_status": null,
-                  "pos_rank_in_league": null,
-                  "is_pick": true
-                },
-                {
                   "sleeper_id": "7567",
                   "name": "Kenneth Gainwell",
                   "position": "RB",
@@ -8947,6 +8886,67 @@
               "partner_dynasty_rank": 2,
               "partner_winnow_rank": 3,
               "partner_pitch": "Ligma is balanced. Mike Evans fills their WR gap (#10 of 10); they cash in Colston Loveland for 2027 1st, dealing from their TE surplus.",
+              "partner_trajectory": "balanced"
+            },
+            {
+              "send": [
+                {
+                  "sleeper_id": "PICK_2027_R1_O3",
+                  "name": "2027 R1 (Comedy of Errors)",
+                  "position": "PICK",
+                  "team": null,
+                  "age": null,
+                  "dynasty_value": 3012,
+                  "redraft_value": 0,
+                  "injury_status": null,
+                  "pos_rank_in_league": null,
+                  "is_pick": true
+                },
+                {
+                  "sleeper_id": "7567",
+                  "name": "Kenneth Gainwell",
+                  "position": "RB",
+                  "team": "TB",
+                  "age": 27,
+                  "dynasty_value": 1824,
+                  "redraft_value": 1334,
+                  "injury_status": null,
+                  "pos_rank_in_league": 30,
+                  "is_pick": false
+                }
+              ],
+              "receive": [
+                {
+                  "sleeper_id": "12517",
+                  "name": "Colston Loveland",
+                  "position": "TE",
+                  "team": "CHI",
+                  "age": 22,
+                  "dynasty_value": 4605,
+                  "redraft_value": 2792,
+                  "injury_status": null,
+                  "pos_rank_in_league": 3,
+                  "is_pick": false
+                }
+              ],
+              "structure": "2v1",
+              "tier": "buy",
+              "pick_flow": "to_them",
+              "my_lineup_change": 3177,
+              "their_lineup_change": -2451,
+              "my_asset_change": -231,
+              "their_asset_change": 231,
+              "my_value_delta": -231,
+              "my_lineup_old": 39099,
+              "my_lineup_new": 42276,
+              "their_lineup_old": 40471,
+              "their_lineup_new": 38020,
+              "score": 3408,
+              "partner_team_name": "Ligma",
+              "partner_owner": "nfaber",
+              "partner_dynasty_rank": 2,
+              "partner_winnow_rank": 3,
+              "partner_pitch": "Ligma is balanced. They land Kenneth Gainwell; they cash in Colston Loveland for 2027 1st, dealing from their TE surplus.",
               "partner_trajectory": "balanced"
             }
           ],
@@ -10368,7 +10368,7 @@
           "package": 8,
           "asymmetric": 8
         },
-        "total_candidates": 4966
+        "total_candidates": 4822
       },
       "winnow": {
         "by_team": [
@@ -11073,7 +11073,7 @@
             },
             "their_rank_dynasty": 1,
             "their_rank_winnow": 4,
-            "candidate_count": 195,
+            "candidate_count": 160,
             "candidates": [
               {
                 "send": [
@@ -11318,15 +11318,15 @@
                     "is_pick": false
                   },
                   {
-                    "sleeper_id": "5967",
-                    "name": "Tony Pollard",
-                    "position": "RB",
-                    "team": "TEN",
+                    "sleeper_id": "5947",
+                    "name": "Jakobi Meyers",
+                    "position": "WR",
+                    "team": "JAX",
                     "age": 29,
-                    "dynasty_value": 1811,
-                    "redraft_value": 1757,
+                    "dynasty_value": 1573,
+                    "redraft_value": 711,
                     "injury_status": null,
-                    "pos_rank_in_league": 26,
+                    "pos_rank_in_league": 38,
                     "is_pick": false
                   }
                 ],
@@ -11348,16 +11348,16 @@
                 "tier": "package",
                 "pick_flow": "none",
                 "my_lineup_change": 3945,
-                "their_lineup_change": -1164,
-                "my_asset_change": -898,
-                "their_asset_change": 898,
-                "my_value_delta": -898,
+                "their_lineup_change": -1441,
+                "my_asset_change": -660,
+                "their_asset_change": 660,
+                "my_value_delta": -660,
                 "my_lineup_old": 39432,
                 "my_lineup_new": 43377,
                 "their_lineup_old": 41619,
-                "their_lineup_new": 40455,
-                "score": 4843,
-                "partner_pitch": "Da Bell of Da Ball is rebuilding. Tony Pollard upgrades their RB.",
+                "their_lineup_new": 40178,
+                "score": 4605,
+                "partner_pitch": "Da Bell of Da Ball is rebuilding. They land Luther Burden and Jakobi Meyers.",
                 "partner_trajectory": "rebuild"
               }
             ]
@@ -11693,7 +11693,7 @@
             },
             "their_rank_dynasty": 4,
             "their_rank_winnow": 7,
-            "candidate_count": 346,
+            "candidate_count": 306,
             "candidates": [
               {
                 "send": [
@@ -16090,7 +16090,7 @@
           "package": 8,
           "asymmetric": 8
         },
-        "total_candidates": 3223
+        "total_candidates": 3148
       }
     },
     "targets": {
@@ -16915,36 +16915,6 @@
               {
                 "send": [
                   {
-                    "sleeper_id": "6904",
-                    "name": "Jalen Hurts",
-                    "position": "QB",
-                    "team": "PHI",
-                    "age": 27,
-                    "dynasty_value": 2784,
-                    "redraft_value": 1654,
-                    "injury_status": null,
-                    "is_pick": false
-                  },
-                  {
-                    "sleeper_id": "5967",
-                    "name": "Tony Pollard",
-                    "position": "RB",
-                    "team": "TEN",
-                    "age": 29,
-                    "dynasty_value": 1811,
-                    "redraft_value": 1757,
-                    "injury_status": null,
-                    "is_pick": false
-                  }
-                ],
-                "my_lineup_change": 1047,
-                "their_lineup_change": -1047,
-                "my_value_delta": -764,
-                "pitch": "cropcreamer is rebuilding. Tony Pollard fills their RB gap (#10 of 10), dealing from their QB surplus."
-              },
-              {
-                "send": [
-                  {
                     "sleeper_id": "PICK_2027_R1_O3",
                     "name": "2027 R1 (Comedy of Errors)",
                     "position": "PICK",
@@ -16971,6 +16941,36 @@
                 "their_lineup_change": -1195,
                 "my_value_delta": -754,
                 "pitch": "cropcreamer is rebuilding. Jakobi Meyers fills their WR gap (#8 of 10); they cash in Jayden Daniels for 2027 1st, dealing from their QB surplus."
+              },
+              {
+                "send": [
+                  {
+                    "sleeper_id": "PICK_2026_R1_O3",
+                    "name": "2026 1.10 (Comedy of Errors)",
+                    "position": "PICK",
+                    "team": null,
+                    "age": null,
+                    "dynasty_value": 2551,
+                    "redraft_value": 0,
+                    "injury_status": null,
+                    "is_pick": true
+                  },
+                  {
+                    "sleeper_id": "12522",
+                    "name": "Cam Ward",
+                    "position": "QB",
+                    "team": "TEN",
+                    "age": 24,
+                    "dynasty_value": 2019,
+                    "redraft_value": 293,
+                    "injury_status": null,
+                    "is_pick": false
+                  }
+                ],
+                "my_lineup_change": 1047,
+                "their_lineup_change": -1195,
+                "my_value_delta": -739,
+                "pitch": "cropcreamer is rebuilding. They land Cam Ward; they cash in Jayden Daniels for 2026 1.10, dealing from their QB surplus."
               }
             ]
           }
@@ -17141,36 +17141,6 @@
               {
                 "send": [
                   {
-                    "sleeper_id": "6904",
-                    "name": "Jalen Hurts",
-                    "position": "QB",
-                    "team": "PHI",
-                    "age": 27,
-                    "dynasty_value": 2784,
-                    "redraft_value": 1654,
-                    "injury_status": null,
-                    "is_pick": false
-                  },
-                  {
-                    "sleeper_id": "5967",
-                    "name": "Tony Pollard",
-                    "position": "RB",
-                    "team": "TEN",
-                    "age": 29,
-                    "dynasty_value": 1811,
-                    "redraft_value": 1757,
-                    "injury_status": null,
-                    "is_pick": false
-                  }
-                ],
-                "my_lineup_change": 961,
-                "their_lineup_change": -32,
-                "my_value_delta": -850,
-                "pitch": "Saquantum Leap is rebuilding. Jalen Hurts upgrades their QB."
-              },
-              {
-                "send": [
-                  {
                     "sleeper_id": "PICK_2027_R1_O3",
                     "name": "2027 R1 (Comedy of Errors)",
                     "position": "PICK",
@@ -17197,6 +17167,36 @@
                 "their_lineup_change": -32,
                 "my_value_delta": -840,
                 "pitch": "Saquantum Leap is rebuilding. Jakobi Meyers upgrades their WR; they cash in Lamar Jackson for 2027 1st."
+              },
+              {
+                "send": [
+                  {
+                    "sleeper_id": "PICK_2026_R1_O3",
+                    "name": "2026 1.10 (Comedy of Errors)",
+                    "position": "PICK",
+                    "team": null,
+                    "age": null,
+                    "dynasty_value": 2551,
+                    "redraft_value": 0,
+                    "injury_status": null,
+                    "is_pick": true
+                  },
+                  {
+                    "sleeper_id": "12522",
+                    "name": "Cam Ward",
+                    "position": "QB",
+                    "team": "TEN",
+                    "age": 24,
+                    "dynasty_value": 2019,
+                    "redraft_value": 293,
+                    "injury_status": null,
+                    "is_pick": false
+                  }
+                ],
+                "my_lineup_change": 961,
+                "their_lineup_change": -32,
+                "my_value_delta": -825,
+                "pitch": "Saquantum Leap is rebuilding. Cam Ward upgrades their QB; they cash in Lamar Jackson for 2026 1.10."
               }
             ]
           }
@@ -17367,36 +17367,6 @@
               {
                 "send": [
                   {
-                    "sleeper_id": "6904",
-                    "name": "Jalen Hurts",
-                    "position": "QB",
-                    "team": "PHI",
-                    "age": 27,
-                    "dynasty_value": 2784,
-                    "redraft_value": 1654,
-                    "injury_status": null,
-                    "is_pick": false
-                  },
-                  {
-                    "sleeper_id": "5967",
-                    "name": "Tony Pollard",
-                    "position": "RB",
-                    "team": "TEN",
-                    "age": 29,
-                    "dynasty_value": 1811,
-                    "redraft_value": 1757,
-                    "injury_status": null,
-                    "is_pick": false
-                  }
-                ],
-                "my_lineup_change": 929,
-                "their_lineup_change": 0,
-                "my_value_delta": -882,
-                "pitch": "Saquantum Leap is rebuilding. Jalen Hurts upgrades their QB."
-              },
-              {
-                "send": [
-                  {
                     "sleeper_id": "PICK_2027_R1_O3",
                     "name": "2027 R1 (Comedy of Errors)",
                     "position": "PICK",
@@ -17423,6 +17393,36 @@
                 "their_lineup_change": 0,
                 "my_value_delta": -872,
                 "pitch": "Saquantum Leap is rebuilding. Jakobi Meyers upgrades their WR; they cash in Caleb Williams for 2027 1st."
+              },
+              {
+                "send": [
+                  {
+                    "sleeper_id": "PICK_2026_R1_O3",
+                    "name": "2026 1.10 (Comedy of Errors)",
+                    "position": "PICK",
+                    "team": null,
+                    "age": null,
+                    "dynasty_value": 2551,
+                    "redraft_value": 0,
+                    "injury_status": null,
+                    "is_pick": true
+                  },
+                  {
+                    "sleeper_id": "12522",
+                    "name": "Cam Ward",
+                    "position": "QB",
+                    "team": "TEN",
+                    "age": 24,
+                    "dynasty_value": 2019,
+                    "redraft_value": 293,
+                    "injury_status": null,
+                    "is_pick": false
+                  }
+                ],
+                "my_lineup_change": 929,
+                "their_lineup_change": 0,
+                "my_value_delta": -857,
+                "pitch": "Saquantum Leap is rebuilding. Cam Ward upgrades their QB; they cash in Caleb Williams for 2026 1.10."
               }
             ]
           }
@@ -17860,36 +17860,6 @@
               {
                 "send": [
                   {
-                    "sleeper_id": "7567",
-                    "name": "Kenneth Gainwell",
-                    "position": "RB",
-                    "team": "TB",
-                    "age": 27,
-                    "dynasty_value": 1824,
-                    "redraft_value": 1334,
-                    "injury_status": null,
-                    "is_pick": false
-                  },
-                  {
-                    "sleeper_id": "5967",
-                    "name": "Tony Pollard",
-                    "position": "RB",
-                    "team": "TEN",
-                    "age": 29,
-                    "dynasty_value": 1811,
-                    "redraft_value": 1757,
-                    "injury_status": null,
-                    "is_pick": false
-                  }
-                ],
-                "my_lineup_change": 244,
-                "their_lineup_change": -881,
-                "my_value_delta": -607,
-                "pitch": "Mongo Money Makers is rebuilding. They land Kenneth Gainwell and Tony Pollard."
-              },
-              {
-                "send": [
-                  {
                     "sleeper_id": "12522",
                     "name": "Cam Ward",
                     "position": "QB",
@@ -17946,6 +17916,36 @@
                 "their_lineup_change": -881,
                 "my_value_delta": -509,
                 "pitch": "Mongo Money Makers is rebuilding. Cam Ward upgrades their QB; they cash in Justin Herbert for 2026 2.10."
+              },
+              {
+                "send": [
+                  {
+                    "sleeper_id": "7567",
+                    "name": "Kenneth Gainwell",
+                    "position": "RB",
+                    "team": "TB",
+                    "age": 27,
+                    "dynasty_value": 1824,
+                    "redraft_value": 1334,
+                    "injury_status": null,
+                    "is_pick": false
+                  },
+                  {
+                    "sleeper_id": "5947",
+                    "name": "Jakobi Meyers",
+                    "position": "WR",
+                    "team": "JAX",
+                    "age": 29,
+                    "dynasty_value": 1573,
+                    "redraft_value": 711,
+                    "injury_status": null,
+                    "is_pick": false
+                  }
+                ],
+                "my_lineup_change": 244,
+                "their_lineup_change": -881,
+                "my_value_delta": -369,
+                "pitch": "Mongo Money Makers is rebuilding. Jakobi Meyers fills their WR gap (#9 of 10)."
               }
             ]
           }
@@ -18086,36 +18086,6 @@
               {
                 "send": [
                   {
-                    "sleeper_id": "7567",
-                    "name": "Kenneth Gainwell",
-                    "position": "RB",
-                    "team": "TB",
-                    "age": 27,
-                    "dynasty_value": 1824,
-                    "redraft_value": 1334,
-                    "injury_status": null,
-                    "is_pick": false
-                  },
-                  {
-                    "sleeper_id": "5967",
-                    "name": "Tony Pollard",
-                    "position": "RB",
-                    "team": "TEN",
-                    "age": 29,
-                    "dynasty_value": 1811,
-                    "redraft_value": 1757,
-                    "injury_status": null,
-                    "is_pick": false
-                  }
-                ],
-                "my_lineup_change": 199,
-                "their_lineup_change": -1138,
-                "my_value_delta": -652,
-                "pitch": "Samir\u2019s Tight End  is rebuilding. Kenneth Gainwell and Tony Pollard upgrade their RB."
-              },
-              {
-                "send": [
-                  {
                     "sleeper_id": "12522",
                     "name": "Cam Ward",
                     "position": "QB",
@@ -18172,6 +18142,36 @@
                 "their_lineup_change": -964,
                 "my_value_delta": -554,
                 "pitch": "Samir\u2019s Tight End  is rebuilding. Cam Ward upgrades their QB; they cash in Patrick Mahomes for 2026 2.10."
+              },
+              {
+                "send": [
+                  {
+                    "sleeper_id": "7567",
+                    "name": "Kenneth Gainwell",
+                    "position": "RB",
+                    "team": "TB",
+                    "age": 27,
+                    "dynasty_value": 1824,
+                    "redraft_value": 1334,
+                    "injury_status": null,
+                    "is_pick": false
+                  },
+                  {
+                    "sleeper_id": "5947",
+                    "name": "Jakobi Meyers",
+                    "position": "WR",
+                    "team": "JAX",
+                    "age": 29,
+                    "dynasty_value": 1573,
+                    "redraft_value": 711,
+                    "injury_status": null,
+                    "is_pick": false
+                  }
+                ],
+                "my_lineup_change": 199,
+                "their_lineup_change": -1138,
+                "my_value_delta": -414,
+                "pitch": "Samir\u2019s Tight End  is rebuilding. Kenneth Gainwell upgrades their RB."
               }
             ]
           }
@@ -19330,92 +19330,21 @@
               {
                 "send": [
                   {
-                    "sleeper_id": "4034",
-                    "name": "Christian McCaffrey",
-                    "position": "RB",
-                    "team": "SF",
-                    "age": 29,
-                    "dynasty_value": 4780,
-                    "redraft_value": 8212,
-                    "injury_status": null,
-                    "is_pick": false
-                  },
-                  {
-                    "sleeper_id": "PICK_2027_R1_O3",
-                    "name": "2027 R1 (Comedy of Errors)",
-                    "position": "PICK",
-                    "team": null,
-                    "age": null,
-                    "dynasty_value": 3012,
-                    "redraft_value": 0,
-                    "injury_status": null,
-                    "is_pick": true
-                  }
-                ],
-                "my_lineup_change": 2851,
-                "their_lineup_change": -2851,
-                "my_value_delta": -161,
-                "pitch": "Mongo Money Makers is rebuilding. They land Christian McCaffrey; they cash in Ashton Jeanty for 2027 1st, dealing from their RB surplus."
-              },
-              {
-                "send": [
-                  {
-                    "sleeper_id": "4034",
-                    "name": "Christian McCaffrey",
-                    "position": "RB",
-                    "team": "SF",
-                    "age": 29,
-                    "dynasty_value": 4780,
-                    "redraft_value": 8212,
-                    "injury_status": null,
-                    "is_pick": false
-                  },
-                  {
-                    "sleeper_id": "PICK_2026_R1_O3",
-                    "name": "2026 1.10 (Comedy of Errors)",
-                    "position": "PICK",
-                    "team": null,
-                    "age": null,
-                    "dynasty_value": 2551,
-                    "redraft_value": 0,
-                    "injury_status": null,
-                    "is_pick": true
-                  }
-                ],
-                "my_lineup_change": 2851,
-                "their_lineup_change": -2851,
-                "my_value_delta": 300,
-                "pitch": "Mongo Money Makers is rebuilding. They land Christian McCaffrey; they cash in Ashton Jeanty for 2026 1.10, dealing from their RB surplus."
-              },
-              {
-                "send": [
-                  {
-                    "sleeper_id": "4034",
-                    "name": "Christian McCaffrey",
-                    "position": "RB",
-                    "team": "SF",
-                    "age": 29,
-                    "dynasty_value": 4780,
-                    "redraft_value": 8212,
-                    "injury_status": null,
-                    "is_pick": false
-                  },
-                  {
-                    "sleeper_id": "12519",
-                    "name": "Luther Burden",
+                    "sleeper_id": "9488",
+                    "name": "Jaxon Smith-Njigba",
                     "position": "WR",
-                    "team": "CHI",
-                    "age": 22,
-                    "dynasty_value": 3518,
-                    "redraft_value": 1824,
+                    "team": "SEA",
+                    "age": 24,
+                    "dynasty_value": 9066,
+                    "redraft_value": 8889,
                     "injury_status": null,
                     "is_pick": false
                   }
                 ],
-                "my_lineup_change": 1157,
-                "their_lineup_change": -2230,
-                "my_value_delta": -667,
-                "pitch": "Mongo Money Makers is rebuilding. Luther Burden fills their WR gap (#9 of 10), dealing from their RB surplus."
+                "my_lineup_change": -1435,
+                "their_lineup_change": 1435,
+                "my_value_delta": -1435,
+                "pitch": "Mongo Money Makers is rebuilding. Jaxon Smith-Njigba fills their WR gap (#9 of 10), dealing from their RB surplus."
               }
             ]
           }
@@ -20498,21 +20427,21 @@
                     "is_pick": true
                   },
                   {
-                    "sleeper_id": "2216",
-                    "name": "Mike Evans",
-                    "position": "WR",
-                    "team": "SF",
-                    "age": 32,
-                    "dynasty_value": 2000,
-                    "redraft_value": 2323,
+                    "sleeper_id": "12489",
+                    "name": "RJ Harvey",
+                    "position": "RB",
+                    "team": "DEN",
+                    "age": 25,
+                    "dynasty_value": 2373,
+                    "redraft_value": 1878,
                     "injury_status": null,
                     "is_pick": false
                   }
                 ],
-                "my_lineup_change": 3450,
-                "their_lineup_change": -3450,
-                "my_value_delta": 438,
-                "pitch": "Bucky the Vampire Slayer is rebuilding. Mike Evans upgrades their WR; they cash in James Cook for 2027 1st."
+                "my_lineup_change": 3077,
+                "their_lineup_change": -3077,
+                "my_value_delta": 65,
+                "pitch": "Bucky the Vampire Slayer is rebuilding. RJ Harvey upgrades their RB; they cash in James Cook for 2027 1st."
               }
             ]
           }
@@ -20754,21 +20683,21 @@
                     "is_pick": true
                   },
                   {
-                    "sleeper_id": "2216",
-                    "name": "Mike Evans",
-                    "position": "WR",
-                    "team": "SF",
-                    "age": 32,
-                    "dynasty_value": 2000,
-                    "redraft_value": 2323,
+                    "sleeper_id": "7567",
+                    "name": "Kenneth Gainwell",
+                    "position": "RB",
+                    "team": "TB",
+                    "age": 27,
+                    "dynasty_value": 1824,
+                    "redraft_value": 1334,
                     "injury_status": null,
                     "is_pick": false
                   }
                 ],
                 "my_lineup_change": 2468,
-                "their_lineup_change": -2468,
-                "my_value_delta": -544,
-                "pitch": "Samir\u2019s Tight End  is rebuilding. Mike Evans upgrades their WR; they cash in Breece Hall for 2027 1st."
+                "their_lineup_change": -2644,
+                "my_value_delta": -368,
+                "pitch": "Samir\u2019s Tight End  is rebuilding. Kenneth Gainwell upgrades their RB; they cash in Breece Hall for 2027 1st."
               }
             ]
           }
@@ -20950,36 +20879,6 @@
                     "is_pick": true
                   },
                   {
-                    "sleeper_id": "2216",
-                    "name": "Mike Evans",
-                    "position": "WR",
-                    "team": "SF",
-                    "age": 32,
-                    "dynasty_value": 2000,
-                    "redraft_value": 2323,
-                    "injury_status": null,
-                    "is_pick": false
-                  }
-                ],
-                "my_lineup_change": 2431,
-                "their_lineup_change": -2897,
-                "my_value_delta": -581,
-                "pitch": "Da Bell of Da Ball is rebuilding. They land Mike Evans; they cash in Kenneth Walker for 2027 1st."
-              },
-              {
-                "send": [
-                  {
-                    "sleeper_id": "PICK_2027_R1_O3",
-                    "name": "2027 R1 (Comedy of Errors)",
-                    "position": "PICK",
-                    "team": null,
-                    "age": null,
-                    "dynasty_value": 3012,
-                    "redraft_value": 0,
-                    "injury_status": null,
-                    "is_pick": true
-                  },
-                  {
                     "sleeper_id": "7567",
                     "name": "Kenneth Gainwell",
                     "position": "RB",
@@ -20995,6 +20894,36 @@
                 "their_lineup_change": -2607,
                 "my_value_delta": -405,
                 "pitch": "Da Bell of Da Ball is rebuilding. Kenneth Gainwell upgrades their RB; they cash in Kenneth Walker for 2027 1st."
+              },
+              {
+                "send": [
+                  {
+                    "sleeper_id": "PICK_2027_R1_O3",
+                    "name": "2027 R1 (Comedy of Errors)",
+                    "position": "PICK",
+                    "team": null,
+                    "age": null,
+                    "dynasty_value": 3012,
+                    "redraft_value": 0,
+                    "injury_status": null,
+                    "is_pick": true
+                  },
+                  {
+                    "sleeper_id": "5947",
+                    "name": "Jakobi Meyers",
+                    "position": "WR",
+                    "team": "JAX",
+                    "age": 29,
+                    "dynasty_value": 1573,
+                    "redraft_value": 711,
+                    "injury_status": null,
+                    "is_pick": false
+                  }
+                ],
+                "my_lineup_change": 2431,
+                "their_lineup_change": -2897,
+                "my_value_delta": -154,
+                "pitch": "Da Bell of Da Ball is rebuilding. They land Jakobi Meyers; they cash in Kenneth Walker for 2027 1st."
               }
             ]
           }
@@ -21247,36 +21176,6 @@
                     "is_pick": true
                   },
                   {
-                    "sleeper_id": "2216",
-                    "name": "Mike Evans",
-                    "position": "WR",
-                    "team": "SF",
-                    "age": 32,
-                    "dynasty_value": 2000,
-                    "redraft_value": 2323,
-                    "injury_status": null,
-                    "is_pick": false
-                  }
-                ],
-                "my_lineup_change": 2329,
-                "their_lineup_change": -2329,
-                "my_value_delta": -683,
-                "pitch": "Saquantum Leap is rebuilding. Mike Evans upgrades their WR; they cash in Quinshon Judkins for 2027 1st, dealing from their RB surplus."
-              },
-              {
-                "send": [
-                  {
-                    "sleeper_id": "PICK_2027_R1_O3",
-                    "name": "2027 R1 (Comedy of Errors)",
-                    "position": "PICK",
-                    "team": null,
-                    "age": null,
-                    "dynasty_value": 3012,
-                    "redraft_value": 0,
-                    "injury_status": null,
-                    "is_pick": true
-                  },
-                  {
                     "sleeper_id": "7567",
                     "name": "Kenneth Gainwell",
                     "position": "RB",
@@ -21292,6 +21191,36 @@
                 "their_lineup_change": -2443,
                 "my_value_delta": -507,
                 "pitch": "Saquantum Leap is rebuilding. They land Kenneth Gainwell; they cash in Quinshon Judkins for 2027 1st, dealing from their RB surplus."
+              },
+              {
+                "send": [
+                  {
+                    "sleeper_id": "PICK_2027_R1_O3",
+                    "name": "2027 R1 (Comedy of Errors)",
+                    "position": "PICK",
+                    "team": null,
+                    "age": null,
+                    "dynasty_value": 3012,
+                    "redraft_value": 0,
+                    "injury_status": null,
+                    "is_pick": true
+                  },
+                  {
+                    "sleeper_id": "5947",
+                    "name": "Jakobi Meyers",
+                    "position": "WR",
+                    "team": "JAX",
+                    "age": 29,
+                    "dynasty_value": 1573,
+                    "redraft_value": 711,
+                    "injury_status": null,
+                    "is_pick": false
+                  }
+                ],
+                "my_lineup_change": 2329,
+                "their_lineup_change": -2443,
+                "my_value_delta": -256,
+                "pitch": "Saquantum Leap is rebuilding. Jakobi Meyers upgrades their WR; they cash in Quinshon Judkins for 2027 1st, dealing from their RB surplus."
               }
             ]
           }
@@ -21473,36 +21402,6 @@
                     "is_pick": true
                   },
                   {
-                    "sleeper_id": "2216",
-                    "name": "Mike Evans",
-                    "position": "WR",
-                    "team": "SF",
-                    "age": 32,
-                    "dynasty_value": 2000,
-                    "redraft_value": 2323,
-                    "injury_status": null,
-                    "is_pick": false
-                  }
-                ],
-                "my_lineup_change": 2208,
-                "their_lineup_change": -2099,
-                "my_value_delta": -804,
-                "pitch": "Mongo Money Makers is rebuilding. Mike Evans fills their WR gap (#9 of 10); they cash in Chase Brown for 2027 1st, dealing from their RB surplus."
-              },
-              {
-                "send": [
-                  {
-                    "sleeper_id": "PICK_2027_R1_O3",
-                    "name": "2027 R1 (Comedy of Errors)",
-                    "position": "PICK",
-                    "team": null,
-                    "age": null,
-                    "dynasty_value": 3012,
-                    "redraft_value": 0,
-                    "injury_status": null,
-                    "is_pick": true
-                  },
-                  {
                     "sleeper_id": "7567",
                     "name": "Kenneth Gainwell",
                     "position": "RB",
@@ -21518,6 +21417,36 @@
                 "their_lineup_change": -2099,
                 "my_value_delta": -628,
                 "pitch": "Mongo Money Makers is rebuilding. They land Kenneth Gainwell; they cash in Chase Brown for 2027 1st, dealing from their RB surplus."
+              },
+              {
+                "send": [
+                  {
+                    "sleeper_id": "PICK_2027_R1_O3",
+                    "name": "2027 R1 (Comedy of Errors)",
+                    "position": "PICK",
+                    "team": null,
+                    "age": null,
+                    "dynasty_value": 3012,
+                    "redraft_value": 0,
+                    "injury_status": null,
+                    "is_pick": true
+                  },
+                  {
+                    "sleeper_id": "5947",
+                    "name": "Jakobi Meyers",
+                    "position": "WR",
+                    "team": "JAX",
+                    "age": 29,
+                    "dynasty_value": 1573,
+                    "redraft_value": 711,
+                    "injury_status": null,
+                    "is_pick": false
+                  }
+                ],
+                "my_lineup_change": 2208,
+                "their_lineup_change": -2099,
+                "my_value_delta": -377,
+                "pitch": "Mongo Money Makers is rebuilding. Jakobi Meyers fills their WR gap (#9 of 10); they cash in Chase Brown for 2027 1st, dealing from their RB surplus."
               }
             ]
           }
@@ -21699,36 +21628,6 @@
                     "is_pick": true
                   },
                   {
-                    "sleeper_id": "2216",
-                    "name": "Mike Evans",
-                    "position": "WR",
-                    "team": "SF",
-                    "age": 32,
-                    "dynasty_value": 2000,
-                    "redraft_value": 2323,
-                    "injury_status": null,
-                    "is_pick": false
-                  }
-                ],
-                "my_lineup_change": 2169,
-                "their_lineup_change": -2169,
-                "my_value_delta": -843,
-                "pitch": "Saquantum Leap is rebuilding. Mike Evans upgrades their WR; they cash in Saquon Barkley for 2027 1st, dealing from their RB surplus."
-              },
-              {
-                "send": [
-                  {
-                    "sleeper_id": "PICK_2027_R1_O3",
-                    "name": "2027 R1 (Comedy of Errors)",
-                    "position": "PICK",
-                    "team": null,
-                    "age": null,
-                    "dynasty_value": 3012,
-                    "redraft_value": 0,
-                    "injury_status": null,
-                    "is_pick": true
-                  },
-                  {
                     "sleeper_id": "7567",
                     "name": "Kenneth Gainwell",
                     "position": "RB",
@@ -21744,6 +21643,36 @@
                 "their_lineup_change": -2283,
                 "my_value_delta": -667,
                 "pitch": "Saquantum Leap is rebuilding. They land Kenneth Gainwell; they cash in Saquon Barkley for 2027 1st, dealing from their RB surplus."
+              },
+              {
+                "send": [
+                  {
+                    "sleeper_id": "PICK_2027_R1_O3",
+                    "name": "2027 R1 (Comedy of Errors)",
+                    "position": "PICK",
+                    "team": null,
+                    "age": null,
+                    "dynasty_value": 3012,
+                    "redraft_value": 0,
+                    "injury_status": null,
+                    "is_pick": true
+                  },
+                  {
+                    "sleeper_id": "5947",
+                    "name": "Jakobi Meyers",
+                    "position": "WR",
+                    "team": "JAX",
+                    "age": 29,
+                    "dynasty_value": 1573,
+                    "redraft_value": 711,
+                    "injury_status": null,
+                    "is_pick": false
+                  }
+                ],
+                "my_lineup_change": 2169,
+                "their_lineup_change": -2283,
+                "my_value_delta": -416,
+                "pitch": "Saquantum Leap is rebuilding. Jakobi Meyers upgrades their WR; they cash in Saquon Barkley for 2027 1st, dealing from their RB surplus."
               }
             ]
           }
@@ -21928,7 +21857,7 @@
                 "my_lineup_change": 2020,
                 "their_lineup_change": -1911,
                 "my_value_delta": -992,
-                "pitch": "Mongo Money Makers is rebuilding. Mike Evans fills their WR gap (#9 of 10); they cash in TreVeyon Henderson for 2027 1st, dealing from their RB surplus."
+                "pitch": "Mongo Money Makers is rebuilding. They cash in TreVeyon Henderson for 2027 1st, dealing from their RB surplus."
               },
               {
                 "send": [
@@ -21988,7 +21917,7 @@
                 "my_lineup_change": 2020,
                 "their_lineup_change": -1911,
                 "my_value_delta": -803,
-                "pitch": "Mongo Money Makers is rebuilding. They land Tony Pollard; they cash in TreVeyon Henderson for 2027 1st, dealing from their RB surplus."
+                "pitch": "Mongo Money Makers is rebuilding. They cash in TreVeyon Henderson for 2027 1st, dealing from their RB surplus."
               }
             ]
           }
@@ -22150,36 +22079,6 @@
                     "is_pick": true
                   },
                   {
-                    "sleeper_id": "5967",
-                    "name": "Tony Pollard",
-                    "position": "RB",
-                    "team": "TEN",
-                    "age": 29,
-                    "dynasty_value": 1811,
-                    "redraft_value": 1757,
-                    "injury_status": null,
-                    "is_pick": false
-                  }
-                ],
-                "my_lineup_change": 1614,
-                "their_lineup_change": -1789,
-                "my_value_delta": -748,
-                "pitch": "cropcreamer is rebuilding. Tony Pollard fills their RB gap (#10 of 10); they cash in Kyren Williams for 2026 1.10."
-              },
-              {
-                "send": [
-                  {
-                    "sleeper_id": "PICK_2026_R1_O3",
-                    "name": "2026 1.10 (Comedy of Errors)",
-                    "position": "PICK",
-                    "team": null,
-                    "age": null,
-                    "dynasty_value": 2551,
-                    "redraft_value": 0,
-                    "injury_status": null,
-                    "is_pick": true
-                  },
-                  {
                     "sleeper_id": "5947",
                     "name": "Jakobi Meyers",
                     "position": "WR",
@@ -22195,6 +22094,36 @@
                 "their_lineup_change": -1789,
                 "my_value_delta": -510,
                 "pitch": "cropcreamer is rebuilding. Jakobi Meyers fills their WR gap (#8 of 10); they cash in Kyren Williams for 2026 1.10."
+              },
+              {
+                "send": [
+                  {
+                    "sleeper_id": "PICK_2026_R1_O3",
+                    "name": "2026 1.10 (Comedy of Errors)",
+                    "position": "PICK",
+                    "team": null,
+                    "age": null,
+                    "dynasty_value": 2551,
+                    "redraft_value": 0,
+                    "injury_status": null,
+                    "is_pick": true
+                  },
+                  {
+                    "sleeper_id": "PICK_2026_R2_O3",
+                    "name": "2026 2.10 (Comedy of Errors)",
+                    "position": "PICK",
+                    "team": null,
+                    "age": null,
+                    "dynasty_value": 1518,
+                    "redraft_value": 0,
+                    "injury_status": null,
+                    "is_pick": true
+                  }
+                ],
+                "my_lineup_change": 1614,
+                "their_lineup_change": -1789,
+                "my_value_delta": -455,
+                "pitch": "cropcreamer is rebuilding. They cash in Kyren Williams for 2026 1.10 and 2026 2.10."
               }
             ]
           }
@@ -22390,7 +22319,7 @@
                 "my_lineup_change": 1546,
                 "their_lineup_change": -1735,
                 "my_value_delta": -816,
-                "pitch": "Bucky the Vampire Slayer is rebuilding. Tony Pollard upgrades their RB; they cash in Bucky Irving for 2026 1.10."
+                "pitch": "Bucky the Vampire Slayer is rebuilding. They cash in Bucky Irving for 2026 1.10."
               },
               {
                 "send": [
@@ -22632,20 +22561,20 @@
                     "is_pick": false
                   },
                   {
-                    "sleeper_id": "2216",
-                    "name": "Mike Evans",
-                    "position": "WR",
-                    "team": "SF",
-                    "age": 32,
-                    "dynasty_value": 2000,
-                    "redraft_value": 2323,
+                    "sleeper_id": "7567",
+                    "name": "Kenneth Gainwell",
+                    "position": "RB",
+                    "team": "TB",
+                    "age": 27,
+                    "dynasty_value": 1824,
+                    "redraft_value": 1334,
                     "injury_status": null,
                     "is_pick": false
                   }
                 ],
                 "my_lineup_change": 1336,
-                "their_lineup_change": -1882,
-                "my_value_delta": -683,
+                "their_lineup_change": -1512,
+                "my_value_delta": -507,
                 "pitch": "Obijan Kenobi is rebuilding. Cam Ward upgrades their QB."
               }
             ]
@@ -22778,36 +22707,6 @@
                     "is_pick": false
                   },
                   {
-                    "sleeper_id": "2216",
-                    "name": "Mike Evans",
-                    "position": "WR",
-                    "team": "SF",
-                    "age": 32,
-                    "dynasty_value": 2000,
-                    "redraft_value": 2323,
-                    "injury_status": null,
-                    "is_pick": false
-                  }
-                ],
-                "my_lineup_change": 1235,
-                "their_lineup_change": -1081,
-                "my_value_delta": -784,
-                "pitch": "Ligma is rebuilding. Cam Ward fills their QB gap (#9 of 10), dealing from their RB surplus."
-              },
-              {
-                "send": [
-                  {
-                    "sleeper_id": "12522",
-                    "name": "Cam Ward",
-                    "position": "QB",
-                    "team": "TEN",
-                    "age": 24,
-                    "dynasty_value": 2019,
-                    "redraft_value": 293,
-                    "injury_status": null,
-                    "is_pick": false
-                  },
-                  {
                     "sleeper_id": "7567",
                     "name": "Kenneth Gainwell",
                     "position": "RB",
@@ -22838,21 +22737,51 @@
                     "is_pick": false
                   },
                   {
-                    "sleeper_id": "5967",
-                    "name": "Tony Pollard",
-                    "position": "RB",
-                    "team": "TEN",
+                    "sleeper_id": "5947",
+                    "name": "Jakobi Meyers",
+                    "position": "WR",
+                    "team": "JAX",
                     "age": 29,
-                    "dynasty_value": 1811,
-                    "redraft_value": 1757,
+                    "dynasty_value": 1573,
+                    "redraft_value": 711,
                     "injury_status": null,
                     "is_pick": false
                   }
                 ],
                 "my_lineup_change": 1235,
                 "their_lineup_change": -1081,
-                "my_value_delta": -595,
+                "my_value_delta": -357,
                 "pitch": "Ligma is rebuilding. Cam Ward fills their QB gap (#9 of 10), dealing from their RB surplus."
+              },
+              {
+                "send": [
+                  {
+                    "sleeper_id": "12522",
+                    "name": "Cam Ward",
+                    "position": "QB",
+                    "team": "TEN",
+                    "age": 24,
+                    "dynasty_value": 2019,
+                    "redraft_value": 293,
+                    "injury_status": null,
+                    "is_pick": false
+                  },
+                  {
+                    "sleeper_id": "PICK_2026_R2_O3",
+                    "name": "2026 2.10 (Comedy of Errors)",
+                    "position": "PICK",
+                    "team": null,
+                    "age": null,
+                    "dynasty_value": 1518,
+                    "redraft_value": 0,
+                    "injury_status": null,
+                    "is_pick": true
+                  }
+                ],
+                "my_lineup_change": 1235,
+                "their_lineup_change": -1081,
+                "my_value_delta": -302,
+                "pitch": "Ligma is rebuilding. Cam Ward fills their QB gap (#9 of 10); they cash in Travis Etienne for 2026 2.10, dealing from their RB surplus."
               }
             ]
           }
@@ -23004,36 +22933,6 @@
                     "is_pick": false
                   },
                   {
-                    "sleeper_id": "2216",
-                    "name": "Mike Evans",
-                    "position": "WR",
-                    "team": "SF",
-                    "age": 32,
-                    "dynasty_value": 2000,
-                    "redraft_value": 2323,
-                    "injury_status": null,
-                    "is_pick": false
-                  }
-                ],
-                "my_lineup_change": 1223,
-                "their_lineup_change": -1069,
-                "my_value_delta": -796,
-                "pitch": "Ligma is rebuilding. Cam Ward fills their QB gap (#9 of 10), dealing from their RB surplus."
-              },
-              {
-                "send": [
-                  {
-                    "sleeper_id": "12522",
-                    "name": "Cam Ward",
-                    "position": "QB",
-                    "team": "TEN",
-                    "age": 24,
-                    "dynasty_value": 2019,
-                    "redraft_value": 293,
-                    "injury_status": null,
-                    "is_pick": false
-                  },
-                  {
                     "sleeper_id": "7567",
                     "name": "Kenneth Gainwell",
                     "position": "RB",
@@ -23064,21 +22963,51 @@
                     "is_pick": false
                   },
                   {
-                    "sleeper_id": "5967",
-                    "name": "Tony Pollard",
-                    "position": "RB",
-                    "team": "TEN",
+                    "sleeper_id": "5947",
+                    "name": "Jakobi Meyers",
+                    "position": "WR",
+                    "team": "JAX",
                     "age": 29,
-                    "dynasty_value": 1811,
-                    "redraft_value": 1757,
+                    "dynasty_value": 1573,
+                    "redraft_value": 711,
                     "injury_status": null,
                     "is_pick": false
                   }
                 ],
                 "my_lineup_change": 1223,
                 "their_lineup_change": -1069,
-                "my_value_delta": -607,
+                "my_value_delta": -369,
                 "pitch": "Ligma is rebuilding. Cam Ward fills their QB gap (#9 of 10), dealing from their RB surplus."
+              },
+              {
+                "send": [
+                  {
+                    "sleeper_id": "12522",
+                    "name": "Cam Ward",
+                    "position": "QB",
+                    "team": "TEN",
+                    "age": 24,
+                    "dynasty_value": 2019,
+                    "redraft_value": 293,
+                    "injury_status": null,
+                    "is_pick": false
+                  },
+                  {
+                    "sleeper_id": "PICK_2026_R2_O3",
+                    "name": "2026 2.10 (Comedy of Errors)",
+                    "position": "PICK",
+                    "team": null,
+                    "age": null,
+                    "dynasty_value": 1518,
+                    "redraft_value": 0,
+                    "injury_status": null,
+                    "is_pick": true
+                  }
+                ],
+                "my_lineup_change": 1223,
+                "their_lineup_change": -1069,
+                "my_value_delta": -314,
+                "pitch": "Ligma is rebuilding. Cam Ward fills their QB gap (#9 of 10); they cash in Javonte Williams for 2026 2.10, dealing from their RB surplus."
               }
             ]
           }
@@ -23240,51 +23169,51 @@
                     "is_pick": false
                   },
                   {
-                    "sleeper_id": "5967",
-                    "name": "Tony Pollard",
-                    "position": "RB",
-                    "team": "TEN",
+                    "sleeper_id": "5947",
+                    "name": "Jakobi Meyers",
+                    "position": "WR",
+                    "team": "JAX",
                     "age": 29,
-                    "dynasty_value": 1811,
-                    "redraft_value": 1757,
+                    "dynasty_value": 1573,
+                    "redraft_value": 711,
                     "injury_status": null,
                     "is_pick": false
                   }
                 ],
                 "my_lineup_change": 1136,
-                "their_lineup_change": -1078,
-                "my_value_delta": -694,
+                "their_lineup_change": -1316,
+                "my_value_delta": -456,
                 "pitch": "Glass bones & paper skin is rebuilding. Cam Ward fills their QB gap (#10 of 10)."
               },
               {
                 "send": [
                   {
-                    "sleeper_id": "2216",
-                    "name": "Mike Evans",
-                    "position": "WR",
-                    "team": "SF",
-                    "age": 32,
-                    "dynasty_value": 2000,
-                    "redraft_value": 2323,
+                    "sleeper_id": "12522",
+                    "name": "Cam Ward",
+                    "position": "QB",
+                    "team": "TEN",
+                    "age": 24,
+                    "dynasty_value": 2019,
+                    "redraft_value": 293,
                     "injury_status": null,
                     "is_pick": false
                   },
                   {
-                    "sleeper_id": "7567",
-                    "name": "Kenneth Gainwell",
-                    "position": "RB",
-                    "team": "TB",
-                    "age": 27,
-                    "dynasty_value": 1824,
-                    "redraft_value": 1334,
+                    "sleeper_id": "PICK_2026_R2_O3",
+                    "name": "2026 2.10 (Comedy of Errors)",
+                    "position": "PICK",
+                    "team": null,
+                    "age": null,
+                    "dynasty_value": 1518,
+                    "redraft_value": 0,
                     "injury_status": null,
-                    "is_pick": false
+                    "is_pick": true
                   }
                 ],
                 "my_lineup_change": 1136,
-                "their_lineup_change": -1009,
-                "my_value_delta": -688,
-                "pitch": "Glass bones & paper skin is rebuilding. Kenneth Gainwell fills their RB gap (#8 of 10)."
+                "their_lineup_change": -1374,
+                "my_value_delta": -401,
+                "pitch": "Glass bones & paper skin is rebuilding. Cam Ward fills their QB gap (#10 of 10); they cash in Derrick Henry for 2026 2.10."
               }
             ]
           }
@@ -23455,36 +23384,6 @@
               {
                 "send": [
                   {
-                    "sleeper_id": "2216",
-                    "name": "Mike Evans",
-                    "position": "WR",
-                    "team": "SF",
-                    "age": 32,
-                    "dynasty_value": 2000,
-                    "redraft_value": 2323,
-                    "injury_status": null,
-                    "is_pick": false
-                  },
-                  {
-                    "sleeper_id": "PICK_2026_R2_O3",
-                    "name": "2026 2.10 (Comedy of Errors)",
-                    "position": "PICK",
-                    "team": null,
-                    "age": null,
-                    "dynasty_value": 1518,
-                    "redraft_value": 0,
-                    "injury_status": null,
-                    "is_pick": true
-                  }
-                ],
-                "my_lineup_change": 831,
-                "their_lineup_change": -831,
-                "my_value_delta": -687,
-                "pitch": "Glass bones & paper skin is rebuilding. They land Mike Evans; they cash in Josh Jacobs for 2026 2.10."
-              },
-              {
-                "send": [
-                  {
                     "sleeper_id": "7567",
                     "name": "Kenneth Gainwell",
                     "position": "RB",
@@ -23511,6 +23410,36 @@
                 "their_lineup_change": -1007,
                 "my_value_delta": -566,
                 "pitch": "Glass bones & paper skin is rebuilding. Kenneth Gainwell fills their RB gap (#8 of 10)."
+              },
+              {
+                "send": [
+                  {
+                    "sleeper_id": "7567",
+                    "name": "Kenneth Gainwell",
+                    "position": "RB",
+                    "team": "TB",
+                    "age": 27,
+                    "dynasty_value": 1824,
+                    "redraft_value": 1334,
+                    "injury_status": null,
+                    "is_pick": false
+                  },
+                  {
+                    "sleeper_id": "PICK_2026_R2_O3",
+                    "name": "2026 2.10 (Comedy of Errors)",
+                    "position": "PICK",
+                    "team": null,
+                    "age": null,
+                    "dynasty_value": 1518,
+                    "redraft_value": 0,
+                    "injury_status": null,
+                    "is_pick": true
+                  }
+                ],
+                "my_lineup_change": 831,
+                "their_lineup_change": -1007,
+                "my_value_delta": -511,
+                "pitch": "Glass bones & paper skin is rebuilding. Kenneth Gainwell fills their RB gap (#8 of 10); they cash in Josh Jacobs for 2026 2.10."
               }
             ]
           }
@@ -23956,92 +23885,21 @@
               {
                 "send": [
                   {
-                    "sleeper_id": "4034",
-                    "name": "Christian McCaffrey",
-                    "position": "RB",
-                    "team": "SF",
-                    "age": 29,
-                    "dynasty_value": 4780,
-                    "redraft_value": 8212,
-                    "injury_status": null,
-                    "is_pick": false
-                  },
-                  {
-                    "sleeper_id": "PICK_2027_R1_O3",
-                    "name": "2027 R1 (Comedy of Errors)",
-                    "position": "PICK",
-                    "team": null,
-                    "age": null,
-                    "dynasty_value": 3012,
-                    "redraft_value": 0,
-                    "injury_status": null,
-                    "is_pick": true
-                  }
-                ],
-                "my_lineup_change": 2361,
-                "their_lineup_change": -2537,
-                "my_value_delta": -475,
-                "pitch": "Samir\u2019s Tight End  is rebuilding. Christian McCaffrey upgrades their RB; they cash in Amon-Ra St. Brown for 2027 1st."
-              },
-              {
-                "send": [
-                  {
-                    "sleeper_id": "4034",
-                    "name": "Christian McCaffrey",
-                    "position": "RB",
-                    "team": "SF",
-                    "age": 29,
-                    "dynasty_value": 4780,
-                    "redraft_value": 8212,
-                    "injury_status": null,
-                    "is_pick": false
-                  },
-                  {
-                    "sleeper_id": "PICK_2026_R1_O3",
-                    "name": "2026 1.10 (Comedy of Errors)",
-                    "position": "PICK",
-                    "team": null,
-                    "age": null,
-                    "dynasty_value": 2551,
-                    "redraft_value": 0,
-                    "injury_status": null,
-                    "is_pick": true
-                  }
-                ],
-                "my_lineup_change": 2361,
-                "their_lineup_change": -2537,
-                "my_value_delta": -14,
-                "pitch": "Samir\u2019s Tight End  is rebuilding. Christian McCaffrey upgrades their RB; they cash in Amon-Ra St. Brown for 2026 1.10."
-              },
-              {
-                "send": [
-                  {
-                    "sleeper_id": "4034",
-                    "name": "Christian McCaffrey",
-                    "position": "RB",
-                    "team": "SF",
-                    "age": 29,
-                    "dynasty_value": 4780,
-                    "redraft_value": 8212,
-                    "injury_status": null,
-                    "is_pick": false
-                  },
-                  {
-                    "sleeper_id": "6904",
-                    "name": "Jalen Hurts",
-                    "position": "QB",
-                    "team": "PHI",
-                    "age": 27,
-                    "dynasty_value": 2784,
-                    "redraft_value": 1654,
+                    "sleeper_id": "9488",
+                    "name": "Jaxon Smith-Njigba",
+                    "position": "WR",
+                    "team": "SEA",
+                    "age": 24,
+                    "dynasty_value": 9066,
+                    "redraft_value": 8889,
                     "injury_status": null,
                     "is_pick": false
                   }
                 ],
-                "my_lineup_change": 1596,
-                "their_lineup_change": -2537,
-                "my_value_delta": -247,
-                "pitch": "Samir\u2019s Tight End  is rebuilding. Jalen Hurts upgrades their QB."
+                "my_lineup_change": -1749,
+                "their_lineup_change": 1749,
+                "my_value_delta": -1749,
+                "pitch": "Samir\u2019s Tight End  is rebuilding. Jaxon Smith-Njigba upgrades their WR."
               }
             ]
           }
@@ -24309,36 +24167,6 @@
                 "their_lineup_change": -3592,
                 "my_value_delta": 580,
                 "pitch": "Bucky the Vampire Slayer is rebuilding. A.J. Brown upgrades their WR; they cash in Justin Jefferson for 2027 1st."
-              },
-              {
-                "send": [
-                  {
-                    "sleeper_id": "4034",
-                    "name": "Christian McCaffrey",
-                    "position": "RB",
-                    "team": "SF",
-                    "age": 29,
-                    "dynasty_value": 4780,
-                    "redraft_value": 8212,
-                    "injury_status": null,
-                    "is_pick": false
-                  },
-                  {
-                    "sleeper_id": "PICK_2027_R1_O3",
-                    "name": "2027 R1 (Comedy of Errors)",
-                    "position": "PICK",
-                    "team": null,
-                    "age": null,
-                    "dynasty_value": 3012,
-                    "redraft_value": 0,
-                    "injury_status": null,
-                    "is_pick": true
-                  }
-                ],
-                "my_lineup_change": 2156,
-                "their_lineup_change": -2332,
-                "my_value_delta": -680,
-                "pitch": "Bucky the Vampire Slayer is rebuilding. Christian McCaffrey upgrades their RB; they cash in Justin Jefferson for 2027 1st."
               }
             ]
           }
@@ -25512,21 +25340,21 @@
                     "is_pick": true
                   },
                   {
-                    "sleeper_id": "2216",
-                    "name": "Mike Evans",
-                    "position": "WR",
-                    "team": "SF",
-                    "age": 32,
-                    "dynasty_value": 2000,
-                    "redraft_value": 2323,
+                    "sleeper_id": "7567",
+                    "name": "Kenneth Gainwell",
+                    "position": "RB",
+                    "team": "TB",
+                    "age": 27,
+                    "dynasty_value": 1824,
+                    "redraft_value": 1334,
                     "injury_status": null,
                     "is_pick": false
                   }
                 ],
                 "my_lineup_change": 3291,
-                "their_lineup_change": -3291,
-                "my_value_delta": 279,
-                "pitch": "Da Bell of Da Ball is rebuilding. They land Mike Evans; they cash in Tetairoa McMillan for 2027 1st, dealing from their WR surplus."
+                "their_lineup_change": -3467,
+                "my_value_delta": 455,
+                "pitch": "Da Bell of Da Ball is rebuilding. Kenneth Gainwell upgrades their RB; they cash in Tetairoa McMillan for 2027 1st, dealing from their WR surplus."
               }
             ]
           }
@@ -25809,21 +25637,21 @@
                     "is_pick": true
                   },
                   {
-                    "sleeper_id": "2216",
-                    "name": "Mike Evans",
-                    "position": "WR",
-                    "team": "SF",
-                    "age": 32,
-                    "dynasty_value": 2000,
-                    "redraft_value": 2323,
+                    "sleeper_id": "7567",
+                    "name": "Kenneth Gainwell",
+                    "position": "RB",
+                    "team": "TB",
+                    "age": 27,
+                    "dynasty_value": 1824,
+                    "redraft_value": 1334,
                     "injury_status": null,
                     "is_pick": false
                   }
                 ],
                 "my_lineup_change": 2572,
-                "their_lineup_change": -2572,
-                "my_value_delta": -440,
-                "pitch": "Samir\u2019s Tight End  is rebuilding. Mike Evans upgrades their WR; they cash in George Pickens for 2027 1st."
+                "their_lineup_change": -2748,
+                "my_value_delta": -264,
+                "pitch": "Samir\u2019s Tight End  is rebuilding. Kenneth Gainwell upgrades their RB; they cash in George Pickens for 2027 1st."
               }
             ]
           }
@@ -26106,21 +25934,21 @@
                     "is_pick": true
                   },
                   {
-                    "sleeper_id": "2216",
-                    "name": "Mike Evans",
-                    "position": "WR",
-                    "team": "SF",
-                    "age": 32,
-                    "dynasty_value": 2000,
-                    "redraft_value": 2323,
+                    "sleeper_id": "7567",
+                    "name": "Kenneth Gainwell",
+                    "position": "RB",
+                    "team": "TB",
+                    "age": 27,
+                    "dynasty_value": 1824,
+                    "redraft_value": 1334,
                     "injury_status": null,
                     "is_pick": false
                   }
                 ],
                 "my_lineup_change": 2541,
-                "their_lineup_change": -2541,
-                "my_value_delta": -471,
-                "pitch": "Da Bell of Da Ball is rebuilding. They land Mike Evans; they cash in Emeka Egbuka for 2027 1st, dealing from their WR surplus."
+                "their_lineup_change": -2717,
+                "my_value_delta": -295,
+                "pitch": "Da Bell of Da Ball is rebuilding. Kenneth Gainwell upgrades their RB; they cash in Emeka Egbuka for 2027 1st, dealing from their WR surplus."
               }
             ]
           }
@@ -26302,36 +26130,6 @@
                     "is_pick": true
                   },
                   {
-                    "sleeper_id": "2216",
-                    "name": "Mike Evans",
-                    "position": "WR",
-                    "team": "SF",
-                    "age": 32,
-                    "dynasty_value": 2000,
-                    "redraft_value": 2323,
-                    "injury_status": null,
-                    "is_pick": false
-                  }
-                ],
-                "my_lineup_change": 2150,
-                "their_lineup_change": -2041,
-                "my_value_delta": -862,
-                "pitch": "Mongo Money Makers is rebuilding. Mike Evans fills their WR gap (#9 of 10); they cash in Nico Collins for 2027 1st."
-              },
-              {
-                "send": [
-                  {
-                    "sleeper_id": "PICK_2027_R1_O3",
-                    "name": "2027 R1 (Comedy of Errors)",
-                    "position": "PICK",
-                    "team": null,
-                    "age": null,
-                    "dynasty_value": 3012,
-                    "redraft_value": 0,
-                    "injury_status": null,
-                    "is_pick": true
-                  },
-                  {
                     "sleeper_id": "7567",
                     "name": "Kenneth Gainwell",
                     "position": "RB",
@@ -26347,6 +26145,36 @@
                 "their_lineup_change": -2041,
                 "my_value_delta": -686,
                 "pitch": "Mongo Money Makers is rebuilding. They land Kenneth Gainwell; they cash in Nico Collins for 2027 1st."
+              },
+              {
+                "send": [
+                  {
+                    "sleeper_id": "PICK_2027_R1_O3",
+                    "name": "2027 R1 (Comedy of Errors)",
+                    "position": "PICK",
+                    "team": null,
+                    "age": null,
+                    "dynasty_value": 3012,
+                    "redraft_value": 0,
+                    "injury_status": null,
+                    "is_pick": true
+                  },
+                  {
+                    "sleeper_id": "5947",
+                    "name": "Jakobi Meyers",
+                    "position": "WR",
+                    "team": "JAX",
+                    "age": 29,
+                    "dynasty_value": 1573,
+                    "redraft_value": 711,
+                    "injury_status": null,
+                    "is_pick": false
+                  }
+                ],
+                "my_lineup_change": 2150,
+                "their_lineup_change": -2041,
+                "my_value_delta": -435,
+                "pitch": "Mongo Money Makers is rebuilding. Jakobi Meyers fills their WR gap (#9 of 10); they cash in Nico Collins for 2027 1st."
               }
             ]
           }
@@ -26561,7 +26389,7 @@
                 "my_lineup_change": 1902,
                 "their_lineup_change": -2091,
                 "my_value_delta": -921,
-                "pitch": "Da Bell of Da Ball is rebuilding. Tony Pollard upgrades their RB; they cash in Garrett Wilson for 2027 1st, dealing from their WR surplus."
+                "pitch": "Da Bell of Da Ball is rebuilding. They cash in Garrett Wilson for 2027 1st, dealing from their WR surplus."
               },
               {
                 "send": [
@@ -26792,32 +26620,32 @@
               {
                 "send": [
                   {
-                    "sleeper_id": "PICK_2026_R1_O3",
-                    "name": "2026 1.10 (Comedy of Errors)",
+                    "sleeper_id": "PICK_2027_R1_O3",
+                    "name": "2027 R1 (Comedy of Errors)",
                     "position": "PICK",
                     "team": null,
                     "age": null,
-                    "dynasty_value": 2551,
+                    "dynasty_value": 3012,
                     "redraft_value": 0,
                     "injury_status": null,
                     "is_pick": true
                   },
                   {
-                    "sleeper_id": "2216",
-                    "name": "Mike Evans",
-                    "position": "WR",
-                    "team": "SF",
-                    "age": 32,
-                    "dynasty_value": 2000,
-                    "redraft_value": 2323,
+                    "sleeper_id": "PICK_2026_R2_O3",
+                    "name": "2026 2.10 (Comedy of Errors)",
+                    "position": "PICK",
+                    "team": null,
+                    "age": null,
+                    "dynasty_value": 1518,
+                    "redraft_value": 0,
                     "injury_status": null,
-                    "is_pick": false
+                    "is_pick": true
                   }
                 ],
                 "my_lineup_change": 1805,
-                "their_lineup_change": -1805,
-                "my_value_delta": -746,
-                "pitch": "Obijan Kenobi is rebuilding. Mike Evans upgrades their WR; they cash in Ladd McConkey for 2026 1.10."
+                "their_lineup_change": -2078,
+                "my_value_delta": -725,
+                "pitch": "Obijan Kenobi is rebuilding. They cash in Ladd McConkey for 2027 1st and 2026 2.10."
               }
             ]
           }
@@ -27018,32 +26846,32 @@
               {
                 "send": [
                   {
-                    "sleeper_id": "PICK_2026_R1_O3",
-                    "name": "2026 1.10 (Comedy of Errors)",
+                    "sleeper_id": "PICK_2027_R1_O3",
+                    "name": "2027 R1 (Comedy of Errors)",
                     "position": "PICK",
                     "team": null,
                     "age": null,
-                    "dynasty_value": 2551,
+                    "dynasty_value": 3012,
                     "redraft_value": 0,
                     "injury_status": null,
                     "is_pick": true
                   },
                   {
-                    "sleeper_id": "2216",
-                    "name": "Mike Evans",
-                    "position": "WR",
-                    "team": "SF",
-                    "age": 32,
-                    "dynasty_value": 2000,
-                    "redraft_value": 2323,
+                    "sleeper_id": "PICK_2026_R2_O3",
+                    "name": "2026 2.10 (Comedy of Errors)",
+                    "position": "PICK",
+                    "team": null,
+                    "age": null,
+                    "dynasty_value": 1518,
+                    "redraft_value": 0,
                     "injury_status": null,
-                    "is_pick": false
+                    "is_pick": true
                   }
                 ],
                 "my_lineup_change": 1783,
                 "their_lineup_change": -1674,
-                "my_value_delta": -768,
-                "pitch": "Mongo Money Makers is rebuilding. Mike Evans fills their WR gap (#9 of 10); they cash in Chris Olave for 2026 1.10."
+                "my_value_delta": -747,
+                "pitch": "Mongo Money Makers is rebuilding. They cash in Chris Olave for 2027 1st and 2026 2.10."
               }
             ]
           }
@@ -27315,32 +27143,32 @@
               {
                 "send": [
                   {
-                    "sleeper_id": "PICK_2026_R1_O3",
-                    "name": "2026 1.10 (Comedy of Errors)",
+                    "sleeper_id": "PICK_2027_R1_O3",
+                    "name": "2027 R1 (Comedy of Errors)",
                     "position": "PICK",
                     "team": null,
                     "age": null,
-                    "dynasty_value": 2551,
+                    "dynasty_value": 3012,
                     "redraft_value": 0,
                     "injury_status": null,
                     "is_pick": true
                   },
                   {
-                    "sleeper_id": "2216",
-                    "name": "Mike Evans",
-                    "position": "WR",
-                    "team": "SF",
-                    "age": 32,
-                    "dynasty_value": 2000,
-                    "redraft_value": 2323,
+                    "sleeper_id": "PICK_2026_R2_O3",
+                    "name": "2026 2.10 (Comedy of Errors)",
+                    "position": "PICK",
+                    "team": null,
+                    "age": null,
+                    "dynasty_value": 1518,
+                    "redraft_value": 0,
                     "injury_status": null,
-                    "is_pick": false
+                    "is_pick": true
                   }
                 ],
                 "my_lineup_change": 1770,
                 "their_lineup_change": -1661,
-                "my_value_delta": -781,
-                "pitch": "Mongo Money Makers is rebuilding. Mike Evans fills their WR gap (#9 of 10); they cash in Rome Odunze for 2026 1.10."
+                "my_value_delta": -760,
+                "pitch": "Mongo Money Makers is rebuilding. They cash in Rome Odunze for 2027 1st and 2026 2.10."
               }
             ]
           }
@@ -27566,7 +27394,7 @@
                 "my_lineup_change": 1501,
                 "their_lineup_change": -1347,
                 "my_value_delta": -861,
-                "pitch": "Ligma is rebuilding. They land Tony Pollard; they cash in Marvin Harrison for 2026 1.10."
+                "pitch": "Ligma is rebuilding. They cash in Marvin Harrison for 2026 1.10."
               },
               {
                 "send": [
@@ -27808,20 +27636,20 @@
                     "is_pick": false
                   },
                   {
-                    "sleeper_id": "2216",
-                    "name": "Mike Evans",
-                    "position": "WR",
-                    "team": "SF",
-                    "age": 32,
-                    "dynasty_value": 2000,
-                    "redraft_value": 2323,
+                    "sleeper_id": "7567",
+                    "name": "Kenneth Gainwell",
+                    "position": "RB",
+                    "team": "TB",
+                    "age": 27,
+                    "dynasty_value": 1824,
+                    "redraft_value": 1334,
                     "injury_status": null,
                     "is_pick": false
                   }
                 ],
                 "my_lineup_change": 1464,
                 "their_lineup_change": -1310,
-                "my_value_delta": -555,
+                "my_value_delta": -379,
                 "pitch": "Ligma is rebuilding. Cam Ward fills their QB gap (#9 of 10)."
               }
             ]
@@ -28034,20 +27862,20 @@
                     "is_pick": false
                   },
                   {
-                    "sleeper_id": "2216",
-                    "name": "Mike Evans",
-                    "position": "WR",
-                    "team": "SF",
-                    "age": 32,
-                    "dynasty_value": 2000,
-                    "redraft_value": 2323,
+                    "sleeper_id": "7567",
+                    "name": "Kenneth Gainwell",
+                    "position": "RB",
+                    "team": "TB",
+                    "age": 27,
+                    "dynasty_value": 1824,
+                    "redraft_value": 1334,
                     "injury_status": null,
                     "is_pick": false
                   }
                 ],
                 "my_lineup_change": 1354,
-                "their_lineup_change": -1354,
-                "my_value_delta": -665,
+                "their_lineup_change": -1468,
+                "my_value_delta": -489,
                 "pitch": "Saquantum Leap is rebuilding. Cam Ward upgrades their QB."
               }
             ]
@@ -28301,36 +28129,6 @@
                     "is_pick": false
                   },
                   {
-                    "sleeper_id": "2216",
-                    "name": "Mike Evans",
-                    "position": "WR",
-                    "team": "SF",
-                    "age": 32,
-                    "dynasty_value": 2000,
-                    "redraft_value": 2323,
-                    "injury_status": null,
-                    "is_pick": false
-                  }
-                ],
-                "my_lineup_change": 1265,
-                "their_lineup_change": -1265,
-                "my_value_delta": -754,
-                "pitch": "cropcreamer is rebuilding. Mike Evans fills their WR gap (#8 of 10)."
-              },
-              {
-                "send": [
-                  {
-                    "sleeper_id": "12522",
-                    "name": "Cam Ward",
-                    "position": "QB",
-                    "team": "TEN",
-                    "age": 24,
-                    "dynasty_value": 2019,
-                    "redraft_value": 293,
-                    "injury_status": null,
-                    "is_pick": false
-                  },
-                  {
                     "sleeper_id": "7567",
                     "name": "Kenneth Gainwell",
                     "position": "RB",
@@ -28346,6 +28144,36 @@
                 "their_lineup_change": -1419,
                 "my_value_delta": -578,
                 "pitch": "cropcreamer is rebuilding. Kenneth Gainwell fills their RB gap (#10 of 10)."
+              },
+              {
+                "send": [
+                  {
+                    "sleeper_id": "12522",
+                    "name": "Cam Ward",
+                    "position": "QB",
+                    "team": "TEN",
+                    "age": 24,
+                    "dynasty_value": 2019,
+                    "redraft_value": 293,
+                    "injury_status": null,
+                    "is_pick": false
+                  },
+                  {
+                    "sleeper_id": "5947",
+                    "name": "Jakobi Meyers",
+                    "position": "WR",
+                    "team": "JAX",
+                    "age": 29,
+                    "dynasty_value": 1573,
+                    "redraft_value": 711,
+                    "injury_status": null,
+                    "is_pick": false
+                  }
+                ],
+                "my_lineup_change": 1265,
+                "their_lineup_change": -1419,
+                "my_value_delta": -327,
+                "pitch": "cropcreamer is rebuilding. Jakobi Meyers fills their WR gap (#8 of 10)."
               }
             ]
           }
@@ -28557,36 +28385,6 @@
                     "is_pick": false
                   },
                   {
-                    "sleeper_id": "2216",
-                    "name": "Mike Evans",
-                    "position": "WR",
-                    "team": "SF",
-                    "age": 32,
-                    "dynasty_value": 2000,
-                    "redraft_value": 2323,
-                    "injury_status": null,
-                    "is_pick": false
-                  }
-                ],
-                "my_lineup_change": 1260,
-                "their_lineup_change": -1260,
-                "my_value_delta": -759,
-                "pitch": "Bucky the Vampire Slayer is rebuilding. Mike Evans upgrades their WR."
-              },
-              {
-                "send": [
-                  {
-                    "sleeper_id": "12522",
-                    "name": "Cam Ward",
-                    "position": "QB",
-                    "team": "TEN",
-                    "age": 24,
-                    "dynasty_value": 2019,
-                    "redraft_value": 293,
-                    "injury_status": null,
-                    "is_pick": false
-                  },
-                  {
                     "sleeper_id": "7567",
                     "name": "Kenneth Gainwell",
                     "position": "RB",
@@ -28602,6 +28400,36 @@
                 "their_lineup_change": -1436,
                 "my_value_delta": -583,
                 "pitch": "Bucky the Vampire Slayer is rebuilding. Kenneth Gainwell upgrades their RB."
+              },
+              {
+                "send": [
+                  {
+                    "sleeper_id": "12522",
+                    "name": "Cam Ward",
+                    "position": "QB",
+                    "team": "TEN",
+                    "age": 24,
+                    "dynasty_value": 2019,
+                    "redraft_value": 293,
+                    "injury_status": null,
+                    "is_pick": false
+                  },
+                  {
+                    "sleeper_id": "5947",
+                    "name": "Jakobi Meyers",
+                    "position": "WR",
+                    "team": "JAX",
+                    "age": 29,
+                    "dynasty_value": 1573,
+                    "redraft_value": 711,
+                    "injury_status": null,
+                    "is_pick": false
+                  }
+                ],
+                "my_lineup_change": 1260,
+                "their_lineup_change": -1570,
+                "my_value_delta": -332,
+                "pitch": "Bucky the Vampire Slayer is rebuilding. Jakobi Meyers upgrades their WR."
               }
             ]
           }
@@ -28753,35 +28581,54 @@
                     "is_pick": false
                   },
                   {
-                    "sleeper_id": "5967",
-                    "name": "Tony Pollard",
-                    "position": "RB",
-                    "team": "TEN",
+                    "sleeper_id": "5947",
+                    "name": "Jakobi Meyers",
+                    "position": "WR",
+                    "team": "JAX",
                     "age": 29,
-                    "dynasty_value": 1811,
-                    "redraft_value": 1757,
+                    "dynasty_value": 1573,
+                    "redraft_value": 711,
                     "injury_status": null,
                     "is_pick": false
                   }
                 ],
                 "my_lineup_change": 1073,
-                "their_lineup_change": -1262,
-                "my_value_delta": -757,
+                "their_lineup_change": -1346,
+                "my_value_delta": -519,
                 "pitch": "Obijan Kenobi is rebuilding. Cam Ward upgrades their QB."
               },
               {
                 "send": [
                   {
-                    "sleeper_id": "2216",
-                    "name": "Mike Evans",
-                    "position": "WR",
-                    "team": "SF",
-                    "age": 32,
-                    "dynasty_value": 2000,
-                    "redraft_value": 2323,
+                    "sleeper_id": "12522",
+                    "name": "Cam Ward",
+                    "position": "QB",
+                    "team": "TEN",
+                    "age": 24,
+                    "dynasty_value": 2019,
+                    "redraft_value": 293,
                     "injury_status": null,
                     "is_pick": false
                   },
+                  {
+                    "sleeper_id": "PICK_2026_R2_O3",
+                    "name": "2026 2.10 (Comedy of Errors)",
+                    "position": "PICK",
+                    "team": null,
+                    "age": null,
+                    "dynasty_value": 1518,
+                    "redraft_value": 0,
+                    "injury_status": null,
+                    "is_pick": true
+                  }
+                ],
+                "my_lineup_change": 1073,
+                "their_lineup_change": -1346,
+                "my_value_delta": -464,
+                "pitch": "Obijan Kenobi is rebuilding. Cam Ward upgrades their QB; they cash in Tee Higgins for 2026 2.10."
+              },
+              {
+                "send": [
                   {
                     "sleeper_id": "7567",
                     "name": "Kenneth Gainwell",
@@ -28792,42 +28639,23 @@
                     "redraft_value": 1334,
                     "injury_status": null,
                     "is_pick": false
-                  }
-                ],
-                "my_lineup_change": 1073,
-                "their_lineup_change": -1073,
-                "my_value_delta": -751,
-                "pitch": "Obijan Kenobi is rebuilding. Kenneth Gainwell upgrades their RB."
-              },
-              {
-                "send": [
-                  {
-                    "sleeper_id": "2216",
-                    "name": "Mike Evans",
-                    "position": "WR",
-                    "team": "SF",
-                    "age": 32,
-                    "dynasty_value": 2000,
-                    "redraft_value": 2323,
-                    "injury_status": null,
-                    "is_pick": false
                   },
                   {
-                    "sleeper_id": "5967",
-                    "name": "Tony Pollard",
-                    "position": "RB",
-                    "team": "TEN",
+                    "sleeper_id": "5947",
+                    "name": "Jakobi Meyers",
+                    "position": "WR",
+                    "team": "JAX",
                     "age": 29,
-                    "dynasty_value": 1811,
-                    "redraft_value": 1757,
+                    "dynasty_value": 1573,
+                    "redraft_value": 711,
                     "injury_status": null,
                     "is_pick": false
                   }
                 ],
                 "my_lineup_change": 1073,
-                "their_lineup_change": -1073,
-                "my_value_delta": -738,
-                "pitch": "Obijan Kenobi is rebuilding. Tony Pollard upgrades their RB."
+                "their_lineup_change": -1249,
+                "my_value_delta": -324,
+                "pitch": "Obijan Kenobi is rebuilding. Kenneth Gainwell upgrades their RB."
               }
             ]
           }
@@ -29095,36 +28923,6 @@
                 "their_lineup_change": -4129,
                 "my_value_delta": 369,
                 "pitch": "cropcreamer is rebuilding. A.J. Brown fills their WR gap (#8 of 10); they cash in Brock Bowers for 2027 1st, dealing from their TE surplus."
-              },
-              {
-                "send": [
-                  {
-                    "sleeper_id": "4034",
-                    "name": "Christian McCaffrey",
-                    "position": "RB",
-                    "team": "SF",
-                    "age": 29,
-                    "dynasty_value": 4780,
-                    "redraft_value": 8212,
-                    "injury_status": null,
-                    "is_pick": false
-                  },
-                  {
-                    "sleeper_id": "PICK_2027_R1_O3",
-                    "name": "2027 R1 (Comedy of Errors)",
-                    "position": "PICK",
-                    "team": null,
-                    "age": null,
-                    "dynasty_value": 3012,
-                    "redraft_value": 0,
-                    "injury_status": null,
-                    "is_pick": true
-                  }
-                ],
-                "my_lineup_change": 2517,
-                "their_lineup_change": -2869,
-                "my_value_delta": -891,
-                "pitch": "cropcreamer is rebuilding. Christian McCaffrey fills their RB gap (#10 of 10); they cash in Brock Bowers for 2027 1st, dealing from their TE surplus."
               }
             ]
           }
@@ -29990,21 +29788,21 @@
                     "is_pick": true
                   },
                   {
-                    "sleeper_id": "5967",
-                    "name": "Tony Pollard",
-                    "position": "RB",
-                    "team": "TEN",
+                    "sleeper_id": "5947",
+                    "name": "Jakobi Meyers",
+                    "position": "WR",
+                    "team": "JAX",
                     "age": 29,
-                    "dynasty_value": 1811,
-                    "redraft_value": 1757,
+                    "dynasty_value": 1573,
+                    "redraft_value": 711,
                     "injury_status": null,
                     "is_pick": false
                   }
                 ],
                 "my_lineup_change": 2790,
                 "their_lineup_change": -2870,
-                "my_value_delta": -605,
-                "pitch": "Da Bell of Da Ball is rebuilding. Tony Pollard upgrades their RB; they cash in Tyler Warren for 2027 1st."
+                "my_value_delta": -367,
+                "pitch": "Da Bell of Da Ball is rebuilding. They land Jakobi Meyers; they cash in Tyler Warren for 2027 1st."
               }
             ]
           }
@@ -30205,36 +30003,6 @@
               {
                 "send": [
                   {
-                    "sleeper_id": "7567",
-                    "name": "Kenneth Gainwell",
-                    "position": "RB",
-                    "team": "TB",
-                    "age": 27,
-                    "dynasty_value": 1824,
-                    "redraft_value": 1334,
-                    "injury_status": null,
-                    "is_pick": false
-                  },
-                  {
-                    "sleeper_id": "5967",
-                    "name": "Tony Pollard",
-                    "position": "RB",
-                    "team": "TEN",
-                    "age": 29,
-                    "dynasty_value": 1811,
-                    "redraft_value": 1757,
-                    "injury_status": null,
-                    "is_pick": false
-                  }
-                ],
-                "my_lineup_change": 1577,
-                "their_lineup_change": -896,
-                "my_value_delta": -630,
-                "pitch": "Mongo Money Makers is rebuilding. They land Kenneth Gainwell and Tony Pollard."
-              },
-              {
-                "send": [
-                  {
                     "sleeper_id": "12522",
                     "name": "Cam Ward",
                     "position": "QB",
@@ -30291,6 +30059,36 @@
                 "their_lineup_change": -896,
                 "my_value_delta": -532,
                 "pitch": "Mongo Money Makers is rebuilding. Cam Ward upgrades their QB; they cash in Tucker Kraft for 2026 2.10."
+              },
+              {
+                "send": [
+                  {
+                    "sleeper_id": "7567",
+                    "name": "Kenneth Gainwell",
+                    "position": "RB",
+                    "team": "TB",
+                    "age": 27,
+                    "dynasty_value": 1824,
+                    "redraft_value": 1334,
+                    "injury_status": null,
+                    "is_pick": false
+                  },
+                  {
+                    "sleeper_id": "5947",
+                    "name": "Jakobi Meyers",
+                    "position": "WR",
+                    "team": "JAX",
+                    "age": 29,
+                    "dynasty_value": 1573,
+                    "redraft_value": 711,
+                    "injury_status": null,
+                    "is_pick": false
+                  }
+                ],
+                "my_lineup_change": 1577,
+                "their_lineup_change": -896,
+                "my_value_delta": -392,
+                "pitch": "Mongo Money Makers is rebuilding. Jakobi Meyers fills their WR gap (#9 of 10)."
               }
             ]
           }
@@ -30777,36 +30575,6 @@
               {
                 "send": [
                   {
-                    "sleeper_id": "5967",
-                    "name": "Tony Pollard",
-                    "position": "RB",
-                    "team": "TEN",
-                    "age": 29,
-                    "dynasty_value": 1811,
-                    "redraft_value": 1757,
-                    "injury_status": null,
-                    "is_pick": false
-                  },
-                  {
-                    "sleeper_id": "5947",
-                    "name": "Jakobi Meyers",
-                    "position": "WR",
-                    "team": "JAX",
-                    "age": 29,
-                    "dynasty_value": 1573,
-                    "redraft_value": 711,
-                    "injury_status": null,
-                    "is_pick": false
-                  }
-                ],
-                "my_lineup_change": 1291,
-                "their_lineup_change": -565,
-                "my_value_delta": -665,
-                "pitch": "Ligma is rebuilding. Jakobi Meyers fills their WR gap (#10 of 10), dealing from their TE surplus."
-              },
-              {
-                "send": [
-                  {
                     "sleeper_id": "7567",
                     "name": "Kenneth Gainwell",
                     "position": "RB",
@@ -30833,6 +30601,36 @@
                 "their_lineup_change": -565,
                 "my_value_delta": -623,
                 "pitch": "Ligma is rebuilding. They land Kenneth Gainwell; they cash in Sam LaPorta for 2026 2.10, dealing from their TE surplus."
+              },
+              {
+                "send": [
+                  {
+                    "sleeper_id": "5947",
+                    "name": "Jakobi Meyers",
+                    "position": "WR",
+                    "team": "JAX",
+                    "age": 29,
+                    "dynasty_value": 1573,
+                    "redraft_value": 711,
+                    "injury_status": null,
+                    "is_pick": false
+                  },
+                  {
+                    "sleeper_id": "PICK_2026_R2_O3",
+                    "name": "2026 2.10 (Comedy of Errors)",
+                    "position": "PICK",
+                    "team": null,
+                    "age": null,
+                    "dynasty_value": 1518,
+                    "redraft_value": 0,
+                    "injury_status": null,
+                    "is_pick": true
+                  }
+                ],
+                "my_lineup_change": 1291,
+                "their_lineup_change": -565,
+                "my_value_delta": -372,
+                "pitch": "Ligma is rebuilding. Jakobi Meyers fills their WR gap (#10 of 10); they cash in Sam LaPorta for 2026 2.10, dealing from their TE surplus."
               }
             ]
           }
@@ -31043,21 +30841,21 @@
               {
                 "send": [
                   {
-                    "sleeper_id": "5967",
-                    "name": "Tony Pollard",
-                    "position": "RB",
-                    "team": "TEN",
+                    "sleeper_id": "5947",
+                    "name": "Jakobi Meyers",
+                    "position": "WR",
+                    "team": "JAX",
                     "age": 29,
-                    "dynasty_value": 1811,
-                    "redraft_value": 1757,
+                    "dynasty_value": 1573,
+                    "redraft_value": 711,
                     "injury_status": null,
                     "is_pick": false
                   }
                 ],
                 "my_lineup_change": 468,
                 "their_lineup_change": -739,
-                "my_value_delta": 85,
-                "pitch": "Saquantum Leap is rebuilding. They land Tony Pollard."
+                "my_value_delta": 323,
+                "pitch": "Saquantum Leap is rebuilding. Jakobi Meyers upgrades their WR."
               }
             ]
           }
@@ -32471,92 +32269,21 @@
               {
                 "send": [
                   {
-                    "sleeper_id": "4034",
-                    "name": "Christian McCaffrey",
-                    "position": "RB",
-                    "team": "SF",
-                    "age": 29,
-                    "dynasty_value": 4780,
-                    "redraft_value": 8212,
-                    "injury_status": null,
-                    "is_pick": false
-                  },
-                  {
-                    "sleeper_id": "PICK_2027_R1_O3",
-                    "name": "2027 R1 (Comedy of Errors)",
-                    "position": "PICK",
-                    "team": null,
-                    "age": null,
-                    "dynasty_value": 3012,
-                    "redraft_value": 0,
-                    "injury_status": null,
-                    "is_pick": true
-                  }
-                ],
-                "my_lineup_change": 2851,
-                "their_lineup_change": -2851,
-                "my_value_delta": -161,
-                "pitch": "Mongo Money Makers is rebuilding. They land Christian McCaffrey; they cash in Ashton Jeanty for 2027 1st, dealing from their RB surplus."
-              },
-              {
-                "send": [
-                  {
-                    "sleeper_id": "4034",
-                    "name": "Christian McCaffrey",
-                    "position": "RB",
-                    "team": "SF",
-                    "age": 29,
-                    "dynasty_value": 4780,
-                    "redraft_value": 8212,
-                    "injury_status": null,
-                    "is_pick": false
-                  },
-                  {
-                    "sleeper_id": "PICK_2026_R1_O3",
-                    "name": "2026 1.10 (Comedy of Errors)",
-                    "position": "PICK",
-                    "team": null,
-                    "age": null,
-                    "dynasty_value": 2551,
-                    "redraft_value": 0,
-                    "injury_status": null,
-                    "is_pick": true
-                  }
-                ],
-                "my_lineup_change": 2851,
-                "their_lineup_change": -2851,
-                "my_value_delta": 300,
-                "pitch": "Mongo Money Makers is rebuilding. They land Christian McCaffrey; they cash in Ashton Jeanty for 2026 1.10, dealing from their RB surplus."
-              },
-              {
-                "send": [
-                  {
-                    "sleeper_id": "4034",
-                    "name": "Christian McCaffrey",
-                    "position": "RB",
-                    "team": "SF",
-                    "age": 29,
-                    "dynasty_value": 4780,
-                    "redraft_value": 8212,
-                    "injury_status": null,
-                    "is_pick": false
-                  },
-                  {
-                    "sleeper_id": "12519",
-                    "name": "Luther Burden",
+                    "sleeper_id": "9488",
+                    "name": "Jaxon Smith-Njigba",
                     "position": "WR",
-                    "team": "CHI",
-                    "age": 22,
-                    "dynasty_value": 3518,
-                    "redraft_value": 1824,
+                    "team": "SEA",
+                    "age": 24,
+                    "dynasty_value": 9066,
+                    "redraft_value": 8889,
                     "injury_status": null,
                     "is_pick": false
                   }
                 ],
-                "my_lineup_change": 1157,
-                "their_lineup_change": -2230,
-                "my_value_delta": -667,
-                "pitch": "Mongo Money Makers is rebuilding. Luther Burden fills their WR gap (#9 of 10), dealing from their RB surplus."
+                "my_lineup_change": -1435,
+                "their_lineup_change": 1435,
+                "my_value_delta": -1435,
+                "pitch": "Mongo Money Makers is rebuilding. Jaxon Smith-Njigba fills their WR gap (#9 of 10), dealing from their RB surplus."
               }
             ]
           }
@@ -32824,36 +32551,6 @@
                 "their_lineup_change": -4129,
                 "my_value_delta": 369,
                 "pitch": "cropcreamer is rebuilding. A.J. Brown fills their WR gap (#8 of 10); they cash in Brock Bowers for 2027 1st, dealing from their TE surplus."
-              },
-              {
-                "send": [
-                  {
-                    "sleeper_id": "4034",
-                    "name": "Christian McCaffrey",
-                    "position": "RB",
-                    "team": "SF",
-                    "age": 29,
-                    "dynasty_value": 4780,
-                    "redraft_value": 8212,
-                    "injury_status": null,
-                    "is_pick": false
-                  },
-                  {
-                    "sleeper_id": "PICK_2027_R1_O3",
-                    "name": "2027 R1 (Comedy of Errors)",
-                    "position": "PICK",
-                    "team": null,
-                    "age": null,
-                    "dynasty_value": 3012,
-                    "redraft_value": 0,
-                    "injury_status": null,
-                    "is_pick": true
-                  }
-                ],
-                "my_lineup_change": 2517,
-                "their_lineup_change": -2869,
-                "my_value_delta": -891,
-                "pitch": "cropcreamer is rebuilding. Christian McCaffrey fills their RB gap (#10 of 10); they cash in Brock Bowers for 2027 1st, dealing from their TE surplus."
               }
             ]
           }
@@ -33065,92 +32762,21 @@
               {
                 "send": [
                   {
-                    "sleeper_id": "4034",
-                    "name": "Christian McCaffrey",
-                    "position": "RB",
-                    "team": "SF",
-                    "age": 29,
-                    "dynasty_value": 4780,
-                    "redraft_value": 8212,
-                    "injury_status": null,
-                    "is_pick": false
-                  },
-                  {
-                    "sleeper_id": "PICK_2027_R1_O3",
-                    "name": "2027 R1 (Comedy of Errors)",
-                    "position": "PICK",
-                    "team": null,
-                    "age": null,
-                    "dynasty_value": 3012,
-                    "redraft_value": 0,
-                    "injury_status": null,
-                    "is_pick": true
-                  }
-                ],
-                "my_lineup_change": 2361,
-                "their_lineup_change": -2537,
-                "my_value_delta": -475,
-                "pitch": "Samir\u2019s Tight End  is rebuilding. Christian McCaffrey upgrades their RB; they cash in Amon-Ra St. Brown for 2027 1st."
-              },
-              {
-                "send": [
-                  {
-                    "sleeper_id": "4034",
-                    "name": "Christian McCaffrey",
-                    "position": "RB",
-                    "team": "SF",
-                    "age": 29,
-                    "dynasty_value": 4780,
-                    "redraft_value": 8212,
-                    "injury_status": null,
-                    "is_pick": false
-                  },
-                  {
-                    "sleeper_id": "PICK_2026_R1_O3",
-                    "name": "2026 1.10 (Comedy of Errors)",
-                    "position": "PICK",
-                    "team": null,
-                    "age": null,
-                    "dynasty_value": 2551,
-                    "redraft_value": 0,
-                    "injury_status": null,
-                    "is_pick": true
-                  }
-                ],
-                "my_lineup_change": 2361,
-                "their_lineup_change": -2537,
-                "my_value_delta": -14,
-                "pitch": "Samir\u2019s Tight End  is rebuilding. Christian McCaffrey upgrades their RB; they cash in Amon-Ra St. Brown for 2026 1.10."
-              },
-              {
-                "send": [
-                  {
-                    "sleeper_id": "4034",
-                    "name": "Christian McCaffrey",
-                    "position": "RB",
-                    "team": "SF",
-                    "age": 29,
-                    "dynasty_value": 4780,
-                    "redraft_value": 8212,
-                    "injury_status": null,
-                    "is_pick": false
-                  },
-                  {
-                    "sleeper_id": "6904",
-                    "name": "Jalen Hurts",
-                    "position": "QB",
-                    "team": "PHI",
-                    "age": 27,
-                    "dynasty_value": 2784,
-                    "redraft_value": 1654,
+                    "sleeper_id": "9488",
+                    "name": "Jaxon Smith-Njigba",
+                    "position": "WR",
+                    "team": "SEA",
+                    "age": 24,
+                    "dynasty_value": 9066,
+                    "redraft_value": 8889,
                     "injury_status": null,
                     "is_pick": false
                   }
                 ],
-                "my_lineup_change": 1596,
-                "their_lineup_change": -2537,
-                "my_value_delta": -247,
-                "pitch": "Samir\u2019s Tight End  is rebuilding. Jalen Hurts upgrades their QB."
+                "my_lineup_change": -1749,
+                "their_lineup_change": 1749,
+                "my_value_delta": -1749,
+                "pitch": "Samir\u2019s Tight End  is rebuilding. Jaxon Smith-Njigba upgrades their WR."
               }
             ]
           }
@@ -33418,36 +33044,6 @@
                 "their_lineup_change": -3592,
                 "my_value_delta": 580,
                 "pitch": "Bucky the Vampire Slayer is rebuilding. A.J. Brown upgrades their WR; they cash in Justin Jefferson for 2027 1st."
-              },
-              {
-                "send": [
-                  {
-                    "sleeper_id": "4034",
-                    "name": "Christian McCaffrey",
-                    "position": "RB",
-                    "team": "SF",
-                    "age": 29,
-                    "dynasty_value": 4780,
-                    "redraft_value": 8212,
-                    "injury_status": null,
-                    "is_pick": false
-                  },
-                  {
-                    "sleeper_id": "PICK_2027_R1_O3",
-                    "name": "2027 R1 (Comedy of Errors)",
-                    "position": "PICK",
-                    "team": null,
-                    "age": null,
-                    "dynasty_value": 3012,
-                    "redraft_value": 0,
-                    "injury_status": null,
-                    "is_pick": true
-                  }
-                ],
-                "my_lineup_change": 2156,
-                "their_lineup_change": -2332,
-                "my_value_delta": -680,
-                "pitch": "Bucky the Vampire Slayer is rebuilding. Christian McCaffrey upgrades their RB; they cash in Justin Jefferson for 2027 1st."
               }
             ]
           }
@@ -34990,7 +34586,7 @@
             "injury_status": "Questionable"
           }
         ],
-        "trending_count": 12483
+        "trending_count": 12501
       },
       {
         "pickup": {
@@ -35039,7 +34635,7 @@
             "injury_status": null
           }
         ],
-        "trending_count": 3128
+        "trending_count": 3144
       },
       {
         "pickup": {
@@ -35137,7 +34733,7 @@
             "injury_status": "Questionable"
           }
         ],
-        "trending_count": 2387
+        "trending_count": 2404
       },
       {
         "pickup": {
@@ -35286,7 +34882,7 @@
             "injury_status": "Questionable"
           }
         ],
-        "trending_count": 12483
+        "trending_count": 12501
       },
       {
         "pickup": {
@@ -35634,7 +35230,7 @@
               "injury_status": "Questionable"
             }
           ],
-          "trending_count": 12483
+          "trending_count": 12501
         },
         {
           "pickup": {
@@ -35732,7 +35328,7 @@
               "injury_status": "Questionable"
             }
           ],
-          "trending_count": 2387
+          "trending_count": 2404
         }
       ],
       "TE": [
@@ -36862,7 +36458,7 @@
       "description": "Packers running back Josh Jacobs has been released from jail Wednesday amid an ongoing investigation following his arrest on several domestic violence charges.",
       "url": "https://www.espn.com/nfl/story/_/id/48892463/packers-josh-jacobs-released-jail-investigation-ongoing",
       "published": "2026-05-27T19:31:31Z",
-      "age_hours": 41.0,
+      "age_hours": 41.2,
       "importance_score": 120,
       "high_impact": true,
       "players": [
@@ -36880,7 +36476,7 @@
       "description": "Raiders tight end Brock Bowers said he feels \"100%\" healthy entering Year 3 after he had battled a knee injury for the majority of last season.",
       "url": "https://www.espn.com/nfl/story/_/id/48904403/raiders-brock-bowers-feel-100-knee-troubles-2025",
       "published": "2026-05-28T22:32:09Z",
-      "age_hours": 14.0,
+      "age_hours": 14.2,
       "importance_score": 36,
       "high_impact": true,
       "players": [
@@ -36898,7 +36494,7 @@
       "description": "While most of the Chiefs participated in voluntary workouts this week, Rashee Rice was back in Texas serving his 30-day jail sentence after violating the terms of his probation for his role in a car crash that left multiple people injured.",
       "url": "https://www.espn.com/nfl/story/_/id/48903684/reid-chiefs-moving-forward-get-rice-caught-up",
       "published": "2026-05-28T21:32:37Z",
-      "age_hours": 15.0,
+      "age_hours": 15.1,
       "importance_score": 30,
       "high_impact": true,
       "players": [
@@ -36916,7 +36512,7 @@
       "description": "Chiefs quarterback Patrick Mahomes went through drills Thursday wearing a compression leg sleeve and black brace on his left leg.",
       "url": "https://www.espn.com/nfl/story/_/id/48903412/chiefs-mahomes-pleased-get-ota-reps-amid-knee-injury-recovery",
       "published": "2026-05-28T20:35:07Z",
-      "age_hours": 16.0,
+      "age_hours": 16.1,
       "importance_score": 30,
       "high_impact": true,
       "players": [
@@ -36934,7 +36530,7 @@
       "description": "Commanders coach Dan Quinn explains what he has seen from Jayden Daniels in the QB's return from injury.",
       "url": "https://www.espn.com/video/clip/_/id/48893979/why-jayden-daniels-mental-quickness-sticks-dan-quinn",
       "published": "2026-05-27T20:59:36Z",
-      "age_hours": 39.6,
+      "age_hours": 39.7,
       "importance_score": 30,
       "high_impact": true,
       "players": [
@@ -36952,7 +36548,7 @@
       "description": "Ian Rapoport joins Pat McAfee and reports the latest on the Packers running back after he was released from jail",
       "url": "https://www.espn.com/video/clip/_/id/48892661/next-josh-jacobs-release-jail",
       "published": "2026-05-27T18:24:52Z",
-      "age_hours": 42.1,
+      "age_hours": 42.3,
       "importance_score": 30,
       "high_impact": true,
       "players": [
@@ -36970,7 +36566,7 @@
       "description": "Murray and McCarthy are competing for the starting job, and we got an initial glimpse into how things could play out.",
       "url": "https://www.espn.com/nfl/story/_/id/48901198/nfl-minnesota-vikings-kyler-murray-jj-mccarthy",
       "published": "2026-05-29T10:00:11Z",
-      "age_hours": 2.6,
+      "age_hours": 2.7,
       "importance_score": 15,
       "high_impact": false,
       "players": [
@@ -36995,7 +36591,7 @@
       "description": "Eligible for an extension for the first time, Texans quarterback C.J. Stroud says he has done his part to earn a new deal but isn't focused on the negotiations.",
       "url": "https://www.espn.com/nfl/story/_/id/48902660/cj-stroud-let-contract-talks-hang-season-prep",
       "published": "2026-05-28T19:34:22Z",
-      "age_hours": 17.0,
+      "age_hours": 17.1,
       "importance_score": 15,
       "high_impact": false,
       "players": [
@@ -37013,7 +36609,7 @@
       "description": "J.J. McCarthy says there isn't \"any awkwardness\" between him and Kyler Murray, whom the Vikings signed in March to compete for Minnesota's starting quarterback duties.",
       "url": "https://www.espn.com/nfl/story/_/id/48894057/mccarthy-no-awkwardness-murray-qb1-competition",
       "published": "2026-05-28T10:40:17Z",
-      "age_hours": 25.9,
+      "age_hours": 26.0,
       "importance_score": 15,
       "high_impact": false,
       "players": [
@@ -37038,7 +36634,7 @@
       "description": "Colts QB Anthony Richardson faces an uncertain future in Indianapolis and hasn't rescinded his recent trade request. But he's not letting any of that stand in the way of doing his job, he said Wednesday.",
       "url": "https://www.espn.com/nfl/story/_/id/48894300/future-uncertain-qb-anthony-richardson-here-right-now-colts",
       "published": "2026-05-27T21:59:30Z",
-      "age_hours": 38.6,
+      "age_hours": 38.7,
       "importance_score": 15,
       "high_impact": false,
       "players": [

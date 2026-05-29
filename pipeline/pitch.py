@@ -11,6 +11,7 @@ from __future__ import annotations
 import re
 
 from data import Player
+from trades import is_aging_vet
 
 SKILL_ORDER = ["QB", "RB", "WR", "TE"]
 TRAJECTORY_THRESHOLD = 2
@@ -87,13 +88,21 @@ def build_partner_pitch(
     in_picks = [p for p in send if p.position == "PICK"]
     out_skill = [p for p in receive if p.is_skill]
 
+    # A rebuilder doesn't value an aging vet as a positional "fill" — they're
+    # acquiring for the future. Exclude over-cliff vets from the fit framing so
+    # the pitch never sells a 32-year-old as filling a rebuild's gap.
+    fit_skill = (
+        [p for p in in_skill if not is_aging_vet(p)]
+        if trajectory == "rebuild" else in_skill
+    )
+
     clauses: list[str] = []
 
     # 1. Position fit for the skill players the partner receives.
     gap_fit = None
     depth_fit = None
     for pos in SKILL_ORDER:
-        at_pos = [p for p in in_skill if p.position == pos]
+        at_pos = [p for p in fit_skill if p.position == pos]
         if not at_pos:
             continue
         info = partner_strength.get(pos, {})
@@ -109,8 +118,8 @@ def build_partner_pitch(
         clauses.append(depth_fit)
     elif in_skill and trajectory == "win-now":
         clauses.append(f"{_names(in_skill)} {_verb(in_skill, 'adds', 'add')} proven production for their playoff push")
-    elif in_skill:
-        clauses.append(f"they land {_names(in_skill)}")
+    elif fit_skill:
+        clauses.append(f"they land {_names(fit_skill)}")
 
     # 2. Picks the partner receives — frame as cashing in the outgoing star,
     #    or as future capital for a rebuild.

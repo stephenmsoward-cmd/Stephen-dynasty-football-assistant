@@ -280,6 +280,33 @@ REBUILD_DISCOUNT = 600
 # to count as a youth infusion.
 YOUTH_AGE_GAP = 2
 
+# Position-aware ages past which a player is "win-now only" — a rebuilder gets
+# little dynasty use from them. When judging whether a REBUILD partner accepts,
+# any such vet they'd RECEIVE is heavily discounted, so a deal can't clear just
+# because we attached an aging vet to sweeten the FantasyCalc math. Shared with
+# pitch.py so the explanation stays consistent with the acceptance logic.
+VET_CLIFF_AGE = {"RB": 28, "WR": 30, "TE": 31, "QB": 35}
+REBUILD_VET_RETAINED = 0.25  # fraction of an over-cliff vet's value a rebuilder credits
+
+
+def is_aging_vet(p: Player) -> bool:
+    cliff = VET_CLIFF_AGE.get(p.position)
+    return cliff is not None and p.age is not None and p.age >= cliff
+
+
+def _rebuild_value(p: Player) -> int:
+    """Value a REBUILD team assigns to an asset it RECEIVES: picks and young
+    players at full FantasyCalc value, aging vets heavily discounted."""
+    if _is_pick(p):
+        return p.dynasty_value
+    if is_aging_vet(p):
+        return int(p.dynasty_value * REBUILD_VET_RETAINED)
+    return p.dynasty_value
+
+
+def _rebuild_received_value(received: list[Player]) -> int:
+    return sum(_rebuild_value(p) for p in received)
+
 
 def _brings_youth_or_picks(incoming: list[Player], outgoing: Player) -> bool:
     """Does the incoming package skew toward future value relative to what's
@@ -309,16 +336,24 @@ def _partner_accepts_acquisition(
       to accumulate future capital."""
     if their_timeline == "win-now":
         return their_lineup_change >= LINEUP_MIN_IMPROVEMENT
-    base = (
+    if their_timeline == "rebuild":
+        # A rebuilder discounts aging vets they'd take on — only picks/youth
+        # count at full value. This stops "send your old WR to a rebuilder"
+        # deals that only cleared because of the vet's market value.
+        eff_change = _rebuild_received_value(send) - target.dynasty_value
+        base = (
+            their_lineup_change >= LINEUP_MIN_IMPROVEMENT
+            or eff_change >= ASSET_MIN_IMPROVEMENT
+        )
+        return base or (
+            _brings_youth_or_picks(send, target)
+            and eff_change >= -REBUILD_DISCOUNT
+        )
+    # balanced
+    return (
         their_lineup_change >= LINEUP_MIN_IMPROVEMENT
         or their_asset_change >= ASSET_MIN_IMPROVEMENT
     )
-    if their_timeline == "rebuild":
-        return base or (
-            _brings_youth_or_picks(send, target)
-            and their_asset_change >= -REBUILD_DISCOUNT
-        )
-    return base
 
 
 def _enumerate_packages(pool: list[Player], max_size: int) -> Iterable[tuple[Player, ...]]:
@@ -399,9 +434,17 @@ def find_trades(
         my_lineup_change = new_my_lineup - my_baseline_lineup
         their_lineup_change = new_their_lineup - their_baseline_lineup
 
+        # When the partner is rebuilding, judge their asset gain on the players
+        # they'd actually value — aging vets they receive are discounted, so we
+        # don't suggest dumping an old vet on a rebuilder. Display still uses
+        # full FantasyCalc value; this only gates acceptance.
+        their_acc_asset = -my_val_delta
+        if their_timeline == "rebuild":
+            their_acc_asset = _rebuild_received_value(list(send)) - _asset_total(list(receive))
+
         if not _passes_improvement(
             my_lineup_change, my_val_delta,
-            their_lineup_change, -my_val_delta,
+            their_lineup_change, their_acc_asset,
             my_timeline, their_timeline,
         ):
             return

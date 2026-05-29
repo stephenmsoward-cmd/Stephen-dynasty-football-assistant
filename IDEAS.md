@@ -73,8 +73,11 @@ Done. `find_trades()` takes `my_value_fn` + `their_value_fn`; the partner's
 lineup is judged under their trajectory (win-now → redraft, rebuild/balanced
 → dynasty). The toggle is now "my lens"; the partner's side is fixed by their
 inferred timeline. Trade cards annotate "Their lineup (win-now/dynasty)".
-Possible follow-up: weight rebuild-team improvement explicitly toward picks +
-youth (currently they just use dynasty value, which already favors youth).
+Follow-up DONE: a rebuild partner now discounts aging vets it would *receive*
+(`VET_CLIFF_AGE` × `REBUILD_VET_RETAINED` in `trades.py`), so we no longer
+suggest dumping an old vet on a rebuilder, and the pitch never frames an
+over-cliff vet as a positional "fill" for a rebuild (pitch.py uses the shared
+`is_aging_vet`). Applies to both the acquisition flow and the trade finder.
 
 ### ~~Tier-classification purity~~ — SHIPPED
 
