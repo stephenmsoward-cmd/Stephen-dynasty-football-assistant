@@ -35,6 +35,66 @@
     value. Real drafts land between the two.
   </p>
 
+  {% if report.draft.mock_draft %}
+  {% set my_rid = report.my_roster_id %}
+  <h2>Mock Draft</h2>
+  <p class="muted small">
+    A projected board: each team takes the best remaining rookie weighted by
+    its own positional needs (gap positions boosted, surplus positions
+    discounted). Linear draft order is pulled live from Sleeper.
+  </p>
+
+  {% macro mock_row(p, my_rid) %}
+  <tr class="{% if p.roster_id == my_rid %}mine-row{% endif %}">
+    <td class="num muted small">{{ p.overall }}</td>
+    <td><strong>{{ p.slot_label }}</strong></td>
+    <td>
+      {{ p.team_name }}
+      <span class="muted small hide-mobile">{{ p.owner_display_name }}</span>
+    </td>
+    <td>
+      <strong>{{ p.player.name }}</strong>
+      <span class="pos-tag">{{ p.player.position }}{% if p.player.team %} · {{ p.player.team }}{% endif %}</span>
+      {% if p.player.injury_status %}<span class="injury Q">{{ p.player.injury_status }}</span>{% endif %}
+      <span class="muted small hide-mobile">dyn {{ p.player.dynasty_value | money }}{% if p.player.age %} · age {{ p.player.age | round | int }}{% endif %}</span>
+    </td>
+    <td class="muted small hide-mobile">{{ p.reasoning }}</td>
+  </tr>
+  {% endmacro %}
+
+  <div class="table-scroll">
+  <table class="standings mock-draft-table">
+    <thead>
+      <tr>
+        <th class="num">#</th>
+        <th>Pick</th>
+        <th>Team</th>
+        <th>Player</th>
+        <th class="hide-mobile">Why</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for p in report.draft.mock_draft if p.round == 1 %}
+      {{ mock_row(p, my_rid) }}
+      {% endfor %}
+    </tbody>
+  </table>
+  </div>
+  {% set remaining = report.draft.mock_draft | selectattr('round', 'gt', 1) | list %}
+  {% if remaining %}
+  <details class="reveal-more">
+    <summary>Show {{ remaining | length }} more picks (rounds 2–{{ remaining[-1].round }})</summary>
+    <div class="table-scroll">
+    <table class="standings mock-draft-table">
+      <tbody>
+        {% for p in remaining %}{{ mock_row(p, my_rid) }}{% endfor %}
+      </tbody>
+    </table>
+    </div>
+  </details>
+  {% endif %}
+  {% endif %}
+
   {% if report.draft.position_demand %}
   <h2>League Positional Demand</h2>
   <div class="demand-grid">
@@ -146,6 +206,15 @@
 
   <div class="methodology">
     <h3>Methodology</h3>
+    <p>
+      <strong>Mock draft</strong>: walks the live Sleeper draft order pick by
+      pick. Each team takes the highest-scoring remaining rookie under
+      <code>score = dynasty_value × need_multiplier</code>, where the
+      multiplier is <strong>1.25</strong> at a positional gap,
+      <strong>0.70</strong> at a surplus, and <strong>1.0</strong> otherwise.
+      Best-player-available with a positional-need lean — not a full
+      personality model of each manager.
+    </p>
     <p>
       <strong>Rookie pool</strong>: every FantasyCalc-valued player with
       <code>years_exp = 0</code> (entering their first NFL season) who isn't

@@ -790,6 +790,13 @@ def build_league_report(
             for t in teams
         }
 
+        # Live draft order for the current season (linear drafts only). Inverts
+        # the {original_roster_id: slot} mapping for the mock draft.
+        current_season_str = str(current_season)
+        mock_order: dict[int, int] = {
+            slot: rid
+            for rid, slot in slot_by_season.get(current_season_str, {}).items()
+        }
         draft_report = build_draft_report(
             available_rookies=available_rookies,
             my_slots=my_draft_slots,
@@ -797,6 +804,9 @@ def build_league_report(
             num_teams=league["total_rosters"],
             pick_slot_values=slot_values,
             position_strengths_by_team=position_strengths_by_team,
+            draft_order=mock_order,
+            team_meta=team_meta,
+            draft_rounds=draft_rounds,
         )
 
     # Per-team time series from historical snapshots → sparkline SVGs.

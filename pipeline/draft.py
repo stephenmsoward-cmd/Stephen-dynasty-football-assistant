@@ -26,6 +26,10 @@ PROSPECTS_AFTER_LAST_SLOT = 12
 # 1 + (demand_score * DEMAND_TUNING).
 DEMAND_TUNING = 0.20  # max boost = 20% at demand_score 1.0
 
+# Mock-draft scoring: a team's per-pick weight on the BPA (best player
+# available) by their positional need at that pick's position.
+MOCK_NEED_MULTIPLIER = {"gap": 1.25, "average": 1.0, "surplus": 0.70}
+
 
 def parse_slot(s: str) -> tuple[int, int]:
     """'1.10' or '1.01' → (round, slot_in_round). Slot is 1-indexed."""
@@ -108,6 +112,76 @@ def _player_dict(p: Player, projected_rank: int, adjusted_value: int | None, dem
     return d
 
 
+def build_mock_draft(
+    rookies: list[Player],
+    draft_order: dict[int, int],            # {slot: roster_id} — linear order
+    draft_rounds: int,
+    num_teams: int,
+    team_meta: dict[int, dict],
+    position_strengths_by_team: dict[int, dict],
+) -> list[dict]:
+    """Project the rookie draft pick-by-pick. Each team takes the best
+    remaining rookie weighted by its own positional needs (gap positions
+    boosted, surplus positions discounted). Linear draft — same slot each round.
+
+    Returns a flat list ordered by overall pick:
+      [{round, slot, overall, slot_label, roster_id, team_name,
+        owner_display_name, player, reasoning}, ...]
+    """
+    if not draft_order:
+        return []
+    pool: list[Player] = sorted(rookies, key=lambda p: p.dynasty_value, reverse=True)
+    picks: list[dict] = []
+    for rnd in range(1, draft_rounds + 1):
+        for slot in range(1, num_teams + 1):
+            roster_id = draft_order.get(slot)
+            if roster_id is None or not pool:
+                continue
+            needs = position_strengths_by_team.get(roster_id, {})
+
+            def score(p: Player, needs: dict = needs) -> float:
+                mult = MOCK_NEED_MULTIPLIER.get(
+                    needs.get(p.position, {}).get("label", "average"), 1.0
+                )
+                return p.dynasty_value * mult
+
+            picked = max(pool, key=score)
+            pool.remove(picked)
+
+            info = needs.get(picked.position, {})
+            label = info.get("label", "average")
+            rank = info.get("league_rank")
+            if label == "gap":
+                reasoning = f"fills {picked.position} gap (#{rank} of {num_teams})"
+            elif label == "surplus":
+                reasoning = f"best available despite {picked.position} surplus"
+            else:
+                reasoning = f"best available ({picked.position})"
+
+            meta = team_meta.get(roster_id, {})
+            picks.append({
+                "round": rnd,
+                "slot": slot,
+                "overall": (rnd - 1) * num_teams + slot,
+                "slot_label": f"{rnd}.{slot:02d}",
+                "roster_id": roster_id,
+                "team_name": meta.get("team_name"),
+                "owner_display_name": meta.get("owner_display_name"),
+                "player": {
+                    "sleeper_id": picked.sleeper_id,
+                    "name": picked.name,
+                    "position": picked.position,
+                    "team": picked.team,
+                    "age": picked.age,
+                    "dynasty_value": picked.dynasty_value,
+                    "redraft_value": picked.redraft_value,
+                    "injury_status": picked.injury_status,
+                },
+                "reasoning": reasoning,
+            })
+    return picks
+
+
 def build_draft_report(
     available_rookies: list[Player],
     my_slots: list[str],
@@ -115,6 +189,9 @@ def build_draft_report(
     num_teams: int,
     pick_slot_values: dict[tuple[str, int, int], int],
     position_strengths_by_team: dict[int, dict] | None = None,
+    draft_order: dict[int, int] | None = None,
+    team_meta: dict[int, dict] | None = None,
+    draft_rounds: int = 3,
 ) -> dict:
     """Returns the draft payload to attach to the league report."""
     rookies = [r for r in available_rookies if r.dynasty_value > 0]
@@ -187,6 +264,17 @@ def build_draft_report(
         for i, p in enumerate(adjusted_sorted[later_start:later_start + PROSPECTS_AFTER_LAST_SLOT])
     ]
 
+    mock_draft: list[dict] = []
+    if draft_order and team_meta and position_strengths_by_team:
+        mock_draft = build_mock_draft(
+            rookies=rookies,
+            draft_order=draft_order,
+            draft_rounds=draft_rounds,
+            num_teams=num_teams,
+            team_meta=team_meta,
+            position_strengths_by_team=position_strengths_by_team,
+        )
+
     return {
         "season": season,
         "num_teams": num_teams,
@@ -194,4 +282,5 @@ def build_draft_report(
         "later_board": later_board,
         "rookie_pool_size": len(rookies),
         "position_demand": demand,
+        "mock_draft": mock_draft,
     }
