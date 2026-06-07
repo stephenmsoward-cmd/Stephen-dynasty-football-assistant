@@ -54,6 +54,7 @@ or change priority.
 | P3 | Fleaflicker / multi-platform support | L | M | Second data adapter; hard part is the player-name join to FantasyCalc + ESPN |
 | P3 | Notifications (Discord / email) | L | L | Premature — open the site instead |
 | P3 | Tiered player rankings view | S | M | Visual tiers + colors on rankings/values |
+| P3 | Mock draft: trajectory bias | S | M | Tilt picks by team trajectory once we see how the model lands during draft season |
 | P3 | AI chat assistant over league data | L | M | NL Q&A — needs a hosted endpoint, breaks static-only |
 | P3 | Rookie draft simulator | L | M | Mock the rookie draft against the need-adjusted board |
 | P3 | Branding / visual identity (name, logo, palette) | S | L | Dark mode + trajectory badges already exist |
@@ -237,6 +238,23 @@ months of data before it says anything reliable.
 
 A user owns multiple leagues. Today each league is independent. Defer
 until anyone outside our league actually uses the tool.
+
+### Mock draft: trajectory bias &mdash; P3 · S · M
+
+The mock draft (`draft.py::build_mock_draft`) scores rookies by
+`dynasty_value × position-need multiplier` — best-player-available with a
+positional lean. It does not bias by team trajectory: in rookie drafts
+everyone's young, so position need was the cleanest first-cut signal.
+
+If during real draft season we see managers picking systematically differently
+based on trajectory, layer in:
+- **Win-now teams** prefer rookies with higher `redraft_value` (immediate
+  contributors) — blend a small fraction of redraft into the score.
+- **Rebuild teams** prefer upside — boost rookies whose dynasty value is
+  notably higher than their redraft value (longer runway).
+
+Wait for live signal before tuning; the current model is honest and easy to
+reason about.
 
 ### Fleaflicker / multi-platform support &mdash; P3 · L · M
 
