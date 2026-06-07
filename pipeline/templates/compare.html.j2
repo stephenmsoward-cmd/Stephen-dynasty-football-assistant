@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>{{ report.name }} — Team Comparisons</title>
   {% set og_title = 'Team Comparisons — ' + report.compare.my_team.team_name %}
-  {% set og_description = 'Side-by-side full-roster comparisons against every team in the league, including draft picks. Position-by-position diffs.' %}
+  {% set og_description = 'Side-by-side full-roster comparisons against every team in the league, under both Dynasty and Win-Now value modes.' %}
   {% set og_path = '/leagues/' + report.slug + '/compare/' %}
   {% include '_meta.html.j2' %}
   <link rel="stylesheet" href="../../../style.css">
@@ -28,13 +28,25 @@
     </div>
   </header>
 
+  <div class="mode-toggle" role="tablist" aria-label="Value mode">
+    <button data-mode="dynasty" class="active" role="tab" aria-selected="true">
+      Dynasty
+      <span class="mode-desc">multi-year, age-weighted</span>
+    </button>
+    <button data-mode="winnow" role="tab" aria-selected="false">
+      Win Now
+      <span class="mode-desc">this season only</span>
+    </button>
+  </div>
+
   <p class="muted small" style="margin-top: 0.5rem;">
-    Side-by-side full-roster comparisons against every other team in your
-    league. Per-position totals come from FantasyCalc dynasty values. The
-    sign of each position diff shows who's ahead at that position.
+    Side-by-side full-roster comparisons against every other team. Within each
+    position the list is sorted by the active mode's value, and the totals /
+    diffs reflect that mode. Picks are future capital — they count toward the
+    Dynasty total only.
   </p>
 
-  {% macro player_row(p, is_mine) %}
+  {% macro player_row(p, is_mine, mode) %}
   <tr class="{% if is_mine %}mine-row{% endif %}">
     <td>
       {{ p.name }}
@@ -42,8 +54,47 @@
       {% if p.injury_status %}<span class="injury Q">{{ p.injury_status }}</span>{% endif %}
     </td>
     <td class="num muted small">{% if p.age %}{{ p.age | round | int }}{% endif %}</td>
-    <td class="num">{{ p.dynasty_value | money }}</td>
+    <td class="num">{{ (p.dynasty_value if mode == 'dynasty' else p.redraft_value) | money }}</td>
   </tr>
+  {% endmacro %}
+
+  {% macro pos_section(pos, cmp, mode) %}
+  {% set my_players = report.compare.my_by_position[mode][pos] %}
+  {% set their_players = cmp.their_by_position[mode][pos] %}
+  {% set my_total = report.compare.my_totals[mode][pos] %}
+  {% set their_total = cmp.their_totals[mode][pos] %}
+  {% set diff = cmp.position_diffs[mode][pos] %}
+  <section class="compare-pos">
+    <header class="compare-pos-header">
+      <h3>{{ pos }}</h3>
+      <div class="compare-pos-totals">
+        <span class="{{ 'good' if diff > 0 else ('bad' if diff < 0 else 'muted') }}">
+          {{ my_total | money }} vs {{ their_total | money }}
+          <span class="muted small">({{ diff | signed }})</span>
+        </span>
+      </div>
+    </header>
+    <div class="compare-grid">
+      <div class="compare-col compare-mine">
+        <div class="compare-col-label">{{ report.compare.my_team.team_name }}</div>
+        <table class="compare-table">
+          <tbody>
+            {% for p in my_players %}{{ player_row(p, true, mode) }}{% endfor %}
+            {% if not my_players %}<tr><td colspan="3" class="muted small">No {{ pos }}s</td></tr>{% endif %}
+          </tbody>
+        </table>
+      </div>
+      <div class="compare-col compare-theirs">
+        <div class="compare-col-label">{{ cmp.partner.team_name }}</div>
+        <table class="compare-table">
+          <tbody>
+            {% for p in their_players %}{{ player_row(p, false, mode) }}{% endfor %}
+            {% if not their_players %}<tr><td colspan="3" class="muted small">No {{ pos }}s</td></tr>{% endif %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
   {% endmacro %}
 
   {% for cmp in report.compare.comparisons %}
@@ -54,56 +105,27 @@
       <span class="muted small">
         &middot; Dyn #{{ cmp.partner.dynasty_rank }} &middot; WN #{{ cmp.partner.winnow_rank }}
       </span>
-      <span class="muted small">
-        &middot; Total assets:
-        <strong>{{ report.compare.my_team.team_name }}</strong> {{ cmp.total_my_assets | money }}
-        vs <strong>{{ cmp.partner.team_name }}</strong> {{ cmp.total_their_assets | money }}
+      <span class="muted small dynasty-only">
+        &middot; Total dynasty value:
+        <strong>{{ report.compare.my_team.team_name }}</strong> {{ cmp.total_my_assets.dynasty | money }}
+        vs <strong>{{ cmp.partner.team_name }}</strong> {{ cmp.total_their_assets.dynasty | money }}
+      </span>
+      <span class="muted small winnow-only">
+        &middot; Total win-now value:
+        <strong>{{ report.compare.my_team.team_name }}</strong> {{ cmp.total_my_assets.winnow | money }}
+        vs <strong>{{ cmp.partner.team_name }}</strong> {{ cmp.total_their_assets.winnow | money }}
       </span>
     </summary>
 
     {% for pos in ['QB', 'RB', 'WR', 'TE'] %}
-    {% set my_players = report.compare.my_by_position[pos] %}
-    {% set their_players = cmp.their_by_position[pos] %}
-    {% set my_total = report.compare.my_totals[pos] %}
-    {% set their_total = cmp.their_totals[pos] %}
-    {% set diff = cmp.position_diffs[pos] %}
-    <section class="compare-pos">
-      <header class="compare-pos-header">
-        <h3>{{ pos }}</h3>
-        <div class="compare-pos-totals">
-          <span class="{{ 'good' if diff > 0 else ('bad' if diff < 0 else 'muted') }}">
-            {{ my_total | money }} vs {{ their_total | money }}
-            <span class="muted small">({{ diff | signed }})</span>
-          </span>
-        </div>
-      </header>
-      <div class="compare-grid">
-        <div class="compare-col compare-mine">
-          <div class="compare-col-label">{{ report.compare.my_team.team_name }}</div>
-          <table class="compare-table">
-            <tbody>
-              {% for p in my_players %}{{ player_row(p, true) }}{% endfor %}
-              {% if not my_players %}<tr><td colspan="3" class="muted small">No {{ pos }}s</td></tr>{% endif %}
-            </tbody>
-          </table>
-        </div>
-        <div class="compare-col compare-theirs">
-          <div class="compare-col-label">{{ cmp.partner.team_name }}</div>
-          <table class="compare-table">
-            <tbody>
-              {% for p in their_players %}{{ player_row(p, false) }}{% endfor %}
-              {% if not their_players %}<tr><td colspan="3" class="muted small">No {{ pos }}s</td></tr>{% endif %}
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
+    <div class="dynasty-only">{{ pos_section(pos, cmp, 'dynasty') }}</div>
+    <div class="winnow-only">{{ pos_section(pos, cmp, 'winnow') }}</div>
     {% endfor %}
 
     {% if report.compare.my_picks.count or cmp.their_picks.count %}
     <section class="compare-pos">
       <header class="compare-pos-header">
-        <h3>Draft Picks</h3>
+        <h3>Draft Picks <span class="muted small">(dynasty value)</span></h3>
         <div class="compare-pos-totals">
           <span class="muted small">
             {{ report.compare.my_picks.count }} picks ({{ report.compare.my_picks.total_value | money }})
@@ -148,12 +170,15 @@
     <h3>Methodology</h3>
     <p>
       Each comparison shows every rostered player at QB/RB/WR/TE on both
-      teams, sorted by FantasyCalc dynasty value. Position totals sum across
-      ALL players at that position — capturing depth, not just starters.
+      teams. Toggle <strong>Dynasty</strong> (multi-year, age-weighted) or
+      <strong>Win-Now</strong> (this season only) — the lists re-sort and
+      totals/diffs update under the chosen mode. Position totals sum across
+      ALL players at that position, capturing depth.
     </p>
     <p>
-      Draft picks are shown separately because they don't slot into
-      lineups but contribute to total asset value.
+      Draft picks are shown separately and valued in dynasty terms only —
+      they're future capital that doesn't contribute to this season's win-now
+      value.
     </p>
     <p>
       <strong>Limitations:</strong> Doesn't show K/DEF (FantasyCalc doesn't
