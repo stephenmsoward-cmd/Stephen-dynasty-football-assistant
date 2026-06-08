@@ -30,6 +30,7 @@ from news import build_news_feed
 from rankings import build_power_rankings
 from compare import build_compare_report
 from diagnosis import build_team_diagnosis
+from projections import fetch_projections, apply_projections
 from history import build_team_series, sparkline_svg
 from og import make_og_image
 
@@ -553,6 +554,12 @@ def build_league_report(
         ppr=ppr,
     )
     index = data.build_player_index(sleeper_players, fc_values)
+    # Projection overlay onto Player.redraft_value. No-op until a 2026 source
+    # is wired up in projections.py (target: late July, when ESPN/FantasyPros
+    # publish). FC redraft stays in place when fetch_projections returns {}.
+    overlaid = apply_projections(index, fetch_projections(league["season"]))
+    if overlaid:
+        print(f"  applied {overlaid} projection overlays onto redraft_value")
     slots = league["roster_positions"]
     previous = load_previous_snapshot(slug)
     prev_totals = prev_team_totals(previous)
