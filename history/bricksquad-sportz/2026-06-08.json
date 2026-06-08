@@ -35,7 +35,7 @@
     "BN",
     "BN"
   ],
-  "generated_at": "2026-06-08T18:51:59+00:00",
+  "generated_at": "2026-06-08T18:54:49+00:00",
   "previous_snapshot_date": "2026-06-07",
   "my_roster_id": 3,
   "teams": [
@@ -539,8 +539,8 @@
         "summary": "Da Bell of Da Ball ranks 1st of 10 in dynasty value, but sits 4th win-now \u2014 young and still maturing. QB leads the way (2nd of 10) with no glaring hole elsewhere. The starting core is young (avg age 23.6) \u2014 time is on your side. Lean in \u2014 consolidate depth into a difference-maker while you're built to win."
       },
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 5.5,4.2 9.9,15.5 14.4,17.0 18.8,17.0 23.3,11.6 27.8,13.6 32.2,13.6 36.7,8.8 41.2,8.8 45.6,8.1 50.1,8.1 54.5,2.3 59.0,2.1\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 5.5,4.0 9.9,17.0 14.4,16.1 18.8,16.1 23.3,8.8 27.8,12.7 32.2,12.7 36.7,6.8 41.2,6.8 45.6,4.5 50.1,4.5 54.5,3.3 59.0,1.2\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 5.5,4.2 9.9,15.5 14.4,17.0 18.8,17.0 23.3,11.6 27.8,13.6 32.2,13.6 36.7,8.8 41.2,8.8 45.6,8.1 50.1,8.1 54.5,2.3 59.0,7.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 5.5,4.0 9.9,17.0 14.4,16.1 18.8,16.1 23.3,8.8 27.8,12.7 32.2,12.7 36.7,6.8 41.2,6.8 45.6,4.5 50.1,4.5 54.5,3.3 59.0,6.8\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
         "dynasty_points": 14,
         "winnow_points": 14
       }
@@ -1045,8 +1045,8 @@
         "summary": "Ligma ranks 2nd of 10 in dynasty value. RB is a strength (1st of 10), while WR is the soft spot (10th). The starting core is young (avg age 24.9) \u2014 time is on your side. Lean in \u2014 turn depth or picks into an upgrade at WR."
       },
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,3.7 5.5,1.0 9.9,6.3 14.4,6.6 18.8,6.6 23.3,14.0 27.8,17.0 32.2,17.0 36.7,4.6 41.2,4.6 45.6,11.9 50.1,11.9 54.5,6.4 59.0,4.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 5.5,1.7 9.9,11.3 14.4,11.4 18.8,11.4 23.3,13.0 27.8,17.0 32.2,17.0 36.7,12.6 41.2,12.6 45.6,10.9 50.1,10.9 54.5,11.1 59.0,7.4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,7.3 5.5,5.3 9.9,9.2 14.4,9.4 18.8,9.4 23.3,14.8 27.8,17.0 32.2,17.0 36.7,7.9 41.2,7.9 45.6,13.3 50.1,13.3 54.5,9.2 59.0,1.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 5.5,1.7 9.9,11.3 14.4,11.4 18.8,11.4 23.3,13.0 27.8,17.0 32.2,17.0 36.7,12.6 41.2,12.6 45.6,10.9 50.1,10.9 54.5,11.1 59.0,6.8\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
         "dynasty_points": 14,
         "winnow_points": 14
       }
@@ -1519,8 +1519,8 @@
         "summary": "Comedy of Errors ranks 3rd of 10 in dynasty value. WR is a strength (1st of 10), while TE is the soft spot (10th). Watch the clock: Mike Evans (32) and 1 other aging starter anchor the lineup. Lean in \u2014 turn depth or picks into an upgrade at TE."
       },
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,9.0 5.5,9.2 9.9,6.9 14.4,6.6 18.8,6.6 23.3,15.1 27.8,17.0 32.2,17.0 36.7,1.6 41.2,1.6 45.6,6.8 50.1,6.8 54.5,5.4 59.0,1.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,6.7 5.5,9.6 9.9,11.5 14.4,12.0 18.8,12.0 23.3,9.6 27.8,17.0 32.2,17.0 36.7,5.2 41.2,5.2 45.6,4.4 50.1,4.4 54.5,5.9 59.0,1.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,8.7 5.5,8.9 9.9,6.5 14.4,6.2 18.8,6.2 23.3,15.0 27.8,17.0 32.2,17.0 36.7,1.0 41.2,1.0 45.6,6.5 50.1,6.5 54.5,5.0 59.0,3.4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,3.9 5.5,7.5 9.9,10.1 14.4,10.6 18.8,10.6 23.3,7.5 27.8,17.0 32.2,17.0 36.7,2.0 41.2,2.0 45.6,1.0 50.1,1.0 54.5,2.9 59.0,1.7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
         "dynasty_points": 14,
         "winnow_points": 14
       }
@@ -2025,8 +2025,8 @@
         "summary": "Saquantum Leap ranks 4th of 10 in dynasty value, and rises to 1st win-now \u2014 a veteran-leaning roster. RB leads the way (2nd of 10) with no glaring hole elsewhere. Watch the clock: Davante Adams (33) and 3 other aging starters anchor the lineup. A targeted upgrade could push you into the top tier."
       },
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 5.5,5.9 9.9,2.7 14.4,1.0 18.8,1.0 23.3,14.7 27.8,10.9 32.2,10.9 36.7,15.5 41.2,15.5 45.6,5.7 50.1,5.7 54.5,2.3 59.0,3.6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,16.2 5.5,1.0 9.9,8.0 14.4,5.4 18.8,5.4 23.3,17.0 27.8,16.4 32.2,16.4 36.7,12.6 41.2,12.6 45.6,10.1 50.1,10.1 54.5,7.4 59.0,4.6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,17.0 5.5,9.4 9.9,7.2 14.4,6.0 18.8,6.0 23.3,15.5 27.8,12.8 32.2,12.8 36.7,16.0 41.2,16.0 45.6,9.2 50.1,9.2 54.5,6.9 59.0,1.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,16.2 5.5,1.2 9.9,8.1 14.4,5.5 18.8,5.5 23.3,17.0 27.8,16.4 32.2,16.4 36.7,12.6 41.2,12.6 45.6,10.2 50.1,10.2 54.5,7.5 59.0,1.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
         "dynasty_points": 14,
         "winnow_points": 14
       }
@@ -2531,8 +2531,8 @@
         "summary": "Mongo Money Makers ranks 5th of 10 in dynasty value. RB is a strength (3rd of 10), while WR is the soft spot (9th). The starting core is young (avg age 24.6) \u2014 time is on your side. A targeted move at WR could tip you toward contention."
       },
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,4.7 5.5,1.0 9.9,9.2 14.4,8.3 18.8,8.3 23.3,6.1 27.8,12.0 32.2,12.0 36.7,11.8 41.2,11.8 45.6,15.0 50.1,15.0 54.5,17.0 59.0,15.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,5.7 5.5,1.0 9.9,14.7 14.4,11.9 18.8,11.9 23.3,6.6 27.8,15.7 32.2,15.7 36.7,11.7 41.2,11.7 45.6,12.6 50.1,12.6 54.5,17.0 59.0,13.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,4.7 5.5,1.0 9.9,9.2 14.4,8.3 18.8,8.3 23.3,6.1 27.8,12.0 32.2,12.0 36.7,11.8 41.2,11.8 45.6,15.0 50.1,15.0 54.5,17.0 59.0,9.6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,5.7 5.5,1.0 9.9,14.7 14.4,11.9 18.8,11.9 23.3,6.6 27.8,15.7 32.2,15.7 36.7,11.7 41.2,11.7 45.6,12.6 50.1,12.6 54.5,17.0 59.0,11.6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
         "dynasty_points": 14,
         "winnow_points": 14
       }
@@ -3037,8 +3037,8 @@
         "summary": "Obijan Kenobi ranks 6th of 10 in dynasty value. The roster is balanced across positions. A targeted upgrade could push you into the top tier."
       },
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,12.4 5.5,10.0 9.9,5.1 14.4,13.5 18.8,13.5 23.3,4.8 27.8,3.1 32.2,3.1 36.7,2.3 41.2,2.3 45.6,17.0 50.1,17.0 54.5,5.4 59.0,1.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,5.6 5.5,9.4 9.9,14.6 14.4,17.0 18.8,17.0 23.3,6.9 27.8,8.8 32.2,8.8 36.7,7.6 41.2,7.6 45.6,8.4 50.1,8.4 54.5,4.8 59.0,1.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,12.0 5.5,9.4 9.9,4.1 14.4,13.1 18.8,13.1 23.3,3.7 27.8,1.9 32.2,1.9 36.7,1.0 41.2,1.0 45.6,17.0 50.1,17.0 54.5,4.3 59.0,3.1\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,2.0 5.5,7.0 9.9,13.8 14.4,17.0 18.8,17.0 23.3,3.7 27.8,6.2 32.2,6.2 36.7,4.6 41.2,4.6 45.6,5.7 50.1,5.7 54.5,1.0 59.0,2.1\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
         "dynasty_points": 14,
         "winnow_points": 14
       }
@@ -3543,8 +3543,8 @@
         "summary": "Bucky the Vampire Slayer ranks 7th of 10 in dynasty value. QB is a strength (1st of 10), while TE is the soft spot (9th). Watch the clock: Travis Kelce (36) anchors the lineup. A targeted move at TE could tip you toward contention."
       },
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,3.6 5.5,1.0 9.9,1.6 14.4,11.4 18.8,11.4 23.3,17.0 27.8,10.8 32.2,10.8 36.7,11.7 41.2,11.7 45.6,5.5 50.1,5.5 54.5,13.0 59.0,12.9\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,2.2 5.5,1.0 9.9,10.7 14.4,17.0 18.8,17.0 23.3,16.2 27.8,15.4 32.2,15.4 36.7,10.1 41.2,10.1 45.6,5.3 50.1,5.3 54.5,15.7 59.0,11.7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,3.6 5.5,1.0 9.9,1.6 14.4,11.4 18.8,11.4 23.3,17.0 27.8,10.8 32.2,10.8 36.7,11.7 41.2,11.7 45.6,5.5 50.1,5.5 54.5,13.0 59.0,6.7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,2.2 5.5,1.0 9.9,10.7 14.4,17.0 18.8,17.0 23.3,16.2 27.8,15.4 32.2,15.4 36.7,10.1 41.2,10.1 45.6,5.3 50.1,5.3 54.5,15.7 59.0,9.6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
         "dynasty_points": 14,
         "winnow_points": 14
       }
@@ -4049,8 +4049,8 @@
         "summary": "Glass bones & paper skin ranks 8th of 10 in dynasty value. TE is a strength (3rd of 10), while QB is the soft spot (10th). Watch the clock: Derrick Henry (32) and 1 other aging starter anchor the lineup. Keep stacking youth and picks; cash Derrick Henry while the value holds (you already hold 6 picks worth 11,940)."
       },
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 5.5,3.0 9.9,17.0 14.4,16.0 18.8,16.0 23.3,16.5 27.8,15.6 32.2,15.6 36.7,9.8 41.2,9.8 45.6,14.0 50.1,14.0 54.5,10.7 59.0,9.8\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 5.5,2.0 9.9,13.4 14.4,15.3 18.8,15.3 23.3,13.6 27.8,17.0 32.2,17.0 36.7,10.0 41.2,10.0 45.6,12.7 50.1,12.7 54.5,12.7 59.0,9.2\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 5.5,3.0 9.9,17.0 14.4,16.0 18.8,16.0 23.3,16.5 27.8,15.6 32.2,15.6 36.7,9.8 41.2,9.8 45.6,14.0 50.1,14.0 54.5,10.7 59.0,10.9\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,1.0 5.5,2.0 9.9,13.4 14.4,15.3 18.8,15.3 23.3,13.6 27.8,17.0 32.2,17.0 36.7,10.0 41.2,10.0 45.6,12.7 50.1,12.7 54.5,12.7 59.0,12.2\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
         "dynasty_points": 14,
         "winnow_points": 14
       }
@@ -4555,8 +4555,8 @@
         "summary": "Samir\u2019s Tight End  ranks 9th of 10 in dynasty value. WR is a strength (3rd of 10), while TE is the soft spot (8th). Watch the clock: Terry McLaurin (30) anchors the lineup. Keep stacking youth and picks; cash Terry McLaurin while the value holds (you already hold 6 picks worth 13,177)."
       },
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,11.4 5.5,1.0 9.9,9.8 14.4,12.4 18.8,12.4 23.3,17.0 27.8,14.7 32.2,14.7 36.7,16.2 41.2,16.2 45.6,11.2 50.1,11.2 54.5,10.9 59.0,10.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,7.6 5.5,1.0 9.9,14.9 14.4,15.6 18.8,15.6 23.3,12.8 27.8,17.0 32.2,17.0 36.7,15.5 41.2,15.5 45.6,11.4 50.1,11.4 54.5,10.0 59.0,6.7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,11.4 5.5,1.0 9.9,9.8 14.4,12.4 18.8,12.4 23.3,17.0 27.8,14.7 32.2,14.7 36.7,16.2 41.2,16.2 45.6,11.2 50.1,11.2 54.5,10.9 59.0,7.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,7.6 5.5,1.0 9.9,14.9 14.4,15.6 18.8,15.6 23.3,12.8 27.8,17.0 32.2,17.0 36.7,15.5 41.2,15.5 45.6,11.4 50.1,11.4 54.5,10.0 59.0,8.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
         "dynasty_points": 14,
         "winnow_points": 14
       }
@@ -5061,8 +5061,8 @@
         "summary": "cropcreamer ranks 10th of 10 in dynasty value. TE is a strength (2nd of 10), while RB is the soft spot (10th). The starting core is young (avg age 24.9) \u2014 time is on your side. Keep stacking youth and picks (you already hold 7 picks worth 13,628)."
       },
       "sparkline": {
-        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,14.9 5.5,15.3 9.9,14.6 14.4,11.7 18.8,11.7 23.3,11.3 27.8,11.4 32.2,11.4 36.7,17.0 41.2,17.0 45.6,5.9 50.1,5.9 54.5,2.4 59.0,1.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
-        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,10.8 5.5,11.8 9.9,17.0 14.4,13.2 18.8,13.2 23.3,11.3 27.8,14.2 32.2,14.2 36.7,15.1 41.2,15.1 45.6,5.5 50.1,5.5 54.5,4.2 59.0,1.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "dynasty": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,14.9 5.5,15.3 9.9,14.6 14.4,11.7 18.8,11.7 23.3,11.3 27.8,11.4 32.2,11.4 36.7,17.0 41.2,17.0 45.6,5.9 50.1,5.9 54.5,2.5 59.0,1.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
+        "winnow": "<svg class=\"sparkline\" viewBox=\"0 0 60 18\" width=\"60\" height=\"18\"><polyline points=\"1.0,9.8 5.5,11.0 9.9,17.0 14.4,12.6 18.8,12.6 23.3,10.4 27.8,13.7 32.2,13.7 36.7,14.8 41.2,14.8 45.6,3.8 50.1,3.8 54.5,2.2 59.0,1.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>",
         "dynasty_points": 14,
         "winnow_points": 14
       }
@@ -37805,7 +37805,7 @@
       "description": "Liz Loza details Christian Watson impressive upside, while acknowledging his injury history.",
       "url": "https://www.espn.com/fantasy/football/story/_/id/40699880/fantasy-football-injuries-position-battles-nfl-news-analysis",
       "published": "2026-06-05T15:31:57Z",
-      "age_hours": 75.3,
+      "age_hours": 75.4,
       "importance_score": 42,
       "high_impact": true,
       "players": [
@@ -37876,7 +37876,7 @@
       "description": "Shortly after Collins signed an extension in 2024, the NFL quickly began to rewrite the WR market.",
       "url": "https://www.espn.com/nfl/story/_/id/48967209/houston-texans-wr-market-boom-nico-collins-raise",
       "published": "2026-06-06T14:39:13Z",
-      "age_hours": 52.2,
+      "age_hours": 52.3,
       "importance_score": 18,
       "high_impact": false,
       "players": [
@@ -37912,7 +37912,7 @@
       "description": "Speaking publicly for the first time this offseason, Buccaneers QB Baker Mayfield said that contract extension talks \"are not anywhere close to what we were thinking\" and that it's \"time to get something done long-term.\"",
       "url": "https://www.espn.com/nfl/story/_/id/48976225/mayfield-contract-talks-not-anywhere-close-buccaneers",
       "published": "2026-06-05T18:27:18Z",
-      "age_hours": 72.4,
+      "age_hours": 72.5,
       "importance_score": 15,
       "high_impact": false,
       "players": [
@@ -37930,7 +37930,7 @@
       "description": "Pitts, still looking for a contract extension in Atlanta, is happy to return after sweeping offseason changes.",
       "url": "https://www.espn.com/nfl/story/_/id/48958922/falcons-te-pitts-franchise-tag-kevin-stefanski-gm-otas-offseason-contract-extension",
       "published": "2026-06-05T18:02:07Z",
-      "age_hours": 72.8,
+      "age_hours": 72.9,
       "importance_score": 15,
       "high_impact": false,
       "players": [
@@ -37991,7 +37991,7 @@
       "description": "'The Pat McAfee Show' breaks down Christian Watson's contract extension",
       "url": "https://www.espn.com/video/clip/_/id/48967107/the-pat-mcafee-show-breaks-christian-watson-contract-extension",
       "published": "2026-06-04T17:03:30Z",
-      "age_hours": 97.8,
+      "age_hours": 97.9,
       "importance_score": 15,
       "high_impact": false,
       "players": [
@@ -38009,7 +38009,7 @@
       "description": "The Pittsburgh Steelers and tight end Darnell Washington reached agreement on a four-year, $42 million extension, sources told ESPN's Jeremy Fowler.",
       "url": "https://www.espn.com/nfl/story/_/id/48961024/sources-darnell-washington-steelers-reach-4-year-extension",
       "published": "2026-06-04T14:43:50Z",
-      "age_hours": 100.1,
+      "age_hours": 100.2,
       "importance_score": 15,
       "high_impact": false,
       "players": [
