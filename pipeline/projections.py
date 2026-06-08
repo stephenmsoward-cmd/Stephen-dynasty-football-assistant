@@ -42,6 +42,8 @@ def fetch_projections(season: str) -> dict[str, int]:
     The contract is FC-scale integers so the overlay is a straight assignment
     into ``Player.redraft_value``; any unit conversion happens here.
     """
+    # TODO(late-July 2026): wire ESPN site API or FantasyPros HTML.
+    # Tracked: github.com/stephenmsoward-cmd/Stephen-dynasty-football-assistant/issues/1
     return {}
 
 
